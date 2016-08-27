@@ -1,0 +1,12 @@
+/* Webfont: ITCBodoniSeventytwoW10 */@font-face {
+    font-family: 'Bodoni';
+    src: url('Bodoni.eot'); /* IE9 Compat Modes */
+    src: url('Bodoni.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Bodoni.woff') format('woff'), /* Modern Browsers */
+         url('Bodoni.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Bodoni.svg#Bodoni') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
