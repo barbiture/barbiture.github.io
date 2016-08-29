@@ -24355,6 +24355,20 @@ else if (typeof define === 'function' && define.amd) {
           $(this).siblings('ul').toggleClass('active');
         });
 
+        // Аккардеон для левой колонки категорий
+        $('.left-filter--link').click(function() {
+          if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).siblings('ul').removeClass('active');
+          }else{
+            $('.left-filter--link').removeClass('active');
+            $('.left-filter--link').siblings('ul').removeClass('active');
+
+
+            $(this).addClass('active');
+            $(this).siblings('ul').addClass('active');
+          }
+        });
         // Кастомный селект на странице карточки товара 
         $('.select-border--square_wrap').selectpicker({
             dropupAuto: false,

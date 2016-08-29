@@ -179,133 +179,36 @@
       <a data-toggle="modal" data-target="#searchModal" class="icon icon-search hidden-sm hidden-xs " ></a>
     </div>
   </div>
-<div class="modal-main--contacts inner-wrap inner-wrap--mobile">
-  <div class="container">
-    <div class="inner-wrap--title">
-      <h1 class="h1 text-center">Контакты</h1>
-    </div>
-    <p>Мы ответим на все интересующие вас вопросы ежедневно с 10:00 до 22:00</p>
-    <a class="modal-main--tel" href="tel:88007006265">8 (800) 700-62-65</a>
-    <p>Не получилось связаться в рабочее время? Не проблема!</br>Напишите нам письмо <a href="mailto:help@bml.com">help@bml.com</a> или заполните пожалуйста форму обратной связи.</p>
-    <form id="formx_contact" method="POST" class="form-wrap">
-        <div class="input-wrap input-wrap--animate">
-          <input id="input-name" name="name" class="input-wrap--input" placeholder="Введите ваше имя*" type="text">
-          <label for="input-name" class="input-wrap--label"></label>
-          <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите ваше имя*</span>
-        </div>
-        <div class="input-wrap input-wrap--animate">
-          <input id="input-eml" name="email" class="input-wrap--input" placeholder="Введите ваш email*" type="text">
-          <label for="input-eml" class="input-wrap--label"></label>
-          <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите ваш email*</span>
-        </div>
-        <div class="textarea-wrap">
-          <label for="text">Текст сообщения</label>
-          <textarea name="enquiry" id="" cols="30" rows="5" placeholder="Пр. Я очень доволен покупкой, но хотел бы сделать ваш магазин еще лучше."></textarea>
-        </div>
-        <div class="g-recaptcha sec" data-size="50" data-sitekey="6LeOrx0TAAAAAHt2R_UzMrE50RUfbPKBBbExHUHh"></div>
-      <button data-loading-text="Отправляем сообщение..." class="btn-bml btn-reset btn-green btn-submit">Отправить</button>
-    </form>
+<div class="success">
+  <div class="success-title">Благодарим Вас за заказ!</div>
+  <div class="success-descript">
+    <p>Ваш заказ успешно сформирован и отправлен на обработку. В ближайшее время наш <br> менеджер свяжется с Вами для уточнения деталей.</p>
+    <p>Спасибо за покупки в интернет-магазине BML.</p>
   </div>
+  <p class="text-center"><a href="main.html" class="back-main--link">Назад</a></p>
 </div>
-<footer id="footer" class="footer footer-inner">
-  <div class="footer-container">
-    <!-- subscrible -->
-    <form id="subscribeform" class="footer-inner--subscription">
-      <!-- <div class="container"> -->
-        <div class="clearfix">
-          <div class="col-sm-3">
-            <label>Подпишитесь на рассылку</label>
-          </div>
-          <div class="col-sm-6">
-            <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите свой E-mail</span>
-            <input id="subscribeemail" class="footer-inner--subscription-input" placeholder="Введите свой E-mail" type="text">
-          </div>
-          <div class="col-sm-3">
-            <button class="btn-green btn-reset">Подписаться</button>
-          </div>
-        </div>
-      <!-- </div> -->
-    </form>
-    <!-- subscrible -->
-    <!-- <div class="row"> -->
-      <div class="footer-inner--wrap container">
-        <div class="row">
-          <!-- logo/tel/social -->
-          <div class="col-sm-3 col-xs-12">
-            <a href="index.html" class="footer-inner--logo">
-              <img src="images/logo.svg" alt=""></a>
-              <span class="footer-inner--tel_label visible-xs">Наш телефон:</span>
-            <a href="tel:88007006265" class="footer-inner--tel">8(800)700-62-65</a>
-            <p class="visible-xs">BML — сеть магазинов мужской одежды премиум класса в Москве. Основной специализацией является классический костюм, который удачно дополняют необходимые в повседневной жизни любого мужчины аксессуары.</p>
-            <ul class="footer-soc-icons hidden-xs">
-              <li><a href="https://www.facebook.com/BMLRussia/" class="soc-icon soc-icon-fb"></a></li>
-              <li><a href="https://www.youtube.com/channel/UClqzaJzhQNOE5sdJHhQlqvQ" class="soc-icon soc-icon-yt"></a></li>
-              <li><a href="http://vk.com/bmlrussia" class="soc-icon soc-icon-vk"></a></li>
-            </ul>
-          </div>
-          <!-- desctipt/copyright -->
-          <div class="col-sm-5 col-xs-12">
-            <p class="hidden-xs">BML — сеть магазинов мужской одежды премиум класса в Москве. Основной специализацией является классический костюм, который удачно дополняют необходимые в повседневной жизни любого мужчины аксессуары.</p>
 
-            <!-- menu about mobile -->
-            <div class="footer-inner--menu col-md-2 col-xs-12 visible-xs">
-              <div class="footer-inner--title footer-inner--toggle">О компании</div>
-              <ul>
-                <li><a href="/vakancii.html">Вакансии</a></li>
-                <li><a href="/rekviziti.html">Реквизиты</a></li>
-                <li>
-                  <a href="index.php?route=information/contactus" id="footerdesktophide">Контакты</a>
-                  <a href="http://bml.ru/index.php?route=information/contactus" id="footercontactmobile" onclick="event.preventDefault();$('#headercontact').trigger('click');" class="">Контакты</a>
-                </li>
-              </ul>
-            </div>
-            <!-- menu info mobile -->
-            <div class="footer-inner--menu col-md-2 col-xs-12 visible-xs">
-              <div class="footer-inner--title footer-inner--toggle">Информация</div>
-              <ul>
-                <li><a href="/oplata-i-doctavka.html">Оплата и доставка</a></li>
-                <li><a href="/vozmozhnoct-primerki.html">Примерка</a></li>
-                <li><a href="/vozvrat-tovarov.html">Возврат товаров</a></li>
-                <li><a href="/oferta.html">Оферта</a></li>
-              </ul>
-            </div>
-
-
-            <div class="footer-copyright">
-              <p>Официальный интернет-магазин BML </p>
-              <p>Все права защищены © 2012-2016</p>
-            </div>
-            <ul class="footer-soc-icons visible-xs">
-              <li><a href="https://www.facebook.com/BMLRussia/" class="soc-icon soc-icon-fb"></a></li>
-              <li><a href="https://www.youtube.com/channel/UClqzaJzhQNOE5sdJHhQlqvQ" class="soc-icon soc-icon-yt"></a></li>
-              <li><a href="http://vk.com/bmlrussia" class="soc-icon soc-icon-vk"></a></li>
-            </ul>
-          </div>
-          <!-- menu info -->
-          <div class="footer-inner--menu col-sm-2 hidden-xs">
-            <div class="footer-inner--title">Информация</div>
-            <ul>
-              <li><a href="/oplata-i-doctavka.html">Оплата и доставка</a></li>
-              <li><a href="/vozmozhnoct-primerki.html">Примерка</a></li>
-              <li><a href="/vozvrat-tovarov.html">Возврат товаров</a></li>
-              <li><a href="/oferta.html">Оферта</a></li>
-            </ul>
-          </div>
-          <!-- menu about -->
-          <div class="footer-inner--menu col-sm-2 hidden-xs">
-            <div class="footer-inner--title">О компании</div>
-            <ul>
-              <li><a href="/vakancii.html">Вакансии</a></li>
-              <li><a href="/rekviziti.html">Реквизиты</a></li>
-              <li>
-                <a href="index.php?route=information/contactus" id="footerdesktophide">Контакты</a>
-                <a href="http://bml.ru/index.php?route=information/contactus" id="footercontactmobile" onclick="event.preventDefault();$('#headercontact').trigger('click');" class="">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    <!-- </div> -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <ul class="footer-menu">
+      <li><a href="/rekviziti.html">Реквизиты</a></li>
+      <li><a href="/oplata-i-doctavka.html">Оплата и доставка</a></li>
+      <li><a href="/vozmozhnoct-primerki.html">Примерка</a></li>
+      <li>
+          <a href="index.php?route=information/contactus" id="footerdesktophide">Контакты</a>
+          <a href="http://bml.ru/index.php?route=information/contactus" id="footercontactmobile" onclick="event.preventDefault();$('#headercontact').trigger('click');" class="">Контакты</a>
+      </li>
+    </ul>
+    <div class="footer-copyright">© 2016 BML. Все права защищены.</div>
+    <hr class="footer-hr">
+    <ul class="footer-soc-icons">
+      <li><a href="https://www.facebook.com/BMLRussia/" class="soc-icon soc-icon-fb"></a></li>
+      <li><a href="https://www.youtube.com/channel/UClqzaJzhQNOE5sdJHhQlqvQ" class="soc-icon soc-icon-yt"></a></li>
+      <li><a href="http://vk.com/bmlrussia" class="soc-icon soc-icon-vk"></a></li>
+      <!-- <li><a href="#" class="soc-icon soc-icon-twitter"></a></li> -->
+      <!-- <li><a href="#" class="soc-icon soc-icon-insta"></a></li> -->
+      <!-- <li><a href="#" class="soc-icon soc-icon-pinterest"></a></li> -->
+    </ul>
   </div>
   
   <div class="modal fade modal-animate" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -495,7 +398,6 @@
     </div>
   </div>
 </footer>
-
 <nav id="menu">
   <ul>
     <li>
