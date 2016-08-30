@@ -367,7 +367,6 @@ div.h4,
 .footer-inner--tel,
 .breadcrumbs li,
 .back-main li,
-.inner-wrap--title,
 .tags-wrap,
 .nav-pages span,
 .center-image--decript {
@@ -386,6 +385,7 @@ div.h3,
 .card-page--right_price,
 .cs-select-bml.cs-skin-overlay .cs-options--title,
 .inner-wrap--filter-title.catalog-container--wrap_filter-title,
+.inner-wrap--title,
 .news-wrap .news-title,
 .news-wrap h2.h2,
 .news-wrap--title-big,
@@ -1596,6 +1596,11 @@ html.mm-opening .mm-slideout .header {
     margin-top: 25px;
   }
 }
+@media (max-width: 767px) {
+  .card-page--right_logo {
+    margin-top: 40px;
+  }
+}
 .card-page--right_decript {
   color: #000;
   font-size: 15px;
@@ -1677,11 +1682,19 @@ html.mm-opening .mm-slideout .header {
 }
 @media (max-width: 767px) {
   .tablet .card-page .card-page-carousel--mobile {
-    float: none;
+    float: none !important;
   }
 }
 .tablet .card-page .card-page--gallery {
   display: none !important;
+}
+.card-page-carousel--mobile {
+  display: block !important;
+}
+@media (max-width: 767px) {
+  .card-page-carousel--mobile {
+    float: none !important;
+  }
 }
 .offset-wrap {
   height: 645px;
@@ -2376,6 +2389,7 @@ div.cs-skin-border {
   height: 193px;
   margin-bottom: 23px;
   cursor: pointer;
+  text-align: center;
 }
 .cs-select-bml.cs-skin-overlay .cs-options--wrap:hover {
   background-color: #e7e7e7;
@@ -3549,28 +3563,6 @@ a.back-main--link:hover:before {
 }
 .left-filter--new .left-filter--link {
   margin-right: 50px;
-}
-.left-filter--new .left-filter--link.active:after {
-  transform: rotate(45deg);
-}
-.left-filter--new .left-filter--link.no-row:after {
-  display: none;
-}
-.left-filter--new .left-filter--link:after {
-  content: '';
-  border: 2px solid transparent;
-  border-top: none;
-  border-left: none;
-  right: -50px;
-  border-color: #525252;
-  display: block;
-  width: 8px;
-  height: 8px;
-  margin: auto;
-  position: absolute;
-  top: 5px;
-  bottom: 0;
-  transform: rotate(-45deg);
 }
 .left-filter--new .left-filter--container ul.left-filter--child {
   padding-left: 15px;
@@ -5103,13 +5095,13 @@ body.modal-open {
 @media (max-width: 1050px) {
   .owl-arrivals .owl-item,
   .owl-recomend .owl-item {
-    height: 220px;
+    height: 230px;
   }
 }
 @media (max-width: 786px) {
   .owl-arrivals .owl-item,
   .owl-recomend .owl-item {
-    height: 190px;
+    height: 200px;
   }
 }
 .owl-arrivals .owl-item .item,
@@ -5157,11 +5149,6 @@ body.modal-open {
   height: 0;
   position: absolute;
 }
-@media (max-width: 768px) {
-  .owl-nav {
-    display: none;
-  }
-}
 .owl-prev.disabled,
 .owl-next.disabled {
   display: none;
@@ -5177,6 +5164,11 @@ body.modal-open {
   width: 10px;
   height: 10px;
 }
+@media (max-width: 1050px) {
+  .owl-prev {
+    top: -25px;
+  }
+}
 .owl-next {
   position: absolute;
   right: -29px;
@@ -5187,6 +5179,11 @@ body.modal-open {
   transform: rotate(45deg);
   width: 10px;
   height: 10px;
+}
+@media (max-width: 1050px) {
+  .owl-next {
+    top: -25px;
+  }
 }
 .owl-dots {
   width: 100%;
@@ -5240,31 +5237,35 @@ body.modal-open {
 }
 .card-page .swiper-button-prev {
   position: absolute;
-  width: 14px;
+  width: 21px;
   height: 21px;
-  left: 0;
   top: 50%;
   margin-top: -10px;
-  background: url(../images/ui/arrow-left.png) no-repeat;
-}
-@media (max-width: 768px) {
-  .card-page .swiper-button-prev {
-    display: none;
-  }
+  border: 2px solid transparent;
+  border-top: none;
+  border-left: none;
+  left: 10px;
+  border-color: #525252;
+  display: block;
+  margin: auto;
+  background-image: url();
+  transform: rotate(135deg);
 }
 .card-page .swiper-button-next {
   position: absolute;
-  width: 14px;
+  width: 21px;
   height: 21px;
-  right: 0;
   top: 50%;
   margin-top: -10px;
-  background: url(../images/ui/arrow-right.png) no-repeat;
-}
-@media (max-width: 768px) {
-  .card-page .swiper-button-next {
-    display: none;
-  }
+  border: 2px solid transparent;
+  border-top: none;
+  border-left: none;
+  right: 10px;
+  border-color: #525252;
+  display: block;
+  margin: auto;
+  background-image: url();
+  transform: rotate(-45deg);
 }
 .card-page .swiper-pagination-bullet {
   background-color: #999;

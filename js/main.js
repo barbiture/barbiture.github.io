@@ -24140,6 +24140,9 @@ else if (typeof define === 'function' && define.amd) {
 
         // execute above function
         initPhotoSwipeFromDOM('.gallery');
+        if (document.documentElement.clientWidth < 768) {
+          initPhotoSwipeFromDOM('.swiper-wrapper');
+        };
         $('body').scrollspy({
             target: '#galleryNav',
             offset: 250
@@ -24663,10 +24666,10 @@ $(document).ready(function() {
 
 
   // $("#cardPageLeft, #cardPageRight").stick_in_parent();
+
   if (document.documentElement.clientWidth >= 768) {
     $(".desktop #LeftFilter").stick_in_parent();
   };
-
   var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -24682,6 +24685,7 @@ $(document).ready(function() {
 
 // onResize bind of the function
 $(window).resize(function() {
+
     // $("#cardPageLeft, #cardPageRight").stick_in_parent();
     if (document.documentElement.clientWidth >= 768) {
       $(".desktop #LeftFilter").stick_in_parent();
