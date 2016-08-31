@@ -5324,14 +5324,6 @@ body.modal-open {
 }
 body .pswp__bg {
   background-color: #fff;
-  opacity: 1 !important;
-}
-body .pswp__zoom-wrap {
-  top: 32px;
-}
-body .pswp__ui--fit .pswp__top-bar,
-body .pswp__ui--fit .pswp__caption {
-  background-color: rgba(0, 0, 0, 0.85) !important;
 }
 body .pswp__button--arrow--left,
 body .pswp__button--arrow--right {
@@ -5463,7 +5455,7 @@ body .pswp__ui--over-close .pswp__button--close {
 body .pswp__button,
 body .pswp__button--arrow--left:before,
 body .pswp__button--arrow--right:before {
-  background: url(../images/ui/default-skin.png) 0 0 no-repeat;
+  background: url(../images/ui/default-skin--dark.png) 0 0 no-repeat;
   background-size: 264px 88px;
   width: 44px;
   height: 44px;
@@ -5475,7 +5467,7 @@ body .pswp__button--arrow--right:before {
   body .pswp--svg .pswp__button,
   body .pswp--svg .pswp__button--arrow--left:before,
   body .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(../images/ui/default-skin.svg);
+    background-image: url(../images/ui/default-skin--dark.svg);
   }
   body .pswp--svg .pswp__button--arrow--left,
   body .pswp--svg .pswp__button--arrow--right {
@@ -5657,7 +5649,7 @@ body .pswp__counter {
   height: 44px;
   font-size: 13px;
   line-height: 44px;
-  color: #FFF;
+  color: #333;
   opacity: 0.75;
   padding: 0 10px;
 }
@@ -5825,9 +5817,7 @@ body .pswp__top-bar {
   position: absolute;
   left: 0;
   top: 0;
-  height: 64px;
   width: 100%;
-  opacity: 1 !important;
 }
 body .pswp__caption,
 body .pswp__top-bar,

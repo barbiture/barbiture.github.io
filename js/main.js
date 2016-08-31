@@ -24075,11 +24075,21 @@ else if (typeof define === 'function' && define.amd) {
 
                 // define options (if needed)
                 options = {
-
                     // define gallery index (for URL)
                     galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                    showHideOpacity: true,
+                    captionEl: false,
+                    fullscreenEl: false,
+                    shareEl: false,
+                    bgOpacity: 0.95,
+                    tapToClose: true,
+                    tapToToggleControls: false,
+                    barsSize: {top:0,bottom:0},
+
+                    mainClass: 'pswp--minimal--dark',
 
                     getThumbBoundsFn: function(index) {
+
                         // See Options -> getThumbBoundsFn section of documentation for more info
                         var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
                             pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
@@ -24650,7 +24660,7 @@ $(document).ready(function() {
   var stickWidth = 991;
   var win = $(window);
   var menu = $(".desktop #cardPageLeft, .desktop #cardPageRight");
-  var options = {
+  var options = {  // stickWidth option
       offset_top: 0
   };
   if (win.width() > stickWidth) {
@@ -24680,12 +24690,26 @@ $(document).ready(function() {
     });
   $('body').click(function(){
   })
-
+  $(window).resize(function() {
+      
+      if (document.documentElement.clientWidth < 991) {
+          alert('resize');
+          
+        initPhotoSwipeFromDOM('.swiper-wrapper');
+          
+      };
+    });
 });
 
 // onResize bind of the function
 $(window).resize(function() {
-
+    
+    // if (document.documentElement.clientWidth < 768) {
+        // alert('resize');
+        // $(document).ready(function() {
+        //     initPhotoSwipeFromDOM('.swiper-wrapper');
+        // });
+    // };
     // $("#cardPageLeft, #cardPageRight").stick_in_parent();
     if (document.documentElement.clientWidth >= 768) {
       $(".desktop #LeftFilter").stick_in_parent();
