@@ -1550,7 +1550,11 @@ html.mm-opening .mm-slideout .header {
 .tablet #galleryNav {
   display: none;
 }
+.card-page--right.Zebra_Pin {
+  width: 22%;
+}
 .card-page--right {
+  z-index: 1 !important;
   overflow: visible;
   text-align: center;
   height: 100vh;
@@ -3677,7 +3681,11 @@ a.back-main--link:hover:before {
   padding-bottom: 64px;
   padding-right: 0;
 }
+.card-page--left.Zebra_Pin {
+  width: 22%;
+}
 .card-page--left {
+  z-index: 1;
   text-align: left;
   height: 100vh;
   float: left;
