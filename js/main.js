@@ -24081,7 +24081,7 @@ else if (typeof define === 'function' && define.amd) {
                     captionEl: false,
                     fullscreenEl: false,
                     shareEl: false,
-                    bgOpacity: 0.95,
+                    bgOpacity: 1,
                     tapToClose: true,
                     tapToToggleControls: false,
                     barsSize: {top:0,bottom:0},
