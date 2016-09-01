@@ -25185,7 +25185,6 @@ else if (typeof define === 'function' && define.amd) {
             var closest = function closest(el, fn) {
                 return el && ( fn(el) ? el : closest(el.parentNode, fn) );
             };
-
             // triggers when user clicks on thumbnail
             var onThumbnailsClick = function(e) {
                 e = e || window.event;
@@ -25261,6 +25260,7 @@ else if (typeof define === 'function' && define.amd) {
             };
 
             var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                $('#mm-0').css('z-index', '1002')
                 var pswpElement = document.querySelectorAll('.pswp')[0],
                     gallery,
                     options,
@@ -25326,8 +25326,11 @@ else if (typeof define === 'function' && define.amd) {
                 // Pass data to PhotoSwipe and initialize it
                 gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
                 gallery.init();
+                gallery.listen('close', function() {
+                    $('#mm-0').css('z-index', '1')
+                });
             };
-
+            
             // loop through all gallery elements and bind events
             var galleryElements = document.querySelectorAll( gallerySelector );
 
@@ -25348,6 +25351,9 @@ else if (typeof define === 'function' && define.amd) {
         if (document.documentElement.clientWidth < 768) {
           initPhotoSwipeFromDOM('.swiper-wrapper');
         };
+        if($('html').hasClass('tablet')){
+            initPhotoSwipeFromDOM('.swiper-wrapper');
+        }
         $('body').scrollspy({
             target: '#galleryNav',
             offset: 250
