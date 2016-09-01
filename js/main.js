@@ -25535,237 +25535,90 @@ else if (typeof define === 'function' && define.amd) {
 
         $('.order-submit--mobile').hide();
 
+        var accordionAction = function(e) {
+            var parent = e.data.parent;
+            var content = e.data.content;
+            var curent = $(this).parent();
+            var next = curent.next();
+            var first = $(this).parents(parent).children().first();
+            var index = curent.index();
+            var lastIndex = $(this).parents(parent).children().last().index();
 
-        // var accordionOpenLeftFilter = $('.left-side--card .accordion-wrap').outerHeight(true);
-        // var accordionCloseLeftFilter = $('.left-side--card .accordion-toggle').outerHeight(true);
-
-        
-        // console.log('accordionOpenLeftFilter:', accordionOpenLeftFilter)
-        // console.log('accordionCloseLeftFilter:', accordionCloseLeftFilter)
-
-        // var accordionOpenArrivals = $('.new-arrivals .accordion-wrap').outerHeight(true);
-        // var accordionCloseArrivals = $('.new-arrivals .accordion-toggle').outerHeight(true);
-
-        // console.log('accordionOpenArrivals:', accordionOpenArrivals)
-        // console.log('accordionCloseArrivals:', accordionCloseArrivals)
-
-        // function accordionHeightDefault(open, close){
-        //     $('.accordion-wrap').css('max-height', open).hasClass('.active');
-        //     $('.accordion-wrap').not('.active').css('max-height', close);
-        // }
-        // accordionHeightDefault(accordionOpenLeftFilter, accordionCloseLeftFilter);
-        // accordionHeightDefault(accordionOpenArrivals, accordionCloseArrivals);
-        // 
-
-
-
-
-        // // ORDER-MOBILE
-
-        // var heightOrdertWrap = getArrHeight($('.order-mobile.accordion .accordion-wrap')); // высота обертки аккардеона вместе с линком и контентом
-
-        // var closeOrdertWrap = $('.order-mobile.accordion .accordion-toggle').outerHeight(true); // высота в закрытом состоянии, равна высоте кнопки нажатия
-
-        // $('.order-mobile.accordion .accordion-wrap').css('max-height', heightOrdertWrap[0]).hasClass('active');
-        // $('.order-mobile.accordion .accordion-wrap').not('.active').css('max-height', closeOrdertWrap); 
-
-        // $(".order-mobile.accordion .accordion-toggle").on("click",{
-        //     close: closeOrdertWrap, height: heightOrdertWrap, parentAccordion:$('.order-mobile.accordion')
-        // }, accordionAction);
-
-        // // LEFT CARD ACCORDION
-        // var heightLeftWrap = getArrHeight($('.left-filter--container.accordion .accordion-wrap')); // высота обертки аккардеона вместе с линком и контентом
-
-        // var closeLeftWrap = $('.left-filter--container.accordion .accordion-toggle').outerHeight(true); // высота в закрытом состоянии, равна высоте кнопки нажатия
-
-        // $('.left-filter--container.accordion .accordion-wrap').css('max-height', heightLeftWrap[0]).hasClass('active');
-        // $('.left-filter--container.accordion .accordion-wrap').not('.active').css('max-height', closeLeftWrap);
-
-        // $(".left-filter--container.accordion .accordion-toggle").on("click",{
-        //     close: closeLeftWrap, height: heightLeftWrap, parentAccordion:$('.left-filter--container.accordion')
-        // }, accordionAction);
-
-        // // NEW ARIVALS ACCORDION
-        // var heightArrivalsWrap = getArrHeight($('.new-arrivals.accordion .accordion-wrap')); // высота обертки аккардеона вместе с линком и контентом
-
-        // var closeArrivalsWrap = $('.new-arrivals.accordion .accordion-toggle').outerHeight(true); // высота в закрытом состоянии, равна высоте кнопки нажатия
-
-        // $('.new-arrivals.accordion .accordion-wrap').css('max-height', heightArrivalsWrap[0]).hasClass('active');
-        // $('.new-arrivals.accordion .accordion-wrap').not('.active').css('max-height', closeArrivalsWrap);
-
-        // $(".new-arrivals.accordion .accordion-toggle").on("click",{
-        //     close: closeArrivalsWrap, height: heightArrivalsWrap, parentAccordion:$('.new-arrivals.accordion')
-        // }, accordionAction);
-
-        var activeFlag = 0;  // Отслеживает состояние активного элемента "accordion-wrap"
-        function getArrHeight(el) {
-            var heightArr = [];
-            for (var i = 0; i < el.length; i++) {
-                heightArr[i] = el.eq(i).outerHeight(true);
-            }
-            return heightArr;
-        }
-
-
-        function accordionHeightEq(open, close){
-            var heightWrap = getArrHeight(open), // высота обертки аккардеона вместе с линком и контентом
-                closeWrap = close.outerHeight(true); // высота в закрытом состоянии, равна высоте кнопки / линка нажатия
-
-            // open.css('max-height', heightWrap[0]).hasClass('active');
-            // open.not('.active').css('max-height', closeWrap);
-            open.each(function(i){
-                if(open.eq(i).hasClass('active')){
-                    open.eq(i).css('max-height', heightWrap[0]);
-                }else{
-                    open.eq(i).css('max-height', closeWrap);
-                }
-            });
-            return {
-                close: closeWrap,
-                height: heightWrap
-            };
-        }
-
-        var accordionAction = function(e){
-            var wrapAccordion = $(this).parent();
-            var parentAccordion = wrapAccordion.parent();
-            var close = e.data.close;
-            var open = 0;
-            var height = e.data.height;
-            if(wrapAccordion.hasClass('active')){
-                activeFlag = 1;
-                open = height[wrapAccordion.index()+1];
-                wrapAccordion.removeClass('active').css('max-height', close).next().addClass('active').css('max-height', open);
-                if (wrapAccordion.index() == parentAccordion.children().last().index()) {
-                    open = height[0];
-                    parentAccordion.children().first().css('max-height', open).addClass('active');
-                }
-            }else{
+            if ( curent.hasClass('active') ) {
+              activeFlag = 1;
+              curent.removeClass('active').children().eq(1).slideUp();
+              next.addClass('active').children().eq(1).slideDown();
+              
+              if ( index == lastIndex ){
+                curent.removeClass('active');
+                first.addClass('active').children().eq(1).slideDown();
+              }
+            } else {
                 activeFlag = 0;
-                open = height[wrapAccordion.index()];
-                parentAccordion.children().removeClass('active').css('max-height', close).hasClass('active');
-                wrapAccordion.addClass('active').css('max-height', open);
+                // $(this).parents(parent).children().removeClass('active').find(content).slideUp();
+                $(parent).children().removeClass('active').find(content).slideUp();
+                curent.addClass('active').children().eq(1).slideDown();
             }
         }
 
-        var leftFilterFun = accordionHeightEq($('.left-filter--container.accordion .accordion-wrap'), $('.left-filter--container.accordion .accordion-toggle'));
-        $(".left-filter--container.accordion .accordion-toggle").on("click", leftFilterFun, accordionAction);
 
-        var arrivalsFun = accordionHeightEq($('.new-arrivals.accordion .accordion-wrap'), $('.new-arrivals.accordion .accordion-toggle'));
-        $(".new-arrivals.accordion .accordion-toggle").on("click", arrivalsFun, accordionAction);
+        $('.new-arrivals.accordion').children().not('.active').find('.accordion-content').hide();
+        var newArrivals = { parent:'.new-arrivals.accordion', content: '.accordion-content' };
+        $(".new-arrivals.accordion .accordion-toggle").on("click", newArrivals, accordionAction);
 
-        //var orderFun = accordionHeightEq($('.order-mobile.accordion .accordion-wrap'), $('.order-mobile.accordion .accordion-toggle'));
-        //$(".order-mobile.accordion .accordion-toggle").on("click", orderFun, accordionAction);
-        /*$(".order-mobile.accordion .accordion-toggle").on("click", function(){
+                $('.left-filter--container.accordion').children().not('.active').find('.accordion-content').hide();
+                var leftFilter = { parent:'.left-filter--container.accordion', content: '.accordion-content' };
+                $(".left-filter--container.accordion .accordion-toggle").on("click", leftFilter, accordionAction);
+
+
+        $('.order-mobile.accordion').children().not('.active').find('.accordion-content').hide();
+        var orderFun = { parent:'.order-mobile.accordion', content: '.accordion-content' };
+        $(".order-mobile.accordion .accordion-toggle").on("click", orderFun, accordionAction);
+
+        $(".order-mobile.accordion .accordion-toggle").on("click", function() {
             $('.order-submit--mobile').hide().removeClass('active'); // СКРЫВАЕМ КНОПКИ ОФРМИТЬ ЗАКАЗ В МОБИЛЬНОМ ЭКРАНЕ ОФОРМЛЕНИЯ ЗАКАЗА
             var hrefActive = $(this).attr('href'),
+            $this = $(this),
             nextHref = $(this).parent().next().children().attr('href'),
             index = $(this).parent().index(),
             lastIndex = $(this).parent().parent().last().index(),
             firsttHref = $(this).parent().parent().children().first().children().attr('href'),
             parent = $(this).parent(),
-            top = 0;
-            if(activeFlag == 1){
+            top = 0,
+            countElements = parent.parent().children().length,
+            animateScrollDelay = 500;
+
+            $this.removeAttr('href');
+
+            if (activeFlag == 1) {
                 if(lastIndex == index){
                     $(firsttHref).toggle().toggleClass('active');
                     top = 0;
-                }else{
+                } else {
                     $(nextHref).toggle().toggleClass('active');
                     top = parent.offset().top - 15;
                 }
-            }else{
+            } else {
                 $(hrefActive).toggle().toggleClass('active');
                 if(index != 0 ) top =  parent.prev().offset().top - 15;
                 if(lastIndex == index) {
-                    //top = parent.offset().top - 49;//parent.prev().prev().offset().top;
-                    top = parent.offset().top - parent.prev().prev().outerHeight(true) - 15;
-                    //console.log( parent.prev().prev()[0] );
+                  // top = parent.parent().children().first().offset().top + orderFun.close*(countElements-1) + 15;
+                  top = parent.parent().children().first().offset().top + 49;   
                 }
             }
-            $('body,html').animate({scrollTop: top}, 100);
-            // var topEx = $(this).parent().offset().top;
-            // console.log('topEx:', topEx);
-            // //забираем идентификатор бока с атрибута href
-            // // var id  = $orderToggleMobile,
 
-            // //узнаем высоту от начала страницы до блока на который ссылается якорь
-            // var top = $(target).offset().top;
-            // console.log(top);
-            // //анимируем переход на расстояние - top за 1500 мс
-            // // $('body,html').animate({scrollTop: top}, 100);
-            
+            setTimeout( function() { $this.attr('href', hrefActive) }, 10 );
 
 
-
-
-            // var $this = $(this)
-            // var orderToggleMobile = $this.attr('href');
-            // console.log(orderToggleMobile);
-
-                // СКРЫВАЕМ КНОПКИ ОФРМИТЬ ЗАКАЗ В МОБИЛЬНОМ ЭКРАНЕ ОФОРМЛЕНИЯ ЗАКАЗА
-                // $('.order-submit--mobile').hide().removeClass('active');
-                // var nextTarget = $(this).parent().next().find('.accordion-toggle');
-                // console.log('nextTarget:', nextTarget);
-                
-                // console.log(target);
-
-                // window.location.href = target;
-                // $(location).attr('hash', target);
-                // console.log()
-                // $(target).toggle().toggleClass('active');
-
-                // console.log(target)
-                // //забираем идентификатор бока с атрибута href
-                // // var id  = $orderToggleMobile,
-
-                // //узнаем высоту от начала страницы до блока на который ссылается якорь
-                // var top = $(target).offset().top;
-                // console.log(top);
-                // //анимируем переход на расстояние - top за 1500 мс
-                // // $('body,html').animate({scrollTop: top}, 100);
-        });*/
+            $('body,html').animate({scrollTop: top}, animateScrollDelay);
+        });
 
 
 
 
 
-        // $(".accordion-toggle").on("click", function(e) {
-        //   e.preventDefault();
-        //   if ($(this).parent('.accordion-wrap').is(':last-child') && $(this).hasClass('in')) {
-        //     // alert('tada')
-        //     $(this).parents('.accordion').find('.accordion-wrap:first-child').find('.accordion-toggle').addClass("in");
-        //     $(this).parents('.accordion').find('.accordion-wrap:first-child').addClass('active');
-        //     $(this).removeClass("in");
-        //     $(this).parent('.accordion-wrap').removeClass("active");
-        //   }
-        //    else if ($(this).hasClass('in')) {
-        //       $(this).parent(".accordion-wrap").next('.accordion-wrap').find('.accordion-toggle').addClass("in");
-        //       $(this).parent(".accordion-wrap").next('.accordion-wrap').addClass('active');
 
-        //       $(this).removeClass("in");
-        //       $(this).parent('.accordion-wrap').removeClass("active");
-        //     } else {
-        //       $(this).parents('.accordion').find(".accordion-toggle").removeClass("in");
-        //       $(this).parents('.accordion').find(".accordion-wrap").removeClass("active");
-        //       $(this).addClass("in");
-        //       $(this).parent('.accordion-wrap').addClass("active");
-        //     }
-        //     // СКРЫВАЕМ КНОПКИ ОФРМИТЬ ЗАКАЗ В МОБИЛЬНОМ ЭКРАНЕ ОФОРМЛЕНИЯ ЗАКАЗА
-        //     $('.order-submit--mobile').hide().removeClass('active');
-        //     var $orderToggleMobile = $('.order-mobile .accordion-toggle.in'),
-        //     target = $orderToggleMobile.attr('href');
-        //     $(target).toggle().toggleClass('active');
 
-        //     //забираем идентификатор бока с атрибута href
-        //     var id  = $orderToggleMobile,
-
-        //     //узнаем высоту от начала страницы до блока на который ссылается якорь
-        //     top = $(id).offset().top - 74;
-
-        //     //анимируем переход на расстояние - top за 1500 мс
-        //     $('body,html').animate({scrollTop: top}, 100);
-        // });
-        // 
         // 
         // MOBILE LEFT MENU
         $("#menu")

@@ -3737,6 +3737,17 @@ a.back-main--link:hover:before {
   border-bottom: none;
   border-radius: 0;
 }
+@media (max-width: 991px) {
+  .card-page--left .left-filter--container .accordion-wrap {
+    width: 47vw;
+  }
+}
+@media (max-width: 771px) {
+  .card-page--left .left-filter--container .accordion-wrap {
+    width: 100vw;
+    padding-right: 9vw;
+  }
+}
 .card-page--left .left-filter--container .accordion-wrap.active .left-filter--link_accordion {
   text-decoration: none;
 }
