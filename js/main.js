@@ -25478,70 +25478,6 @@ else if (typeof define === 'function' && define.amd) {
           mouseDrag: true,
           touchDrag: true,
         });
-        // MOBILE LEFT MENU
-        $("#menu")
-            .mmenu({
-                extensions: ["pagedim-black"],
-                "slidingSubmenus": true,
-                navbar: {
-                    title: "МЕНЮ"
-                },
-                navbars: [true, {
-                  "position": "bottom",
-                    content: ["searchfield"]
-                }, {
-                    "position": "top",
-                    "content": [
-                        "<a class='fa leftmenu' href='/index.php?route=account/login'><i class='icon icon-account'></i></a>",
-                        "<a class='fa leftmenu' href='/index.php?route=information/contactus'><i class='icon icon-contacts'></i></a>"
-                    ]
-                }],
-                searchfield: {
-                    search: false,
-                    placeholder: "Поиск по сайту",
-                    resultsPanel: true,
-                    addTo: '#mm-1',
-                }
-            }, {
-                searchfield: {
-                    form: {
-                        name: "searchform",
-                        method: "get",
-                        action: "index.php?route=product/search",
-                    },
-                    input: {
-                        name: "search"
-                    },
-                    submit: true
-
-                }
-            }).on('click',
-                'a[href^="#/"]',
-                function() {
-                    return false;
-                }
-            );
-        $('.mm-next').click(function(){
-            $('.mm-navbar-bottom').hide();
-            $('.mm-navbar-top-2').hide();
-        });
-        $('.mm-navbar a').click(function(){
-            $('.mm-navbar-bottom').show();
-            $('.mm-navbar-top-2').show();
-        })
-        
-        $('[name="searchform"]').submit(function(e) {
-            // e.preventDeafault();
-            e.preventDefault();
-            var value = $('[name="search"]').val();
-            url = $('base').attr('href') + 'index.php?route=product/search';
-            // var value = $('#input-search').val();
-            if (value) {
-                url += '&search=' + encodeURIComponent(value);
-            }
-            location = url;
-            console.log(value);
-        });
 
         // СМЕНА ИЗОБРАЖЕНИЙ В КАТАЛОГЕ
         $(".catalog-wrap").on({
@@ -25823,7 +25759,145 @@ else if (typeof define === 'function' && define.amd) {
         //     //анимируем переход на расстояние - top за 1500 мс
         //     $('body,html').animate({scrollTop: top}, 100);
         // });
-    });
+        // 
+        // 
+        // MOBILE LEFT MENU
+        $("#menu")
+            .mmenu({
+                extensions: ["pagedim-black"],
+                "slidingSubmenus": true,
+                navbar: {
+                    title: "МЕНЮ"
+                },
+                navbars: [true, {
+                  "position": "bottom",
+                    content: ["searchfield"]
+                }, {
+                    "position": "top",
+                    "content": [
+                        "<a class='fa leftmenu' href='/index.php?route=account/login'><i class='icon icon-account'></i></a>",
+                        "<a class='fa leftmenu' href='/index.php?route=information/contactus'><i class='icon icon-contacts'></i></a>"
+                    ]
+                }],
+                searchfield: {
+                    search: false,
+                    placeholder: "Поиск по сайту",
+                    resultsPanel: true,
+                    addTo: '#mm-1',
+                }
+            },
+             {
+                // clone: true,
+                classNames: {
+                  fixedElements: {
+                     fixed: "header",
+                  }
+                },
+                searchfield: {
+                    form: {
+                        name: "searchform",
+                        method: "get",
+                        action: "index.php?route=product/search",
+                    },
+                    input: {
+                        name: "search"
+                    },
+                    submit: true
+
+                }
+            }).on('click',
+                'a[href^="#/"]',
+                function() {
+                    return false;
+                }
+            );
+
+        $('.mm-next').click(function(){
+            $('.mm-navbar-bottom').hide();
+            $('.mm-navbar-top-2').hide();
+        });
+        $('.mm-navbar a').click(function(){
+            $('.mm-navbar-bottom').show();
+            $('.mm-navbar-top-2').show();
+        })
+        
+        $('[name="searchform"]').submit(function(e) {
+            // e.preventDeafault();
+            e.preventDefault();
+            var value = $('[name="search"]').val();
+            url = $('base').attr('href') + 'index.php?route=product/search';
+            // var value = $('#input-search').val();
+            if (value) {
+                url += '&search=' + encodeURIComponent(value);
+            }
+            location = url;
+            console.log(value);
+        });
+        // END MOBILE MENU
+
+        var pinWidth = 991,
+        win = $(window),
+        menuL =  $(".desktop #cardPageLeft").outerWidth(),
+        menuR =  $(".desktop #cardPageRight").outerWidth(),
+        menu = $(".desktop #cardPageLeft, .desktop #cardPageRight");
+
+        if (win.width() > pinWidth) {
+            var pin = new $.Zebra_Pin($(menu), {
+                    top_spacing: 10,
+                    contain: true,
+                    z_index: 1
+            }),
+            $container = $('.card-page'),
+            additional_height = -100;
+            pin.update();
+        } else{
+            initPhotoSwipeFromDOM('.swiper-wrapper');
+        }
+        win.resize(function () {
+            if (win.width() > pinWidth) {
+                var pin = new $.Zebra_Pin($(menu), {
+                    top_spacing: 10,
+                    contain: true,
+                    z_index: 1
+                }),
+                $container = $('.card-page'),
+                additional_height = -100;
+                pin.update();
+            } else {
+                initPhotoSwipeFromDOM('.swiper-wrapper');
+            }
+
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 10,
+            loop: true
+        });
+
+
+        // win.resize(function () {
+        //     menuL =  $("#cardPageLeft").outerWidth();
+        //     menuR =  $("#cardPageRight").outerWidth();
+        //     // console.log('menuL:', menuL);
+        //     // console.log('menuR:', menuR);
+        //     pin.update();
+        //     // if (win.width() < 1200) {
+        //     //     menuL =  $(".desktop #cardPageLeft").css("wight", "25%");
+        //     //     menuR =  $(".desktop #cardPageRight").css("wight", "25%");
+        //     //     console.log('alert');
+        //     // };
+        //     //     menuL =  $(".desktop #cardPageLeft").css("wight", "10%");
+        //     //     menuR =  $(".desktop #cardPageRight").css("wight", "10%");
+        //     // console.log('menuL:', menuL);
+        //     // console.log('menuR:', menuR);
+        // });
+
+    });  // end Document ready
+
 
     var $forms = $('.form-wrap'), $inputs = $forms.find('textarea, input:not([type=submit],[type=reset],[type=button],[type=radio],[type=checkbox])');
     $inputs.each(function (k, el) {
@@ -25845,28 +25919,10 @@ else if (typeof define === 'function' && define.amd) {
 
 // onDocumentReady function bind
 $(document).ready(function() {
-    var stickWidth = 991;
-    var win = $(window);
-    var menuL =  $(".desktop #cardPageLeft").outerWidth();
-    console.log(menuL);
-    var menu = $(".desktop #cardPageLeft, .desktop #cardPageRight");
-    var pin = new $.Zebra_Pin($(menu), {
-            top_spacing: 10,
-            contain: true,
-            z_index: 1
-        }),
-        $container = $('.pin1-container'),
-        additional_height = -100;
 
-        if (win.width() > stickWidth) {
-            menu.stick_in_parent(options);
-        }
-        $(window).resize(function () {
-            console.log('lalal');
-            pin.update();
-            menuL =  $(".desktop #cardPageLeft").outerWidth();
-            console.log(menuL);
-        });
+
+
+
 
 
   // Add class on focus Subscrible - Добавляем класс на кнопку при фокусе на инпут подписки в мобильном
@@ -25876,6 +25932,9 @@ $(document).ready(function() {
     });
 
   // var stickWidth = 991;
+  //   // if (win.width() > stickWidth) {
+  //     menu.stick_in_parent(options);
+  // }
   // var win = $(window);
 
   //   //menu.trigger("sticky_kit:recalc");
@@ -25904,19 +25963,12 @@ $(document).ready(function() {
 
   // $("#cardPageLeft, #cardPageRight").stick_in_parent();
 
-  if (document.documentElement.clientWidth >= 768) {
-    $(".desktop #LeftFilter").stick_in_parent();
-  };
+  // if (document.documentElement.clientWidth >= 768) {
+  //   $(".desktop #LeftFilter").stick_in_parent();
+  // };
 
 
-  var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 10,
-        loop: true
-    });
+
   $('body').click(function(){
   })
   $(window).resize(function() {
@@ -25924,7 +25976,7 @@ $(document).ready(function() {
       if (document.documentElement.clientWidth < 991) {
           // alert('resize');
           
-        initPhotoSwipeFromDOM('.swiper-wrapper');
+        
           
       };
     });
