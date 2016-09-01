@@ -25279,7 +25279,7 @@ else if (typeof define === 'function' && define.amd) {
                     bgOpacity: 1,
                     tapToClose: true,
                     tapToToggleControls: false,
-                    barsSize: {top:0,bottom:0},
+                    barsSize: {top:10,bottom:10},
 
                     mainClass: 'pswp--minimal--dark',
 
@@ -25845,34 +25845,29 @@ else if (typeof define === 'function' && define.amd) {
 
 // onDocumentReady function bind
 $(document).ready(function() {
+    var stickWidth = 991;
+    var win = $(window);
+    var menuL =  $(".desktop #cardPageLeft").outerWidth();
+    console.log(menuL);
     var menu = $(".desktop #cardPageLeft, .desktop #cardPageRight");
-    var
-     
-        pin = new $.Zebra_Pin($(menu), {
+    var pin = new $.Zebra_Pin($(menu), {
             top_spacing: 10,
-            contain: true
+            contain: true,
+            z_index: 1
         }),
         $container = $('.pin1-container'),
         additional_height = -100;
-     // new $.Zebra_Pin(".desktop #cardPageLeft");
-    /*var menuL = $(".desktop #cardPageLeft");
-    var menuR = $(".desktop #cardPageRight");
-    var menuWidthL = menuL.outerWidth();
-    var menuWidthR = menuR.outerWidth();
-    var menuLCh = $('.card-page--left_desctop');
-    menuL.wrap('<div class="leftStucky"></div>');
-    var menuWrapL = $('.leftStucky');*/
-    /*menuWrapL.css({
-        width: menuWidthL,
-        position: 'static'
-    });
-    menuLCh.css({
-        position: 'fixed',
-    });*/
 
+        if (win.width() > stickWidth) {
+            menu.stick_in_parent(options);
+        }
+        $(window).resize(function () {
+            console.log('lalal');
+            pin.update();
+            menuL =  $(".desktop #cardPageLeft").outerWidth();
+            console.log(menuL);
+        });
 
-
-    // console.log(menuWidth);
 
   // Add class on focus Subscrible - Добавляем класс на кнопку при фокусе на инпут подписки в мобильном
     $("#subscribeemail").focus(function(){
