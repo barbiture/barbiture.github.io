@@ -776,7 +776,7 @@ span.placeholder-for-ie {
 .catalog-image--first img,
 .catalog-image--second img,
 .cs-select-bml.cs-skin-overlay .cs-options > ul.container,
-.modal-main--contacts,
+.modal-dialog .modal-main--contacts,
 .cart.cart-modal {
   position: absolute;
   left: 50%;
@@ -4452,6 +4452,9 @@ body.modal-open {
   position: relative;
   color: #000;
 }
+.modal-dialog .modal-main--login {
+  position: absolute;
+}
 .modal-main {
   position: relative;
   font-size: 14px;
@@ -4490,8 +4493,14 @@ body.modal-open {
 }
 .modal-main--login {
   text-align: left;
-  position: absolute;
   right: 5%;
+}
+.modal-main--login .input-wrap--input ~ .visible-ie8.visible-ie9.placeholder-for-ie {
+  top: 20px;
+}
+.modal-main--login .input-wrap--input:focus ~ .visible-ie8.visible-ie9.placeholder-for-ie,
+.modal-main--login .input-wrap--input.active ~ .visible-ie8.visible-ie9.placeholder-for-ie {
+  top: 0;
 }
 .modal-main--login .btn-modal--close {
   top: 85px;
@@ -4576,7 +4585,6 @@ body.modal-open {
   text-transform: uppercase;
 }
 .modal-main--contacts {
-  position: absolute;
   text-align: center;
 }
 .modal-main--contacts .btn-modal--close {
