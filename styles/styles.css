@@ -3672,6 +3672,9 @@ a.back-main--link:hover:before {
 .left-filter--checkbox input[type=checkbox]:checked + label:before {
   background-color: #006830;
 }
+.tablet .card-page--left .left-filter--container .accordion-wrap {
+  width: 55vw;
+}
 .tablet .card-page--left {
   float: right;
   width: 50%;
@@ -6621,13 +6624,13 @@ body .pswp--minimal--dark .pswp__top-bar {
     display: block;
   }
   .mm-menu {
-    width: 80%;
+    width: 80vw;
     min-width: 140px;
     max-width: 440px;
   }
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate3d(80%, 0, 0);
-    transform: translate3d(80%, 0, 0);
+    -webkit-transform: translate3d(80vw, 0, 0);
+    transform: translate3d(80vw, 0, 0);
   }
   .mm-menu.mm-autoheight.mm-bottom,
   .mm-menu.mm-autoheight.mm-top {
@@ -7178,10 +7181,6 @@ body .pswp--minimal--dark .pswp__top-bar {
   .mm-panels > .mm-resultspanel:not(.mm-opened) {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-  .mm-menu .mm-search input {
-    background: rgba(0, 0, 0, 0.05);
-    color: rgba(0, 0, 0, 0.7);
   }
   .mm-menu .mm-noresultsmsg {
     color: rgba(0, 0, 0, 0.3);
@@ -7844,10 +7843,6 @@ body .pswp--minimal--dark .pswp__top-bar {
   .mm-menu.mm-pageshadow.mm-theme-white:after {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  .mm-menu.mm-theme-white .mm-search input {
-    background: rgba(0, 0, 0, 0.05);
-    color: rgba(0, 0, 0, 0.6);
-  }
   .mm-menu.mm-theme-white .mm-indexer a,
   .mm-menu.mm-theme-white .mm-noresultsmsg {
     color: rgba(0, 0, 0, 0.3);
@@ -8426,7 +8421,7 @@ body .pswp--minimal--dark .pswp__top-bar {
   display: block;
 }
 .tablet .mm-menu {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 440px;
 }
@@ -8486,13 +8481,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(100%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-0 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 0;
 }
 .tablet.mm-opening.mm-columns-0 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns .mm-panels > .mm-panel.mm-columns-1 {
   -webkit-transform: translate3d(100%, 0, 0);
@@ -8504,13 +8499,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(200%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-1 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 440px;
 }
 .tablet.mm-opening.mm-columns-1 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns-1 .mm-panels > .mm-panel {
   width: 100%;
@@ -8525,13 +8520,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(300%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-2 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 880px;
 }
 .tablet.mm-opening.mm-columns-2 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns-2 .mm-panels > .mm-panel {
   width: 50%;
@@ -8546,13 +8541,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(400%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-3 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 1320px;
 }
 .tablet.mm-opening.mm-columns-3 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns-3 .mm-panels > .mm-panel {
   width: 33.34%;
@@ -8567,13 +8562,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(500%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-4 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 1760px;
 }
 .tablet.mm-opening.mm-columns-4 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns-4 .mm-panels > .mm-panel {
   width: 25%;
@@ -8588,13 +8583,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(600%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-5 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 2200px;
 }
 .tablet.mm-opening.mm-columns-5 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns-5 .mm-panels > .mm-panel {
   width: 20%;
@@ -8609,13 +8604,13 @@ body .pswp--minimal--dark .pswp__top-bar {
   transform: translate3d(700%, 0, 0);
 }
 .tablet .mm-menu.mm-columns-6 {
-  width: 80%;
+  width: 50vw;
   min-width: 140px;
   max-width: 2640px;
 }
 .tablet.mm-opening.mm-columns-6 .mm-slideout {
-  -webkit-transform: translate3d(80%, 0, 0);
-  transform: translate3d(80%, 0, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0);
 }
 .tablet .mm-menu.mm-columns-6 .mm-panels > .mm-panel {
   width: 16.67%;
@@ -8983,10 +8978,6 @@ body .pswp--minimal--dark .pswp__top-bar {
 .tablet .mm-panels > .mm-resultspanel:not(.mm-opened) {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-}
-.tablet .mm-menu .mm-search input {
-  background: rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.7);
 }
 .tablet .mm-menu .mm-noresultsmsg {
   color: rgba(0, 0, 0, 0.3);
@@ -9649,10 +9640,6 @@ body .pswp--minimal--dark .pswp__top-bar {
 .tablet .mm-menu.mm-pageshadow.mm-theme-white:after {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.tablet .mm-menu.mm-theme-white .mm-search input {
-  background: rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.6);
-}
 .tablet .mm-menu.mm-theme-white .mm-indexer a,
 .tablet .mm-menu.mm-theme-white .mm-noresultsmsg {
   color: rgba(0, 0, 0, 0.3);
@@ -9716,10 +9703,6 @@ body .pswp--minimal--dark .pswp__top-bar {
 .tablet .mm-menu.mm-pageshadow.mm-theme-black:after {
   content: none;
   display: none;
-}
-.tablet .mm-menu.mm-theme-black .mm-search input {
-  background: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.6);
 }
 .tablet .mm-menu.mm-theme-black .mm-indexer a,
 .tablet .mm-menu.mm-theme-black .mm-noresultsmsg {
