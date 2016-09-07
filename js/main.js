@@ -25548,7 +25548,7 @@ else if (typeof define === 'function' && define.amd) {
               activeFlag = 1;
               curent.removeClass('active').children().eq(1).slideUp();
               next.addClass('active').children().eq(1).slideDown();
-              
+
               if ( index == lastIndex ){
                 curent.removeClass('active');
                 first.addClass('active').children().eq(1).slideDown();
@@ -25560,15 +25560,19 @@ else if (typeof define === 'function' && define.amd) {
                 curent.addClass('active').children().eq(1).slideDown();
             }
         }
+        // console.log($('.new-arrivals.accordion').children().length);
+        if ($('.new-arrivals.accordion').children().length > 1) {
+            var newArrivals = { parent:'.new-arrivals.accordion', content: '.accordion-content' };
+            $('.new-arrivals.accordion').children().not('.active').find('.accordion-content').hide();
+            $(".new-arrivals.accordion .accordion-toggle").on("click", newArrivals, accordionAction);
+        }
 
-
-        $('.new-arrivals.accordion').children().not('.active').find('.accordion-content').hide();
-        var newArrivals = { parent:'.new-arrivals.accordion', content: '.accordion-content' };
-        $(".new-arrivals.accordion .accordion-toggle").on("click", newArrivals, accordionAction);
-
-                $('.left-filter--container.accordion').children().not('.active').find('.accordion-content').hide();
-                var leftFilter = { parent:'.left-filter--container.accordion', content: '.accordion-content' };
-                $(".left-filter--container.accordion .accordion-toggle").on("click", leftFilter, accordionAction);
+        if ($('.left-filter--container.accordion').children().length > 1) {
+            $('.left-filter--container.accordion').children().not('.active').find('.accordion-content').hide();
+            var leftFilter = { parent:'.left-filter--container.accordion', content: '.accordion-content' };
+            $(".left-filter--container.accordion .accordion-toggle").on("click", leftFilter, accordionAction);
+        }
+        
 
 
         $('.order-mobile.accordion').children().not('.active').find('.accordion-content').hide();
