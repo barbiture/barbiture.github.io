@@ -2854,6 +2854,7 @@ div.cs-skin-border {
   top: 0;
 }
 a.back-main--link {
+  cursor: pointer;
   position: relative;
   color: #777777;
   line-height: 8px;
