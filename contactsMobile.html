@@ -20,7 +20,7 @@
   <!-- <link rel="stylesheet" href="styles/default-skin.css"> -->
 </head>
 
-<body>
+<body class="body-bml">
   <div id="preloader">
     <div class="load-wrap">
       <div class=""></div>
@@ -182,36 +182,36 @@
     </div>
   </div>
 <div class="modal-main--contacts inner-wrap inner-wrap--mobile">
-<div class="inner-wrap">
-  <div class="container">
-    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-      <div class="inner-wrap--title">
-        <h1 class="h1 text-center">Контакты</h1>
+  <div class="inner-wrap">
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+        <div class="inner-wrap--title">
+          <h1 class="h1 text-center">Контакты</h1>
+        </div>
+        <p>Мы ответим на все интересующие вас вопросы ежедневно с 10:00 до 22:00</p>
+        <a class="modal-main--tel" href="tel:88007006265">8 (800) 700-62-65</a>
+        <p>Не получилось связаться в рабочее время? Не проблема!</br>Напишите нам письмо <a href="mailto:help@bml.com">help@bml.com</a> или заполните пожалуйста форму обратной связи.</p>
+        <form id="formx_contact" method="POST" class="form-wrap">
+          <div class="input-wrap input-wrap--animate">
+            <input id="input-name" name="name" class="input-wrap--input" placeholder="Введите ваше имя*" type="text">
+            <label for="input-name" class="input-wrap--label"></label>
+            <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите ваше имя*</span>
+          </div>
+          <div class="input-wrap input-wrap--animate">
+            <input id="input-eml" name="email" class="input-wrap--input" placeholder="Введите ваш email*" type="text">
+            <label for="input-eml" class="input-wrap--label"></label>
+            <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите ваш email*</span>
+          </div>
+          <div class="textarea-wrap">
+            <label for="text">Текст сообщения</label>
+            <textarea name="enquiry" id="" cols="30" rows="5" placeholder="Пр. Я очень доволен покупкой, но хотел бы сделать ваш магазин еще лучше."></textarea>
+          </div>
+          <div class="g-recaptcha sec" data-size="50" data-sitekey="6LeOrx0TAAAAAHt2R_UzMrE50RUfbPKBBbExHUHh"></div>
+          <button data-loading-text="Отправляем сообщение..." class="btn-bml btn-reset btn-green btn-submit">Отправить</button>
+        </form>
       </div>
-      <p>Мы ответим на все интересующие вас вопросы ежедневно с 10:00 до 22:00</p>
-      <a class="modal-main--tel" href="tel:88007006265">8 (800) 700-62-65</a>
-      <p>Не получилось связаться в рабочее время? Не проблема!</br>Напишите нам письмо <a href="mailto:help@bml.com">help@bml.com</a> или заполните пожалуйста форму обратной связи.</p>
-      <form id="formx_contact" method="POST" class="form-wrap">
-        <div class="input-wrap input-wrap--animate">
-          <input id="input-name" name="name" class="input-wrap--input" placeholder="Введите ваше имя*" type="text">
-          <label for="input-name" class="input-wrap--label"></label>
-          <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите ваше имя*</span>
-        </div>
-        <div class="input-wrap input-wrap--animate">
-          <input id="input-eml" name="email" class="input-wrap--input" placeholder="Введите ваш email*" type="text">
-          <label for="input-eml" class="input-wrap--label"></label>
-          <span class="visible-ie8 visible-ie9 placeholder-for-ie">Введите ваш email*</span>
-        </div>
-        <div class="textarea-wrap">
-          <label for="text">Текст сообщения</label>
-          <textarea name="enquiry" id="" cols="30" rows="5" placeholder="Пр. Я очень доволен покупкой, но хотел бы сделать ваш магазин еще лучше."></textarea>
-        </div>
-        <div class="g-recaptcha sec" data-size="50" data-sitekey="6LeOrx0TAAAAAHt2R_UzMrE50RUfbPKBBbExHUHh"></div>
-        <button data-loading-text="Отправляем сообщение..." class="btn-bml btn-reset btn-green btn-submit">Отправить</button>
-      </form>
+      </div>
     </div>
-  </div>
-  </div>
 </div>
 <footer id="footer" class="footer footer-inner mm-slideout">
   <div class="footer-container">

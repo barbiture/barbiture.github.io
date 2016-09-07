@@ -263,6 +263,7 @@ body .pika-single .pika-title {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .PTreg,
+.body-bml,
 ._404 p,
 body .pika-single,
 .small-bml,
@@ -272,6 +273,7 @@ body .pika-single,
 .textarea-wrap label,
 input,
 textarea,
+.input-wrap--animate .placeholder-for-ie,
 .input-wrap--input,
 .checkbox-wrap,
 .notification,
@@ -587,6 +589,7 @@ div.h6 {
   text-align: left;
 }
 .textarea-wrap label {
+  font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -4410,6 +4413,23 @@ a.back-main--link:hover:before {
     margin: 25px auto 0;
   }
 }
+.container-mobile--form {
+  width: 420px;
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .container-mobile--form {
+    width: 50vw;
+  }
+}
+@media (max-width: 767px) {
+  .container-mobile--form {
+    width: 70vw;
+  }
+}
+.tablet .container-mobile--form {
+  width: 70vw;
+}
 .main--login {
   margin-top: 50px;
 }
@@ -4638,7 +4658,7 @@ body.modal-open {
 .modal-main--contacts .textarea-wrap label {
   text-transform: none;
   margin-bottom: 11px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .modal-main--contacts .textarea-wrap textarea {
   height: 190px;
