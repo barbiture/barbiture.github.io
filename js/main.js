@@ -25359,6 +25359,7 @@ else if (typeof define === 'function' && define.amd) {
             offset: 250
         });
 
+
         /* CSS Tricks smooth scrolling : http://css-tricks.com/snippets/jquery/smooth-scrolling/ */
         $('.link-animate').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -25565,12 +25566,16 @@ else if (typeof define === 'function' && define.amd) {
             var newArrivals = { parent:'.new-arrivals.accordion', content: '.accordion-content' };
             $('.new-arrivals.accordion').children().not('.active').find('.accordion-content').hide();
             $(".new-arrivals.accordion .accordion-toggle").on("click", newArrivals, accordionAction);
+        }else{
+            $('.new-arrivals.accordion').children().find('.new-arrivals--accordion').addClass('single-accordion');
         }
 
         if ($('.left-filter--container.accordion').children().length > 1) {
             $('.left-filter--container.accordion').children().not('.active').find('.accordion-content').hide();
             var leftFilter = { parent:'.left-filter--container.accordion', content: '.accordion-content' };
             $(".left-filter--container.accordion .accordion-toggle").on("click", leftFilter, accordionAction);
+        }else{
+            $('.new-arrivals.accordion').children().find('.new-arrivals--accordion').addClass('single-accordion')
         }
         
 
@@ -25876,17 +25881,20 @@ $('#registr-link').click(function() {
   $('#registr-container').show();
   $('#input-emlR').focus();
 });
+
 $('#forgot-link').click(function() {
   $('#login-container').hide();
   $('#forgot-container').show();
   $('#input-emlF').focus();
 });
+
 $('.login-link').click(function() {
   $('#login-container').show();
   $('#forgot-container').hide();
   $('#registr-container').hide();
   $('#input-eml').focus();
 });
+
 $('#loginModal').on('shown.bs.modal', function () {
   //#myInput - id элемента, которому необходимо установить фокус
   $('#input-eml').focus();
