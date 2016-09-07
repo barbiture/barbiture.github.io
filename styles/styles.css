@@ -4416,6 +4416,7 @@ a.back-main--link:hover:before {
 .container-mobile--form {
   width: 420px;
   margin: 0 auto;
+  height: 454px;
 }
 @media (max-width: 991px) {
   .container-mobile--form {
