@@ -264,15 +264,17 @@ body .pika-single .pika-title {
 /*FONTS*/
 .PTNreg,
 .header-navbar > li > a {
-  font-family: 'PTSansNarrow', sans-serif;
+  font-family: 'PTSansNarrowReg', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
+  transform: translateZ(0);
 }
 .PTNbold,
 .cs-select-bml.cs-skin-overlay .cs-options--wrap--title {
-  font-family: 'PTSansNarrow', sans-serif;
+  font-family: 'PTSansNarrowBold', sans-serif;
   font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
+  transform: translateZ(0);
 }
 .PTreg,
 .body-bml,
@@ -334,7 +336,7 @@ a.back-main--link,
 .order-tabs--nav,
 .cart,
 .cart-price--old {
-  font-family: 'PTSans', sans-serif;
+  font-family: 'PTSansReg', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -362,7 +364,7 @@ div.h6,
 .cart-title,
 .cart-price,
 .cart-action--price span {
-  font-family: 'PTSans', sans-serif;
+  font-family: 'PTSansBold', sans-serif;
   font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -517,6 +519,29 @@ div.h6 {
 }
 .pr0 {
   padding-right: 0 !important;
+}
+/*Buttons*/
+/*Animate Buttons*/
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all 0.3s ease-out;
+}
+.waves-effect:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.waves-effect.waves-light {
+  background-color: rgba(255, 255, 255, 0.45);
 }
 .btn-reset {
   border: none;
