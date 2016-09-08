@@ -265,14 +265,12 @@ body .pika-single .pika-title {
 .PTNreg,
 .header-navbar > li > a {
   font-family: 'PTSansNarrowReg', sans-serif;
-  font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
   transform: translateZ(0);
 }
 .PTNbold,
 .cs-select-bml.cs-skin-overlay .cs-options--wrap--title {
   font-family: 'PTSansNarrowBold', sans-serif;
-  font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
   transform: translateZ(0);
 }
@@ -337,7 +335,6 @@ a.back-main--link,
 .cart,
 .cart-price--old {
   font-family: 'PTSansReg', sans-serif;
-  font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .PTbold,
@@ -365,7 +362,6 @@ div.h6,
 .cart-price,
 .cart-action--price span {
   font-family: 'PTSansBold', sans-serif;
-  font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .BodoniC,

@@ -1,6 +1,8 @@
 /* Webfont: ITCBodoniSeventytwoW10-It */@font-face {
     font-family: 'PTSansNarrowReg';
     src: url('PT_Sans-Narrow-Web-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
     text-rendering: optimizeLegibility;
 }
 
