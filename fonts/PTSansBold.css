@@ -1,8 +1,6 @@
 /* Webfont: ITCBodoniSeventytwoW10-It */@font-face {
-    font-family: 'PTSansBold';
+    font-family: 'PTSans';
     src: url('PT_Sans-Web-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 700;
     text-rendering: optimizeLegibility;
 }
 
