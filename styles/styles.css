@@ -3,10 +3,8 @@
 @import '../fonts/BodoniIt.css';
 @import '../fonts/BodoniBd.css';
 @import '../fonts/BodoniBdIt.css';
-@import '../fonts/PTSansNarrow.css';
-@import '../fonts/PTSansNarrowBold.css';
-@import '../fonts/PTSansReg.css';
-@import '../fonts/PTSansBold.css';
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700italic&subset=latin,cyrillic,cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext,cyrillic);
 /*COLORS*/
 .cart-empty img {
   margin-top: 50px;
@@ -264,7 +262,7 @@ body .pika-single .pika-title {
 /*FONTS*/
 .PTNreg,
 .header-navbar > li > a {
-  font-family: 'PTSansNarrowReg', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-transform: translateZ(0);
@@ -274,7 +272,7 @@ body .pika-single .pika-title {
 }
 .PTNbold,
 .cs-select-bml.cs-skin-overlay .cs-options--wrap--title {
-  font-family: 'PTSansNarrowBold', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-transform: translateZ(0);
@@ -341,7 +339,7 @@ a.back-main--link,
 .order-tabs--nav,
 .cart,
 .cart-price--old {
-  font-family: 'PTSansReg', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -371,7 +369,7 @@ div.h6,
 .cart-title,
 .cart-price,
 .cart-action--price span {
-  font-family: 'PTSansBold', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -819,7 +817,6 @@ span.placeholder-for-ie {
 .center-xy,
 #preloader .load-wrap,
 .card-page--right_gallery.nav img,
-.card-page .image-height img,
 .share-block--shares,
 .salwort-images--inner_center {
   position: absolute;
@@ -1791,22 +1788,32 @@ html.mm-opening #header {
 .card-page .image-height {
   text-align: center;
   white-space: nowrap;
-  padding: 0 60px;
   position: relative;
 }
 .card-page .image-height a {
   font-size: 0;
-  line-height: 0;
   width: 100%;
   height: 100%;
+  display: block;
+}
+.card-page .image-height a:after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
 }
 .card-page .image-height img {
+  display: inline-block;
+  vertical-align: middle;
   max-width: 90%;
   width: auto;
-  max-height: 788px;
   height: auto;
   max-height: 75%;
-  margin-top: 32px;
+  margin-top: 64px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .tablet .share-block--die {
   display: none;
