@@ -1,10 +1,42 @@
 @charset "UTF-8";
-@import '../fonts/Bodoni.css';
-@import '../fonts/BodoniIt.css';
-@import '../fonts/BodoniBd.css';
-@import '../fonts/BodoniBdIt.css';
+/* Webfont: ITCBodoniSeventytwoW10-It */
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700italic&subset=latin,cyrillic,cyrillic-ext);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext,cyrillic);
+@font-face {
+  font-family: 'BodoniIt';
+  src: url('../fonts/BodoniIt.eot');
+  src: url('../fonts/BodoniIt.eot?#iefix') format('embedded-opentype'), url('../fonts/BodoniIt.woff') format('woff'), url('../fonts/BodoniIt.ttf') format('truetype'), url('../fonts/BodoniIt.svg#BodoniIt') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ITCBodoniSeventytwoW10-BdIt */
+@font-face {
+  font-family: 'BodoniBdIt';
+  src: url('../fonts/BodoniBdIt.eot');
+  src: url('../fonts/BodoniBdIt.eot?#iefix') format('embedded-opentype'), url('../fonts/BodoniBdIt.woff') format('woff'), url('../fonts/BodoniBdIt.ttf') format('truetype'), url('../fonts/BodoniBdIt.svg#BodoniBdIt') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ITCBodoniSeventytwoW10-Bd */
+@font-face {
+  font-family: 'BodoniBd';
+  src: url('../fonts/BodoniBd.eot');
+  src: url('../fonts/BodoniBd.eot?#iefix') format('embedded-opentype'), url('../fonts/BodoniBd.woff') format('woff'), url('../fonts/BodoniBd.ttf') format('truetype'), url('../fonts/BodoniBd.svg#BodoniBd') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ITCBodoniSeventytwoW10 */
+@font-face {
+  font-family: 'Bodoni';
+  src: url('../fonts/Bodoni.eot');
+  src: url('../fonts/Bodoni.eot?#iefix') format('embedded-opentype'), url('../fonts/Bodoni.woff') format('woff'), url('../fonts/Bodoni.ttf') format('truetype'), url('../fonts/Bodoni.svg#Bodoni') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
 /*COLORS*/
 .cart-empty img {
   margin-top: 50px;
@@ -3230,8 +3262,11 @@ a.back-main--link:hover:before {
 .tablet .left-filter--show .left-filter--mobile .left-filter--container ul {
   padding-left: 20px;
 }
+.category-60 .inner-wrap--filter-title {
+  margin-top: -36px;
+}
 .brand-wrap .catalog-container--wrap_filter-title {
-  margin-top: -39px;
+  margin-top: -60px;
   padding-top: 0;
 }
 .brand-wrap .catalog-container {

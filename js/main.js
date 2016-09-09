@@ -23844,6 +23844,7 @@ else if (typeof define === 'function' && define.amd) {
 /*STICK FOOTER*/
 /*MAIN JS*/
 (function($) {
+
     $(document).ready(function() {
       moment.locale('ru'); /*ВКЛЮЧАЕМ РУССКУЮ ЛОКАЛИЗАЦИЮ ДЛЯ ДНЯ НЕДЕЛИ  <SCRIPT SRC="JS/MOMENT-LOCALE-RU.JS"></SCRIPT> */
       var picker = new Pikaday({
@@ -24663,9 +24664,7 @@ $(document).ready(function() {
 
   // $("#cardPageLeft, #cardPageRight").stick_in_parent();
 
-  if (document.documentElement.clientWidth >= 768) {
-    $(".desktop #LeftFilter").stick_in_parent();
-  };
+
 
 
 
@@ -24742,9 +24741,15 @@ $('#searchModal').on('show.bs.modal', function() {
 
 $(window).load(function() { // makes sure the whole site is loaded
   // alert('tada');
+
   $('#status').fadeOut(); // will first fade out the loading animation
   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
   $('body').delay(350).css({
     'overflow': 'visible'
   });
+
+  if (document.documentElement.clientWidth >= 768) {
+      // alert('test');
+    $(".desktop #LeftFilter").stick_in_parent();
+  };
 })
