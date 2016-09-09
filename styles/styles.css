@@ -265,13 +265,21 @@ body .pika-single .pika-title {
 .PTNreg,
 .header-navbar > li > a {
   font-family: 'PTSansNarrowReg', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
   transform: translateZ(0);
 }
 .PTNbold,
 .cs-select-bml.cs-skin-overlay .cs-options--wrap--title {
   font-family: 'PTSansNarrowBold', sans-serif;
+  font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
   transform: translateZ(0);
 }
 .PTreg,
@@ -280,7 +288,6 @@ body .pika-single .pika-title {
 body .pika-single,
 .small-bml,
 .product-desc,
-.btn-green,
 .btn-cart,
 .textarea-wrap label,
 input,
@@ -335,6 +342,7 @@ a.back-main--link,
 .cart,
 .cart-price--old {
   font-family: 'PTSansReg', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .PTbold,
@@ -343,6 +351,8 @@ h6.h6,
 div.h6,
 .product-name,
 .product-price,
+.btn-submit,
+.btn-green,
 .btn-border,
 .header-navbar--dropdown_lists ul a,
 .header-navbar--dropdown_lists--first ul a,
@@ -362,6 +372,7 @@ div.h6,
 .cart-price,
 .cart-action--price span {
   font-family: 'PTSansBold', sans-serif;
+  font-weight: 700;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .BodoniC,
@@ -564,7 +575,7 @@ a.btn-bml:hover {
   color: #fff;
   background-color: #006830;
   text-transform: uppercase;
-  line-height: 48px;
+  line-height: 46px;
   height: 48px;
   font-size: 14px;
   border-width: 0;
@@ -808,17 +819,16 @@ span.placeholder-for-ie {
 .center-xy,
 #preloader .load-wrap,
 .card-page--right_gallery.nav img,
-.card-page .image-height a,
 .card-page .image-height img,
 .share-block--shares,
 .salwort-images--inner_center {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
 .border,
 .select-style,
@@ -1569,8 +1579,10 @@ html.mm-opening #header {
   z-index: 1 !important;
   overflow: visible;
   text-align: center;
+  height: 100%;
   height: 100vh;
   float: right;
+  width: 25%;
   width: 25vw;
   display: table;
   vertical-align: middle;
@@ -1579,6 +1591,7 @@ html.mm-opening #header {
 }
 @media (max-width: 1199px) {
   .card-page--right {
+    width: 33%;
     width: 33vw;
   }
 }
@@ -1729,6 +1742,7 @@ html.mm-opening #header {
   padding-right: 6%;
   margin: 0 auto 0;
   overflow: hidden;
+  min-height: 100%;
   min-height: 100vh;
   position: relative;
 }
@@ -1737,6 +1751,7 @@ html.mm-opening #header {
 }
 @media (max-width: 767px) {
   .card-page {
+    min-height: 90%;
     min-height: 90vh;
   }
 }
@@ -1770,6 +1785,7 @@ html.mm-opening #header {
   min-height: 100%;
 }
 .card-page .gallery {
+  min-height: 100%;
   min-height: 100vh;
 }
 .card-page .image-height {
@@ -1791,8 +1807,6 @@ html.mm-opening #header {
   height: auto;
   max-height: 75%;
   margin-top: 32px;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
 }
 .tablet .share-block--die {
   display: none;
@@ -2692,6 +2706,9 @@ div.cs-skin-border {
   border-right: 2px solid #777777;
   border-top: 2px solid #777777;
   z-index: 10;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 8px;
   height: 8px;
@@ -2700,6 +2717,9 @@ div.cs-skin-border {
   margin-bottom: 1px;
 }
 .footer-inner--title.footer-inner--toggle.active:after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
   transform: rotate(135deg);
   margin-bottom: 3px;
 }
@@ -2897,6 +2917,9 @@ a.back-main--link:before {
   border-right: 2px solid #777777;
   border-top: 2px solid #777777;
   z-index: 10;
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
   transform: rotate(225deg);
   width: 8px;
   height: 8px;
@@ -3149,10 +3172,18 @@ a.back-main--link:hover:before {
   padding: 0 15px;
 }
 .tablet .catalog {
+  -webkit-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .tablet .catalog-hide {
+  -webkit-transform: translate3d(150%, 0, 0);
+  -ms-transform: translate3d(150%, 0, 0);
+  -o-transform: translate3d(150%, 0, 0);
   transform: translate3d(150%, 0, 0);
 }
 .tablet .catalog-hide div {
@@ -3161,7 +3192,12 @@ a.back-main--link:hover:before {
 .tablet .left-filter--mobile .left-filter--container {
   position: absolute;
   left: -100em;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
+  -webkit-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 .tablet .left-filter--new .left-filter--container {
@@ -3178,6 +3214,9 @@ a.back-main--link:hover:before {
   background-color: #fff;
   z-index: 9;
   padding-left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .tablet .left-filter--show .left-filter--mobile .left-filter--container .inner-wrap--filter-title,
@@ -3719,6 +3758,7 @@ a.back-main--link:hover:before {
   background-color: #006830;
 }
 .tablet .card-page--left .left-filter--container .accordion-wrap {
+  width: 55%;
   width: 55vw;
 }
 .tablet .card-page--left {
@@ -3733,8 +3773,10 @@ a.back-main--link:hover:before {
 .card-page--left {
   z-index: 1;
   text-align: left;
+  height: 100%;
   height: 100vh;
   float: left;
+  width: 25%;
   width: 25vw;
   display: table;
   vertical-align: middle;
@@ -3743,6 +3785,7 @@ a.back-main--link:hover:before {
 }
 @media (max-width: 1199px) {
   .card-page--left {
+    width: 33%;
     width: 33vw;
   }
 }
@@ -3788,12 +3831,15 @@ a.back-main--link:hover:before {
 }
 @media (max-width: 991px) {
   .card-page--left .left-filter--container .accordion-wrap {
+    width: 47%;
     width: 47vw;
   }
 }
 @media (max-width: 771px) {
   .card-page--left .left-filter--container .accordion-wrap {
+    width: 100%;
     width: 100vw;
+    padding-right: 9%;
     padding-right: 9vw;
   }
 }
@@ -4599,7 +4645,6 @@ body.modal-open {
 }
 .modal-main--login .btn-submit {
   width: 100%;
-  font-weight: 400;
   font-size: 13px;
   line-height: 38px;
   margin: 35px 0;
@@ -5225,6 +5270,13 @@ body.modal-open {
     padding: 0 10px;
   }
 }
+.owl-arrivals .owl-item .item img,
+.owl-recomend .owl-item .item img {
+  display: inline-block;
+  padding-bottom: 20px;
+  max-width: 100%;
+  width: auto;
+}
 .owl-arrivals--descript a,
 .owl-recomend--descript a {
   display: block;
@@ -5459,11 +5511,17 @@ body .pswp__button--arrow--right:before {
   border-top: 2px solid #000;
 }
 body .pswp__button--arrow--left:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   opacity: 1 !important;
   left: 40px !important;
 }
 body .pswp__button--arrow--right:before {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
   transform: rotate(135deg);
   opacity: 1 !important;
   right: 40px !important;
