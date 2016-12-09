@@ -1,3 +1,305 @@
-h1 {
-  color: red;
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'ClearSansThin';
+  src: url('../fonts/ClearSans-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansLight';
+  src: url('../fonts/ClearSans-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansRegular';
+  src: url('../fonts/ClearSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansItalic';
+  src: url('../fonts/ClearSans-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansMedium';
+  src: url('../fonts/ClearSans-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansMediumItalic';
+  src: url('../fonts/ClearSans-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansBold';
+  src: url('../fonts/ClearSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClearSansBoldItalic';
+  src: url('../fonts/ClearSans-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bemount';
+  src: url('../fonts/Bemount.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ClinicaProRegular';
+  src: url('../fonts/ClinicaPro-Regular.otf') format('opentype');
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.form-group {
+  display: block;
+}
+.date {
+  color: #734343;
+  font-size: 12px;
+  font-family: ClearSansRegular;
+}
+.date span {
+  margin-left: 29px;
+}
+h2 {
+  font-family: ClearSansMedium;
+  font-size: 24px;
+  color: #2f0f01;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 18px;
+  font-family: ClearSansRegular;
+}
+.wrap {
+  background-image: url(../images/fon.jpg);
+}
+.main {
+  margin-left: 72px;
+  margin-right: 61px;
+}
+.main h2 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.main h4 {
+  margin-bottom: 20px;
+}
+header {
+  background-image: url(../images/header.jpg);
+  padding: 51px 0 66px 0;
+}
+.header-form {
+  font-family: ClinicaProRegular;
+  float: right;
+  width: 275px;
+  margin-right: 15px;
+  display: block;
+}
+.header-form .social-group {
+  margin-bottom: 10px;
+}
+.header-form .social-group_label {
+  margin: 5px 10px 0 0;
+  font-family: ClearSansMedium;
+  font-size: 19px;
+  color: #fff;
+  float: left;
+}
+.header-form .social-group a {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.header-form .social-group a:hover {
+  box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.5);
+}
+.header-form .social-group .vk {
+  background-image: url(../images/h_vk.png);
+}
+.header-form .social-group .ok {
+  background-image: url(../images/h_ok.png);
+}
+.header-form .social-group .fb {
+  background-image: url(../images/h_fb.png);
+}
+.header-form .social-group .in {
+  background-image: url(../images/h_in.png);
+}
+.header-form .form-group {
+  text-align: right;
+  margin-bottom: 5px;
+}
+.header-form label {
+  float: left;
+  color: #fff;
+}
+.header-form input {
+  border: none;
+  width: 183px;
+  height: 21px;
+  border-radius: 5px;
+}
+.header-form_action button {
+  cursor: pointer;
+  font-size: 16px;
+  width: 127px;
+  height: 29px;
+  background-image: url(../images/btn.png);
+  background-size: no-repeat, 100%, 100%, cover;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 0;
+  color: #fff;
+}
+.header-form_action button:hover {
+  box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.5);
+}
+nav {
+  background-image: url(../images/menu.png);
+  background-repeat: no-repeat;
+  padding: 16px 0 14px 45px;
+  text-transform: uppercase;
+  font-family: ClearSansThin;
+}
+nav span,
+nav a {
+  margin-right: 40px;
+}
+nav span {
+  color: #fff;
+}
+nav a {
+  color: #fff000;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #fff;
 }

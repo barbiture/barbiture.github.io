@@ -1,0 +1,95 @@
+header{
+  background-image: url(../images/header.jpg);
+  // width: 100%;
+  padding: 51px 0 66px 0;
+}
+.header-form{
+  font-family: ClinicaProRegular;
+  float: right;
+  width: 275px;
+  margin-right: 15px;
+  .social-group{
+    margin-bottom: 10px;
+    &_label{
+      margin: 5px 10px 0 0;
+      font-family: ClearSansMedium;
+      font-size: 19px;
+      color: #fff;
+      float: left;
+    }
+    a{
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      border-radius: 50%;
+      &:hover{
+        box-shadow: 0 0 15px 1px rgba(255,255,255,.5);
+      }
+    }
+    .vk{
+      background-image: url(../images/h_vk.png);
+    }
+    .ok{
+      background-image: url(../images/h_ok.png);
+    }
+    .fb{
+      background-image: url(../images/h_fb.png);
+    }
+    .in{
+      background-image: url(../images/h_in.png);
+    }
+  }
+  display: block;
+  .form-group{
+    text-align: right;
+    margin-bottom: 5px;
+  }
+  label{
+    float: left;
+    color: #fff;
+  }
+  input{
+    border: none;
+    width: 183px;
+    height: 21px;
+    border-radius: 5px;
+  }
+  &_action{
+    button{
+      cursor: pointer;
+      font-size: 16px;
+      width: 127px;
+      height: 29px;
+      background-image: url(../images/btn.png);
+      background-size: no-repeat, 100%, 100%, cover;
+      border-radius: 5px;
+      box-shadow: none;
+      border: 0;
+      color: #fff;
+      &:hover{
+        box-shadow: 0 0 15px 1px rgba(255,255,255,.5);
+      }
+    }
+  }
+}
+nav{
+  background-image: url(../images/menu.png);
+  background-repeat: no-repeat;
+  padding: 16px 0 14px 45px;
+  text-transform: uppercase;
+  font-family: ClearSansThin;
+  span,
+  a{
+    margin-right: 40px;
+  }
+  span{
+    color: #fff;
+  }
+  a{
+    color: @yellow;
+    text-decoration: none;
+    &:hover{
+      color: #fff;
+    }
+  }
+}

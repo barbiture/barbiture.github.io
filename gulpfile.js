@@ -17,7 +17,7 @@ var gulp           = require('gulp'),
 gulp.task('html', function(){
 	gulp.src('src/*.html')
 		.pipe(rigger())
-		.pipe(gulp.dest('barbiture.github.io/'))
+		.pipe(gulp.dest('build/'))
 		.pipe(browserSync.stream());
 });
 
@@ -25,7 +25,7 @@ gulp.task('html', function(){
 gulp.task('css', function(){
 	gulp.src('src/styles/*.css')
 		.pipe(rigger())
-		.pipe(gulp.dest('barbiture.github.io/styles'))
+		.pipe(gulp.dest('build/styles'))
 		.pipe(browserSync.stream());
 });
 
@@ -39,14 +39,14 @@ gulp.task('less', function () {
              cascade: false
          }))
         // .pipe(plumber.stop())
-        .pipe(gulp.dest('barbiture.github.io/styles'))
+        .pipe(gulp.dest('build/styles'))
         .pipe(browserSync.stream());
 });
 
 // IMG
 gulp.task('img', function(){
 	gulp.src('src/images/**/*')
-	.pipe(gulp.dest('barbiture.github.io/images/'))
+	.pipe(gulp.dest('build/images/'))
 	.pipe(imagemin())
 	.pipe(browserSync.stream());
 });
@@ -58,14 +58,14 @@ gulp.task('js', function(){
 		// .pipe(plumber())
 		// .pipe(jsmin())
 		// .pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('barbiture.github.io/js'))
+		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.stream());
 });
 
 // fonts
 gulp.task('fonts', function(){
 	gulp.src('src/fonts/**/*.*')
-	.pipe(gulp.dest('barbiture.github.io/fonts/'))
+	.pipe(gulp.dest('build/fonts/'))
 	.pipe(browserSync.stream());
 });
 
@@ -85,26 +85,26 @@ gulp.task('sprite', function() {
 			}
 		}));
 
-		spriteData.img.pipe(gulp.dest('./barbiture.github.io/images/')); // путь, куда сохраняем картинку
+		spriteData.img.pipe(gulp.dest('./build/images/')); // путь, куда сохраняем картинку
 		spriteData.css.pipe(gulp.dest('./src/styles/')); // путь, куда сохраняем стили
 });
 
 //+----------------------------------------------------------------+//
 
-gulp.task('barbiture.github.io', ['html', 'less', 'img', 'js', 'fonts', 'css', 'sprite']);
+gulp.task('build', ['html', 'less', 'img', 'js', 'fonts', 'css', 'sprite']);
 
-gulp.task('default', ['barbiture.github.io', 'watch', 'serve']);
+gulp.task('default', ['build', 'watch', 'serve']);
 
 gulp.task('serve', ['watch'], function (){
 	browserSync.init({
 		server: {
-			baseDir: "./barbiture.github.io"
+			baseDir: "./build"
 		},
 		host: "localhost",
 		port: 8080,
 		tunnel: false,
 		directory: true,
-		browser: "Firefox"
+		browser: "/Applications/Google Chrome.app"
 	});
 });
 
