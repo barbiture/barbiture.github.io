@@ -3,53 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <title>Legend</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<div class="container wrap">
-  <header>
+<div class="container">
+  <header class="header-register">
+    <div class="register hiden-tablet hiden-mobile">
+      <a href="" class="visible-tablet visible-mobile">РЕГИСТРАЦИЯ</a>
+    </div>
     <div class="header-form">
-      <div class="social-group">
-        <div class="social-group_label">
-          Войти через
+      <div>
+        <div class="social-group">
+          <div class="social-group_label">
+            Войти через
+          </div>
+          <a href="" class="vk"></a>
+          <a href="" class="ok"></a>
+          <a href="" class="fb"></a>
+          <a href="" class="in"></a>
         </div>
-        <a href="" class="vk"></a>
-        <a href="" class="ok"></a>
-        <a href="" class="fb"></a>
-        <a href="" class="in"></a>
+        <div class="clearfix"></div>
+        <div class="form-group">
+          <label for="login">Логин</label>
+          <input type="text" name="login" id="login">
+        </div>
+        <div class="form-group">
+          <label for="pass">Пароль</label>
+          <input type="password" name="pass" id="pass">
+        </div>
+        <div class="form_action">
+          <button>Регистрация</button>
+          <button>Войти</button>
+        </div>
       </div>
-      <div class="clearfix"></div>
-      <div class="form-group">
-        <label for="login">Логин</label>
-        <input type="text" name="login" id="login">
-      </div>
-      <div class="form-group">
-        <label for="pass">Пароль</label>
-        <input type="password" name="pass" id="pass">
-      </div>
-      <div class="header-form_action">
-        <button>Регистрация</button>
-        <button>Войти</button>
-      </div>
-      
     </div>
     <div class="clearfix"></div>
-  </header>
-  <nav>
-    <span>играть</span>
-    <a href="">новости</a>
-    <a href="">об игре</a>
-    <a href="">видео</a>
-    <a href="">форум</a>
-    <a href="">цитаты</a>
-  </nav>
-    <div class="container">
-      <div class="main">
-        <h2>Новости</h2>
-        <h4>Чем “Легенды Древних” отличается от других игр?</h4>
-        <p class="date"><i class="icon-date"></i><span>10.10.2015</span><span>18:50</span></p>
+    <nav arial-label="Menu" class="menu">
+      <div>
+        <span>играть</span>
+        <a href="">новости</a>
+        <a href="">об игре</a>
+        <a href="">видео</a>
+        <a href="">форум</a>
+        <a href="">цитаты</a>
       </div>
-    </div>
+      <div class="next visible-mobile"></div>
+    </nav>
+  </header>
+<div class="wrap wrap-main">
+  <div class="main noMenu">
+    <h2>Новости</h2>
+    <h4><a href="">Чем “Легенды Древних” отличается от других игр?</a></h4>
+    <p class="date"><i class="icon-date"></i><span>10.10.2015</span><span>18:50</span></p>
+    <img class="visible-mobile pull-right main-img" src="images/banner.png" alt="">
+    <p class="text text-img">
+      The very best way to spend your New Year's Eve in Budapest is definitely on the magnificent river,
+      with the wonderous sight of the celebrating capital.Join the grand event on the river on the 31st
+      of December and celebrate your new year in and unique way!
+      The 'New Year's Eve on the Danube' program is a full night celebration, including a circle on the
+      river, open-buffet dinner plus late night dinner in New Year's Eve style - accompanied by all-night
+      -long open bar, folklore showpiece on board, raffle much more!
+    </p>
+    
+    <aside class="aside-main visible-mobile visible-tablet-md clearfix">
+      <img class="hidden-mobile" src="images/banner.png" alt="">
+      <ul>
+        <li>Проект на движке Unreal Engine 4</li>
+        <li>Проект на движке Unreal Engine 4</li>
+        <li><span>Проект на движке Unreal Engine 4</span></li>
+      </ul>
+    </aside>
+    <h4><a href="">Чем “Легенды Древних” отличается от других игр?</a></h4>
+    <p class="date"><i class="icon-date"></i><span>10.10.2015</span><span>18:50</span></p>
+    <p class="text">
+      The very best way to spend your New Year's Eve in Budapest is definitely on the magnificent river,
+      with the wonderous sight of the celebrating capital.Join the grand event on the river on the 31st
+      of December and celebrate your new year in and unique way!
+      The 'New Year's Eve on the Danube' program is a full night celebration, including a circle on the
+      river, open-buffet dinner plus late night dinner in New Year's Eve style - accompanied by all-night
+        -long open bar, folklore showpiece on board, raffle much more!
+    </p>
+    <h4><a href="">Чем “Легенды Древних” отличается от других игр?</a></h4>
+    <p class="date"><i class="icon-date"></i><span>10.10.2015</span><span>18:50</span></p>
+    <p class="text">
+      The very best way to spend your New Year's Eve in Budapest is definitely on the magnificent river,
+      with the wonderous sight of the celebrating capital.Join the grand event on the river on the 31st
+      of December and celebrate your new year in and unique way!
+      The 'New Year's Eve on the Danube' program is a full night celebration, including a circle on the
+      river, open-buffet dinner plus late night dinner in New Year's Eve style - accompanied by all-night
+      -long open bar, folklore showpiece on board, raffle much more!
+    </p>
   </div>
-</body>
-</html>
+  <aside class="aside-main hiden-mobile hiden-tablet-md">
+    <img class="hidden-mobile" src="images/banner.png" alt="">
+    <ul>
+      <li>Проект на движке Unreal Engine 4</li>
+      <li>Проект на движке Unreal Engine 4</li>
+      <li>Проект на движке Unreal Engine 4</li>
+    </ul>
+  </aside>
+  <div class="clearfix"></div>
+  <nav arial-label="Page navigator">
+    <ul class="pagination-main">
+      <li>
+        <a href="" class="prev-page">Предыдущая страница</a>
+      </li>
+      <li>
+        <i class="paginImage"></i>
+      </li>
+      <li>
+        <a href="" class="next-page">Следующая страница</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<footer class="hiden-mobile">
+  <nav arial-label="Footer menu">
+    <a href="">Журналистам</a> | 
+    <a href="">Работа в "ЛЕГЕНДЫ ДРЕВНИХ"</a> | 
+    <a href="">Политика конфиденцальности</a> | 
+    <a href="">Юридическме документы</a> | 
+    <a href="">Контакты</a> | 
+    <a href="">Карта сайта</a>
+  </nav>
+  <div class="copyright">
+    Все товарные знаки являются собственностью соответствующих владельцев.
+    © “ЛЕГЕНДЫ ДРЕВНИХ”, 2016 г. Все права защищены.
+  </div>
+  <div class="f_social">
+    <span>Будем на связи!</span>
+    <a class="in" href=""></a>
+    <a class="gp" href=""></a>
+    <a class="fb" href=""></a>
+    <a class="vk" href=""></a>
+    <a class="ok" href=""></a>
+  </div>
+</footer>
+</div>
+</dody>

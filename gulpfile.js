@@ -45,7 +45,7 @@ gulp.task('less', function () {
 
 // IMG
 gulp.task('img', function(){
-	gulp.src('src/images/**/*')
+	gulp.src('src/images/*')
 	.pipe(gulp.dest('build/images/'))
 	.pipe(imagemin())
 	.pipe(browserSync.stream());
@@ -72,21 +72,20 @@ gulp.task('fonts', function(){
 // sprite
 gulp.task('sprite', function() {
 	var spriteData = 
-		gulp.src('./src/sprite/*.*') // путь, откуда берем картинки для спрайта
+		gulp.src('src/images/sprite/*.*') // путь, откуда берем картинки для спрайта
 		.pipe(spritesmith({
 			imgName: 'sprite.png',
-			cssName: 'sprite.less',
+			cssName: 'styles/sprite.less',
 			cssFormat: 'less',
 			algorithm: 'binary-tree',
-			cssTemplate: 'less.template.mustache',
 			imgPath: '../images/sprite.png',
 			cssVarMap: function(sprite) {
 				sprite.name = 's-' + sprite.name
 			}
 		}));
 
-		spriteData.img.pipe(gulp.dest('./build/images/')); // путь, куда сохраняем картинку
-		spriteData.css.pipe(gulp.dest('./src/styles/')); // путь, куда сохраняем стили
+		spriteData.img.pipe(gulp.dest('build/images/')); // путь, куда сохраняем картинку
+		spriteData.css.pipe(gulp.dest('./src/')); // путь, куда сохраняем стили
 });
 
 //+----------------------------------------------------------------+//

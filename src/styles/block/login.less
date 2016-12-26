@@ -1,0 +1,51 @@
+.wrap.wrap-login{
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  background-image: url(../images/fon2.png);
+  max-height: 900px;
+  @media @mobile, @mobile-md {
+    max-height: 100%;
+    margin-top: -20px;
+  }
+  &:after {
+    content: '';
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/fon.jpg);
+    z-index: -1;
+  }
+
+}
+.title-login{
+  margin-top: 200px;
+  height: 112px;
+  background-image: url(../images/enter.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  @media @tablet, @highdensity, @mobile, @mobile-md {
+    margin-top: 20vw;
+  }
+}
+.form-login{
+  text-align: center;
+  width: 261px;
+  margin: 0 auto;
+  padding-bottom: 500px;
+  input{
+    margin-bottom: 15px;
+    text-align: left;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,.35);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+  }
+  button{
+     margin-top: 10px;
+  }
+}
