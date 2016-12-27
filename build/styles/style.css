@@ -2333,19 +2333,26 @@ button.button-create {
     float: none;
     width: 100%;
   }
-  .contacts span {
-    width: 100px;
-  }
 }
 .contacts p {
   font-size: 17px;
   font-size: ClearSansRegular;
+}
+@media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .contacts p {
+    font-size: 14px;
+  }
 }
 .contacts span {
   width: 120px;
   text-transform: uppercase;
   color: #000;
   display: inline-block;
+}
+@media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .contacts span {
+    width: 100px;
+  }
 }
 .contacts a {
   color: #000;
@@ -2363,6 +2370,9 @@ button.button-create {
     width: 100%;
     margin-top: 25px;
     float: none;
+  }
+  #map p {
+    font-size: 14px;
   }
   #map span {
     width: 100px;
