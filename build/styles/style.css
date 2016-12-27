@@ -20,8 +20,8 @@
   }
 }
 .main h2 {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .main h2 {
@@ -30,12 +30,15 @@
   }
 }
 .main h4 {
+  margin-top: 35px;
   margin-bottom: 20px;
+  color: #734343;
+}
+.main p.text {
+  font-size: 12px;
+  color: #734343;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px), only screen and (min-width: 530px) and (max-width: 818px) {
-  .main p.text {
-    font-size: 12px;
-  }
   .main img.main-img {
     margin-left: 10px;
     width: 130px;
@@ -45,7 +48,6 @@
   width: 285px;
   float: right;
   margin-right: 61px;
-  margin-top: 30px;
 }
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .aside-main {
@@ -384,13 +386,34 @@
 .wrap-new .divid {
   margin-top: 40px;
 }
+.wrap-new .date,
+.wrap-new p.new-text {
+  color: #734343;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+}
+@media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .wrap-new .date,
+  .wrap-new p.new-text {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.wrap-new .date .icon-date {
+  background-image: url(../images/sprite.png);
+  background-position: -642px -61px;
+  width: 31px;
+  height: 31px;
+}
 .new-title {
+  font-family: ClearSansRegular;
   color: #fff;
   background-image: url(../images/ribbon.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 16px 0 26px;
   text-align: center;
   font-size: 22px;
@@ -411,12 +434,21 @@
 .new-image {
   float: right;
   margin-left: 10px;
+  max-width: 207px;
+  margin-right: 42px;
+}
+.new-image img {
+  max-width: 100%;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .new-image {
     float: none;
+    margin: 0 auto;
     text-align: center;
   }
+}
+.form-section_block {
+  margin-bottom: 15px;
 }
 .left-menu {
   font-family: ClearSansRegular;
@@ -465,6 +497,7 @@
     background-repeat: no-repeat;
     position: fixed;
     top: 46%;
+    z-index: 10;
     left: -10px;
   }
 }
@@ -510,7 +543,7 @@
 .about-block {
   float: left;
   width: 289px;
-  margin: 0 17px;
+  margin: 0 0 0 35px;
 }
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .about-block {
@@ -525,7 +558,7 @@
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .about-block {
     width: 100%;
-    margin: 0 ;
+    margin: 0;
   }
 }
 .about-block .title {
@@ -612,11 +645,17 @@
   background-image: url(../images/forumSelectBg.png);
   background-repeat: no-repeat;
   max-width: 798px;
-  margin: 15px auto;
+  margin: 35px 0 0 72px;
+}
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  .forum-create {
+    margin: 35px auto;
+  }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .forum-create {
     background-size: 100% 200px;
+    margin-left: 0;
   }
 }
 .forum-create input[type="text"] {
@@ -671,14 +710,47 @@
 }
 .forum-section {
   color: #626262;
+  padding-right: 44px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .forum-section {
     color: #000;
   }
 }
+.forum-section .pagination {
+  padding-right: 50px;
+}
+@media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .forum-section .pagination {
+    padding-right: 5px;
+  }
+}
+.forum-section .breadcrumbs {
+  margin-bottom: 20px;
+}
+.forum-section p {
+  color: #000;
+}
+.forum-section button {
+  margin-top: 5px;
+}
+@media only screen and (max-width: 439px) {
+  .forum-section button {
+    display: block;
+    margin: 10px auto;
+  }
+  .forum-section button.pull-right,
+  .forum-section button.pull-left {
+    float: none;
+  }
+}
+.forum-section .textarea {
+  margin-top: 20px;
+  height: 225px;
+  width: 100%;
+}
 .forum-section_title {
-  margin-top: 38px;
+  margin-top: 13px;
   font-size: 18px;
   font-family: ClearSansRegular;
   color: #680909;
@@ -689,7 +761,7 @@
   content: '';
   display: block;
   margin-top: 3px;
-  background-color: #eab171;
+  background-image: url(../images/borderTitle.png);
   background-repeat: no-repeat;
   height: 3px;
   width: 100%;
@@ -730,6 +802,7 @@
 .forum-section_date {
   color: #626262;
   margin-bottom: 0;
+  font-size: 12px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .forum-section_date {
@@ -776,6 +849,9 @@
   margin-right: 32px;
   margin-left: 4.4vh;
 }
+.video.noMenu p {
+  font-size: 12px;
+}
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .video.noMenu {
     margin: 0;
@@ -785,6 +861,7 @@
 .video-block {
   width: 555px;
   float: left;
+  margin-top: 15px;
 }
 .video-block img {
   width: 100%;
@@ -808,8 +885,8 @@
   margin-bottom: 10px;
 }
 .video-descript {
-  width: 297px;
-  margin-left: 24px;
+  width: 300px;
+  margin-left: 20px;
   float: left;
 }
 @media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
@@ -921,7 +998,8 @@
   }
 }
 .messages-block {
-  margin-top: 50px;
+  margin-top: 45px;
+  margin-bottom: 30px;
   background-image: url(../images/plashka.png);
   background-repeat: no-repeat;
   background-size: 100% 51px;
@@ -1090,7 +1168,7 @@
 .quotation-subtitle {
   margin-top: 25px;
   font-family: ClearSansBold;
-  font-size: 16px;
+  font-size: 18px;
   color: #680909;
 }
 .quotation-messages {
@@ -1528,7 +1606,7 @@ nav.menu {
   height: 53px;
 }
 nav.menu > div {
-  padding-left: 20px;
+  padding-left: 45px;
   line-height: 45px;
   vertical-align: middle;
 }
@@ -1915,7 +1993,7 @@ figure img {
   max-width: 100%;
 }
 p {
-  font-size: 12px;
+  font-size: 16px;
   font-family: ClearSansRegular;
   margin: 15px 0;
   line-height: 24px;
@@ -1949,6 +2027,12 @@ button:focus {
 .wrap {
   padding: 35px 0 50px;
   margin-top: -20px;
+}
+.wrap-text {
+  padding-right: 72px;
+}
+.wrap-text p {
+  font-size: 12px;
 }
 .wrap-cont {
   padding-bottom: 0;
@@ -1997,11 +2081,11 @@ button:focus {
   height: 26px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: -16px;
+  margin-right: -20px;
 }
 .date span {
   vertical-align: middle;
-  margin-left: 29px;
+  margin-left: 25px;
 }
 h2 {
   font-family: ClearSansMedium;
@@ -2022,7 +2106,6 @@ h4 a:hover {
 }
 .pagination {
   margin-right: 5px;
-  margin-top: 20px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .pagination {
@@ -2154,10 +2237,11 @@ h4 a:hover {
 .breadcrumbs {
   font-family: ClearSansMedium;
   font-size: 15px;
+  color: #262525;
 }
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (min-width: 530px) and (max-width: 818px) {
   .breadcrumbs {
-    margin-top: 20px;
+    margin-top: 26px;
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
@@ -2225,11 +2309,6 @@ h4 a:hover {
 .pull-left {
   float: left;
 }
-p {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: ClearSansRegular;
-}
 .defaultTtle {
   font-size: 17px;
   font-family: ClearSansBold;
@@ -2277,7 +2356,7 @@ button.button-new {
   background-image: url(../images/button-new.png);
   background-repeat: no-repeat;
   width: 214px;
-  padding: 15px 0;
+  padding: 16px 0 16px;
   font-size: 16px;
   border: none;
   font-family: ClearSansRegular;
@@ -2288,7 +2367,7 @@ button.button-create {
   background-image: url(../images/button-add.png);
   background-repeat: no-repeat;
   width: 188px;
-  padding: 13px 0 16px;
+  padding: 15px 0 16px;
   border: none;
   font-size: 16px;
   font-family: ClearSansRegular;
@@ -2297,6 +2376,13 @@ button.button-create {
 }
 .work .breadcrumbs {
   margin-bottom: 40px;
+}
+.work .defaultTtle {
+  font-size: 16px;
+  margin: 25px 0 15px;
+}
+.work p {
+  margin: 5px 0;
 }
 .map-site {
   margin-top: 20px;
@@ -2322,6 +2408,7 @@ button.button-create {
   line-height: 36px;
   color: #680909;
   font-size: 21px;
+  padding-left: 20px;
 }
 .map-site a:hover {
   text-decoration: none;
@@ -2367,10 +2454,15 @@ button.button-create {
 }
 #map {
   float: right;
-  margin-right: 50px;
+  margin-right: 110px;
   margin-bottom: 100vh;
   width: 320px;
   box-shadow: 23px 23px 0 rgba(200, 162, 117, 0.5);
+}
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  #map {
+    margin-right: 40px;
+  }
 }
 @media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   #map {
@@ -2384,6 +2476,13 @@ button.button-create {
   #map span {
     width: 100px;
   }
+}
+.terms {
+  padding-left: 10px;
+  padding-right: 72px;
+}
+.terms .defaultDate {
+  margin: 35px 0 20px;
 }
 .visible-tablet {
   display: none;

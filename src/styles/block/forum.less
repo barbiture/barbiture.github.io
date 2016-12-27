@@ -1,3 +1,6 @@
+.form-section_block {
+  margin-bottom: 15px;
+}
 .left-menu{
   font-family: ClearSansRegular;
   font-size: 16px;
@@ -41,6 +44,7 @@
       background-repeat: no-repeat;
       position: fixed;
       top: 46%;
+      z-index: 10;
       left: -10px;
     }
   }
@@ -84,7 +88,7 @@
 .about-block{
   float: left;
   width: 289px;
-  margin: 0 17px;
+  margin: 0 0 0 35px;
   @media @tablet, @highdensity {
     width: 40%;
   }
@@ -93,7 +97,7 @@
   }
   @media @mobile, @mobile-md{
     width: 100%;
-    margin: 0 ;
+    margin: 0;
   }
   .title{
     margin-top: 30px;
@@ -167,9 +171,13 @@
     background-image: url(../images/forumSelectBg.png);
     background-repeat: no-repeat;
     max-width: 798px;
-    margin: 15px auto;
+    margin: 35px 0 0 72px;
+    @media @tablet, @highdensity {
+      margin: 35px auto;
+    }
     @media @mobile, @mobile-md {
       background-size: 100% 200px;
+      margin-left: 0;
     }
     input[type="text"]{
       color: @bGrey;
@@ -217,11 +225,40 @@
   }
   &-section{
     color: @bGrey;
+    padding-right: 44px;
     @media @mobile, @mobile-md {
       color: #000;
     }
+    .pagination {
+      padding-right: 50px;
+      @media @tablet-md, @mobile, @mobile-md{
+        padding-right: 5px;
+      }
+    }
+    .breadcrumbs {
+      margin-bottom: 20px;
+    }
+    p{
+      color: #000;
+    }
+    button{
+      margin-top: 5px;
+      @media @mobile-md {
+        display: block;
+        margin: 10px auto;
+        &.pull-right,
+        &.pull-left{
+          float: none;
+        }
+      }
+    }
+    .textarea{
+      margin-top: 20px;
+      height: 225px;
+      width: 100%;
+    }
     &_title{
-      margin-top: 38px;
+      margin-top: 13px;
       font-size: 18px;
       font-family: ClearSansRegular;
       color: @rRed;
@@ -231,7 +268,7 @@
         content: '';
         display: block;
         margin-top: 3px;
-        background-color: @bdColor;
+        background-image: url(../images/borderTitle.png);
         background-repeat: no-repeat;
         height: 3px;
         width: 100%;
@@ -274,6 +311,7 @@
     &_date{
       color: @bGrey;
       margin-bottom: 0;
+      font-size: 12px;
       @media @mobile, @mobile-md {
         color: #000;
       }

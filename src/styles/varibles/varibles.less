@@ -51,7 +51,7 @@ figure img {
   max-width: 100%;
 }
 p{
-  font-size: 12px;
+  font-size: 16px;
   font-family: ClearSansRegular;
   margin: 15px 0;
   line-height: 24px;
@@ -99,6 +99,12 @@ button:focus {
 .wrap{
   padding: 35px 0 50px;
   margin-top: -20px;
+  &-text {
+    padding-right: 72px;
+    p {
+      font-size: 12px;
+    }
+  }
   &-cont{
     padding-bottom: 0;
   }
@@ -137,11 +143,11 @@ button:focus {
     .sprite(@s-calendar);
     display: inline-block;
     vertical-align: middle;
-    margin-right: -16px;
+    margin-right: -20px;
   }
   span{
     vertical-align: middle;
-    margin-left: 29px;
+    margin-left: 25px;
   }
 }
 h2{
@@ -163,7 +169,7 @@ h4{
 }
 .pagination{
   margin-right: 5px;
-  margin-top: 20px;
+  // margin-top: 20px;
   @media @mobile, @mobile-md{
     margin-top: 30px;
     &.pull-right {
@@ -283,8 +289,9 @@ h4{
 .breadcrumbs{
   font-family: ClearSansMedium;
   font-size: 15px;
+  color: @lBlack;
   @media @tablet, @tablet-md {
-    margin-top: 20px;
+    margin-top: 26px;
   }
   
   @media @mobile, @mobile-md {
@@ -347,11 +354,6 @@ h4{
 .pull-left{
   float: left;
 }
-p{
-  font-size: 16px;
-  line-height: 24px;
-  font-family: ClearSansRegular;
-}
 .defaultTtle{
   font-size: 17px;
   font-family: ClearSansBold;
@@ -395,7 +397,7 @@ button.button-new{
   background-image: url(../images/button-new.png);
   background-repeat: no-repeat;
   width: 214px;
-  padding: 15px 0;
+  padding: 16px 0 16px;
   font-size: 16px;
   border: none;
   font-family: ClearSansRegular;
@@ -406,7 +408,7 @@ button.button-create{
   background-image: url(../images/button-add.png);
   background-repeat: no-repeat;
   width: 188px;
-  padding: 13px 0 16px;
+  padding: 15px 0 16px;
   border: none;
   font-size: 16px;
   font-family: ClearSansRegular;
@@ -416,6 +418,13 @@ button.button-create{
 .work{
   .breadcrumbs{
     margin-bottom: 40px;
+  }
+  .defaultTtle {
+    font-size: 16px;
+    margin: 25px 0 15px;
+  }
+  p{
+    margin: 5px 0;
   }
 }
 .map-site{
@@ -441,6 +450,7 @@ button.button-create{
     line-height: 36px;
     color: @rRed;
     font-size: 21px;
+    padding-left: 20px;
     &:hover{
       text-decoration: none;
     }
@@ -481,10 +491,13 @@ button.button-create{
 }
 #map{
   float: right;
-  margin-right: 50px;
+  margin-right: 110px;
   margin-bottom: 100vh;
   width: 320px;
   box-shadow: 23px 23px 0 rgba(200,162,117,.5);
+  @media @tablet, @highdensity {
+    margin-right: 40px;
+  }
   @media @tablet-md, @mobile, @mobile-md {
     width: 100%;
     margin-top: 25px;
@@ -495,5 +508,12 @@ button.button-create{
       width: 100px;
     }
     float: none;
+  }
+}
+.terms{
+  padding-left: 10px;
+  padding-right: 72px;
+  .defaultDate{
+    margin: 35px 0 20px;
   }
 }
