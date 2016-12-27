@@ -75,7 +75,7 @@
 }
 .aside-main ul {
   margin-top: -4px;
-  background-image: url(../../images/ribbonV.png);
+  background-image: url(../images/ribbonV.png);
   background-repeat: no-repeat;
   background-position: 50% 0;
   padding-top: 17px;
@@ -100,7 +100,7 @@
   font-family: ClearSansMedium;
   color: #2f0f01;
   text-align: center;
-  background-image: url(../../images/banner-text.png);
+  background-image: url(../images/banner-text.png);
   background-repeat: no-repeat;
   padding: 17px 20px;
   margin-bottom: 20px;
@@ -1147,7 +1147,7 @@ header {
 }
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   header {
-    background-image: url(../../images/heder-tablet2.jpg);
+    background-image: url(../images/heder-tablet2.jpg);
     height: 33vw;
   }
 }
@@ -1155,7 +1155,7 @@ header {
   .header-log {
     height: auto;
     background-size: 960px auto;
-    background-image: url(../../images/headerTablet.png);
+    background-image: url(../images/headerTablet.png);
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
@@ -2103,7 +2103,7 @@ h4 a:hover {
   }
 }
 .divid {
-  background-image: url(../../images/element.png);
+  background-image: url(../images/element.png);
   background-position: 50% 0;
   background-repeat: no-repeat;
   width: 100%;
@@ -2281,6 +2281,32 @@ button.button-create {
 .map-site .sublist {
   font-size: 18px;
   font-family: ClearSansRegular;
+}
+.contacts {
+  width: 50%;
+  float: left;
+  margin-top: 20px;
+}
+.contacts p {
+  font-size: 17px;
+  font-size: ClearSansRegular;
+}
+.contacts span {
+  width: 120px;
+  text-transform: uppercase;
+  color: #000;
+  display: inline-block;
+}
+.contacts a {
+  color: #000;
+  text-decoration: none;
+}
+#map {
+  float: right;
+  margin-right: 50px;
+  margin-bottom: 100vh;
+  width: 320px;
+  box-shadow: 23px 23px 0 rgba(200, 162, 117, 0.5);
 }
 .visible-tablet {
   display: none;
