@@ -105,22 +105,37 @@
   padding: 17px 20px;
   margin-bottom: 20px;
 }
-@media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .aside-main li {
-    font-size: 11px;
-    line-height: 13px;
-    width: 155px;
-    padding-top: 12px;
+    line-height: 19px;
+    font-size: 17px;
+    padding-top: 8px;
+    vertical-align: middle;
+    max-width: 250px;
+    width: 100%;
+    background-size: 100% auto;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 818px) {
+  .aside-main li {
+    width: 290px;
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 16px;
   }
   .aside-main li:nth-child(3) {
-    width: 300px;
-    margin: 90px auto 0;
-    font-size: 12px;
-    padding: 7px 80px;
-    line-height: 12px;
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 90px;
+    padding: 7px 160px;
+    line-height: 25px;
+  }
+  .aside-main li:nth-child(3) span {
+    display: inline-block;
   }
   .aside-main li:nth-child(3):before {
-    margin-left: -150px;
+    margin-left: -250px;
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px), only screen and (min-width: 530px) and (max-width: 818px) {
@@ -155,7 +170,9 @@
   .aside-main li:nth-child(3):before {
     position: absolute;
     width: 100%;
-    left: 50%;
+    left: 0;
+    margin-left: 0;
+    background-position: 0 center;
     height: 100%;
     top: 0;
     z-index: 1;
@@ -165,37 +182,24 @@
     content: '';
   }
 }
-@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .aside-main li {
-    line-height: 19px;
-    font-size: 17px;
-    padding-top: 8px;
-    vertical-align: middle;
-    max-width: 250px;
-    width: 100%;
-    background-size: 100% auto;
-  }
-}
-@media only screen and (min-width: 530px) and (max-width: 818px) {
-  .aside-main li {
-    width: 290px;
-    font-size: 18px;
-    line-height: 23px;
-    padding-top: 16px;
+    font-size: 11px;
+    line-height: 13px;
+    width: 155px;
+    padding-top: 12px;
   }
   .aside-main li:nth-child(3) {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 90px;
-    padding: 7px 160px;
-    line-height: 25px;
-  }
-  .aside-main li:nth-child(3) span {
-    display: inline-block;
+    width: 300px;
+    margin: 90px auto 0;
+    font-size: 12px;
+    padding: 5px 80px 7px;
+    line-height: 12px;
   }
   .aside-main li:nth-child(3):before {
-    margin-left: -250px;
+    left: 0;
+    margin-left: 0;
+    background-position: 0 center;
   }
 }
 .wrap.wrap-playGame {
@@ -419,16 +423,23 @@
   font-size: 16px;
   float: left;
   width: 250px;
+  margin-top: -10px;
   margin-left: 5px;
   background-image: url(../images/leftmenubg.png);
-  padding: 55px 0 50px 30px;
+  padding: 25px 0 80px 30px;
   background-repeat: no-repeat;
+}
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  .left-menu {
+    margin-top: 10px;
+  }
 }
 @media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .left-menu {
     padding: 0;
     position: relative;
     background: transparent;
+    margin-top: 0;
   }
   .left-menu.show {
     width: 100%;
@@ -458,15 +469,21 @@
   }
 }
 @media only screen and (min-width: 530px) and (max-width: 818px) {
+  .left-menu {
+    margin-top: 0;
+  }
   .left-menu.show {
     margin-top: 20px;
     z-index: -1;
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .left-menu {
+    margin-top: 0;
+  }
   .left-menu .left-menu-link {
     height: 200px;
-    top: 68%;
+    top: 40%;
   }
 }
 .left-menu li {
@@ -821,6 +838,7 @@
 }
 .video-thumb {
   margin-top: 40px;
+  padding-bottom: 40px;
 }
 .video-thumb .video-block {
   width: auto;
@@ -893,6 +911,14 @@
   width: 54px;
   height: 65px;
   float: right;
+}
+.video-thumb + button {
+  margin-right: 65px;
+}
+@media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .video-thumb + button {
+    margin-right: 20px;
+  }
 }
 .messages-block {
   margin-top: 50px;
@@ -1154,13 +1180,14 @@ header {
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .header-log {
     height: auto;
-    background-size: 960px auto;
+    background-size: 980px auto;
     background-image: url(../images/headerTablet.png);
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .header-log {
     background-size: 530px auto;
+    background-image: url(../images/header-mobile.jpg);
   }
 }
 .header-log .header-form {
@@ -1183,7 +1210,7 @@ header {
     float: none;
     margin: 0;
     height: 100%;
-    padding: 90px 0 0 0;
+    padding: 200px 0 0 0;
   }
   .header-log .header-form .log-wrap {
     padding-top: 40px;
@@ -1288,45 +1315,17 @@ header {
   width: 48px;
   height: 4px;
 }
+.header-register-btn {
+  background-image: url(../images/heder-tablet2.jpg);
+  background-size: 980px auto;
+}
+.header-register-btn .header-form {
+  margin: 110px 15px 80px 0;
+}
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .header-register-btn {
     height: 320px;
-    background-size: 960px auto;
-  }
-}
-@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
-  .header-register {
-    height: 220px;
-    background-size: 960px auto;
-    background-image: url(../images/fonTabletSign.png);
-  }
-  .header-register .header-form {
-    padding-bottom: 0;
-    padding: 32px 0;
-  }
-}
-@media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
-  .header-register {
-    background-image: url(../images/header-mobile.jpg);
-    background-size: 540px auto;
-  }
-  .header-register nav.menu {
-    margin-top: -2px;
-  }
-  .header-register .header-form {
-    height: 190px;
-    padding-top: 30px;
-    margin: 218px 0 0 0;
-  }
-  .header-register .header-form > div {
-    margin: 0 auto;
-    width: 300px;
-  }
-  .header-register .header-form .form_action button:first-child {
-    float: left;
-  }
-  .header-register .header-form .form_action button:last-child {
-    float: right;
+    background-size: 980px auto;
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
@@ -1344,17 +1343,19 @@ header {
   float: right;
   padding-left: 20px;
   line-height: 50px;
+  display: none;
 }
 .register:after {
   content: '';
   position: absolute;
   height: 50px;
   width: 100%;
-  right: -2px;
+  right: 0;
   top: 0;
   background-image: url(../images/register.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: 2px 0;
 }
 .register > a {
   color: #fff;
@@ -1364,6 +1365,7 @@ header {
 }
 @media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .register {
+    display: block;
     font-size: 24px;
     margin: 130px 0;
     vertical-align: middle;
@@ -1373,12 +1375,48 @@ header {
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .register {
-    margin: 50px 0;
+    display: block;
+    margin: 70px 0;
+    height: auto;
     width: 160px;
     line-height: 30px;
   }
-  .register:after {
-    height: 30px;
+}
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  .header-register {
+    height: 220px;
+    background-size: 980px auto;
+    background-image: url(../images/fonTabletSign.png);
+  }
+  .header-register .header-form {
+    padding-bottom: 0;
+    padding: 32px 0;
+  }
+}
+@media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .header-register {
+    background-image: url(../images/header-mobile.jpg);
+    background-size: 540px auto;
+    height: auto;
+    padding-top: 218px;
+  }
+  .header-register nav.menu {
+    margin-top: -2px;
+  }
+  .header-register .header-form {
+    height: 190px;
+    padding-top: 30px;
+    margin: 0;
+  }
+  .header-register .header-form > div {
+    margin: 0 auto;
+    width: 300px;
+  }
+  .header-register .header-form .form_action button:first-child {
+    float: left;
+  }
+  .header-register .header-form .form_action button:last-child {
+    float: right;
   }
 }
 .header-form {
@@ -1388,7 +1426,7 @@ header {
   width: 258px;
   display: block;
 }
-@media only screen and (min-width: 530px) and (max-width: 949px) {
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .header-form {
     margin: 0 auto;
     float: none;
@@ -1909,7 +1947,7 @@ button:focus {
   outline: 0;
 }
 .wrap {
-  padding: 58px 0 50px;
+  padding: 45px 0 50px;
   margin-top: -20px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
@@ -1926,7 +1964,7 @@ button:focus {
   }
 }
 .wrap-lmenu {
-  margin-top: 25px;
+  margin-top: 0;
   margin-left: 15px;
   float: left;
   width: 71%;
@@ -1981,6 +2019,7 @@ h4 a:hover {
 }
 .pagination {
   margin-right: 5px;
+  margin-top: 20px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .pagination {
@@ -2112,9 +2151,11 @@ h4 a:hover {
 .breadcrumbs {
   font-family: ClearSansRegular;
   font-size: 15px;
+  margin-top: 20px;
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .breadcrumbs {
+    margin-top: 20px;
     font-size: 13px;
   }
   .breadcrumbs.pull-left {
@@ -2287,6 +2328,15 @@ button.button-create {
   float: left;
   margin-top: 20px;
 }
+@media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  .contacts {
+    float: none;
+    width: 100%;
+  }
+  .contacts span {
+    width: 100px;
+  }
+}
 .contacts p {
   font-size: 17px;
   font-size: ClearSansRegular;
@@ -2307,6 +2357,16 @@ button.button-create {
   margin-bottom: 100vh;
   width: 320px;
   box-shadow: 23px 23px 0 rgba(200, 162, 117, 0.5);
+}
+@media only screen and (min-width: 530px) and (max-width: 818px), only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
+  #map {
+    width: 100%;
+    margin-top: 25px;
+    float: none;
+  }
+  #map span {
+    width: 100px;
+  }
 }
 .visible-tablet {
   display: none;

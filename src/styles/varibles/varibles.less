@@ -97,7 +97,7 @@ button:focus {
   outline: 0;
 }
 .wrap{
-  padding: 58px 0 50px;
+  padding: 45px 0 50px;
   margin-top: -20px;
   @media @mobile, @mobile-md{
     margin-top: 0;
@@ -109,7 +109,7 @@ button:focus {
     padding-bottom: 20px;
   }
   &-lmenu{
-    margin-top: 25px;
+    margin-top: 0;
     margin-left: 15px;
     float: left;
     width: 71%;
@@ -160,6 +160,7 @@ h4{
 }
 .pagination{
   margin-right: 5px;
+  margin-top: 20px;
   @media @mobile, @mobile-md{
     margin-top: 30px;
     &.pull-right {
@@ -279,7 +280,12 @@ h4{
 .breadcrumbs{
   font-family: ClearSansRegular;
   font-size: 15px;
+  @media @tablet, @tablet-md {
+
+  }
+  margin-top: 20px;
   @media @mobile, @mobile-md {
+    margin-top: 20px;
     font-size: 13px;
     &.pull-left{
       float: none;
@@ -445,15 +451,25 @@ button.button-create{
   width: 50%;
   float: left;
   margin-top: 20px;
+  @media @tablet-md, @mobile, @mobile-md {
+    float: none;
+    width: 100%;
+  }
   p{
     font-size: 17px;
     font-size: ClearSansRegular;
+    @media @tablet-md, @mobile, @mobile-md {
+      font-size: 14px;
+    }
   }
   span{
     width: 120px;
     text-transform: uppercase;
     color: #000;
     display: inline-block;
+    @media @tablet-md, @mobile, @mobile-md {
+      width: 100px;
+    }
   }
   a{
     color: #000;
@@ -466,4 +482,15 @@ button.button-create{
   margin-bottom: 100vh;
   width: 320px;
   box-shadow: 23px 23px 0 rgba(200,162,117,.5);
+  @media @tablet-md, @mobile, @mobile-md {
+    width: 100%;
+    margin-top: 25p
+    p{
+      font-size: 14px;
+      }x;
+    span{
+      width: 100px;
+    }
+    float: none;
+  }
 }

@@ -89,63 +89,6 @@
     background-repeat: no-repeat;
     padding: 17px 20px;
     margin-bottom: 20px;
-    @media @mobile, @mobile-md {
-      font-size: 11px;
-      line-height: 13px;
-      width: 155px;
-      padding-top: 12px;
-      &:nth-child(3) {
-        width: 300px;
-        margin: 90px auto 0;
-        font-size: 12px;
-        padding: 7px 80px;
-        line-height: 12px;
-        &:before {
-          margin-left: -150px;
-        }
-      }
-    }
-  
-    @media @mobile, @mobile-md, @tablet-md {
-      position: relative;
-      display: inline-block;
-      background-size: 100% auto;
-      &:nth-child(1) {
-        background-image: url(../images/decorMobileLeft.png);
-        margin-left: -20px;
-        float: left;
-        padding-left: 28px;
-      }
-      &:nth-child(2) {
-        background-image: url(../images/decorMobileRight.png);
-        margin-right: -20px;
-        float: right;
-        padding-right: 28px;
-      }
-      &:nth-child(3) {
-        display: block;
-        position: relative;
-        background: transparent;
-        max-width: 100%;
-        span {
-          position: relative;
-          display: inline-block;
-          z-index: 1;
-        }
-        &:before {
-          position: absolute;
-          width: 100%;
-          left: 50%;
-          height: 100%;
-          top: 0;
-          z-index: 1;
-          background-size: 100% auto;
-          background-image: url(../images/decorMobileCenter.png);
-          background-repeat: no-repeat;
-          content: '';
-        }
-      }
-    }
     @media @tablet, @highdensity {
       line-height: 19px;
       font-size: 17px;
@@ -175,5 +118,69 @@
         }
       }
     }
+    @media @mobile, @mobile-md, @tablet-md {
+      position: relative;
+      display: inline-block;
+      background-size: 100% auto;
+      &:nth-child(1) {
+        background-image: url(../images/decorMobileLeft.png);
+        margin-left: -20px;
+        float: left;
+        padding-left: 28px;
+      }
+      &:nth-child(2) {
+        background-image: url(../images/decorMobileRight.png);
+        margin-right: -20px;
+        float: right;
+        padding-right: 28px;
+      }
+      &:nth-child(3) {
+        display: block;
+        position: relative;
+        background: transparent;
+        max-width: 100%;
+        // width: 100%;
+        span {
+          position: relative;
+          display: inline-block;
+          z-index: 1;
+        }
+        &:before {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          margin-left: 0;
+          background-position: 0 center;
+          height: 100%;
+          top: 0;
+          z-index: 1;
+          background-size: 100% auto;
+          background-image: url(../images/decorMobileCenter.png);
+          background-repeat: no-repeat;
+          content: '';
+        }
+      }
+    }
+    @media @mobile, @mobile-md {
+      font-size: 11px;
+      line-height: 13px;
+      width: 155px;
+      padding-top: 12px;
+      &:nth-child(3) {
+        width: 300px;
+        margin: 90px auto 0;
+        font-size: 12px;
+        padding: 5px 80px 7px;
+        line-height: 12px;
+        &:before {
+          left: 0;
+          margin-left: 0;
+          background-position: 0 center;
+        }
+      }
+    }
+  
+   
+ 
   }
 }

@@ -3,15 +3,19 @@
   font-size: 16px;
   float: left;
   width: 250px;
+  margin-top: -10px;
   margin-left: 5px;
   background-image: url(../images/leftmenubg.png);
-  padding: 55px 0 50px 30px;
+  padding: 25px 0 80px 30px;
   background-repeat: no-repeat;
-
+  @media @tablet, @highdensity{
+    margin-top: 10px;
+  }
   @media @tablet-md, @mobile, @mobile-md {
     padding: 0;
     position: relative;
     background: transparent;
+    margin-top: 0;
     &.show{
       // padding: 0 0 50px 30px;
       width: 100%;
@@ -41,6 +45,7 @@
     }
   }
   @media @tablet-md{
+    margin-top: 0;
     &.show {
       margin-top: 20px;
       z-index: -1;
@@ -48,9 +53,10 @@
     
   }
   @media @mobile, @mobile-md {
+    margin-top: 0;
     .left-menu-link {
       height: 200px;
-      top: 68%;
+      top: 40%;
     }
   }
   li{

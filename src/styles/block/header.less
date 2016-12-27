@@ -12,11 +12,12 @@ header {
 .header-log {
   @media @tablet, @highdensity {
     height: auto;
-    background-size: 960px auto;
+    background-size: 980px auto;
     background-image: url(../images/headerTablet.png);
   }
   @media @mobile, @mobile-md {
     background-size: 530px auto;
+    background-image: url(../images/header-mobile.jpg);
   }
   .header-form {
     margin: 10px 0 15px;
@@ -34,7 +35,7 @@ header {
       float: none;
       margin: 0;
       height: 100%;
-      padding: 90px 0 0 0;
+      padding: 200px 0 0 0;
       // padding-top: 40px;
       .log-wrap {
         // margin-top: 40px;
@@ -140,16 +141,71 @@ header {
   }
 }
 .header-register-btn{
+  background-image: url(../images/heder-tablet2.jpg);
+  background-size: 980px auto;
+  .header-form {
+    margin: 110px 15px 80px 0;
+  }
   @media @tablet, @highdensity {
     height: 320px;
-    background-size: 960px auto;
-
+    background-size: 980px auto;
+  }
+  @media @mobile, @mobile-md {
+    background-size: 530px;
+    height: auto;
+  }
+}
+.register {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-family: Bemount;
+  text-align: center;
+  float: right;
+  padding-left: 20px;
+  line-height: 50px;
+  display: none;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    right: 0;
+    top: 0;
+    background-image: url(../images/register.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 2px 0;
+  }
+  > a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+  }
+  @media @tablet, @highdensity {
+    display: block;
+    font-size: 24px;
+    margin: 130px 0;
+    vertical-align: middle;
+    height: 50px;
+    width: 250px;
+  }
+  @media @mobile, @mobile-md {
+    display: block;
+    margin: 70px 0;
+    height: auto;
+    width: 160px;
+    line-height: 30px;
+    // &:after {
+    //   height: 30px;
+    // }
   }
 }
 .header-register {
   @media @tablet, @highdensity {
     height: 220px;
-    background-size: 960px auto;
+    background-size: 980px auto;
     background-image: url(../images/fonTabletSign.png);
     .header-form {
       padding-bottom: 0;
@@ -160,13 +216,15 @@ header {
   @media @mobile, @mobile-md {
     background-image: url(../images/header-mobile.jpg);
     background-size: 540px auto;
+    height: auto;
+    padding-top: 218px;
     nav.menu {
       margin-top: -2px;
     }
     .header-form {
       height: 190px;
       padding-top: 30px;
-      margin: 218px 0 0 0;
+      margin: 0;
       > div {
         margin: 0 auto;
         width: 300px;
@@ -182,62 +240,16 @@ header {
     }
   }
 }
-.header-register-btn{
-  @media @mobile, @mobile-md {
-    background-size: 530px;
-    height: auto;
-  }
-}
 
-.register {
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  font-family: Bemount;
-  text-align: center;
-  float: right;
-  padding-left: 20px;
-  line-height: 50px;
-  &:after {
-    content: '';
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    right: -2px;
-    top: 0;
-    background-image: url(../images/register.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
-  > a {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-    z-index: 2;
-  }
-  @media @tablet, @highdensity {
-    font-size: 24px;
-    margin: 130px 0;
-    vertical-align: middle;
-    height: 50px;
-    width: 250px;
-  }
-  @media @mobile, @mobile-md {
-    margin: 50px 0;
-    width: 160px;
-    line-height: 30px;
-    &:after {
-      height: 30px;
-    }
-  }
-}
+
+
 .header-form {
   margin: 51px 15px 67px 0;
   font-family: ClinicaProRegular;
   float: right;
   width: 258px;
   display: block;
-  @media @tablet {
+  @media @tablet, @highdensity {
     margin: 0 auto;
     float: none;
   }

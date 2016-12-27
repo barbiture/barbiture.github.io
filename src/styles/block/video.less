@@ -60,6 +60,7 @@
 
 .video-thumb{
   margin-top: 40px;
+  padding-bottom: 40px;
   .video-block {
     width: auto;
     @media @tablet-md {
@@ -113,5 +114,11 @@
     display: inline-block;
     .sprite(@s-ar-decor-right);
     float: right;
+  }
+  + button {
+    margin-right: 65px;
+    @media @tablet-md, @mobile, @mobile-md {
+      margin-right: 20px;
+    }
   }
 }
