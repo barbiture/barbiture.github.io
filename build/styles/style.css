@@ -1947,7 +1947,7 @@ button:focus {
   outline: 0;
 }
 .wrap {
-  padding: 45px 0 50px;
+  padding: 35px 0 50px;
   margin-top: -20px;
 }
 .wrap-cont {
@@ -2152,13 +2152,17 @@ h4 a:hover {
   height: 42px;
 }
 .breadcrumbs {
-  font-family: ClearSansRegular;
+  font-family: ClearSansMedium;
   font-size: 15px;
-  margin-top: 20px;
+}
+@media only screen and (min-width: 530px) and (max-width: 949px), only screen and (min-width: 530px) and (max-width: 818px) {
+  .breadcrumbs {
+    margin-top: 10px;
+  }
 }
 @media only screen and (min-width: 440px) and (max-width: 529px), only screen and (max-width: 439px) {
   .breadcrumbs {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 13px;
   }
   .breadcrumbs.pull-left {
