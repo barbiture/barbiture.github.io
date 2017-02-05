@@ -529,7 +529,10 @@ td.loader-td {
   background-position: -112px 0;
 }
 
-
+.traning-tile a {
+  text-decoration: none;
+  color: #000;
+}
 .traning-tile .free {
   background-color: #ff9926;
 }
@@ -749,4 +752,47 @@ td.loader-td {
   left: -90px;
   font-size: 30px;
   font-family: DINCondensedRegular;
+}
+
+.lider,
+.speak,
+.skill {
+  margin-top: -68px;
+  float: left;
+  width: 191px;
+  height: 191px;
+  position: relative;
+}
+.lider {
+  margin-left: 163px;
+}
+.speak,
+.skill {
+  margin-left: 25px;
+}
+.svg path {
+  -webkit-transition: stroke-dashoffset .4s linear;
+  -o-transition: stroke-dashoffset .4s linear;
+  transition: stroke-dashoffset .4s linear;
+}
+.cont{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 175px;
+  height: 44px;
+  margin-left: -87px;
+  margin-top: -10px;
+  display: block;
+  text-align: center;
+  font-family: DINCondensedRegular;
+  font-size: 22px;
+}
+.cont:after {
+  font-size: 22px;
+  height: 30px;
+  width: 175px;
+  display: block;
+  content: attr(data-pct)"%";
+  border-radius: 100%;
 }
