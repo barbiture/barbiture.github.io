@@ -11,32 +11,29 @@
     <div class="container">
       <div class="row">
         <div class="col col-3">
-          <div class="dropdown">
+          <div class="dropdown" id="dropdownDilever">
             <div class="dropdown__selected dropdown__selected_white dropdown__selected_s">
               Челябинск
-              <div class="tabs dropdown__content dropdown__content_theme-left" id="tabRus" style="display:block;">
-                <ul class="tabs__nav">
-                  <li class="tabs__nav_item tabs__nav_item_active">ДОСТАВКА ПО РОССИИ</li>
-                  <li class="tabs__nav_item">МЕЖДУНАРОДНАЯ ДОСТАВКА</li>
-                </ul>
-                <div class="tabs__content">
-                  <form action="" method="GET" onsubmit="return false">
-                    <input type="text" placeholder="Введите название города" name="val" class="awesomplete__input">
-                  </form>
-                  <ul class="tabs__content-list"></ul>
-                </div>
+              <!-- <i class="dropdown__selected-arrow"></i> -->
+            </div>
+            <div class="tabs dropdown__content dropdown__content_theme-left">
+              <div class="tabs__nav">
+                <span class="tabs__nav_item tabs__nav_item_active" id="linkRus">ДОСТАВКА ПО РОССИИ</span>
+                <span class="tabs__nav_item" id="linkInt">МЕЖДУНАРОДНАЯ ДОСТАВКА</span>
               </div>
-              <div class="tabs dropdown__content dropdown__content_theme-left" id="tabInt">
-                <ul class="tabs__nav">
-                  <li class="tabs__nav_item tabs__nav_item_active">ДОСТАВКА ПО РОССИИ</li>
-                  <li class="tabs__nav_item">МЕЖДУНАРОДНАЯ ДОСТАВКА</li>
-                </ul>
-                <div class="tabs__content">
-                  <form action="" method="GET" onsubmit="return false">
-                    <input type="text" placeholder="Введите название города" name="val" class="awesomplete__input">
-                  </form>
-                  <ul class="tabs__content-list"></ul>
-                </div>
+              <div class="tabs__content tabs__content-active" id="tabRus">
+                <form action="" method="GET" onsubmit="return false">
+                  <input type="text" placeholder="Введите название города" name="rus" class="awesomplete__input">
+                </form>
+                <ul class="tabs__content-list" id="rus"></ul>
+                <div><a href="">Полный список</a></div>
+              </div>
+              <div class="tabs__content" id="tabInt">
+                <form action="" method="GET" onsubmit="return false">
+                  <input type="text" placeholder="Введите название города" name="int" class="awesomplete__input">
+                </form>
+                <ul class="tabs__content-list" id="int"></ul>
+                <div><a href="">Полный список</a></div>
               </div>
             </div>
           </div>

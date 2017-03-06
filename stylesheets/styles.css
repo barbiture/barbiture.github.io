@@ -1,3 +1,11 @@
+.dropdown__selected-arrow {
+  display: inline-block;
+  background-image: url("../images/sprite.svg");
+  background-size: 117.5em 47.1875em; }
+
+.lt-ie9 .dropdown__selected-arrow {
+  background-image: url("../images/sprite.png"); }
+
 @font-face {
   font-family: "sf";
   font-style: normal;
@@ -246,6 +254,13 @@ p {
   cursor: pointer; }
   .tabs__content-list-item:hover {
     color: #e395c0; }
+  .tabs__content-list-item.selected {
+    color: #e395c0; }
+
+.tabs__content {
+  display: none; }
+  .tabs__content-active {
+    display: block; }
 
 .header__cart {
   display: block;
@@ -280,6 +295,18 @@ p {
 
 .dropdown__selected {
   position: relative; }
+
+.dropdown__selected-arrow {
+  width: 0.625em;
+  height: 0.3925em;
+  background-position: -72.78938em -29.0625em; }
+  .lt-ie9 .dropdown__selected-arrow {
+    width: 9px;
+    height: 5.28px;
+    background-position: -1164.63px -465px; }
+
+.dropdown__selected-arrow_active {
+  transform: rotate(180deg); }
 
 .dropdown__selected_m {
   font-size: 15px;
@@ -442,15 +469,30 @@ p {
   position: relative; }
   .catalog__item:hover {
     border-color: #e6e6e6;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
     .catalog__item:hover .btn-catalog {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transition: all .6s ease-in-out;
+      -o-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out; }
     .catalog__item:hover .catalog__item-size {
-      opacity: .6; }
+      opacity: .6;
+      -webkit-transition: all .6s ease-in-out;
+      -o-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out; }
     .catalog__item:hover .catalog__item-size_active {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transition: all .6s ease-in-out;
+      -o-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out; }
     .catalog__item:hover .choose-color {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transition: all .6s ease-in-out;
+      -o-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out; }
 
 .btn-catalog {
   opacity: 0; }

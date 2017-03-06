@@ -13,52 +13,42 @@ b))}).filter(function(d){return a.filter(d,b)}).sort(this.sort).slice(0,this.max
 function(a,b){var d=""===b?a:a.replace(RegExp(c.regExpEscape(b.trim()),"gi"),"<mark>$&</mark>");return c.create("li",{innerHTML:d,"aria-selected":"false"})};e.REPLACE=function(a){this.input.value=a.value};e.DATA=function(a){return a};Object.defineProperty(h.prototype=Object.create(String.prototype),"length",{get:function(){return this.label.length}});h.prototype.toString=h.prototype.valueOf=function(){return""+this.label};var l=Array.prototype.slice;c.create=function(a,b){var d=document.createElement(a),
 g;for(g in b){var f=b[g];"inside"===g?c(f).appendChild(d):"around"===g?(f=c(f),f.parentNode.insertBefore(d,f),d.appendChild(f)):g in d?d[g]=f:d.setAttribute(g,f)}return d};c.bind=function(a,b){if(a)for(var d in b){var c=b[d];d.split(/\s+/).forEach(function(b){a.addEventListener(b,c)})}};c.fire=function(a,b,c){var e=document.createEvent("HTMLEvents");e.initEvent(b,!0,!0);for(var f in c)e[f]=c[f];return a.dispatchEvent(e)};c.regExpEscape=function(a){return a.replace(/[-\\^$*+?.()|[\]{}]/g,"\\$&")};
 c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b};"undefined"!==typeof Document&&("loading"!==document.readyState?m():document.addEventListener("DOMContentLoaded",m));e.$=c;e.$$=k;"undefined"!==typeof self&&(self.Awesomplete=e);"object"===typeof module&&module.exports&&(module.exports=e);return e})();
+
 ;(function(){
-  var rus = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Нижний Новгород', 'Казань', 'Челябинск', 'Омск', 'Самара', 'Красноярск', 'Пермь', 'Ростов-на-Дону', 'Волгоград', 'Уфа', 'Воронеж', 'Саратов', 'Иркутск', 'Ульяновск', 'Хабаровск', 'Пенза', 'Белгород', 'Миас', 'Троицк (Челяб. обл)', 'Полный список'];
-  var int = ['Белорусь', 'Украина', 'Грузия', 'Испания', 'США', 'Венесуэла', 'Канада', 'Франция', 'Италия', 'Нидерланды', 'Великобритания', 'Тайланд', 'Китай', 'Аргентина', 'Куба', 'Бразилия', 'Люксембург', 'Чехия', 'Австрия', 'Германия', 'Чили', 'Индия', 'Швеция', 'Швейцария', 'ЮАР', 'Япония', 'Австралия', 'Полный список',];
+    var dropdownDilever = document.getElementById('dropdownDilever');
+    var rus = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Нижний Новгород', 'Казань', 'Челябинск', 'Омск', 'Самара', 'Красноярск', 'Пермь', 'Ростов-на-Дону', 'Волгоград', 'Уфа', 'Воронеж', 'Саратов', 'Иркутск', 'Ульяновск', 'Хабаровск', 'Пенза', 'Белгород', 'Миас', 'Троицк (Челяб. обл)'];
+    var int = ['Белорусь', 'Украина', 'Грузия', 'Испания', 'США', 'Венесуэла', 'Канада', 'Франция', 'Италия', 'Нидерланды', 'Великобритания', 'Тайланд', 'Китай', 'Аргентина', 'Куба', 'Бразилия', 'Люксембург', 'Чехия', 'Австрия', 'Германия', 'Чили', 'Индия', 'Швеция', 'Швейцария', 'ЮАР', 'Япония', 'Австралия'];
 
-  function fillUl(id, arr, classes) {
-    var menu = document.getElementById(id),
-        ul = menu.getElementsByTagName('ul')[1],
-        title = menu.children[0];
-    title.innerHTML = arr[1];
-    for (var i=0; i<arr.length; i++) {
-      if ( arr[i] == title.innerHTML )
-        ul.innerHTML += '<li class="'+classes+
-          ' selected">'+arr[i]+'</li>';
-      else
-        ul.innerHTML += '<li class="'+classes+'">'+
-          arr[i]+'</li>';
+    /////////////Заполнениие меню//////////////////
+
+    function fillUl(id, arr, classes) {
+      var ul = document.getElementById(id),
+          title = document.getElementById('dropdownDilever').children[0];
+      for (var i=0; i<arr.length; i++) {
+        if ( arr[i] == title.innerHTML )
+          ul.innerHTML += '<li class="'+classes+
+            ' selected">'+arr[i]+'</li>';
+        else
+          ul.innerHTML += '<li class="'+classes+'">'+
+            arr[i]+'</li>';
+      }
     }
-  }
-  // function createLi(id, arr) {
-  //   var menu = document.getElementById(id),
-  //       ul = menu.getElementsByClassName('tabs__content-list')[0],
-  //       title = menu.children[0];
-  //   for (var i=0; i<arr.length; i++) {
-  //     if ( arr[i] == title.innerHTML )
-  //       ul.innerHTML+='<li class="tabs__content-list-item selected">'+arr[i]+'</li>';
-  //     else
-  //       ul.innerHTML+='<li class="tabs__content-list-item">'+arr[i]+'</li>';
-  //   }
-  // }
-  fillUl('tabRus',rus,'tabs__content-list-item');
-  fillUl('tabInt',int,'tabs__content-list-item');
-  // createLi('tabRus',rus);
-  // createLi('tabInt',int);
 
-  function clearUl(id) {
-    var ul = document.getElementById(id);
-    while (ul.firstChild)
-      ul.removeChild(ul.firstChild);
-  }
+    fillUl('rus',rus,'tabs__content-list-item');
+    fillUl('int',int,'tabs__content-list-item');
+
+    function clearUl(id) {
+      var ul = document.getElementById(id);
+      while (ul.firstChild)
+        ul.removeChild(ul.firstChild);
+    }
 
 
-    /////////////Доп. функции//////////////////
+  /////////////Доп. функции//////////////////
 
-    var addClass = function(el) {
-      if ( !hasClass(el, 'selected') )
-        el.className += ' ' + 'selected';
+    var addClass = function(el, className) {
+      if ( !hasClass(el, className) )
+        el.className += ' ' + className;
     };
 
     var hasClass = function(str, className) {
@@ -79,10 +69,10 @@ c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b}
           break;
         }
       }
-      return classList;
+      return classList.join(' ');
     };
 
-    ///////////////////////////////////////////////
+  ///////////////////////////////////////////////
 
     function Menu(obj,type,index) {
       var id = (typeof obj == 'object') ? obj.id : obj;
@@ -92,8 +82,8 @@ c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b}
         this.el = document.getElementsByClassName(id)[index];
       this.delay = obj.delay || 0.5;
       this.content = this.el.children[1];
-      this.li = this.el.getElementsByTagName('li');
-      this.input = this.el.getElementsByTagName('input')[0];
+      this.li = this.el.getElementsByClassName('tabs__content-list-item');
+      this.inputs = this.el.getElementsByTagName('input');
       this.menuName = this.el.children[0];
       this.content.style.transition = 'all '+this.delay+'s';
       this.timeOut;
@@ -101,20 +91,38 @@ c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b}
       this.list = obj.list;
       this.addEventToItems();
       this.clickEvent();
-      // this.awesomplete();
+      this.closeByClickBody();
     }
+
+    Menu.prototype.closeByClickBody = function() {
+      var $this = this;
+      document.body.onclick = function(e) {
+        console.log(e.target.parentElement.className);
+        // if ( e.target.nodeName == 'HTML' || e.target.nodeName == 'BODY') {
+        if ( e.target.parentElement.className != 'dropdown' &&
+          e.target.parentElement.className != 'tabs__nav' &&
+          e.target.parentElement.className != 'awesomplete') {
+          if ($this.content.style.display == 'block')
+            $this.fadeOut();
+        }
+      };
+    };
+
 
     Menu.prototype.awesomplete = function() {
       var $this = this;
-      new Awesomplete($this.input, {
-        list: $this.list,
-        replace: function(e) {
-          $this.input.value = '';
-          $this.menuName.innerHTML = e.value;
-          $this.selectItemFromSearch(e.value);
-          $this.fadeOut();
-        }
-      });
+      for (var i=0; i<this.inputs.length; i++) {
+        new Awesomplete($this.inputs[i], {
+          list: $this.list[i],
+          replace: function(e) {
+            for (var j=0; j<$this.inputs.length; j++)
+              $this.inputs[j].value = '';
+            $this.menuName.innerHTML = e.value;
+            $this.selectItemFromSearch(e.value);
+            $this.fadeOut();
+          }
+        });
+      }
     };
 
     Menu.prototype.fadeIn = function() {
@@ -153,16 +161,15 @@ c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b}
         $this.stop();
         $this.fadeIn();
       };
-      this.el.onmouseleave = function(e) {
-        $this.fadeOut();
+        this.el.onmouseleave = function(e) {
+          $this.fadeOut();
       };
     };
 
     Menu.prototype.clearSelected = function(str, className) {
       for (var i=0; i<this.li.length; i++ ) {
-        if ( hasClass(this.li[i],'selected') ) {
+        if ( hasClass(this.li[i],'selected') )
           this.li[i].className = removeClass(this.li[i],'selected');
-        }
       }
     };
 
@@ -175,43 +182,51 @@ c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b}
       this.clearSelected(this.li);
       for (var i=1; i<this.li.length; i++) {
         if ( this.li[i].innerHTML == val )
-          addClass(this.li[i]);
+        addClass(this.li[i]);
       }
     };
 
     Menu.prototype.addEventToItems = function() {
       var $this = this;
       for (var i=0; i<this.li.length; i++ ) {
-        if ( hasClass(this.li[i],'itemLi') ) {
-          this.li[i].onclick = function() {
-            $this.selectItem(this);
-            $this.el.children[0].innerHTML = this.innerHTML;
-            if ($this.close) $this.fadeOut();
-          };
-        }
+        this.li[i].onclick = function() {
+          $this.selectItem(this);
+          $this.el.children[0].innerHTML = this.innerHTML;
+          if ($this.close) $this.fadeOut();
+        };
       }
     };
 
-////////////////////////////////////////////////////////////
+     ////// Как использовать //////////////////
+     // use: Id
+     // new Menu('bb1').clickEvent();
+     // new Menu({id:'aa1',close:true});
+     // use: Class
+     // new Menu({id:'bb',close:true,delay:1},1,1);
+     //////////////////////////////////////////////
 
-  var a = new Menu({id:'tabRus',list:rus});
-  a.awesomplete();
-  var b = new Menu({id:'tabInt',list:int});
-  b.awesomplete();
+    new Menu({id:'dropdownDilever',list:[rus,int]}).awesomplete();
 
-  var rus = document.getElementsByClassName('rus');
-  var int = document.getElementsByClassName('int');
+    var tabRus = document.getElementById('tabRus'),
+        tabInt = document.getElementById('tabInt'),
+        linkRus = document.getElementById('linkRus'),
+        linkInt = document.getElementById('linkInt');
 
-  for (var i=0; i<rus.length; i++) {
-    rus[i].onclick = function() {
-      a.el.style.display = 'block';
-      a.ul.style.display = 'block';
-      b.el.style.display = 'none';
+    linkRus.onclick = function() {
+      if (!hasClass(this, 'tabs__nav_item_active')) {
+        linkInt.className = removeClass(linkInt, 'tabs__nav_item_active');
+        addClass(this, 'tabs__nav_item_active');
+      }
+      tabInt.style.display = 'none';
+      tabRus.style.display = 'block';
     };
-    int[i].onclick = function() {
-      b.el.style.display = 'block';
-      b.ul.style.display = 'block';
-      a.el.style.display = 'none';
+
+    linkInt.onclick = function() {
+      if (!hasClass(this, 'tabs__nav_item_active')) {
+        linkRus.className = removeClass(linkRus, 'tabs__nav_item_active');
+        addClass(this, 'tabs__nav_item_active');
+      }
+      tabRus.style.display = 'none';
+      tabInt.style.display = 'block';
     };
-  }
 })();
