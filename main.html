@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3">
+          <div class="dropdown">
+            <div class="dropdown__selected dropdown__selected_white dropdown__selected_s">
+              Челябинск
+              <div class="tabs dropdown__content dropdown__content_theme-left" id="tabRus" style="display:block;">
+                <ul class="tabs__nav">
+                  <li class="tabs__nav_item tabs__nav_item_active">ДОСТАВКА ПО РОССИИ</li>
+                  <li class="tabs__nav_item">МЕЖДУНАРОДНАЯ ДОСТАВКА</li>
+                </ul>
+                <div class="tabs__content">
+                  <form action="" method="GET" onsubmit="return false">
+                    <input type="text" placeholder="Введите название города" name="val" class="awesomplete__input">
+                  </form>
+                  <ul class="tabs__content-list"></ul>
+                </div>
+              </div>
+              <div class="tabs dropdown__content dropdown__content_theme-left" id="tabInt">
+                <ul class="tabs__nav">
+                  <li class="tabs__nav_item tabs__nav_item_active">ДОСТАВКА ПО РОССИИ</li>
+                  <li class="tabs__nav_item">МЕЖДУНАРОДНАЯ ДОСТАВКА</li>
+                </ul>
+                <div class="tabs__content">
+                  <form action="" method="GET" onsubmit="return false">
+                    <input type="text" placeholder="Введите название города" name="val" class="awesomplete__input">
+                  </form>
+                  <ul class="tabs__content-list"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown__header-tel">
+            <div class="dropdown__selected dropdown__selected_white dropdown__selected_m">
+              8 800 5555 714
+            </div>
+            <ul class="dropdown__content dropdown__content_theme_left">
+              <li></li>
+            </ul>
+          </div>
+          <div class="link link_white link_size_s link_underline">Заказать звонок</div>
+        </div>
+        <div class="col col-6 text-center">
+          <div class="logo header__logo">
+            <a href="index.html"><img src="images/logo.png" alt="" class="logo_img"></a>
+            <div class="header__logo_text">В любую точку мира за 3 часа!</div>
+          </div>
+        </div>
+        <div class="col col-3 text-right">
+          <div class="link link_white link_size_s in-bl">Вход</div>
+          <div class="dropdown in-bl dropdown_lang">
+            <div class="dropdown__selected spite">
+              en
+            </div>
+            <ul class="dropdown__content dropdown__content_theme_left">
+              <li>ru</li>
+            </ul>
+          </div>
+          <div class="dropdown in-bl">
+            <div class="dropdown__selected dropdown__selected_white dropdown__selected_s">
+              $
+            </div>
+            <ul class="dropdown__content dropdown__content_theme_left">
+              <li></li>
+            </ul>
+          </div>
+          <a href="" class="header__cart">
+            <span class="sprite"><span class="header__cart-val">1</span></span>
+            <span class="link link_size_s link_white">Мой заказ</span>
+          </a>
+          <div class="sprite link link_size_s link_white">Поиск</div>
+        </div>
+      </div>
+    </div>
+    <div class="search-form hidden">
+      <div class="container">
+        <div class="sprite"></div>
+        <input class="search-form__input" type="search" placeholder="Искать букет, например “розы”">
+        <button class="search-form__close sprite"></button>
+      </div>
+      <div class="search-form__nav">
+        <div class="container">
+          <ul>
+            <li class="dropdown search-form__nav-item">
+              <div class="dropdown__selected">Кому</div>
+              <ul class="dropdown__content">
+                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
+                <li class="dropdown__item search-form__nav-option">Женщине</li>
+                <li class="dropdown__item search-form__nav-option">Мужчине</li>
+                <li class="dropdown__item search-form__nav-option">Маме</li>
+                <li class="dropdown__item search-form__nav-option">Коллеге</li>
+                <li class="dropdown__item search-form__nav-option">Ребенку</li>
+              </ul>
+            </li>
+            <li class="dropdown search-form__nav-item">
+              <div class="dropdown__selected">Тюльпаны</div>
+              <ul class="dropdown__content">
+                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
+                <li class="dropdown__item search-form__nav-option">Женщине</li>
+                <li class="dropdown__item search-form__nav-option">Мужчине</li>
+                <li class="dropdown__item search-form__nav-option">Маме</li>
+                <li class="dropdown__item search-form__nav-option">Коллеге</li>
+                <li class="dropdown__item search-form__nav-option">Ребенку</li>
+              </ul>
+            </li>
+            <li class="dropdown search-form__nav-item">
+              <div class="dropdown__selected">Размер</div>
+              <ul class="dropdown__content">
+                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
+                <li class="dropdown__item search-form__nav-option">Женщине</li>
+                <li class="dropdown__item search-form__nav-option">Мужчине</li>
+                <li class="dropdown__item search-form__nav-option">Маме</li>
+                <li class="dropdown__item search-form__nav-option">Коллеге</li>
+                <li class="dropdown__item search-form__nav-option">Ребенку</li>
+              </ul>
+            </li>
+            <li class="dropdown search-form__nav-item">
+              <div class="dropdown__selected">Упаковка</div>
+              <ul class="dropdown__content">
+                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
+                <li class="dropdown__item search-form__nav-option">Женщине</li>
+                <li class="dropdown__item search-form__nav-option">Мужчине</li>
+                <li class="dropdown__item search-form__nav-option">Маме</li>
+                <li class="dropdown__item search-form__nav-option">Коллеге</li>
+                <li class="dropdown__item search-form__nav-option">Ребенку</li>
+              </ul>
+            </li>
+            <li class="search-form__nav-item">Сбросить настройки</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="container">
+    <ul class="navbar-nav">
+      <li class="navbar-nav__item dropdown">
+        <a href="" class="navbar-nav__link dropdown__selected">КАТАЛОГ БУКЕТОВ</a>
+        <ul class="dropdown__content dropdown__content_theme_left">
+          <li></li>
+        </ul>
+      </li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">АКЦИИ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">МАСТЕР БУКЕТОВ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">СОБРАТЬ БУКЕТ ONLINE</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">КОНТАКТЫ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">ОТЗЫВЫ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">ГАРАНТИИ</a></li>
+    </ul>
+  </nav>
+  <section class="section main-banner">
+    <div class="container prel">
+      <div class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</div>
+      <div class="main-banner_subtitle">Выбери на свой вкус!</div>
+      <a href="" class="btn btn-bg btn_main-banner">Быстрая покупка</a>
+    </div>
+  </section>
+  <section class="section catalog">
+      <div class="container">
+        <div class="row">
+          <div class="col col-4 pref"><i class="sprite"></i> Мы доставили 35 000 букетов</div>
+          <div class="col col-4 text-center pref"><i class="sprite"></i> Оперативная доставка за три часа</div>
+          <div class="col col-4 text-right pref"><i class="sprite"></i> 100% финансовая гарантия</div>
+        </div>
+        <div class="row">
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img1.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Ранняя весна</a>
+              <div class="catalog__item-price catalog__item-price_old">16 690</div>
+              <div class="catalog__item-price catalog__item-price_new">10 180 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img2.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Ключ к сердцу</a>
+              <div class="catalog__item-price">1460 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img3.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Розовые тюльпаны</a>
+              <div class="catalog__item-price catalog__item-price_old">1800</div>
+              <div class="catalog__item-price catalog__item-price_new">1800 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img4.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Белые тюльпаны</a>
+              <div class="catalog__item-price catalog__item-price_old">2500</div>
+              <div class="catalog__item-price catalog__item-price_new">2000 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img5.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Ранняя весна</a>
+              <div class="catalog__item-price catalog__item-price_old">16 690</div>
+              <div class="catalog__item-price catalog__item-price_new">10 180 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img6.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Ключ к сердцу</a>
+              <div class="catalog__item-price">1460 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img7.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Розовые тюльпаны</a>
+              <div class="catalog__item-price catalog__item-price_old">1800</div>
+              <div class="catalog__item-price catalog__item-price_new">1800 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img8.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Белые тюльпаны</a>
+              <div class="catalog__item-price catalog__item-price_old">2500</div>
+              <div class="catalog__item-price catalog__item-price_new">2000 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img9.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Ранняя весна</a>
+              <div class="catalog__item-price catalog__item-price_old">16 690</div>
+              <div class="catalog__item-price catalog__item-price_new">10 180 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img10.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Ключ к сердцу</a>
+              <div class="catalog__item-price">1460 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img11.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Розовые тюльпаны</a>
+              <div class="catalog__item-price catalog__item-price_old">1800</div>
+              <div class="catalog__item-price catalog__item-price_new">1800 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+          <div class="col col-3">
+            <div class="catalog__item">
+              <div class="row">
+                <div class="col col-4 catalog__item-size catalog__item-size_active">
+                  <div class="catalog__item-size-name">Малый</div>
+                  <p class="catalog__item-size-sm">15-20 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Средний</div>
+                  <p class="catalog__item-size-sm">25-30 см</p>
+                </div>
+                <div class="col col-4 catalog__item-size">
+                  <div class="catalog__item-size-name">Большой</div>
+                  <p class="catalog__item-size-sm">35-40 см</p>
+                </div>
+              </div>
+              <div class="choose-color">
+                <a href="" class="choose-color__item choose-color__item_color1 choose-color__item_active"></a>
+                <a href="" class="choose-color__item choose-color__item_color2"></a>
+                <a href="" class="choose-color__item choose-color__item_color3"></a>
+                <a href="" class="choose-color__item choose-color__item_color4"></a>
+              </div>
+              <a href="" class="catalog__img"><img src="images/img12.jpg" alt=""></a>
+              <a href="" class="catalog__item-name">Белые тюльпаны</a>
+              <div class="catalog__item-price catalog__item-price_old">2500</div>
+              <div class="catalog__item-price catalog__item-price_new">2000 ₽</div>
+              <a href="" class="btn btn-bg btn-catalog">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__btn-place">
+          <a href="" class="btn">Смотреть каталог</a>
+        </div>
+      </div>
+    </section>
+  <section class="section present">
+    <div class="container prel">
+      <img src="images/flower-bg.png" alt="" class="present__flower">
+      <div class="h1 text-center">ПРОСТОЕ РЕШЕНИЕ</div>
+      <div class="subtitle">Для лучшего подарка!</div>
+      <div class="row">
+        <div class="col col-6 text-jst">
+          <p>Хотите поздравить кого-то инкогнито? Спектр наших услуг позволяет заказать букет с конфиденциальной адресной доставкой. Курьер может принести и вручить цветы в разгар торжества, что, несомненно, удивит и порадует адресата. По вашему желанию возможна бесплатная доставка цветов на дом по Москве и России. Из всех вариантов проявления внимания подарок цветов - самый точный и глубокий. Ведь цветы способны выразить и передать эмоции дарящего. Именно поэтому традиция дарить цветы по поводу и без так прочно укоренилась в культурах многих стран!</p>
+        </div>
+        <div class="col col-6 text-jst">
+          <p>Выбирая букет на заказ, важно учитывать множество особенностей — возраст, пол, характер взаимоотношений с адресатом. Специалисты нашего салона всегда помогут вам подобрать лучшее сочетание цветов в композиции, грамотно и эффектно ее оформить. Если вы подбираете букет цветов с доставкой для любимой женщины, вам посоветуют свежесрезанные, насыщенного цвета розы, к которым по желанию можно добавить милый оригинальный подарок. Если вам требуется недорогой букет, мы сможем предложить несколько десятков подходящих вариантов. <span class="link link_more">Далее</span></p>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+  </section>
+  <section class="section review">
+    <div class="container">
+      <div class="h1 text-center">ОТЗЫВЫ</div>
+      <div class="row">
+        <div class="col col-3 review__item">
+          <div class="review__date">18 октября, 2016</div>
+          <div class="review__name">Мария</div>
+          <div class="review__text">Спасибо! Я очень довольна! Заказывали цветы в коробке! Очень оригинально и подруга которая получала была в восторге!</div>
+        </div>
+        <div class="col col-3 review__item">
+          <div class="review__date">5 октября, 2016</div>
+          <div class="review__name">Анна Попова</div>
+          <div class="review__text">Спасибо огромное! Букет доставлен даже чуть раньше промежутка назначенного времени! Процветания Вам!</div>
+        </div>
+        <div class="col col-3 review__item">
+          <div class="review__date">18 октября, 2016</div>
+          <div class="review__name">Анастасия</div>
+          <div class="review__text">Спасибо! Я очень довольна! Заказывали цветы в коробке! Очень оригинально и подруга которая получала была в восторге!</div>
+        </div>
+        <div class="col col-3 review__item">
+          <div class="review__date">18 октября, 2016</div>
+          <div class="review__name">Мария</div>
+          <div class="review__text">Спасибо! Я очень довольна! Заказывали цветы в коробке! Очень оригинально и подруга которая получала была в восторге!</div>
+        </div>
+      </div>
+      <div class="review__btn-place">
+        <a href="" class="btn">Смотреть все отзывы</a>
+      </div>
+    </div>
+  </section>
+  <section class="section section-ig">
+    <div class="container">
+      <div class="section-ig__title">#megaflowers</div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info clearfix">
+        <div class="pull-left">
+          <div class="footer__tel">8 800 5555 714</div>
+          <a href="mailto:info@megaflowers.ru" class="footer__mail">info@megaflowers.ru</a>
+        </div>
+        <div class="pull-right">
+          <a href=""></a>
+          <ul class="social">
+            <li>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">О компании</li>
+            <li><a href="" class="footer_link">О нас</a></li>
+            <li><a href="" class="footer_link">Отзывы</a></li>
+            <li><a href="" class="footer_link">Контактная информация</a></li>
+            <li><a href="" class="footer_link">Наши лица</a></li>
+            <li><a href="" class="footer_link">Видео</a></li>
+            <li><a href="" class="footer_link">Фото с доставкой</a></li>
+            <li><a href="" class="footer_link">Веб-Камера</a></li>
+            <li><a href="" class="footer_link">Новости</a></li>
+            <li><a href="" class="footer_link">Блог</a></li>
+            <li><a href="" class="footer_link">Наши статьи</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">Сотрудничество</li>
+            <li><a href="" class="footer_link">Франчайзинг</a></li>
+            <li><a href="" class="footer_link">Корпоративным клиентам</a></li>
+            <li><a href="" class="footer_link">Партнерская пррограмма</a></li>
+            <li><a href="" class="footer_link">Партнеры Megaflowers</a></li>
+            <li><a href="" class="footer_link">Фото с доставкой</a></li>
+            <li><a href="" class="footer_link">Пресс-центр</a></li>
+            <li><a href="" class="footer_link">Прочее сотрудничество</a></li>
+          </ul>
+          <ul class="footer__block">
+            <li class="footer__title">Услуги</li>
+            <li><a href="" class="footer_link">Найти друга</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">Специальные предложения</li>
+            <li><a href="" class="footer_link">Накопительные скидки</a></li>
+            <li><a href="" class="footer_link">Акции и скидки</a></li>
+            <li><a href="" class="footer_link">Дополнения к букету</a></li>
+            <li><a href="" class="footer_link">Другие товары</a></li>
+            <li><a href="" class="footer_link">Доставка цветов за границу</a></li>
+            <li><a href="" class="footer_link">Идеальный подарок</a></li>
+          </ul>
+          <ul class="footer__block">
+            <li class="footer__title">Личный кабинет</li>
+            <li><a href="" class="footer_link">Вход</a></li>
+            <li><a href="" class="footer_link">Регистрация</a></li>
+            <li><a href="" class="footer_link">Забыли пароль?</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">Помощь</li>
+            <li><a href="" class="footer_link">Форматы оплаты</a></li>
+            <li><a href="" class="footer_link">Плата за доставку</a></li>
+            <li><a href="" class="footer_link">Публичный договор-оферта</a></li>
+            <li><a href="" class="footer_link">Правила предоставления услуг</a></li>
+            <li><a href="" class="footer_link">Порядлок оформления заказа</a></li>
+            <li><a href="" class="footer_link">Гаранти</a></li>
+            <li><a href="" class="footer_link">Часто задаваемые вопросы</a></li>
+            <li><a href="" class="footer_link">Онлайн чат</a></li>
+            <li><a href="" class="footer_link">Включить уведомления</a></li>
+            <li><a href="" class="footer_link">Помощь</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">© 2005-2016 Megaflowers</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

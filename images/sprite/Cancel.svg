@@ -1,0 +1,14 @@
+<svg id="Cancel" xmlns="http://www.w3.org/2000/svg" width="14.75" height="14.438" viewBox="0 0 14.75 14.438">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #111;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M313.636,129.636l12.728,12.728" transform="translate(-312.125 -129.125)"/>
+  <path id="Shape_2_copy_3" data-name="Shape 2 copy 3" class="cls-1" d="M326.071,130.343l-12.728,12.728" transform="translate(-312.125 -129.125)"/>
+</svg>

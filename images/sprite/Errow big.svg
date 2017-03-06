@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="36" viewBox="0 0 19 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #111;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Errow_big" data-name="Errow big" class="cls-1" d="M375.7,120.009L392.99,137.5,375.7,154.99" transform="translate(-374.5 -119.5)"/>
+</svg>
