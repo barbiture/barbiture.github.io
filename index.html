@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>  <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>  <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>  <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3">
+          <div class="dropdown
+                      dropdown_template__header__deliver"
+              id="dropdownDeliver">
+            <div class="dropdown__selected
+                        dropdown__selected__icon
+                        dropdown__selected_white
+                        dropdown__selected__deliver
+                        dropdown__selected_s">Челябинск</div>
+          
+            <div class="tabs dropdown__content
+                        dropdown__content__deliver
+                        dropdown__content_theme_left">
+              <div class="tabs__nav">
+                <span class="tabs__nav_item tabs__nav_item_active" id="">ДОСТАВКА ПО РОССИИ</span>
+                <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ ДОСТАВКА</span>
+                <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ TEST</span>
+              </div>
+              <div class="tabs__content">
+                <form action="" method="GET" onsubmit="return false">
+                  <input type="text" placeholder="Введите название города" name="rus" class="awesomplete__input">
+                </form>
+                <ul class="dropdown__content__list
+                          tabs__content__list
+                          tabs__content__list_rus"></ul>
+              </div>
+              <div class="tabs__content">
+                <form action="" method="GET" onsubmit="return false">
+                  <input type="text" placeholder="Введите название города" name="int" class="awesomplete__input">
+                </form>
+                <ul class="dropdown__content__list
+                          tabs__content__list
+                          tabs__content__list_int"></ul>
+              </div>
+              <div class="tabs__content"">
+                <form action="" method="GET" onsubmit="return false">
+                  <input type="text" placeholder="Введите название города" name="int" class="awesomplete__input">
+                </form>
+                <ul class="dropdown__content__list
+                          tabs__content__list
+                          tabs__content__list_test"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown_template__header__tel" id="dropdownTel">
+            <div class="dropdown__selected
+                        dropdown__selected_white
+                        dropdown__selected_m
+                        dropdown__selected_tel
+                        dropdown__selected__icon">
+              <i class="dropdown_template__header__tel__icon"></i>
+              8 800 5555 714
+            </div>
+            <ul class="dropdown__content
+                        dropdown__content_theme_left
+                        dropdown__content__tel">
+            </ul>
+          </div>
+          <div class="link
+                      link_white
+                      link_size_s
+                      link_underline">Заказать звонок</div>
+        </div>
+        <div class="col col-6 text-center">
+          <div class="logo header__logo">
+            <a href="index.html"><img src="images/logo.png" alt="" class="logo_img"></a>
+            <div class="header__logo_text">В любую точку мира за 3 часа!</div>
+          </div>
+        </div>
+        <div class="col col-3 text-right">
+          <div class="link
+                      link_white
+                      link_size_s
+                      in-bl">Вход</div>
+          <div class="dropdown
+                      in-bl
+                      dropdown__lang
+                      text-left"
+               id="dropdownLang">
+            <div class="dropdown__selected
+                        dropdown__selected__lang
+                        dropdown__selected__lang_en
+                        text-center"></div>
+            <ul class="dropdown__content
+                      dropdown__content_theme_right">
+              <li class="dropdown__content__item">English</li>
+              <li class="dropdown__content__item">Русский</li>
+              <li class="dropdown__content__item">Український</li>
+              <li class="dropdown__content__item">Français</li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown_template__header__curency in-bl text-left" id="dropdownCurency">
+            <div class="dropdown__selected
+                        dropdown__selected_white
+                        dropdown__selected_s
+                        dropdown__selected__icon
+                        dropdown__selected__curency">$</div>
+            <ul class="dropdown__content dropdown__content_theme__right">
+              <li class="dropdown__content__item dropdown__content__item_selected">£ UK</li>
+              <li class="dropdown__content__item">$ US</li>
+              <li class="dropdown__content__item">€ EU</li>
+              <li class="dropdown__content__item">₽ РУБ</li>
+            </ul>
+          </div>
+          <a href="" class="header__cart">
+            <span class="link
+                         link_size_s
+                         link_white
+                         header__cart__icon">Мой заказ
+              <span class="header__cart-val">1</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container clearfix search-form__link" id="searchFormTogle" data-flag="close">
+      <div class="search-form__icon search-form__link__icon link link_size_s link_white text-right col-3 pull-right" >Поиск</div>
+    </div>
+    <div class="search-form" id="searchForm">
+        <div class="search-form__content">
+          <div class="search-form__wrap">
+            <div class="container clearfix">
+              <div class="search-form__wrap__icon search-form__icon pull-left"></div>
+              <input class="search-form__input pull-left" type="search" placeholder="Искать букет, например “розы”">
+              <button class="search-form__close pull-right" id="searchFormClose"></button>
+            </div>
+          </div>
+          <div class="search-form__nav">
+            <div class="container">
+              <ul>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Кому</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="1" type="radio" checked name="rad1">
+                      <label class="radio radio_nav" for="1">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="2" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="2">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="3" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="3">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="4" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="4">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="5" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="5">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="6" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="6">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Событие</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="7" type="radio" checked name="rad2">
+                      <label class="radio radio_nav" for="7">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="8" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="8">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="9" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="9">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="10" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="10">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="11" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="11">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="12" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="12">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Тюльпаны</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="13" type="radio" checked name="rad3">
+                      <label class="radio radio_nav" for="13">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="14" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="14">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="15" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="15">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="16" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="16">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="17" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="17">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="18" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="18">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Размер</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="19" type="radio" checked name="rad4">
+                      <label class="radio radio_nav" for="19">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="20" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="20">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="21" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="21">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="22" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="22">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="23" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="23">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="24" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="24">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Упаковка</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="25" type="radio" checked name="rad5">
+                      <label class="radio radio_nav" for="25">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="26" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="26">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="27" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="27">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="28" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="28">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="29" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="29">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="30" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="30">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="search-form__nav-item">Сбросить настройки</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </header>
+  <nav class="container">
+    <ul class="navbar-nav">
+      <li class="navbar-nav__item dropdown">
+        <a href="" class="navbar-nav__link dropdown__selected">КАТАЛОГ БУКЕТОВ</a>
+        <ul class="dropdown__content dropdown__content_theme_left">
+          <li></li>
+        </ul>
+      </li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">АКЦИИ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">МАСТЕР БУКЕТОВ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">СОБРАТЬ БУКЕТ ONLINE</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">КОНТАКТЫ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">ОТЗЫВЫ</a></li>
+      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">ГАРАНТИИ</a></li>
+    </ul>
+  </nav>
+  <style>
+    .site-map li {
+      line-height: 45px;
+    }
+  </style>
+  <div class="container">
+    <h1 class="h1">Ссылки на страницы</h1>
+    <ul class="site-map">
+      <li>
+        <a href="main.html" class="link link_more">Главная (90%) - 15 марта сдача</a>
+      </li>
+      <li>
+        <span href="#" class="">Главная - 'полный список городов' (0%) - 15 марта сдача</span>
+      </li>
+      <li>
+        <span href="#" class="">Главная - 'статус заказа' (0%) - 15 марта сдача</span>
+      </li>
+      <li>
+        <span href="#" class="">Каталог(0%) - 20 марта сдача</span>
+      </li>
+    </ul>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info clearfix">
+        <div class="pull-left">
+          <div class="footer__tel">8 800 5555 714</div>
+          <a href="mailto:info@megaflowers.ru" class="footer__mail">info@megaflowers.ru</a>
+        </div>
+        <div class="pull-right">
+          <a href=""></a>
+          <ul class="social">
+            <li>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+              <a href=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">О компании</li>
+            <li><a href="" class="footer_link">О нас</a></li>
+            <li><a href="" class="footer_link">Отзывы</a></li>
+            <li><a href="" class="footer_link">Контактная информация</a></li>
+            <li><a href="" class="footer_link">Наши лица</a></li>
+            <li><a href="" class="footer_link">Видео</a></li>
+            <li><a href="" class="footer_link">Фото с доставкой</a></li>
+            <li><a href="" class="footer_link">Веб-Камера</a></li>
+            <li><a href="" class="footer_link">Новости</a></li>
+            <li><a href="" class="footer_link">Блог</a></li>
+            <li><a href="" class="footer_link">Наши статьи</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">Сотрудничество</li>
+            <li><a href="" class="footer_link">Франчайзинг</a></li>
+            <li><a href="" class="footer_link">Корпоративным клиентам</a></li>
+            <li><a href="" class="footer_link">Партнерская пррограмма</a></li>
+            <li><a href="" class="footer_link">Партнеры Megaflowers</a></li>
+            <li><a href="" class="footer_link">Фото с доставкой</a></li>
+            <li><a href="" class="footer_link">Пресс-центр</a></li>
+            <li><a href="" class="footer_link">Прочее сотрудничество</a></li>
+          </ul>
+          <ul class="footer__block">
+            <li class="footer__title">Услуги</li>
+            <li><a href="" class="footer_link">Найти друга</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">Специальные предложения</li>
+            <li><a href="" class="footer_link">Накопительные скидки</a></li>
+            <li><a href="" class="footer_link">Акции и скидки</a></li>
+            <li><a href="" class="footer_link">Дополнения к букету</a></li>
+            <li><a href="" class="footer_link">Другие товары</a></li>
+            <li><a href="" class="footer_link">Доставка цветов за границу</a></li>
+            <li><a href="" class="footer_link">Идеальный подарок</a></li>
+          </ul>
+          <ul class="footer__block">
+            <li class="footer__title">Личный кабинет</li>
+            <li><a href="" class="footer_link">Вход</a></li>
+            <li><a href="" class="footer_link">Регистрация</a></li>
+            <li><a href="" class="footer_link">Забыли пароль?</a></li>
+          </ul>
+        </div>
+        <div class="col col-3">
+          <ul class="footer__block">
+            <li class="footer__title">Помощь</li>
+            <li><a href="" class="footer_link">Форматы оплаты</a></li>
+            <li><a href="" class="footer_link">Плата за доставку</a></li>
+            <li><a href="" class="footer_link">Публичный договор-оферта</a></li>
+            <li><a href="" class="footer_link">Правила предоставления услуг</a></li>
+            <li><a href="" class="footer_link">Порядлок оформления заказа</a></li>
+            <li><a href="" class="footer_link">Гаранти</a></li>
+            <li><a href="" class="footer_link">Часто задаваемые вопросы</a></li>
+            <li><a href="" class="footer_link">Онлайн чат</a></li>
+            <li><a href="" class="footer_link">Включить уведомления</a></li>
+            <li><a href="" class="footer_link">Помощь</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">© 2005-2016 Megaflowers</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

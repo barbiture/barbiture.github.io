@@ -1,51 +1,82 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>  <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>  <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>  <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
 <html lang="ru">
+<!--<![endif]-->
 <head>
   <meta charset="UTF-8">
   <title>Main</title>
   <link rel="stylesheet" href="stylesheets/styles.css">
-  
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="row">
         <div class="col col-3">
-          <div class="dropdown" id="dropdownDilever">
-            <div class="dropdown__selected dropdown__selected_white dropdown__selected_s">
-              Челябинск
-              <!-- <i class="dropdown__selected-arrow"></i> -->
-            </div>
-            <div class="tabs dropdown__content dropdown__content_theme-left">
+          <div class="dropdown
+                      dropdown_template__header__deliver"
+              id="dropdownDeliver">
+            <div class="dropdown__selected
+                        dropdown__selected__icon
+                        dropdown__selected_white
+                        dropdown__selected__deliver
+                        dropdown__selected_s">Челябинск</div>
+          
+            <div class="tabs dropdown__content
+                        dropdown__content__deliver
+                        dropdown__content_theme_left">
               <div class="tabs__nav">
-                <span class="tabs__nav_item tabs__nav_item_active" id="linkRus">ДОСТАВКА ПО РОССИИ</span>
-                <span class="tabs__nav_item" id="linkInt">МЕЖДУНАРОДНАЯ ДОСТАВКА</span>
+                <span class="tabs__nav_item tabs__nav_item_active" id="">ДОСТАВКА ПО РОССИИ</span>
+                <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ ДОСТАВКА</span>
+                <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ TEST</span>
               </div>
-              <div class="tabs__content tabs__content-active" id="tabRus">
+              <div class="tabs__content">
                 <form action="" method="GET" onsubmit="return false">
                   <input type="text" placeholder="Введите название города" name="rus" class="awesomplete__input">
                 </form>
-                <ul class="tabs__content-list" id="rus"></ul>
-                <div><a href="">Полный список</a></div>
+                <ul class="dropdown__content__list
+                          tabs__content__list
+                          tabs__content__list_rus"></ul>
               </div>
-              <div class="tabs__content" id="tabInt">
+              <div class="tabs__content">
                 <form action="" method="GET" onsubmit="return false">
                   <input type="text" placeholder="Введите название города" name="int" class="awesomplete__input">
                 </form>
-                <ul class="tabs__content-list" id="int"></ul>
-                <div><a href="">Полный список</a></div>
+                <ul class="dropdown__content__list
+                          tabs__content__list
+                          tabs__content__list_int"></ul>
+              </div>
+              <div class="tabs__content"">
+                <form action="" method="GET" onsubmit="return false">
+                  <input type="text" placeholder="Введите название города" name="int" class="awesomplete__input">
+                </form>
+                <ul class="dropdown__content__list
+                          tabs__content__list
+                          tabs__content__list_test"></ul>
               </div>
             </div>
           </div>
-          <div class="dropdown dropdown__header-tel">
-            <div class="dropdown__selected dropdown__selected_white dropdown__selected_m">
+          <div class="dropdown dropdown_template__header__tel" id="dropdownTel">
+            <div class="dropdown__selected
+                        dropdown__selected_white
+                        dropdown__selected_m
+                        dropdown__selected_tel
+                        dropdown__selected__icon">
+              <i class="dropdown_template__header__tel__icon"></i>
               8 800 5555 714
             </div>
-            <ul class="dropdown__content dropdown__content_theme_left">
-              <li></li>
+            <ul class="dropdown__content
+                        dropdown__content_theme_left
+                        dropdown__content__tel">
             </ul>
           </div>
-          <div class="link link_white link_size_s link_underline">Заказать звонок</div>
+          <div class="link
+                      link_white
+                      link_size_s
+                      link_underline">Заказать звонок</div>
         </div>
         <div class="col col-6 text-center">
           <div class="logo header__logo">
@@ -54,88 +85,216 @@
           </div>
         </div>
         <div class="col col-3 text-right">
-          <div class="link link_white link_size_s in-bl">Вход</div>
-          <div class="dropdown in-bl dropdown_lang">
-            <div class="dropdown__selected spite">
-              en
-            </div>
-            <ul class="dropdown__content dropdown__content_theme_left">
-              <li>ru</li>
+          <div class="link
+                      link_white
+                      link_size_s
+                      in-bl">Вход</div>
+          <div class="dropdown
+                      in-bl
+                      dropdown__lang
+                      text-left"
+               id="dropdownLang">
+            <div class="dropdown__selected
+                        dropdown__selected__lang
+                        dropdown__selected__lang_en
+                        text-center"></div>
+            <ul class="dropdown__content
+                      dropdown__content_theme_right">
+              <li class="dropdown__content__item">English</li>
+              <li class="dropdown__content__item">Русский</li>
+              <li class="dropdown__content__item">Український</li>
+              <li class="dropdown__content__item">Français</li>
             </ul>
           </div>
-          <div class="dropdown in-bl">
-            <div class="dropdown__selected dropdown__selected_white dropdown__selected_s">
-              $
-            </div>
-            <ul class="dropdown__content dropdown__content_theme_left">
-              <li></li>
+          <div class="dropdown dropdown_template__header__curency in-bl text-left" id="dropdownCurency">
+            <div class="dropdown__selected
+                        dropdown__selected_white
+                        dropdown__selected_s
+                        dropdown__selected__icon
+                        dropdown__selected__curency">$</div>
+            <ul class="dropdown__content dropdown__content_theme__right">
+              <li class="dropdown__content__item dropdown__content__item_selected">£ UK</li>
+              <li class="dropdown__content__item">$ US</li>
+              <li class="dropdown__content__item">€ EU</li>
+              <li class="dropdown__content__item">₽ РУБ</li>
             </ul>
           </div>
           <a href="" class="header__cart">
-            <span class="sprite"><span class="header__cart-val">1</span></span>
-            <span class="link link_size_s link_white">Мой заказ</span>
+            <span class="link
+                         link_size_s
+                         link_white
+                         header__cart__icon">Мой заказ
+              <span class="header__cart-val">1</span>
+            </span>
           </a>
-          <div class="sprite link link_size_s link_white">Поиск</div>
         </div>
       </div>
     </div>
-    <div class="search-form hidden">
-      <div class="container">
-        <div class="sprite"></div>
-        <input class="search-form__input" type="search" placeholder="Искать букет, например “розы”">
-        <button class="search-form__close sprite"></button>
-      </div>
-      <div class="search-form__nav">
-        <div class="container">
-          <ul>
-            <li class="dropdown search-form__nav-item">
-              <div class="dropdown__selected">Кому</div>
-              <ul class="dropdown__content">
-                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
-                <li class="dropdown__item search-form__nav-option">Женщине</li>
-                <li class="dropdown__item search-form__nav-option">Мужчине</li>
-                <li class="dropdown__item search-form__nav-option">Маме</li>
-                <li class="dropdown__item search-form__nav-option">Коллеге</li>
-                <li class="dropdown__item search-form__nav-option">Ребенку</li>
+    <div class="container clearfix search-form__link" id="searchFormTogle" data-flag="close">
+      <div class="search-form__icon search-form__link__icon link link_size_s link_white text-right col-3 pull-right" >Поиск</div>
+    </div>
+    <div class="search-form" id="searchForm">
+        <div class="search-form__content">
+          <div class="search-form__wrap">
+            <div class="container clearfix">
+              <div class="search-form__wrap__icon search-form__icon pull-left"></div>
+              <input class="search-form__input pull-left" type="search" placeholder="Искать букет, например “розы”">
+              <button class="search-form__close pull-right" id="searchFormClose"></button>
+            </div>
+          </div>
+          <div class="search-form__nav">
+            <div class="container">
+              <ul>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Кому</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="1" type="radio" checked name="rad1">
+                      <label class="radio radio_nav" for="1">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="2" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="2">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="3" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="3">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="4" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="4">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="5" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="5">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="6" type="radio" name="rad1">
+                      <label class="radio radio_nav" for="6">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Событие</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="7" type="radio" checked name="rad2">
+                      <label class="radio radio_nav" for="7">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="8" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="8">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="9" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="9">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="10" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="10">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="11" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="11">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="12" type="radio" name="rad2">
+                      <label class="radio radio_nav" for="12">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Тюльпаны</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="13" type="radio" checked name="rad3">
+                      <label class="radio radio_nav" for="13">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="14" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="14">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="15" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="15">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="16" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="16">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="17" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="17">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="18" type="radio" name="rad3">
+                      <label class="radio radio_nav" for="18">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Размер</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="19" type="radio" checked name="rad4">
+                      <label class="radio radio_nav" for="19">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="20" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="20">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="21" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="21">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="22" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="22">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="23" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="23">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="24" type="radio" name="rad4">
+                      <label class="radio radio_nav" for="24">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown search-form__nav-item">
+                  <div class="dropdown__selected dropdown__selected__icon">Упаковка</div>
+                  <ul class="search-form__nav__content">
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="25" type="radio" checked name="rad5">
+                      <label class="radio radio_nav" for="25">Не выбрано</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="26" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="26">Женщине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="27" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="27">Мужчине</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="28" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="28">Маме</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="29" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="29">Коллеге</label>
+                    </li>
+                    <li class="search-form__nav-option">
+                      <input class="hidden" id="30" type="radio" name="rad5">
+                      <label class="radio radio_nav" for="30">Ребенку</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="search-form__nav-item">Сбросить настройки</li>
               </ul>
-            </li>
-            <li class="dropdown search-form__nav-item">
-              <div class="dropdown__selected">Тюльпаны</div>
-              <ul class="dropdown__content">
-                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
-                <li class="dropdown__item search-form__nav-option">Женщине</li>
-                <li class="dropdown__item search-form__nav-option">Мужчине</li>
-                <li class="dropdown__item search-form__nav-option">Маме</li>
-                <li class="dropdown__item search-form__nav-option">Коллеге</li>
-                <li class="dropdown__item search-form__nav-option">Ребенку</li>
-              </ul>
-            </li>
-            <li class="dropdown search-form__nav-item">
-              <div class="dropdown__selected">Размер</div>
-              <ul class="dropdown__content">
-                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
-                <li class="dropdown__item search-form__nav-option">Женщине</li>
-                <li class="dropdown__item search-form__nav-option">Мужчине</li>
-                <li class="dropdown__item search-form__nav-option">Маме</li>
-                <li class="dropdown__item search-form__nav-option">Коллеге</li>
-                <li class="dropdown__item search-form__nav-option">Ребенку</li>
-              </ul>
-            </li>
-            <li class="dropdown search-form__nav-item">
-              <div class="dropdown__selected">Упаковка</div>
-              <ul class="dropdown__content">
-                <li class="dropdown__item search-form__nav-option">Не выбрано</li>
-                <li class="dropdown__item search-form__nav-option">Женщине</li>
-                <li class="dropdown__item search-form__nav-option">Мужчине</li>
-                <li class="dropdown__item search-form__nav-option">Маме</li>
-                <li class="dropdown__item search-form__nav-option">Коллеге</li>
-                <li class="dropdown__item search-form__nav-option">Ребенку</li>
-              </ul>
-            </li>
-            <li class="search-form__nav-item">Сбросить настройки</li>
-          </ul>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
   </header>
   <nav class="container">
@@ -155,10 +314,111 @@
     </ul>
   </nav>
   <section class="section main-banner">
+    <ul class="slider text-center" id="mainSlider">
+      <li class="slider__item slider__item_show">
+        <div class="slider__item__txt container">
+          <p class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</p>
+          <p class="main-banner_subtitle">Выбери на свой вкус!</p>
+        </div>
+        <img class="slider__item__img" src="images/sliderImg.jpg" >
+      </li>
+      <li class="slider__item">
+        <div class="slider__item__txt container">
+          <p class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</p>
+          <p class="main-banner_subtitle">Выбери на свой вкус!</p>
+        </div>
+        <img class="slider__item__img" src="https://newevolutiondesigns.com/images/freebies/flowers-wallpaper-7.jpg">
+      </li>
+      <li class="slider__item">
+        <div class="slider__item__txt container">
+          <p class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</p>
+          <p class="main-banner_subtitle">Выбери на свой вкус!</p>
+        </div>
+        <img class="slider__item__img" src="images/sliderImg.jpg" >
+      </li>
+      <li class="slider__item">
+        <div class="slider__item__txt container">
+          <p class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</p>
+          <p class="main-banner_subtitle">Выбери на свой вкус!</p>
+        </div>
+        <img class="slider__item__img" src="http://placehold.it/1920x577">
+      </li>
+    </ul>
+    <div class="container bullet-wrap text-center">
+      <ul class="bullet clearfix">
+        <li id="0" class="bullet__item in-bl bullet__item_active"></li>
+        <li id="1" class="bullet__item in-bl"></li>
+        <li id="2" class="bullet__item in-bl"></li>
+        <li id="3" class="bullet__item in-bl"></li>
+      </ul>
+    </div>
     <div class="container prel">
-      <div class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</div>
-      <div class="main-banner_subtitle">Выбери на свой вкус!</div>
-      <a href="" class="btn btn-bg btn_main-banner">Быстрая покупка</a>
+      <div class="main-banner__carousel">
+        
+        <!-- <div class="main-banner_title">АВТОРСКИЕ БУКЕТЫ</div> -->
+        <!-- <div class="main-banner_subtitle">Выбери на свой вкус!</div> -->
+      </div>
+      <div class="fast-buy" id="fastBuy">
+        <div class="fast-buy__content">
+          <div class="fast-buy_close" id="fastBuyClose"></div>
+          <img class="fast-buy__img" src="images/img1.jpg" alt="" id="fastBuyImg">
+          <div class="dropdown fast-buy__dropdown" id="fastBuyDrop">
+            <div class="dropdown__selected dropdown__selected_black dropdown__selected_l dropdown__selected__icon">
+              Тюльпан
+            </div>
+            <ul class="dropdown__content dropdown__content_theme_left"></ul>
+          </div>
+          <div class="fast-buy__range">
+            <div class="fast-buy__range__amount clearfix">
+              <div class="pull-left title-light_s">Кол-во цветков:</div>
+              <div class="pull-right text-center">
+                <div class="fast-buy__range__minus pull-left" id="rangeMinus"></div>
+                <div class="pull-left fast-buy__range__val" id="rangeVal"></div>
+                <div class="fast-buy__range__plus pull-left" id="rangePlus"></div>
+              </div>
+            </div>
+            <div id="fastRange"></div>
+            <div id="FastRangeSteps"></div>
+            <input type="hidden" name="rangeNum" value="25">
+          </div>
+          <div class="fast-buy__radio">
+            <div class="title-light_s">Цвет</div>
+            <ul class="fast-buy__radio__list">
+              <li class="in-bl">
+                <input class="hidden" type="radio" name="fbr" id="fbr1">
+                <label class="radio radio_color radio_color_white" for="fbr1"></label>
+              </li>
+              <li class="in-bl">
+                <input class="hidden" type="radio" name="fbr" id="fbr2" checked>
+                <label class="radio radio_color radio_color_orange" for="fbr2"></label>
+              </li>
+              <li class="in-bl">
+                <input class="hidden" type="radio" name="fbr" id="fbr3">
+                <label class="radio radio_color radio_color_red" for="fbr3"></label>
+              </li>
+              <li class="in-bl">
+                <input class="hidden" type="radio" name="fbr" id="fbr4">
+                <label class="radio radio_color radio_color_pink" for="fbr4"></label>
+              </li>
+            </ul>
+          </div>
+          <div class="fast-buy__radio">
+            <div class="title-light_s">Упаковка</div>
+            <ul class="fast-buy__radio__list">
+              <li class="in-bl">
+                <input class="hidden" type="radio" name="pack" id="pack1">
+                <label class="radio radio_default" for="pack1">Органза</label>
+              </li>
+              <li class="in-bl pull-right">
+                <input class="hidden" type="radio" name="pack" id="pack2" checked>
+                <label class="radio radio_default" for="pack2">Крафт-бумага</label>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-bg fast-buy__btn" data-flag="close">Купить за 3990 ₽</button>
+        </div>
+      </div>
+      <button class="btn btn-bg btn_main-banner" id="fastBuyToggle" data-flag="close">Быстрая покупка</button>
     </div>
   </section>
   <section class="section catalog">
