@@ -10,21 +10,27 @@
   <meta charset="UTF-8">
   <title>Main</title>
   <link rel="stylesheet" href="stylesheets/styles.css">
+  <style>
+    .site-map li {
+      line-height: 45px;
+    }
+  </style>
 </head>
 <body>
+  <div class="visuallyhidden">
+    <!-- inject:svg --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></symbol></svg><!-- endinject -->
+  </div>
   <header class="header">
     <div class="container">
       <div class="row">
         <div class="col col-3">
-          <div class="dropdown
-                      dropdown_template__header__deliver"
-              id="dropdownDeliver">
-            <div class="dropdown__selected
-                        dropdown__selected__icon
-                        dropdown__selected_white
-                        dropdown__selected__deliver
-                        dropdown__selected_s">Челябинск</div>
-          
+          <div class="dropdown dropdown_template__header__deliver" id="dropdownDeliver">
+            <div class="dropdown__selected dropdown__selected_white dropdown__selected__deliver dropdown__selected_s">
+              Челябинск
+              <svg class="icon dropdown__selected__icon">
+                <use xlink:href="#arrow" />
+              </svg>
+            </div>
             <div class="tabs dropdown__content
                         dropdown__content__deliver
                         dropdown__content_theme_left">
@@ -39,7 +45,9 @@
                 </form>
                 <ul class="dropdown__content__list
                           tabs__content__list
-                          tabs__content__list_rus"></ul>
+                          tabs__content__list_rus
+                          dropdown__content__deliver__col-li
+                          col-li-4"></ul>
               </div>
               <div class="tabs__content">
                 <form action="" method="GET" onsubmit="return false">
@@ -47,7 +55,9 @@
                 </form>
                 <ul class="dropdown__content__list
                           tabs__content__list
-                          tabs__content__list_int"></ul>
+                          tabs__content__list_int
+                          dropdown__content__deliver__col-li
+                          col-li-4"></ul>
               </div>
               <div class="tabs__content"">
                 <form action="" method="GET" onsubmit="return false">
@@ -55,7 +65,9 @@
                 </form>
                 <ul class="dropdown__content__list
                           tabs__content__list
-                          tabs__content__list_test"></ul>
+                          tabs__content__list_test
+                          dropdown__content__deliver__col-li
+                          col-li-4"></ul>
               </div>
             </div>
           </div>
@@ -73,15 +85,20 @@
                         dropdown__content__tel">
             </ul>
           </div>
-          <div class="link
-                      link_white
-                      link_size_s
-                      link_underline">Заказать звонок</div>
+          <div class="link link_white link_size_s link_underline" id="showModal">Заказать звонок</div>
         </div>
         <div class="col col-6 text-center">
           <div class="logo header__logo">
             <a href="index.html"><img src="images/logo.png" alt="" class="logo_img"></a>
-            <div class="header__logo_text">В любую точку мира за 3 часа!</div>
+            <div id="textSlider" class="header__logo_text text-slider">
+              <ul class="text-slider__content">
+                <li class="text-slider__item">В любую точку мира за 3 часа!</li>
+                <li class="text-slider__item">Еще слоган!</li>
+                <li class="text-slider__item">Акция!</li>
+                <li class="text-slider__item">Скидка!</li>
+                <li class="text-slider__item">Еще длинный слоган на 5 часов!</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="col col-3 text-right">
@@ -138,7 +155,7 @@
           <div class="search-form__wrap">
             <div class="container clearfix">
               <div class="search-form__wrap__icon search-form__icon pull-left"></div>
-              <input class="search-form__input pull-left" type="search" placeholder="Искать букет, например “розы”">
+              <input class="search-form__input pull-left" type="search" placeholder="Искать букет, например “розы”" autofocus>
               <button class="search-form__close pull-right" id="searchFormClose"></button>
             </div>
           </div>
@@ -298,26 +315,81 @@
     </div>
   </header>
   <nav class="container">
-    <ul class="navbar-nav">
-      <li class="navbar-nav__item dropdown">
-        <a href="" class="navbar-nav__link dropdown__selected">КАТАЛОГ БУКЕТОВ</a>
-        <ul class="dropdown__content dropdown__content_theme_left">
-          <li></li>
-        </ul>
-      </li>
-      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">АКЦИИ</a></li>
-      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">МАСТЕР БУКЕТОВ</a></li>
-      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">СОБРАТЬ БУКЕТ ONLINE</a></li>
-      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">КОНТАКТЫ</a></li>
-      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">ОТЗЫВЫ</a></li>
-      <li class="navbar-nav__item"><a href="" class="navbar-nav__link">ГАРАНТИИ</a></li>
-    </ul>
+    <div class="navbar-nav justify">
+      <div class="navbar-nav__item dropdown">
+        <a href="" class="navbar-nav__link">Каталог букетов</a>
+        <div class="navbar-nav__dropdown navbar-nav__dropdown_left justify-reset dropdown__content">
+          <div class="col col-7 border-right">
+            <div class="col col-4">
+              <div class="navbar-nav__dropdown__wrap">
+                <div class="navbar-nav__item__link navbar-nav__item_title">Кому</div>
+                <div class="navbar-nav__item__link">Женщине</div>
+                <div class="navbar-nav__item__link">Мужчине</div>
+                <div class="navbar-nav__item__link">Ребенку</div>
+                <div class="navbar-nav__item__link">Семье</div>
+                <div class="navbar-nav__item__link">Маме</div>
+              </div>
+              <div class="navbar-nav__dropdown__wrap">
+                <div class="navbar-nav__item__link navbar-nav__item_title">Розы</div>
+                <div class="navbar-nav__item__link">Красные</div>
+                <div class="navbar-nav__item__link">Белые</div>
+                <div class="navbar-nav__item__link">Розовые</div>
+                <div class="navbar-nav__item__link">Кремовые</div>
+                <div class="navbar-nav__item__link">Кустовые</div>
+              </div>
+            </div>
+            <div class="col col-4">
+              <div class="navbar-nav__dropdown__wrap">
+                <div class="navbar-nav__item__link navbar-nav__item_title">Событие</div>
+                <div class="navbar-nav__item__link">Свадьба</div>
+                <div class="navbar-nav__item__link">Рождение ребенка</div>
+                <div class="navbar-nav__item__link">Просто так</div>
+                <div class="navbar-nav__item__link">День рождения</div>
+                <div class="navbar-nav__item__link">Люблю</div>
+              </div>
+              <div class="navbar-nav__dropdown__wrap">
+                <div class="navbar-nav__item__link navbar-nav__item_title">Композиции</div>
+                <div class="navbar-nav__item__link">Популярные</div>
+                <div class="navbar-nav__item__link">Настольные</div>
+                <div class="navbar-nav__item__link">В корзинах</div>
+                <div class="navbar-nav__item__link">Игрушки с цветами</div>
+                <div class="navbar-nav__item__link">Горшечные растения</div>
+              </div>
+            </div>
+            <div class="col col-4">
+              <div class="navbar-nav__dropdown__wrap">
+                <div class="navbar-nav__item__link navbar-nav__item_title">Цветы</div>
+                <div class="navbar-nav__item__link">Роза</div>
+                <div class="navbar-nav__item__link">Красная Роза</div>
+                <div class="navbar-nav__item__link">Альстромерия</div>
+                <div class="navbar-nav__item__link">Ирис</div>
+                <div class="navbar-nav__item__link">Лилия</div>
+              </div>
+              <div class="navbar-nav__dropdown__wrap">
+                <div class="navbar-nav__item__link navbar-nav__item_title">МЕГАБУКЕТЫ</div>
+                <div class="navbar-nav__item__link navbar-nav__item_title">ДОПОЛНЕНИЯ К БУКЕТУ</div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-5 prel text-center navbar-nav__item">
+            <h3 class="lowercase navbar-nav__item_title">Хит продаж</h3>
+            <p class="italic pink lowercase">Успей купить по суперцене!</p>
+            <img class="img img-center" src="../images/flowerBig1.jpg" alt="">
+            <div class="navbar-nav__price">
+              <div class="catalog__item-price_old navbar-nav__price_old">1800</div>
+              <div class="catalog__item-price_new navbar-nav__price_new">2390₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-nav__item"><a href="" class="navbar-nav__link">Акции</a></div>
+      <div class="navbar-nav__item"><a href="" class="navbar-nav__link">Мастер букетов</a></div>
+      <div class="navbar-nav__item"><a href="" class="navbar-nav__link">Собрать букет online</a></div>
+      <div class="navbar-nav__item"><a href="" class="navbar-nav__link">Контакты</a></div>
+      <div class="navbar-nav__item"><a href="" class="navbar-nav__link">Отзывы</a></div>
+      <div class="navbar-nav__item"><a href="" class="navbar-nav__link">Гарантии</a></div>
+    </div>
   </nav>
-  <style>
-    .site-map li {
-      line-height: 45px;
-    }
-  </style>
   <div class="container">
     <h1 class="h1">Ссылки на страницы</h1>
     <ul class="site-map">
@@ -423,6 +495,16 @@
       <p class="footer__bottom">© 2005-2016 Megaflowers</p>
     </div>
   </footer>
+  <div id="modal" class="modal">
+    <button id="closeModal" data-close="close" class="modal__close">close</button>
+    <div class="modal__content">
+      Укажите номер вашего телефона и время, когда вам будет удобно принять звонок.
+    </div>
+    <button class="btn btn-bg">Позвоните мне!</button>
+  </div>
+  
+  <!-- <button id="top">top</button> -->
+  <button class="scroll-top" id="top">top</button>
   <script src="js/main.js"></script>
 </body>
 </html>
