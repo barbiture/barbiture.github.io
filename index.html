@@ -72,7 +72,7 @@
                         dropdown__selected_m
                         dropdown__selected_tel
                         dropdown__selected__icon">
-              <i class="dropdown_template__header__tel__icon"></i>
+              <i class="icon dropdown_template__header__tel__icon"></i>
               8 800 5555 714
             </div>
             <ul class="dropdown__content
@@ -132,8 +132,15 @@
         </div>
       </div>
     </div>
-    <div class="container clearfix search-form__link" id="searchFormTogle" data-flag="close">
-      <div class="search-form__icon search-form__link__icon link link_size_s link_white text-right col-3 pull-right" >Поиск</div>
+    <div class="clearfix" id="searchFormTogle" data-flag="close">
+      <div class="container prel">
+        <div class="search-form__link search-form__icon link link_size_s link_white text-right pull-right">
+          <svg class="search-form__link__icon icon icon-Search">
+            <use xlink:href="#Search"></use>
+          </svg>
+          Поиск
+        </div>
+      </div>
     </div>
     <div class="search-form" id="searchForm">
         <div class="search-form__content">
@@ -152,7 +159,11 @@
             <div class="container">
               <ul>
                 <li class="dropdown search-form__nav-item">
-                  <div class="dropdown__selected dropdown__selected__icon">Кому</div>
+                  <div class="dropdown__selected_hover dropdown__selected dropdown__selected__icon">Кому
+                    <svg class="icon icon-arrow">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </div>
                   <ul class="search-form__nav__content">
                     <li class="search-form__nav-option">
                       <input class="hidden" id="1" type="radio" checked name="rad1">
@@ -181,7 +192,11 @@
                   </ul>
                 </li>
                 <li class="dropdown search-form__nav-item">
-                  <div class="dropdown__selected dropdown__selected__icon">Событие</div>
+                  <div class="dropdown__selected_hover dropdown__selected dropdown__selected__icon">Событие
+                    <svg class="icon icon-arrow">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </div>
                   <ul class="search-form__nav__content">
                     <li class="search-form__nav-option">
                       <input class="hidden" id="7" type="radio" checked name="rad2">
@@ -210,7 +225,11 @@
                   </ul>
                 </li>
                 <li class="dropdown search-form__nav-item">
-                  <div class="dropdown__selected dropdown__selected__icon">Тюльпаны</div>
+                  <div class="dropdown__selected_hover dropdown__selected dropdown__selected__icon">Тюльпаны
+                    <svg class="icon icon-arrow">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </div>
                   <ul class="search-form__nav__content">
                     <li class="search-form__nav-option">
                       <input class="hidden" id="13" type="radio" checked name="rad3">
@@ -239,7 +258,11 @@
                   </ul>
                 </li>
                 <li class="dropdown search-form__nav-item">
-                  <div class="dropdown__selected dropdown__selected__icon">Размер</div>
+                  <div class="dropdown__selected_hover dropdown__selected dropdown__selected__icon">Размер
+                    <svg class="icon icon-arrow">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </div>
                   <ul class="search-form__nav__content">
                     <li class="search-form__nav-option">
                       <input class="hidden" id="19" type="radio" checked name="rad4">
@@ -268,7 +291,11 @@
                   </ul>
                 </li>
                 <li class="dropdown search-form__nav-item">
-                  <div class="dropdown__selected dropdown__selected__icon">Упаковка</div>
+                  <div class="dropdown__selected_hover dropdown__selected dropdown__selected__icon">Упаковка
+                    <svg class="icon icon-arrow">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </div>
                   <ul class="search-form__nav__content">
                     <li class="search-form__nav-option">
                       <input class="hidden" id="25" type="radio" checked name="rad5">
@@ -306,7 +333,12 @@
   <nav class="container">
     <div class="navbar-nav justify">
       <div class="navbar-nav__item dropdown">
-        <a href="" class="navbar-nav__link">Каталог букетов</a>
+        <a href="" class="navbar-nav__link">
+        Каталог букетов
+        <svg class="icon icon-arrow">
+          <use xlink:href="#arrow"></use>
+        </svg>
+        </a>
         <div class="navbar-nav__dropdown navbar-nav__dropdown_left justify-reset dropdown__content">
           <div class="col col-7 border-right">
             <div class="col col-4">

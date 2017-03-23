@@ -671,7 +671,7 @@ new Dropdown({
   id:'dropdownDeliver',
   menuName:'.dropdown__selected',
   content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active',
+  classOnClick: 'dropdown__selected-active_bg',
   classSelected: 'dropdown__content__item_selected',
   list:[rus,int, test]
 }).addEventToItems().awesomplete();
@@ -723,7 +723,7 @@ new Dropdown({
   id:'dropdownTel',
   menuName:'.dropdown__selected',
   content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active',
+  classOnClick: 'dropdown__selected-active_bg',
   classSelected: 'dropdown__content__item_selected',
   list:[tel]
 }).addEventToItems('tel');
@@ -738,7 +738,7 @@ new Dropdown({
   id:'dropdownCurency',
   menuName:'.dropdown__selected',
   content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active',
+  classOnClick: 'dropdown__selected-active_bg',
   classSelected: 'dropdown__content__item_selected'
 }).addEventToItems('curency');
 ;(function() {
@@ -809,6 +809,7 @@ new Dropdown({
   id:'fastBuyDrop',
   menuName:'.dropdown__selected',
   content:'.dropdown__content',
+  classOnClick: 'dropdown__selected-active',
   classSelected: 'dropdown__content__item_selected'
   }).addEventToItems('flowers');
 ;(function(){
