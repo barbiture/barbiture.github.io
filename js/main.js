@@ -560,7 +560,7 @@ Dropdown.prototype.test = function(fn) {
   for (var i=0; i<this.li.length; i++ ) {
     this.li[i].addClass('test');
       this.li[i].onclick = function(e) {
-        console.log(this.li);
+        // console.log(this.li);
       }
   }
 };
@@ -591,6 +591,31 @@ Dropdown.prototype.flowers = function(e) {
  // new Menu({id:'bb',close:true,delay:1},1,1);
  //////////////////////////////////////////////
 
+;(function() {
+  var elem = document.getElementById('textSlider');
+  var ul = elem.querySelector('ul');
+  var li = ul.getElementsByTagName('li');
+  var liLen = li.length;
+  var width = li[0].scrollWidth;
+  var i = 0;
+
+  function txtSlider() {
+    var delay = 2;
+    ul.style.transition = 'margin '+delay+'s';
+    i++;
+    if ( i >= liLen-1 ) {
+      setTimeout(function() {
+        ul.style.transition = 'none';
+        ul.appendChild(li[0].cloneNode(true));
+        ul.removeChild(li[0]);
+        ul.style.marginLeft = -width*(i-1) + 'px';
+        i--;
+      },delay*1000);
+    }
+    ul.style.marginLeft = -width*i + 'px';
+  }
+  var tId = setInterval(txtSlider, 5000);
+})();
 // Awesomplete - Lea Verou - MIT license
 (function(){function h(a){a=Array.isArray(a)?{label:a[0],value:a[1]}:"object"===typeof a&&"label"in a&&"value"in a?a:{label:a,value:a};this.label=a.label||a.value;this.value=a.value}function n(a,b,d){for(var g in b){var f=b[g],c=a.input.getAttribute("data-"+g.toLowerCase());a[g]="number"===typeof f?parseInt(c):!1===f?null!==c:f instanceof Function?null:c;a[g]||0===a[g]||(a[g]=g in d?d[g]:f)}}function c(a,b){return"string"===typeof a?(b||document).querySelector(a):a||null}function k(a,b){return l.call((b||
 document).querySelectorAll(a))}function m(){k("input.awesomplete").forEach(function(a){new e(a)})}var e=function(a,b){var d=this;this.input=c(a);this.input.setAttribute("autocomplete","off");this.input.setAttribute("aria-autocomplete","list");b=b||{};n(this,{minChars:2,maxItems:10,autoFirst:!1,data:e.DATA,filter:e.FILTER_CONTAINS,sort:e.SORT_BYLENGTH,item:e.ITEM,replace:e.REPLACE},b);this.index=-1;this.container=c.create("div",{className:"awesomplete",around:a});this.ul=c.create("ul",{hidden:"hidden",
@@ -905,6 +930,7 @@ for (var i=0; i<tabNav.length; i++) {
     }
   })(i);
 }
+
 ;(function() {
 
   var topBtm;
@@ -936,8 +962,6 @@ for (var i=0; i<tabNav.length; i++) {
   };
 
 })();
-
-
 scrollToTop.init('top').onclick = function() {
   scrollToTop.up();
 };

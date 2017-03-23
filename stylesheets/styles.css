@@ -1,3 +1,61 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor; }
+
+.icon-AppStore {
+  font-size: 2.703rem;
+  width: 2.84869em; }
+
+.icon-Bouqet {
+  font-size: 2.297rem;
+  width: 0.91424em; }
+
+.icon-Cancel {
+  font-size: 1.444rem;
+  width: 1.02147em; }
+
+.icon-Car {
+  font-size: 1.9rem;
+  width: 1.31579em; }
+
+.icon-Cart {
+  font-size: 1.9rem;
+  width: 1.31579em; }
+
+.icon-Facebook {
+  font-size: 1.569rem;
+  width: 0.50414em; }
+
+.icon-Instagram {
+  font-size: 1.8rem;
+  width: 1.00167em; }
+
+.icon-Odnoclass {
+  font-size: 1.638rem;
+  width: 0.60501em; }
+
+.icon-Search {
+  font-size: 1.2rem;
+  width: 1em; }
+
+.icon-minus {
+  font-size: 1.9rem;
+  width: 1em; }
+
+.icon-plus {
+  font-size: 1.9rem;
+  width: 1em; }
+
+.dropdown__selected.dropdown__selected__icon:after, .dropdown__selected__lang_en:after, .dropdown__selected__lang_ru:after, .dropdown__selected__lang_ua:after, .dropdown__selected__lang_fr:after, .dropdown__lang_en {
+  display: inline-block;
+  background-image: url("../images/sprite.svg");
+  background-size: 2.4375em 1.9375em; }
+
+.lt-ie9 .dropdown__selected.dropdown__selected__icon:after, .lt-ie9 .dropdown__selected__lang_en:after, .lt-ie9 .dropdown__selected__lang_ru:after, .lt-ie9 .dropdown__selected__lang_ua:after, .lt-ie9 .dropdown__selected__lang_fr:after, .lt-ie9 .dropdown__lang_en {
+  background-image: url("../images/sprite.png"); }
+
 @font-face {
   font-family: "sf";
   font-style: normal;
@@ -57,13 +115,13 @@ body {
 article, aside, figcaption, figure, footer, header, nav, section {
   display: block; }
 
-a {
-  text-decoration: none; }
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none; }
 
 .icon {
   display: inline-block; }
@@ -78,8 +136,7 @@ ul {
   padding: 0;
   position: absolute;
   width: 1px;
-  white-space: nowrap;
-  /* 1 */ }
+  white-space: nowrap; }
 
 .img {
   display: block; }
@@ -481,6 +538,8 @@ input[type="radio"]:checked + .radio_default:before {
   color: #fff;
   margin: 3px 0 7px;
   position: relative; }
+  .header__cart .link {
+    position: relative; }
 
 .header__cart-val {
   border-radius: 50%;
@@ -492,19 +551,15 @@ input[type="radio"]:checked + .radio_default:before {
   line-height: 14px;
   text-align: center;
   position: absolute;
-  left: 20px;
-  top: -6px; }
+  left: -13px;
+  top: -8px; }
 
 .header__cart__icon {
-  position: relative;
-  padding-left: 42px;
-  vertical-align: bottom; }
-  .header__cart__icon:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    font-size: 17px;
-    top: -2px; }
+  fill: #fff;
+  position: absolute;
+  left: -40px;
+  top: -10px;
+  font-size: 30px; }
 
 .header__logo_text,
 .text-slider {
@@ -641,12 +696,19 @@ input[type="radio"]:checked + .radio_default:before {
   .dropdown__selected-active {
     background-color: #06512c;
     border-radius: 12px; }
-  .dropdown__selected .dropdown__selected__icon {
-    fill: #fff;
-    width: 1em;
-    height: 1em;
+  .dropdown__selected.dropdown__selected__icon:after {
+    width: 0.6875em;
+    height: 0.375em;
+    background-position: -0.3125em -0.3125em;
+    content: '';
+    font-size: 16px;
+    margin-left: 5px;
     vertical-align: middle; }
-  .dropdown__selected-active .dropdown__selected__icon {
+    .lt-ie9 .dropdown__selected.dropdown__selected__icon:after {
+      width: 10px;
+      height: 5px;
+      background-position: -5px -5px; }
+  .dropdown__selected-active.dropdown__selected__icon:after {
     transform: rotate(180deg); }
 
 .dropdown__selected__deliver {
@@ -664,11 +726,60 @@ input[type="radio"]:checked + .radio_default:before {
   display: block;
   margin-right: -7px;
   margin-left: 3px;
-  padding: 4px 9px 4px; }
+  padding: 4px 9px 4px;
+  font-size: 0; }
   .dropdown__selected__lang:after {
-    font-size: 16px;
     content: '';
     display: block; }
+  .dropdown__selected__lang_en:after {
+    width: 0.625em;
+    height: 0.4375em;
+    background-position: -1.5625em -0.3125em; }
+    .lt-ie9 .dropdown__selected__lang_en:after {
+      width: 9px;
+      height: 6px;
+      background-position: -25px -5px; }
+  .dropdown__selected__lang_ru:after {
+    width: 0.625em;
+    height: 0.4375em;
+    background-position: -1.5625em -0.3125em; }
+    .lt-ie9 .dropdown__selected__lang_ru:after {
+      width: 9px;
+      height: 6px;
+      background-position: -25px -5px; }
+  .dropdown__selected__lang_ua:after {
+    width: 0.625em;
+    height: 0.4375em;
+    background-position: -1.5625em -0.3125em; }
+    .lt-ie9 .dropdown__selected__lang_ua:after {
+      width: 9px;
+      height: 6px;
+      background-position: -25px -5px; }
+  .dropdown__selected__lang_fr:after {
+    width: 0.625em;
+    height: 0.4375em;
+    background-position: -1.5625em -0.3125em; }
+    .lt-ie9 .dropdown__selected__lang_fr:after {
+      width: 9px;
+      height: 6px;
+      background-position: -25px -5px; }
+
+.dropdown__lang_en {
+  font-size: 24px;
+  width: 0.625em;
+  height: 0.4375em;
+  background-position: -1.5625em -0.3125em; }
+  .lt-ie9 .dropdown__lang_en {
+    width: 9px;
+    height: 6px;
+    background-position: -25px -5px; }
+
+.dropdown__lang ._ico {
+  display: block;
+  font-size: 24px; }
+
+.dropdown__lang__content ._ico {
+  display: none; }
 
 .dropdown__selected__curency {
   padding: 4px 9px 4px;
@@ -832,11 +943,12 @@ input[type="radio"]:checked + .radio_default:before {
   background-color: #fff; }
 
 .search-form__close {
+  fill: #000;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-top: 3px;
-  font-size: 16px; }
+  margin: 0;
+  font-size: 23px; }
 
 .search-form {
   left: 0;
@@ -860,17 +972,14 @@ input[type="radio"]:checked + .radio_default:before {
     padding-right: 7px;
     vertical-align: bottom; }
 
-.search-form__icon:before {
-  content: '';
-  display: inline-block;
-  font-size: 16px; }
-
 .search-form__wrap {
   vertical-align: middle;
   padding: 7px 0 4px; }
 
 .search-form__wrap__icon {
-  margin: 4px 0 0 5px; }
+  margin: 0;
+  font-size: 21px;
+  fill: #000; }
 
 .navbar-nav__item {
   display: inline-block;
@@ -977,10 +1086,14 @@ input[type="radio"]:checked + .radio_default:before {
 
 .fast-buy__range__minus,
 .fast-buy__range__plus {
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 32px;
+  fill: #e6e6e6; }
 
 .fast-buy__range__val {
-  width: 48px; }
+  width: 48px;
+  font-size: 17px;
+  font-family: sfL; }
 
 .fast-buy__range__amount {
   margin-bottom: 25px; }

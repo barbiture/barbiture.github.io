@@ -17,20 +17,15 @@
   </style>
 </head>
 <body>
-  <div class="visuallyhidden">
-    <!-- inject:svg --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow" viewBox="0 0 451.847 451.847"><path d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/></symbol></svg><!-- endinject -->
-  </div>
   <header class="header">
     <div class="container">
       <div class="row">
         <div class="col col-3">
           <div class="dropdown dropdown_template__header__deliver" id="dropdownDeliver">
-            <div class="dropdown__selected dropdown__selected_white dropdown__selected__deliver dropdown__selected_s">
+            <div class="dropdown__selected dropdown__selected_white dropdown__selected__deliver dropdown__selected_s dropdown__selected__icon">
               Челябинск
-              <svg class="icon dropdown__selected__icon">
-                <use xlink:href="#arrow" />
-              </svg>
             </div>
+          
             <div class="tabs dropdown__content
                         dropdown__content__deliver
                         dropdown__content_theme_left">
@@ -102,25 +97,15 @@
           </div>
         </div>
         <div class="col col-3 text-right">
-          <div class="link
-                      link_white
-                      link_size_s
-                      in-bl">Вход</div>
-          <div class="dropdown
-                      in-bl
-                      dropdown__lang
-                      text-left"
+          <div class="link link_white link_size_s in-bl">Вход</div>
+          <div class="dropdown in-bl dropdown__lang text-left"
                id="dropdownLang">
-            <div class="dropdown__selected
-                        dropdown__selected__lang
-                        dropdown__selected__lang_en
-                        text-center"></div>
-            <ul class="dropdown__content
-                      dropdown__content_theme_right">
-              <li class="dropdown__content__item">English</li>
-              <li class="dropdown__content__item">Русский</li>
-              <li class="dropdown__content__item">Український</li>
-              <li class="dropdown__content__item">Français</li>
+            <div class="dropdown__selected dropdown__selected__lang text-center"><i class="dropdown__lang_en _ico"></i>English</div>
+            <ul class="dropdown__content dropdown__content_theme_right dropdown__lang__content">
+              <li class="dropdown__content__item"><i class="dropdown__lang_en _ico"></i>English</li>
+              <li class="dropdown__content__item"><i class="dropdown__lang_ru _ico"></i>Русский</li>
+              <li class="dropdown__content__item"><i class="dropdown__lang_ua _ico"></i>Український</li>
+              <li class="dropdown__content__item"><i class="dropdown__lang_fr _ico"></i>Français</li>
             </ul>
           </div>
           <div class="dropdown dropdown_template__header__curency in-bl text-left" id="dropdownCurency">
@@ -137,10 +122,10 @@
             </ul>
           </div>
           <a href="" class="header__cart">
-            <span class="link
-                         link_size_s
-                         link_white
-                         header__cart__icon">Мой заказ
+            <span class="link link_size_s link_white">Мой заказ
+              <svg class="icon header__cart__icon icon-Cart">
+                <use xlink:href="#Cart"></use>
+              </svg>
               <span class="header__cart-val">1</span>
             </span>
           </a>
@@ -154,9 +139,13 @@
         <div class="search-form__content">
           <div class="search-form__wrap">
             <div class="container clearfix">
-              <div class="search-form__wrap__icon search-form__icon pull-left"></div>
+              <svg class="search-form__wrap__icon search-form__icon pull-left icon icon-Search">
+                <use xlink:href="#Search"></use>
+              </svg>
               <input class="search-form__input pull-left" type="search" placeholder="Искать букет, например “розы”" autofocus>
-              <button class="search-form__close pull-right" id="searchFormClose"></button>
+              <svg class="search-form__close pull-right icon icon-Cancel " id="searchFormClose">
+                <use xlink:href="#Cancel"></use>
+              </svg>
             </div>
           </div>
           <div class="search-form__nav">
