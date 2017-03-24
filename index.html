@@ -150,7 +150,7 @@
                 <use xlink:href="#Search"></use>
               </svg>
               <input class="search-form__input pull-left" type="search" placeholder="Искать букет, например “розы”" autofocus>
-              <svg class="search-form__close pull-right icon icon-Cancel " id="searchFormClose">
+              <svg class="search-form__close pull-right icon icon_grey icon-Cancel " id="searchFormClose">
                 <use xlink:href="#Cancel"></use>
               </svg>
             </div>
@@ -431,19 +431,51 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-info clearfix">
-        <div class="pull-left">
+        <div class="col col-8">
           <div class="footer__tel">8 800 5555 714</div>
           <a href="mailto:info@megaflowers.ru" class="footer__mail">info@megaflowers.ru</a>
         </div>
-        <div class="pull-right">
-          <a href=""></a>
-          <ul class="social">
+        <div class="col col-4 footer-info__right">
+          <a href="" class="footer__available pull-left">
+            <svg class="icon icon-AppStore">
+              <use xlink:href="#AppStore"></use>
+            </svg>
+          </a>
+          <ul class="footer__social social pull-left">
             <li>
-              <a href=""></a>
-              <a href=""></a>
-              <a href=""></a>
-              <a href=""></a>
-              <a href=""></a>
+              <a href="">
+                <svg class="icon icon-Facebook">
+                  <use xlink:href="#Facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon icon-vk">
+                  <use xlink:href="#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon icon-Instagram">
+                  <use xlink:href="#Instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon icon-Odnoclass">
+                  <use xlink:href="#Odnoclass"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon icon-twitter">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -517,15 +549,26 @@
     </div>
   </footer>
   <div id="modal" class="modal">
-    <button id="closeModal" data-close="close" class="modal__close">close</button>
+    <header class="clearfix">
+      <svg id="closeModal" data-close="close" class="icon icon_grey icon-Cancel modal__close pull-right" id="fastBuyClose" >
+        <use xlink:href="#Cancel"></use>
+      </svg>
+    </header>
     <div class="modal__content">
       Укажите номер вашего телефона и время, когда вам будет удобно принять звонок.
     </div>
-    <button class="btn btn-bg">Позвоните мне!</button>
+    <footer class="text-center">
+      <button class="btn btn-bg">Позвоните мне!</button>
+    </footer>
   </div>
-  
-  <!-- <button id="top">top</button> -->
-  <button class="scroll-top" id="top">top</button>
+  <div class="scroll-top" id="top">
+    <div class="scroll-top__wrap">
+      <svg class="icon icon-arrowUp"><use xlink:href="#arrowUp"></use></svg>
+    </div>
+    <div class="scroll-top__text">
+      Наверх
+    </div>
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>

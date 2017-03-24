@@ -150,7 +150,9 @@ var slider = document.getElementById('mainSlider'),
     offsetX,
     left = 0,
     rigth = 0;
-slider.onmousedown = function() {return false;};
+
+slider.onmousedown = function() {return false;}
+slider.onselectstart = function() {return false;}
 
 slider.addEventListener('mousedown', mouseDown, false);
 slider.addEventListener('touchstart', mouseDown, false); 
@@ -167,9 +169,9 @@ function mouseMove(e) {
   var currOffsetX = e.offsetX || e.touches[0].pageX;
   var position = offsetX-currOffsetX;
   if ( offsetX > currOffsetX ) {
-    if ( position > 100 ) left = 1;
+    if ( position >= 100 ) left = 1;
   } else {
-    if ( position < -100 ) rigth = 1;
+    if ( position <= -100 ) rigth = 1;
   }
 }
 
