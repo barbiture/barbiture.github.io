@@ -22,8 +22,12 @@
       <div class="row">
         <div class="col col-3">
           <div class="dropdown dropdown_template__header__deliver" id="dropdownDeliver">
-            <div class="dropdown__selected dropdown__selected_white dropdown__selected__deliver dropdown__selected_s dropdown__selected__icon">
-              Челябинск
+            <div class="dropdown__selected
+                        dropdown__selected__icon
+                        dropdown__selected_theme_white
+                        dropdown__selected_theme_s
+                        header__deliver__selected">
+                        Москва
             </div>
           
             <div class="tabs dropdown__content
@@ -32,7 +36,7 @@
               <div class="tabs__nav">
                 <span class="tabs__nav_item tabs__nav_item_active" id="">ДОСТАВКА ПО РОССИИ</span>
                 <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ ДОСТАВКА</span>
-                <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ TEST</span>
+                <!--span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ TEST</span-->
               </div>
               <div class="tabs__content">
                 <form action="" method="GET" onsubmit="return false">
@@ -66,21 +70,21 @@
               </div>
             </div>
           </div>
-          <div class="dropdown dropdown_template__header__tel" id="dropdownTel">
+          <div class="dropdown header__tel" id="dropdownTel">
             <div class="dropdown__selected
-                        dropdown__selected_white
-                        dropdown__selected_m
-                        dropdown__selected_tel
-                        dropdown__selected__icon">
-              <i class="icon dropdown_template__header__tel__icon"></i>
+                        dropdown__selected__icon
+                        dropdown__selected_theme_white
+                        dropdown__selected_theme_m
+                        header__tel__selected">
+              <i class="icon header__tel__icon"></i>
               8 800 5555 714
             </div>
             <ul class="dropdown__content
-                        dropdown__content_theme_left
-                        dropdown__content__tel">
+                       dropdown__content_theme_left
+                       dropdown__content__tel">
             </ul>
           </div>
-          <div class="link link_white link_size_s link_underline" id="showModal">Заказать звонок</div>
+          <div class="link link_white link_size_s link_underline header__link_callback" id="showModal">Заказать звонок</div>
         </div>
         <div class="col col-6 text-center">
           <div class="logo header__logo">
@@ -100,8 +104,16 @@
           <div class="link link_white link_size_s in-bl">Вход</div>
           <div class="dropdown in-bl dropdown__lang text-left"
                id="dropdownLang">
-            <div class="dropdown__selected dropdown__selected__lang text-center"><i class="dropdown__lang_en _ico"></i>English</div>
-            <ul class="dropdown__content dropdown__content_theme_right dropdown__lang__content">
+            <div class="dropdown__selected
+                        dropdown__selected__lang
+                        dropdown__selected_theme_s
+                        dropdown__selected_theme_white
+                        text-center">
+              <i class="dropdown__lang_en _ico"></i>English
+            </div>
+            <ul class="dropdown__content
+                       dropdown__content_theme_right
+                       dropdown__lang__content">
               <li class="dropdown__content__item"><i class="dropdown__lang_en _ico"></i>English</li>
               <li class="dropdown__content__item"><i class="dropdown__lang_ru _ico"></i>Русский</li>
               <li class="dropdown__content__item"><i class="dropdown__lang_ua _ico"></i>Український</li>
@@ -110,12 +122,17 @@
           </div>
           <div class="dropdown dropdown_template__header__curency in-bl text-left" id="dropdownCurency">
             <div class="dropdown__selected
-                        dropdown__selected_white
-                        dropdown__selected_s
-                        dropdown__selected__icon
-                        dropdown__selected__curency">$</div>
-            <ul class="dropdown__content dropdown__content_theme__right">
-              <li class="dropdown__content__item dropdown__content__item_selected">£ UK</li>
+                        dropdown__selected_theme_white
+                        dropdown__selected_theme_s">
+                        <span>$</span>
+                          <svg class="icon icon-arrow">
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </div>
+            <ul class="dropdown__content
+                       dropdown__content_theme__right">
+              <li class="dropdown__content__item
+                         dropdown__content__item_selected">£ UK</li>
               <li class="dropdown__content__item">$ US</li>
               <li class="dropdown__content__item">€ EU</li>
               <li class="dropdown__content__item">₽ РУБ</li>
@@ -556,6 +573,7 @@
     </header>
     <div class="modal__content">
       Укажите номер вашего телефона и время, когда вам будет удобно принять звонок.
+      <input type="text" name="" />
     </div>
     <footer class="text-center">
       <button class="btn btn-bg">Позвоните мне!</button>
