@@ -744,9 +744,10 @@ input[type="radio"]:checked + .radio_default:before {
 .header {
   background-color: #006134;
   color: #fff;
-  padding: 11px 0;
-  position: relative;
-  height: 89px; }
+  position: relative; }
+  .header .header__container {
+    padding-top: 11px;
+    padding-bottom: 11px; }
 
 .header__link_callback {
   display: inline-block; }
@@ -985,6 +986,18 @@ input[type="radio"]:checked + .radio_default:before {
   width: 90%;
   padding-left: 13px;
   vertical-align: top; }
+  .search-form__input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #006134; }
+  .search-form__input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #006134; }
+  .search-form__input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #006134; }
+  .search-form__input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #006134; }
 
 .search-form__nav {
   border-top: 1px solid #e6e6e6; }
@@ -1039,10 +1052,10 @@ input[type="radio"]:checked + .radio_default:before {
   left: 0;
   overflow: hidden;
   position: absolute;
-  top: 100%;
+  top: 89px;
   width: 100%; }
   .search-form__link {
-    bottom: 1px;
+    bottom: 12px;
     right: 15px;
     position: absolute; }
   .search-form__content {
@@ -1057,9 +1070,9 @@ input[type="radio"]:checked + .radio_default:before {
 
 .search-form__link__icon {
   fill: #fff;
-  font-size: 14px;
+  font-size: 13px;
   margin-right: 3px;
-  vertical-align: -2px; }
+  vertical-align: middle; }
 
 .search-form__wrap {
   vertical-align: top;
@@ -1067,8 +1080,8 @@ input[type="radio"]:checked + .radio_default:before {
 
 .search-form__wrap__icon {
   margin-left: 5px;
-  margin-top: 4px;
-  font-size: 15px;
+  margin-top: 2px;
+  font-size: 14px;
   fill: #006134; }
 
 .navbar-nav__item {
@@ -1241,7 +1254,7 @@ input[type="radio"]:checked + .radio_default:before {
   .fast-buy__preview_hover {
     position: relative;
     z-index: 12; }
-    .fast-buy__preview_hover:hover + .fast-buy__preview {
+    .fast-buy__preview_hover:hover ~ .fast-buy__preview {
       visibility: visible;
       opacity: 1;
       z-index: -1;
@@ -1387,6 +1400,33 @@ input[type="radio"]:checked + .radio_default:before {
   padding: 65px 0 15px;
   text-align: center; }
 
+.catalog-pref-link {
+  position: relative;
+  display: inline-block;
+  color: #949a96;
+  margin-top: 10px; }
+  .catalog-pref-link:hover {
+    color: #006134; }
+  .catalog-pref-link.catalog-pref-link_Bouqet {
+    padding-left: 38px; }
+  .catalog-pref-link.catalog-pref-link_Car {
+    padding-left: 38px; }
+  .catalog-pref-link.catalog-pref-link_Znak {
+    padding-left: 32px; }
+  .catalog-pref-link .icon {
+    position: absolute;
+    left: 0;
+    top: 50%; }
+    .catalog-pref-link .icon.icon-Bouqet {
+      font-size: 22px;
+      top: -5px; }
+    .catalog-pref-link .icon.icon-Car {
+      font-size: 18px;
+      top: -3px; }
+    .catalog-pref-link .icon.icon-Znak {
+      font-size: 25px;
+      top: -6px; }
+
 .choose-color__item {
   width: 20px;
   height: 20px;
@@ -1446,6 +1486,10 @@ input[type="radio"]:checked + .radio_default:before {
   text-align: center;
   font-size: 24px;
   margin-bottom: 30px; }
+  .section-ig__title .icon {
+    top: 6px;
+    position: relative;
+    margin-right: 5px; }
 
 .ig__item {
   position: relative;

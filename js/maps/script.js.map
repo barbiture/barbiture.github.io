@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["script.js"],"sourcesContent":["'use strict';\nconsole.log('script.js');"],"file":"../script.js"}
+{"version":3,"names":[],"mappings":"","sources":["script.js"],"sourcesContent":["'use strict';\r\nconsole.log('script.js');"],"file":"../script.js"}

@@ -992,6 +992,12 @@ for (var i=0; i<tabNav.length; i++) {
 
 //var classLink = document.getElementsByClassName[0]("");
 
+
+$(document).ready(function() {
+alert("asfas");
+});
+
+
 scrollToTop.init('top').onclick = function() {
   scrollToTop.up();
 };
