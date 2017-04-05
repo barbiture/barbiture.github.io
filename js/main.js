@@ -835,13 +835,16 @@ new Dropdown({
       rangeVal = document.getElementById('rangeVal'),
       fastRangeSteps = document.getElementById('FastRangeSteps'),
       offset = 0,
-      range = [7, 9, 11, 15, 17, 19, 25, 35, 51],
+      range = [1, 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51],
       rangeLength = range.length-1;
   fastRange.style.width = "257px";
   function steps(arr) {
     var x = '';
-    for (var i = 0; i < arr.length; i++)
-      x += ' <li class="in-bl">'+range[i]+'</li>';
+    for (var i = 0; i < arr.length; i++) {
+      if ((i == 0)||(i == 8)||(i==10)||(i==14)||(i==16)||(i==18)||(i==24)||(i==34)||(i==50)) {
+        x += ' <li class="in-bl">'+range[i]+'</li>';  
+      }
+    }
     return x;
   };
   fastRangeSteps.innerHTML = '<ul class="fast-buy__range__step clearfix">'+steps(range)+'</ul>';
@@ -873,8 +876,11 @@ new Dropdown({
     rangeVal.innerHTML = range[offset];
   });
   document.getElementById('rangePlus').onclick = function(){
-    if(offset < rangeLength)
+    if(offset < rangeLength) {
+      console.log(offset);
       fastRange.noUiSlider.set(++offset);
+      return false;
+    }
   };
   document.getElementById('rangeMinus').onclick = function(){
     if(offset > 0)
@@ -993,9 +999,14 @@ for (var i=0; i<tabNav.length; i++) {
 //var classLink = document.getElementsByClassName[0]("");
 
 
-$(document).ready(function() {
-alert("asfas");
-});
+
+
+	$(".choose-color__item").click(function() {
+		alert("fasfasfas");
+		//$(".choose-color__item").removeClass("choose-color__item_active");
+		//$(this).addClass("choose-color__item_active");
+		//return false;		
+	});
 
 
 scrollToTop.init('top').onclick = function() {

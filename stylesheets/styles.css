@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .icon {
   display: inline-block;
   width: 1em;
@@ -35,6 +36,10 @@
 .icon-Heart {
   font-size: 3.2rem;
   width: 1.15625em; }
+
+.icon-Inst {
+  font-size: 2.6rem;
+  width: 1.03846em; }
 
 .icon-Instagram {
   font-size: 1.8rem;
@@ -1211,7 +1216,12 @@ input[type="radio"]:checked + .radio_default:before {
 .fast-buy__range__val {
   width: 44px;
   font-size: 17px;
-  font-family: sfL; }
+  font-family: sfL;
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none; }
 
 .fast-buy__range__amount {
   margin-bottom: 25px; }
@@ -1227,7 +1237,12 @@ input[type="radio"]:checked + .radio_default:before {
   display: block;
   float: left;
   width: 11.1%;
-  text-align: center; }
+  text-align: center;
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none; }
 
 .fast-buy__preview {
   position: absolute;
@@ -1300,7 +1315,12 @@ input[type="radio"]:checked + .radio_default:before {
   width: auto; }
 
 .fast-buy__radio {
-  margin-top: 18px; }
+  margin-top: 18px;
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none; }
 
 .fast-buy__radio__list {
   width: 100%;
@@ -1308,7 +1328,12 @@ input[type="radio"]:checked + .radio_default:before {
 
 .fast-buy__btn {
   margin-top: 14px;
-  width: 100%; }
+  width: 100%;
+  -webkit-user-select: none;
+  /* user-select -- это нестандартное свойство */
+  -moz-user-select: none;
+  /* поэтому нужны префиксы */
+  -ms-user-select: none; }
 
 .pref {
   color: #949a96;
@@ -1406,7 +1431,7 @@ input[type="radio"]:checked + .radio_default:before {
   color: #949a96;
   margin-top: 10px; }
   .catalog-pref-link:hover {
-    color: #006134; }
+    color: #e395c0; }
   .catalog-pref-link.catalog-pref-link_Bouqet {
     padding-left: 38px; }
   .catalog-pref-link.catalog-pref-link_Car {
@@ -1487,9 +1512,10 @@ input[type="radio"]:checked + .radio_default:before {
   font-size: 24px;
   margin-bottom: 30px; }
   .section-ig__title .icon {
-    top: 6px;
+    top: 7px;
     position: relative;
-    margin-right: 5px; }
+    margin-right: 1px;
+    font-size: 1.7rem; }
 
 .ig__item {
   position: relative;
