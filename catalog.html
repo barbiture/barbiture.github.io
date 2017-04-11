@@ -22,6 +22,7 @@
         <div class="col col-3">
           <div class="dropdown dropdown_template__header__deliver" id="dropdownDeliver">
             <div class="dropdown__selected
+                        dropdown__selected_bg
                         dropdown__selected__icon
                         dropdown__selected_theme_white
                         dropdown__selected_theme_s
@@ -35,7 +36,7 @@
               <div class="tabs__nav">
                 <span class="tabs__nav_item tabs__nav_item_active" id="">ДОСТАВКА ПО РОССИИ</span>
                 <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ ДОСТАВКА</span>
-                <!--span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ TEST</span-->
+                <span class="tabs__nav_item" id="">МЕЖДУНАРОДНАЯ TEST</span>
               </div>
               <div class="tabs__content">
                 <form action="" method="GET" onsubmit="return false">
@@ -71,6 +72,7 @@
           </div>
           <div class="dropdown header__tel" id="dropdownTel">
             <div class="dropdown__selected
+                        dropdown__selected_bg
                         dropdown__selected__icon
                         dropdown__selected_theme_white
                         dropdown__selected_theme_m
@@ -104,26 +106,28 @@
           <div class="dropdown in-bl dropdown__lang text-left"
                id="dropdownLang">
             <div class="dropdown__selected
+                        dropdown__selected_bg
                         dropdown__selected__lang
                         dropdown__selected_theme_s
                         dropdown__selected_theme_white
                         text-center">
-              <i class="dropdown__lang_en _ico"></i>English
+              <i id="flagIcon" class="dropdown__lang__flag flag-icon flag-icon-gb"></i>
             </div>
             <ul class="dropdown__content
                        dropdown__content_theme_right
                        dropdown__lang__content">
-              <li class="dropdown__content__item"><i class="dropdown__lang_en _ico"></i>English</li>
-              <li class="dropdown__content__item"><i class="dropdown__lang_ru _ico"></i>Русский</li>
-              <li class="dropdown__content__item"><i class="dropdown__lang_ua _ico"></i>Український</li>
-              <li class="dropdown__content__item"><i class="dropdown__lang_fr _ico"></i>Français</li>
+              <li class="dropdown__content__item dropdown__content__item_selected" data-index="gb">English</li>
+              <li class="dropdown__content__item" data-index="ru">Русский</li>
+              <li class="dropdown__content__item" data-index="ua">Український</li>
+              <li class="dropdown__content__item" data-index="fr">Français</li>
             </ul>
           </div>
           <div class="dropdown dropdown_template__header__curency in-bl text-left" id="dropdownCurency">
             <div class="dropdown__selected
+                        dropdown__selected_bg
                         dropdown__selected_theme_white
                         dropdown__selected_theme_s">
-                        <span>$</span>
+                        <span id="currSymb">$</span>
                           <svg class="icon icon-arrow">
                             <use xlink:href="#arrow"></use>
                           </svg>

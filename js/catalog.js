@@ -1771,7 +1771,7 @@ var CreateList = function(o) {
   this.selectedClass = o.selectedClass;
 
   if (o.title)
-    this.title = id.querySelector(o.title).innerHTML.trim();
+    this.title = id.querySelector(o.title).innerText.trim();
 
   for (var i=0; i<o.array.length; i++) {
     item = o.array[i];
@@ -1804,6 +1804,17 @@ var fn2 = function(item) {
     selected = (item == this.title) ? this.selectedClass: '';
   }
   return '<li class="'+(this.classes+' '+selected).trim()+'">'+item+'</li>';
+};
+
+var telCountry = function(item) {
+  var selected = '';
+  if (this.title) {
+    selected = (item['phone'] == this.title) ? this.selectedClass: '';
+  }
+  return '<li class="'+(this.classes+' '+selected).trim()+'">'+
+            '<i class="header__tel__flag flag-icon flag-icon-squared flag-icon_round flag-icon-'+item['index']+'"></i>'+
+            ' <span class="header__tel__item">'+item['country']+' '+item['phone']+'</span>'+
+          '</li>';
 };
 
 /////////////Заполнениие меню//////////////////
@@ -1852,176 +1863,137 @@ HTMLElement.prototype.removeClass = function(className) {
 
 /////////////Допо. функции анимация//////////////////
 
-//////////////Dropdown///////////////////////////
-var objectsList = [];
-function Dropdown(obj,type,index) {
-  var id = (typeof obj == 'object') ? obj.id : obj;
-  this.el = (!type) ? this.el = document.getElementById(id) :
-    this.el = document.getElementsByClassName(id)[index];
 
-  this.menuName = this.el.querySelector(obj.menuName);
-  this.content = this.el.querySelector(obj.content);
-  this.li = this.el.getElementsByTagName('li');
 
-  if (this.el.getElementsByTagName('input').length != 0)
-    this.inputs = this.el.getElementsByTagName('input');
+  var objectsList = [];
+  function Dropdown(obj,type,index) {
+    var id = (typeof obj == 'object') ? obj.id : obj;
+    this.el = document.getElementById(id);
 
-  this.notClose = obj.notClose || false;
-  this.list = obj.list;
-  this.classOnClick = obj.classOnClick || false;
-  this.classSelected = obj.classSelected || false;
-  objectsList.push(this);
-  this.closeByClickBody();
-  this.clickEvent();
-  this.stopPropag();
-}
-// Закрывает выпадающее меню при клике на страницу //
-Dropdown.prototype.stopPropag = function(arr) {
-  this.el.onclick = function(e) {
-    e.stopPropagation();
-  };
-};
-
-Dropdown.prototype.clearWindow = function() {
-  this.menuName.removeClass(this.classOnClick);
-  for (var i=0; i<objectsList.length; i++) {
-    if (objectsList[i].content.style.display == 'block') {
-      objectsList[i].content.fadeOut(); window.onclick = '';
-    }
+    this.init(obj);
+    this.addEventToTitle();
+    this.addEventToItems();
+    this.stopPropag();
   }
-};
-Dropdown.prototype.closeByClickBody = function() {
-  var $this = this;
-  document.body.onclick = function(e) {
-    $this.clearWindow();
-  };
-};
-// Функция автодополнения //
-Dropdown.prototype.awesomplete = function() {
-  var $this = this;
-  for (var i=0; i<this.inputs.length; i++) {
-    new Awesomplete($this.inputs[i], {
-      list: $this.list[i],
-      replace: function(e) {
-        for (var j=0; j<$this.inputs.length; j++) {
-          $this.inputs[j].value = '';
-        }
-        $this.menuName.innerHTML = e.value;
-        $this.selectItemFromSearch(e.value);
-        $this.content.fadeOut();
-        if ($this.classOnClick) $this.menuName.removeClass($this.classOnClick);
-      }
-    });
-  }
-};
-Dropdown.prototype.checkOpenMenu = function() {
-  for (var i=0; i<objectsList.length; i++) {
-    if (objectsList[i].content != this.content) {
-      if (objectsList[i].content.style.display == 'block') {
-        if (this.classOnClick)
-          objectsList[i].menuName.removeClass(objectsList[i].classOnClick);
-        objectsList[i].content.fadeOut();
-      }
-    }
-  }
-};
-// Скрывает или показывает выпадающее меню при клике на заголовок //
-Dropdown.prototype.clickEvent = function() {
-  var $this = this;
-  this.menuName.onclick = function(e) {
-    $this.closeByClickBody();
-    if ($this.content.style.display == '') {
-      $this.checkOpenMenu();
-      if ($this.classOnClick) e.target.addClass($this.classOnClick);
-      $this.content.fadeIn();
-    } else {
-      if ($this.classOnClick) e.target.removeClass($this.classOnClick);
-      $this.content.fadeOut();
-    }
-  };
-};
-// Скрывает или показывает выпадающее меню при наведении на заголовок //
-Dropdown.prototype.hoverEvent = function() {
-  var $this = this;
-  this.el.onmouseenter = function(e) {
-    $this.content.stopAnimation();
-    $this.content.fadeIn();
-  };
-  this.el.onmouseleave = function(e) {
-    $this.content.stopAnimation();
-    $this.content.fadeOut();
-  };
-};
-// Удаляет у всех элементов списка класс selected //
-Dropdown.prototype.clearSelected = function(className) {
-  for (var i=0; i<this.li.length; i++ ) {
-    if ( this.li[i].hasClass(className) ) {
-      this.li[i].removeClass(className);
-    }
-  }
-};
-// Добавляет класс selected на кликнутый элемент списка //
-Dropdown.prototype.selectItem = function(el) {
-  this.clearSelected(this.classSelected);
-  el.addClass(this.classSelected);
-};
-// Добавляет класс selected элементу списка при выборе его из формы //
-Dropdown.prototype.selectItemFromSearch = function(val) {
-  this.clearSelected(this.classSelected);
-  for (var i=1; i<this.li.length; i++) {
-    if (this.li[i].innerHTML == val)
-      this.li[i].addClass(this.classSelected);
-  }
-};
-// Добавляет onclick на элементы списка //
-Dropdown.prototype.addEventToItems = function(fn) {
-  var $this = this;
-  for (var i=0; i<this.li.length; i++ ) {
-    if (!this.li[i].hasClass('dropdown__content__list__link')) {
-      this.li[i].onclick = function(e) {
-        // console.log(this);
-        $this.selectItem(this);
-        $this.menuName.innerHTML = this.innerHTML;
 
-        if (fn == 'tel') $this.tel(e);
-        if (fn == 'lang') $this.lang(e);
-        if (fn == 'curency') $this.curency(e);
-        if (fn == 'flowers') $this.flowers(e);
+  Dropdown.prototype = {
+    init: function(obj) {
+      this.title = this.el.getElementsByClassName(obj.title)[0];
+      this.content = this.el.getElementsByClassName(obj.content)[0];
+      this.li = this.content.getElementsByTagName('li');
 
-        if ($this.classOnClick) $this.menuName.removeClass($this.classOnClick);
-        if (!$this.notClose) $this.content.fadeOut();
+      this.notClose = obj.notClose || false;
+      this.classTitle = obj.classTitle || false;
+      this.classSelected = obj.classSelected || false;
+      objectsList.push(this);
+    },
+    stopPropag: function(arr) {
+      this.el.onclick = function(e) {
+        e.stopPropagation();
       };
+    },
+    closeByClickBody: function() {
+      var self = this;
+      window.onclick = function(e) {
+        self.classForTitle('rm');
+        if (self.content.style.display == 'block') {
+          self.closeMenu(true);
+          window.onclick = null;
+        }
+      };
+    },
+    // Добавляет или удаляет класс при нажатии на меню
+    classForTitle: function(param) {
+      if (this.classTitle) {
+        if (param == 'add')
+          this.title.addClass(this.classTitle);
+        else if (param == 'rm')
+          this.title.removeClass(this.classTitle);
+      }
+    },
+    openMenu: function() {
+      this.classForTitle('add');
+      this.content.fadeIn();
+    },
+    closeMenu: function(close) {
+      if (!this.notClose || close) {
+        this.content.fadeOut();
+        this.classForTitle('rm');
+      }
+    },
+    // Проверяет какие еще из меню открыты и закрывает их//
+    checkOpenMenu: function() {
+      for (var i=0; i<objectsList.length; i++) {
+        if (objectsList[i].content != this.content) {
+          if (objectsList[i].content.style.display == 'block') {
+            if (this.classTitle)
+              objectsList[i].title.removeClass(objectsList[i].classTitle);
+            objectsList[i].content.fadeOut();
+          }
+        }
+      }
+    },
+    // Скрывает или показывает выпадающее меню при клике на заголовок //
+    addEventToTitle: function() {
+      var self = this;
+      this.title.onclick = function(e) {
+        self.closeByClickBody();
+        if (self.content.style.display == '') {
+          self.checkOpenMenu();
+          self.openMenu();
+        } else {
+           self.closeMenu(true);
+        }
+      };
+      return this;
+    },
+    // Скрывает или показывает выпадающее меню при наведении на заголовок //
+    hoverEvent: function() {
+      var self = this;
+      this.el.onmouseenter = function(e) {
+        self.content.stopAnimation();
+        self.content.fadeIn();
+      };
+      this.el.onmouseleave = function(e) {
+        self.content.stopAnimation();
+        self.content.fadeOut();
+      };
+    },
+    // Удаляет у элементов списка класс selected //
+    clearSelected: function(className, br) {
+      for (var i=0; i<this.li.length; i++) {
+        if ( this.li[i].hasClass(className) ) {
+          this.li[i].removeClass(className);
+          if (!br) break;
+        }
+      }
+    },
+    // Добавляет класс selected на кликнутый элемент списка //
+    selectItem: function(el, br) {
+      this.clearSelected(this.classSelected, br);
+      el.addClass(this.classSelected);
+    },
+    // Добавляет onclick на элементы списка //
+    addEventToItems: function() {
+      var self = this;
+      for (var i=0; i<this.li.length; i++ ) {
+        if ( !this.li[i].hasClass('disable') ) {
+          this.li[i].onclick = function(e) {
+            if (typeof self.onSelect == 'function') {
+              self.onSelect.call(self,e);
+            } else { 
+              self.title.innerHTML = this.innerText;
+              self.selectItem(this); 
+            }
+            self.closeMenu();
+          };
+        }
+      }
+      return this;
     }
   }
-  return this;
-};
-Dropdown.prototype.test = function(fn) {
-  
-  var $this = this;
-  for (var i=0; i<this.li.length; i++ ) {
-    this.li[i].addClass('test');
-      this.li[i].onclick = function(e) {
-        // console.log(this.li);
-      }
-  }
-};
-Dropdown.prototype.tel = function(e) {
-  this.inputs[0].placeholder = e.target.dataset.code;
-};
 
-Dropdown.prototype.lang = function(e) {
-  this.menuName.innerHTML = e.target.innerHTML.split(' ')[0];
-};
-Dropdown.prototype.curency = function(e) {
-  this.menuName.innerHTML = e.target.innerHTML.split(' ')[0];
-};
-
-Dropdown.prototype.flowers = function(e) {
-  var img = document.getElementById('fastBuyImg');
-  img.src = e.target.dataset.imglink;
-};
-
-
+  window.Dropdown = Dropdown;
 
 
  ////// Как использовать //////////////////
@@ -2070,8 +2042,6 @@ function(a,b){var d=""===b?a:a.replace(RegExp(c.regExpEscape(b.trim()),"gi"),"<m
 g;for(g in b){var f=b[g];"inside"===g?c(f).appendChild(d):"around"===g?(f=c(f),f.parentNode.insertBefore(d,f),d.appendChild(f)):g in d?d[g]=f:d.setAttribute(g,f)}return d};c.bind=function(a,b){if(a)for(var d in b){var c=b[d];d.split(/\s+/).forEach(function(b){a.addEventListener(b,c)})}};c.fire=function(a,b,c){var e=document.createEvent("HTMLEvents");e.initEvent(b,!0,!0);for(var f in c)e[f]=c[f];return a.dispatchEvent(e)};c.regExpEscape=function(a){return a.replace(/[-\\^$*+?.()|[\]{}]/g,"\\$&")};
 c.siblingIndex=function(a){for(var b=0;a=a.previousElementSibling;b++);return b};"undefined"!==typeof Document&&("loading"!==document.readyState?m():document.addEventListener("DOMContentLoaded",m));e.$=c;e.$$=k;"undefined"!==typeof self&&(self.Awesomplete=e);"object"===typeof module&&module.exports&&(module.exports=e);return e})();
 
-
-
 var rus = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Нижний Новгород', 'Казань', 'Челябинск', 'Омск', 'Самара', 'Красноярск', 'Пермь', 'Ростов-на-Дону', 'Волгоград', 'Уфа', 'Воронеж', 'Саратов', 'Иркутск', 'Ульяновск', 'Хабаровск', 'Пенза', 'Белгород', 'Миас', 'Троицк (Челяб. обл)'];
 var int = ['Белорусь', 'Украина', 'Грузия', 'Испания', 'США', 'Венесуэла', 'Канада', 'Франция', 'Италия', 'Нидерланды', 'Великобритания', 'Тайланд', 'Китай', 'Аргентина', 'Куба', 'Бразилия', 'Люксембург', 'Чехия', 'Австрия', 'Германия', 'Чили', 'Индия', 'Швеция', 'Швейцария', 'ЮАР', 'Япония', 'Австралия'];
 var test = ['TEst', 'Украина', 'Грузия', 'Испания', 'США', 'Венесуэла', 'Канада', 'Франция', 'Италия', 'Нидерланды', 'Великобритания', 'Тайланд', 'Китай', 'Аргентина', 'Куба', 'Бразилия', 'Люксембург', 'Чехия', 'Австрия', 'Германия', 'Чили', 'Индия', 'Швеция', 'Швейцария', 'ЮАР', 'Япония', 'Австралия'];
@@ -2103,23 +2073,75 @@ new CreateList({
   html: fn2
 });
 
-var lastEl = document.getElementsByClassName('tabs__content__list');
-lastEl[0].innerHTML+='<li><a href="" class="dropdown__content__link link link_more link_size_m">Полный список</a></li>';
-lastEl[1].innerHTML+='<li><a href="" class="dropdown__content__link link link_more link_size_m">Полный список</a></li>';
-lastEl[2].innerHTML+='<li><a href="" class="dropdown__content__link link link_more link_size_m">Полный список</a></li>';
+var deliverDropdown = new Dropdown({
+  id: 'dropdownDeliver',
+  title: 'dropdown__selected',
+  classTitle: 'dropdown__selected_active',
+  content: 'dropdown__content',
+  classSelected: 'dropdown__content__item_selected'
+});
 
-new Dropdown({
-  id:'dropdownDeliver',
-  menuName:'.dropdown__selected',
-  content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active_bg',
-  classSelected: 'dropdown__content__item_selected',
-  list:[rus,int, test]
-}).addEventToItems('deliver').awesomplete();
+
+Dropdown.prototype.addForm = function() {
+  if (this.el.getElementsByTagName('input').length != 0)
+    this.inputs = this.el.getElementsByTagName('input');
+  return this;
+};
+// Добавляет класс selected элементу списка при выборе его из формы //
+Dropdown.prototype.selectItemFromSearch = function(val) {
+  this.clearSelected(this.classSelected);
+  for (var i=1; i<this.li.length; i++) {
+    if (this.li[i].innerHTML == val)
+      this.li[i].addClass(this.classSelected);
+  }
+};
+// Функция автодополнения //
+Dropdown.prototype.awesomplete = function(list, m) {
+  var self = this;
+  if (m) {
+    for (var i=0; i<this.inputs.length; i++) {
+      new Awesomplete(this.inputs[i], {
+        list: list[i],
+        replace: function(e) {
+          for (var j=0; j<self.inputs.length; j++) {
+            self.inputs[j].value = '';
+          }
+          self.title.innerText = e.value;
+          self.selectItemFromSearch(e.value);
+          self.closeMenu();
+        }
+      });
+    }
+  } else {
+    new Awesomplete(this.inputs[0], {
+      list: list,
+      replace: function(e) {
+        self.inputs[0].value = '';
+        self.title.innerText = e.value;
+        self.selectItemFromSearch(e.value);
+        self.closeMenu();
+      }
+    });
+  }
+  return this;
+};
+
+deliverDropdown.addForm().awesomplete([rus,int], 1);
+
+
+var uls = document.querySelectorAll('#dropdownDeliver .tabs__content > ul');
+
+for (var i=0; i<uls.length; i++) {
+  var li = document.createElement('LI');
+  li.innerHTML = '<a href="" class="dropdown__content__link link link_more link_size_m">Полный список</a>';
+  uls[i].appendChild(li);
+}
+
 
 // 
 //* Добавление onclick на элементы списка находится в components/dropdown/dropdown.js (Dropdown.prototype.addEventToItems = function(fn))*//
 
+// TABS
 var tabNav = document.querySelectorAll('#dropdownDeliver .tabs__nav_item');
 var tabCont = document.querySelectorAll('#dropdownDeliver .tabs__content');
 function rmClasses(el, className) {
@@ -2149,7 +2171,23 @@ for (var i=0; i<tabNav.length; i++) {
     }
   })(i);
 }
-var tel = ['Россия 8 800 5555 714', 'Украина 0 800 901 504', 'Канада 0 800 901 504', 'Германия 8 800 5555 714', 'Израиль 0 800 901 504', 'Франция 8 800 5555 714', 'Бельгия 0 800 901 504', 'Италия 8 800 5555 714', 'Латвия 0 800 901 504', 'Польша 8 800 5555 714', 'Испания 0 800 901 504', 'Финляндия 8 800 5555 714', 'Норвегия 0 800 901 504', 'Словения 8 800 5555 714', 'Казахстан 0 800 901 504'];
+var tel = [
+  {"country":"Россия","phone":"8 800 5555 714","index":"ru"},
+  {"country":"Украина","phone":"0 800 901 502","index":"ua"},
+  {"country":"Канада","phone":"0 800 901 503","index":"ca"},
+  {"country":"Германия","phone":"8 800 5555 711","index":"de"},
+  {"country":"Израиль","phone":"0 800 901 505","index":"il"},
+  {"country":"Франция","phone":"8 800 5555 716","index":"fr"},
+  {"country":"Бельгия","phone":"0 800 901 507","index":"be"},
+  {"country":"Италия","phone":"8 800 5555 718","index":"it"},
+  {"country":"Латвия","phone":"0 800 901 509","index":"lv"},
+  {"country":"Польша","phone":"8 800 5555 7110","index":"pl"},
+  {"country":"Испания","phone":"0 800 901 5011","index":"es"},
+  {"country":"Финляндия","phone":"8 800 5555 7112","index":"fi"},
+  {"country":"Норвегия","phone":"0 800 901 5013","index":"no"},
+  {"country":"Словения","phone":"8 800 5555 7114","index":"sl"},
+  {"country":"Казахстан","phone":"0 800 901 5015","index":"kz"}
+];
 new CreateList({
   id: 'dropdownTel',
   ul: '.dropdown__content',
@@ -2157,31 +2195,54 @@ new CreateList({
   classes: 'dropdown__content__item',
   selectedClass: 'dropdown__content__item_selected',
   array: tel,
-  html: fn2
+  html: telCountry
 });
-
-new Dropdown({
-  id:'dropdownTel',
-  menuName:'.dropdown__selected',
-  content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active_bg',
+var telDropdown = new Dropdown({
+  id: 'dropdownTel',
+  title: 'dropdown__selected',
+  classTitle: 'dropdown__selected_active',
+  content: 'dropdown__content',
   classSelected: 'dropdown__content__item_selected',
-  list:[tel]
-}).addEventToItems('tel');
+  list: tel
+});
+telDropdown.onSelect = function(e) {
+  var target = e.target;
+  while (target.tagName != 'UL') {
+    if (target.tagName == 'LI') {
+      this.title.innerHTML = '<i class="icon header__tel__icon"></i> ' + target.children[1].innerText.replace(/\D+/,'');
+      this.selectItem(target);
+      return;
+    }
+    target = target.parentNode;
+  }
+}
 new Dropdown({
-  id:'dropdownLang',
-  menuName:'.dropdown__selected',
-  content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active',
+  id: 'dropdownLang',
+  title: 'dropdown__selected',
+  classTitle: 'dropdown__selected_active',
+  content: 'dropdown__content',
   classSelected: 'dropdown__content__item_selected'
-}).addEventToItems('lang');
+}).onSelect = function(e) {
+    var target = e.target;
+    var currentFlag = target.dataset.index;
+    var flagIcon = document.getElementById('flagIcon');
+    var className = flagIcon.className.split(' ')[2];
+    flagIcon.removeClass(className);
+    flagIcon.addClass('flag-icon-' + currentFlag);
+    this.selectItem(target);
+  };
 new Dropdown({
-  id:'dropdownCurency',
-  menuName:'.dropdown__selected',
-  content:'.dropdown__content',
-  classOnClick: 'dropdown__selected-active_bg',
+  id: 'dropdownCurency',
+  title: 'dropdown__selected',
+  classTitle: 'dropdown__selected_active',
+  content: 'dropdown__content',
   classSelected: 'dropdown__content__item_selected'
-}).addEventToItems('curency');
+}).onSelect = function(e) {
+    var target = e.target;
+    var currSymb = document.getElementById('currSymb');
+    currSymb.innerText = target.innerText.split(' ')[0];
+    this.selectItem(target);
+  };
 ;(function() {
   var m1 = new Modal('modal');
   m1.topBtm = function(id) {
