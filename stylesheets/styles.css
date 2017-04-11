@@ -89,12 +89,13 @@
   font-size: 1.019rem;
   width: 1.73307em; }
 
-.radio_nav:before, .header__tel__icon, .dropdown__selected_theme_black.dropdown__selected__icon:after, .dropdown__selected_theme_white.dropdown__selected__icon:after {
+.radio_nav:before,
+.check_nav:before, .header__tel__icon, .dropdown__selected_theme_black.dropdown__selected__icon:after, .dropdown__selected_theme_white.dropdown__selected__icon:after {
   display: inline-block;
   background-image: url("../images/sprite.svg");
   background-size: 2.875em 2.4375em; }
 
-.lt-ie9 .radio_nav:before, .lt-ie9 .header__tel__icon, .lt-ie9 .dropdown__selected_theme_black.dropdown__selected__icon:after, .lt-ie9 .dropdown__selected_theme_white.dropdown__selected__icon:after {
+.lt-ie9 .radio_nav:before, .lt-ie9 .check_nav:before, .lt-ie9 .header__tel__icon, .lt-ie9 .dropdown__selected_theme_black.dropdown__selected__icon:after, .lt-ie9 .dropdown__selected_theme_white.dropdown__selected__icon:after {
   background-image: url("../images/sprite.png"); }
 
 @font-face {
@@ -227,7 +228,12 @@ h3, .h3 {
   font-size: 30px;
   font-weight: normal; }
 
-h4, .h4 {
+h5, .h5 {
+  font-family: Charter;
+  font-size: 26px;
+  font-weight: normal; }
+
+h6, .h6 {
   font-family: "sfB";
   font-size: 18px; }
 
@@ -417,21 +423,27 @@ p {
   height: 1px;
   margin: 60px 0 85px; }
 
-.radio {
+.radio,
+.check {
   cursor: pointer; }
-  .radio:before, .radio:after {
+  .radio:before, .radio:after,
+  .check:before,
+  .check:after {
     content: '';
     display: inline-block; }
-  .radio:before {
+  .radio:before,
+  .check:before {
     opacity: 0;
     position: relative; }
-  .radio_default {
+  .radio_default,
+  .check_default {
     display: inline-block;
     color: #b7b7b7;
     position: relative;
     padding-left: 32px;
     margin: 0 8px; }
-    .radio_default:after {
+    .radio_default:after,
+    .check_default:after {
       left: 0;
       top: -2px;
       position: absolute;
@@ -439,7 +451,8 @@ p {
       height: 21px;
       border-radius: 50%;
       border: solid 1px #e6e6e6; }
-  .radio_color {
+  .radio_color,
+  .check_color {
     margin: 0 8px;
     border-radius: 50%;
     display: block;
@@ -447,43 +460,54 @@ p {
     height: 23px;
     position: relative;
     border-width: 3px; }
-    .radio_color:before {
+    .radio_color:before,
+    .check_color:before {
       position: absolute;
       left: -3px;
       top: -3px;
       width: 23px;
       height: 23px;
       border-radius: 50%; }
-  .radio_nav {
+  .radio_nav,
+  .check_nav {
     padding-left: 15px; }
-    .radio_nav:hover {
+    .radio_nav:hover,
+    .check_nav:hover {
       color: #e395c0; }
-    .radio_nav:before {
+    .radio_nav:before,
+    .check_nav:before {
       left: -15px;
       width: 0.8125em;
       height: 0.625em;
       background-position: -1.8125em -0.3125em;
       font-size: 17px; }
-      .lt-ie9 .radio_nav:before {
+      .lt-ie9 .radio_nav:before, .lt-ie9
+      .check_nav:before {
         width: 12px;
         height: 9px;
         background-position: -29px -5px; }
 
-input[type="radio"]:checked + .radio:before {
+input[type="radio"]:checked + .radio:before,
+input[type="checkbox"]:checked + .check:before {
   opacity: 1; }
 
-input[type="radio"]:checked + .radio_color {
+input[type="radio"]:checked + .radio_color,
+input[type="checkbox"]:checked + .check_color {
   border-color: transparent; }
-  input[type="radio"]:checked + .radio_color:before {
+  input[type="radio"]:checked + .radio_color:before,
+  input[type="checkbox"]:checked + .check_color:before {
     border: solid #006134; }
 
-input[type="radio"]:checked + .radio_nav:hover {
+input[type="radio"]:checked + .radio_nav:hover,
+input[type="checkbox"]:checked + .check_nav:hover {
   color: #006134; }
 
-input[type="radio"]:checked + .radio_default:after {
+input[type="radio"]:checked + .radio_default:after,
+input[type="checkbox"]:checked + .check_default:after {
   border-color: #006134; }
 
-input[type="radio"]:checked + .radio_default:before {
+input[type="radio"]:checked + .radio_default:before,
+input[type="checkbox"]:checked + .check_default:before {
   position: absolute;
   left: 7px;
   top: 5px;
@@ -492,18 +516,33 @@ input[type="radio"]:checked + .radio_default:before {
   border-radius: 50%;
   background-color: #006134; }
 
-.radio_color_white {
+.radio_color_white,
+.check-color_white {
   background-color: #fff;
   border: solid 1px #e6e6e6; }
+
+.check-color_yellow {
+  background-color: #f8eb33; }
 
 .radio_color_orange {
   background-color: #fbad7d; }
 
-.radio_color_red {
+.radio_color_red,
+.check-color_red {
   background-color: #dc474c; }
 
-.radio_color_pink {
+.radio_color_pink,
+.check-color_pink {
   background-color: #e395c0; }
+
+.check-color_blue {
+  background: #8497de; }
+
+.check-color_purple {
+  background: #a878f0; }
+
+.check-color_green {
+  background: #9fdbb7; }
 
 .toggle-block_target {
   height: 0;
@@ -534,7 +573,8 @@ input[type="radio"]:checked + .radio_default:before {
   touch-action: none;
   -ms-user-select: none;
   -moz-user-select: none;
-  user-select: none; }
+  user-select: none;
+  cursor: pointer; }
 
 .noUi-base, .noUi-handle {
   -webkit-transform: translate3d(0, 0, 0);
@@ -587,7 +627,7 @@ input[type="radio"]:checked + .radio_default:before {
   left: 50%;
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
-  top: -30px; }
+  top: -20px; }
 
 .tabs__nav {
   margin: 0 -18px 20px; }
@@ -1207,7 +1247,6 @@ input[type="radio"]:checked + .radio_default:before {
 .fast-buy__range {
   padding-top: 15px; }
   .fast-buy__range .noUi-target {
-    width: 240px !important;
     margin-left: 15px; }
     .fast-buy__range .noUi-target:before {
       background-color: #006134;
@@ -1242,7 +1281,8 @@ input[type="radio"]:checked + .radio_default:before {
   margin-left: -10px;
   width: 270px;
   font-size: 12px;
-  color: #e6e6e6; }
+  color: #e6e6e6;
+  cursor: pointer; }
 
 .fast-buy__range__step li {
   display: block;
@@ -1254,6 +1294,16 @@ input[type="radio"]:checked + .radio_default:before {
   -moz-user-select: none;
   /* поэтому нужны префиксы */
   -ms-user-select: none; }
+  .fast-buy__range__step li:nth-child(2) {
+    width: 13.1%; }
+  .fast-buy__range__step li:nth-child(3) {
+    width: 15.2%; }
+  .fast-buy__range__step li:nth-child(5) {
+    width: 28%; }
+  .fast-buy__range__step li:nth-child(6) {
+    width: 19%;
+    float: right;
+    text-align: right; }
 
 .fast-buy__preview {
   position: absolute;
@@ -1554,11 +1604,35 @@ input[type="radio"]:checked + .radio_default:before {
     font-family: sfB;
     color: #fff; }
 
+.catalog-inner__title {
+  margin-top: 49px;
+  margin-bottom: 26px; }
+
 .catalog-filter__range {
-  margin-top: 50px; }
+  margin-top: 38px; }
+  .catalog-filter__range__title {
+    margin-bottom: 47px; }
+
+.content {
+  background: #aaa;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s; }
+
+.title {
+  background: #555;
+  cursor: pointer;
+  height: 20px; }
+
+.active {
+  height: 108px; }
 
 .catalog-filter {
+  padding-left: 25px;
   border-left: solid 1px #e6e6e6; }
+  .catalog-filter__item {
+    border-bottom: solid 1px #e6e6e6;
+    padding-bottom: 31px; }
 
 .footer__block {
   margin-top: 25px; }

@@ -475,7 +475,7 @@
     <div class="container prel">
   
       <div class="fast-buy" id="fastBuy">
-        <div class="fast-buy__content">
+        <div class="fast-buy__content" id="item">
           <svg class="fast-buy_close icon icon_grey icon-Cancel " id="fastBuyClose" >
             <use xlink:href="#Cancel"></use>
           </svg>
@@ -515,19 +515,19 @@
             <div class="title-light_s">Цвет</div>
             <ul class="fast-buy__radio__list">
               <li class="in-bl">
-                <input class="hidden" type="radio" name="fbr" id="fbr1">
+                <input class="hidden" type="radio" name="fbr" id="fbr1" value="white">
                 <label class="radio radio_color radio_color_white" for="fbr1"></label>
               </li>
               <li class="in-bl">
-                <input class="hidden" type="radio" name="fbr" id="fbr2" checked>
+                <input class="hidden" type="radio" name="fbr" id="fbr2" checked value="orange">
                 <label class="radio radio_color radio_color_orange" for="fbr2"></label>
               </li>
               <li class="in-bl">
-                <input class="hidden" type="radio" name="fbr" id="fbr3">
+                <input class="hidden" type="radio" name="fbr" id="fbr3" value="red">
                 <label class="radio radio_color radio_color_red" for="fbr3"></label>
               </li>
               <li class="in-bl">
-                <input class="hidden" type="radio" name="fbr" id="fbr4">
+                <input class="hidden" type="radio" name="fbr" id="fbr4" value="pink">
                 <label class="radio radio_color radio_color_pink" for="fbr4"></label>
               </li>
             </ul>
@@ -536,11 +536,11 @@
             <div class="title-light_s">Упаковка</div>
             <ul class="fast-buy__radio__list">
               <li class="in-bl">
-                <input class="hidden" type="radio" name="pack" id="pack1">
+                <input class="hidden" type="radio" name="pack" id="pack1" value="organza" data-cost="1">
                 <label class="radio radio_default" for="pack1">Органза</label>
               </li>
               <li class="in-bl pull-right">
-                <input class="hidden" type="radio" name="pack" id="pack2" checked>
+                <input class="hidden" type="radio" name="pack" id="pack2" checked value="kraft" data-cost="2">
                 <label class="radio radio_default" for="pack2">Крафт-бумага</label>
               </li>
             </ul>

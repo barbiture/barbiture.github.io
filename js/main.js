@@ -2355,57 +2355,142 @@ new Dropdown({
       rangeVal = document.getElementById('rangeVal'),
       fastRangeSteps = document.getElementById('fastRangeSteps'),
       offset = 0,
-      range = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51],
-      rangeLength = range.length-1;
-  fastRange.style.width = '257px';
-  function steps(arr) {
-    var x = '';
-    for (var i = 0; i < arr.length; i++) {
-      if ((i == 0)||(i == 8)||(i==10)||(i==14)||(i==16)||(i==18)||(i==24)||(i==34)||(i==50)) {
-        x += ' <li class="in-bl">'+range[i]+'</li>';
-      }
-    }
-    return x;
-  };
-  fastRangeSteps.innerHTML = '<ul class="fast-buy__range__step clearfix">'+steps(range)+'</ul>';
+      // range = [1,9,11,15,17,19,25,35,51],
+      range = [1,9,17,25,35,51],
+      myRange = [1,25,51],
+      maxRange = 51;
+  // fastRange.style.width = '257px';
 
-  // var bla = function() {
-  //   var x = '';
-  //   for (var i = 0; i < arr.length; i++)
-  //     x += ' <li class="in-bl">'+range[i]+'</li>';
-  //   return '<ul class="fast-buy__range__step">'+x+'</ul>';
-  // }();
+
+  var elem = document.getElementById('fastBuy').children[0];
+  var colors = elem.querySelectorAll('input[name=fbr]');
+  // var sizes = elem.querySelectorAll('input[name=size]');
+  var wrappers = elem.querySelectorAll('input[name=pack]');
+  // var range = elem.querySelector('.range');
+  var btn = elem.querySelector('button');
+  // var img = elem.querySelector('img');
+  var img = {};
+  var data = {
+   id: elem.id,
+   amount: range[0],
+   size: 1,
+   color: 'red',
+   wrap: 'organza',
+   wrapCost: 1,
+   oneFlowerCost: 1
+   // parseInt(elem.dataset.cost)
+  };
+
+  fastRangeSteps.innerHTML = (function(x) {
+    for (var i = 0; i < range.length; i++)
+      x += ' <li class="in-bl">'+range[i]+'</li>';
+    return '<ul class="fast-buy__range__step clearfix">'+x+'</ul>';
+  })('');
 
   noUiSlider.create(fastRange, {
-    start: [0],
+    start: 0,
     step: 1,
     connect: [true, false],
     orientation: 'horizontal',
     range: {
-      'min': 0,
-      'max': rangeLength
-    },
-    // pips: { // Show a scale with the slider
-    //   mode: 'steps',
-    //   stepped: true,
-    //   density: 4
-    // },
+      'min': 1,
+      'max': maxRange
+    }
   });
-  fastRange.noUiSlider.on('update', function(values, handle){
-    offset = parseInt(values[handle]);
-    rangeVal.innerHTML = range[offset];
+  fastRange.noUiSlider.on('update', function(values, handle) {
+    data.amount = parseInt(values[handle]);
+    rangeVal.innerHTML = data.amount;
+    data.size = (function() {
+      var s = 0;
+      for (var i = 0; i < myRange.length; i++)
+        if ( myRange[i] <= data.amount ) s = myRange[i];
+      return s;
+    })();
+    changeSrcImg();
+    calcCost();
   });
-  document.getElementById('rangePlus').onclick = function(){
-    if(offset < rangeLength) {
-      console.log(offset);
+  document.getElementById('rangePlus').onclick = function() {
+    if (offset < maxRange) {
       fastRange.noUiSlider.set(++offset);
       return false;
     }
   };
-  document.getElementById('rangeMinus').onclick = function(){
-    if(offset > 0)
+  document.getElementById('rangeMinus').onclick = function() {
+    if (offset > 0)
       fastRange.noUiSlider.set(--offset);
   };
+  fastRangeSteps.onclick = function(e) {
+    var target = e.target;
+    if (target.tagName == 'LI') {
+      var val = parseInt(target.innerText);
+      fastRange.noUiSlider.set( val );
+
+      for (var i=0; i<myRange.length; i++) {
+        if ( myRange[i] == val) {
+          data.size = val; changeSrcImg(); break;
+        }
+      }
+    }
+  };
+
+
+
+
+
+/////
+
+  function update(id, cost) {
+    data.id = id;
+    data.oneFlowerCost = cost;
+  }
+
+  function changeSrcImg() {
+    img.src = data.id +'_'+ data.size +
+      '_'+ data.color +'_'+ data.wrap + '.jpg';
+    console.log( img.src );
+  };
+
+  function calcCost() {
+    var amount = data.amount;
+    var wrap = data.wrapCost;
+    var oneFlowerCost = data.oneFlowerCost;
+    data.cost = (oneFlowerCost*amount)+wrap;
+    btn.innerText = btn.innerText.replace(/\d+/, data.cost);
+  };
+
+
+  for (var i=0; i<colors.length; i++) {
+    colors[i].onchange = function(e) {
+      data.color = e.target.value;
+      changeSrcImg();
+    };
+  }
+
+  for (var i=0; i<wrappers.length; i++) {
+    wrappers[i].onchange = function(e) {
+      data.wrap = e.target.value;
+      data.wrapCost = parseInt(e.target.dataset.cost);
+      changeSrcImg();
+      calcCost();
+    };
+  }
+
+  btn.onclick = function(e) {
+    // var result = {
+    //   id: data.id,
+    //   color: data.color,
+    //   amount: data.amount,
+    //   wrap: data.wrap
+    // };
+    console.log( data );
+  };
+
+  calcCost();
+
+  return {
+    update: update,
+    data: data
+  }
 })();
 
   var wrap = document.getElementById('fastBuy'),

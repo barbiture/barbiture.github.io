@@ -2310,6 +2310,51 @@ noUiSlider.create(filterRange, {
     'max': 6000
   }
 });
+var menu = document.getElementById('menu');
+var title = menu.getElementsByClassName('title');
+var contents = menu.getElementsByClassName('content');
+var blocks = menu.getElementsByClassName('block');
+
+// var firstBlock = blocks[0].children[1];
+// firstBlock.style.height = firstBlock.scrollHeight + 'px';
+
+function siblings(elem) {
+  var parent = elem.parentElement.children;
+  var tmp = [];
+  for (var i=0; i<parent.length; i++) {
+    if (elem != parent[i]) {
+      tmp.push(parent[i]);
+    }
+   }
+  return tmp;
+}
+
+function close(elem) {
+  for (var i=0; i<elem.length; i++) {
+    elem[i].children[1].style.height = 0;
+    elem[i].children[0].style.color = 'black';
+  }
+}
+
+var fn = function() {
+  var parent = this.parentElement,
+      content = this.nextElementSibling,
+      contentHeight = content.scrollHeight,
+      onHeight = content.offsetHeight;
+
+  content.style.height = (onHeight > 0) ? 0 :
+    contentHeight + 'px';
+  this.style.color = 'white';
+
+  close(siblings(parent));
+
+  // if (parent.id == blocks.length && onHeight > 0)
+    // contents[0].style.height = contents[0].scrollHeight + 'px';
+};
+
+for(var i=0; i<title.length; i++) {
+  title[i].onclick = fn;
+}
 
 scrollToTop.init('top').onclick = function() {
   scrollToTop.up();
