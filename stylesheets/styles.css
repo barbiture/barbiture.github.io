@@ -1978,21 +1978,30 @@ input[type="checkbox"]:checked + .check_default:before {
 .text-slider {
   font-size: 13px;
   font-family: Helvetica;
-  opacity: .4;
   color: #fff;
-  overflow: hidden;
-  text-align: center;
   width: 485px; }
 
 .text-slider__content {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100000em; }
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0; }
 
 .text-slider__item {
-  float: left;
-  width: 485px; }
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .5s ease; }
+  .text-slider__item_show {
+    z-index: 100;
+    opacity: .4; }
 
 .header__logo {
   margin-top: 15px; }
@@ -2001,21 +2010,30 @@ input[type="checkbox"]:checked + .check_default:before {
 .text-slider {
   font-size: 13px;
   font-family: Helvetica;
-  opacity: .4;
   color: #fff;
-  overflow: hidden;
-  text-align: center;
   width: 485px; }
 
 .text-slider__content {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100000em; }
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0; }
 
 .text-slider__item {
-  float: left;
-  width: 485px; }
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .5s ease; }
+  .text-slider__item_show {
+    z-index: 100;
+    opacity: .4; }
 
 .header__cart {
   display: block;
@@ -2394,7 +2412,7 @@ input[type="checkbox"]:checked + .check_default:before {
   background-color: transparent;
   cursor: pointer;
   margin-top: 2px;
-  font-size: 17px; }
+  font-size: 15px; }
 
 .search-form {
   left: 0;
@@ -2460,12 +2478,14 @@ input[type="checkbox"]:checked + .check_default:before {
   .navbar-nav__link .icon-arrow {
     font-size: 6px;
     vertical-align: middle; }
-  .navbar-nav__link:hover + .navbar-nav__dropdown {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-    transform: translateY(0%);
-    transition-delay: 0s, 0s, 0.3s; }
+  .navbar-nav__link:hover {
+    color: #dc7ab0; }
+    .navbar-nav__link:hover + .navbar-nav__dropdown {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s; }
 
 .navbar-nav__link_active {
   color: #f49ac1; }
