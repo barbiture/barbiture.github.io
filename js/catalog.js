@@ -1623,9 +1623,6 @@ HTMLElement.prototype.topOut = function(position, delay) {
   this.parentElement.style.overflow = 'hidden';
 };
 
-
-
-
 HTMLElement.prototype.fadeIn = function(delay) {
   var $this = this;
   var delay = delay || 0.5;
@@ -1664,7 +1661,7 @@ $(document).ready(function() {
 		$(this).closest(".toggle-block_target").toggleClass("visible");
 		$(this).closest(".toggle-block_target").prev(".toggle-block_linked").find(".jsToggleBlockLink").toggleClass("hidden");
 		return false;
-	});	
+	});
 });
 /*! nouislider - 9.2.0 - 2017-01-11 10:35:35 */
 
@@ -2004,33 +2001,6 @@ HTMLElement.prototype.removeClass = function(className) {
  // new Menu({id:'bb',close:true,delay:1},1,1);
  //////////////////////////////////////////////
 
-
-HTMLElement.prototype.removeClass = function(className) {
-  var classList = this.className.split(' ');
-  for (var i=0; i<classList.length; i++) {
-    if (classList[i] == className) {
-      classList.splice(i,1); break;
-    }
-  }
-  this.className = classList.join(' ').trim();
-};
-HTMLElement.prototype.hasClass = function(className) {
-  var classList = this.className.split(' ');
-  for (var i=0; i<classList.length; i++) {
-    if (classList[i] == className) return true;
-  }
-  return false;
-};
-HTMLCollection.prototype.rmClasses = function(className, br) {
-  for (var i=0; i<this.length; i++) {
-    if (this[i].hasClass(className)) {
-      this[i].removeClass(className);
-      if (br) break;
-    }
-  }
-  return this;
-};
-
 ;(function() {
   var elem = document.getElementById('textSlider');
   var textSlides = elem.getElementsByClassName('text-slider__item');
@@ -2038,38 +2008,12 @@ HTMLCollection.prototype.rmClasses = function(className, br) {
   var slideShow = 'text-slider__item text-slider__item_show';
   var slide = slideShow.split(' ')[0];
   var show = slideShow.split(' ')[1];
-
-
   var slideInterval = setInterval(nextSlide,3000);
-
   function nextSlide() {
     textSlides[currentSlide].className = slide;
     currentSlide = (currentSlide+1)%textSlides.length;
     textSlides[currentSlide].className = slideShow;
   }
-//   var elem = document.getElementById('textSlider');
-//   var ul = elem.querySelector('ul');
-//   var li = ul.getElementsByTagName('li');
-//   var liLen = li.length;
-//   var width = li[0].scrollWidth;
-//   var i = 0;
-
-//   function txtSlider() {
-//     var delay = 2;
-//     ul.style.transition = 'margin '+delay+'s';
-//     i++;
-//     if ( i >= liLen-1 ) {
-//       setTimeout(function() {
-//         ul.style.transition = 'none';
-//         ul.appendChild(li[0].cloneNode(true));
-//         ul.removeChild(li[0]);
-//         ul.style.marginLeft = -width*(i-1) + 'px';
-//         i--;
-//       },delay*1000);
-//     }
-//     ul.style.marginLeft = -width*i + 'px';
-//   }
-//   var tId = setInterval(txtSlider, 5000);
 })();
 // Awesomplete - Lea Verou - MIT license
 (function(){function h(a){a=Array.isArray(a)?{label:a[0],value:a[1]}:"object"===typeof a&&"label"in a&&"value"in a?a:{label:a,value:a};this.label=a.label||a.value;this.value=a.value}function n(a,b,d){for(var g in b){var f=b[g],c=a.input.getAttribute("data-"+g.toLowerCase());a[g]="number"===typeof f?parseInt(c):!1===f?null!==c:f instanceof Function?null:c;a[g]||0===a[g]||(a[g]=g in d?d[g]:f)}}function c(a,b){return"string"===typeof a?(b||document).querySelector(a):a||null}function k(a,b){return l.call((b||
