@@ -1395,43 +1395,43 @@
   font-family: "sf";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Regular.woff") format("woff"), url("../fonts/SFUIText/SFUIText-Regular.woff2") format("woff2"); }
+  src: url("../fonts/SFUIText/SFUIText-Regular.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Regular.woff") format("woff"); }
 
 @font-face {
   font-family: "sfB";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Bold.woff") format("woff"), url("../fonts/SFUIText/SFUIText-Bold.woff2") format("woff2"); }
+  src: url("../fonts/SFUIText/SFUIText-Bold.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Bold.woff") format("woff"); }
 
 @font-face {
   font-family: "sfM";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Medium.woff") format("woff"), url("../fonts/SFUIText/SFUIText-Medium.woff2") format("woff2"); }
+  src: url("../fonts/SFUIText/SFUIText-Medium.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Medium.woff") format("woff"); }
 
 @font-face {
   font-family: "sfL";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Light.woff") format("woff"), url("../fonts/SFUIText/SFUIText-Light.woff2") format("woff2"); }
+  src: url("../fonts/SFUIText/SFUIText-Light.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Light.woff") format("woff"); }
 
 @font-face {
-  font-family: "CharterC";
+  font-family: "Charter";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Charter/CharterC.woff") format("woff"), url("../fonts/Charter/CharterC.woff2") format("woff2"); }
+  src: url("../fonts/Charter/CharterC.woff2") format("woff2"), url("../fonts/Charter/CharterC.woff") format("woff"); }
 
 @font-face {
   font-family: "HelveticaNeue";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/HelveticaNeue/HelveticaNeue.woff") format("woff"), url("../fonts/HelveticaNeue/HelveticaNeue.woff2") format("woff2"); }
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeue.woff") format("woff"); }
 
 @font-face {
   font-family: "TimesNewRoman";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/TimesNewRoman/TimesNewRoman.woff") format("woff"), url("../fonts/TimesNewRoman/TimesNewRoman.woff2") format("woff2"); }
+  src: url("../fonts/TimesNewRoman/TimesNewRoman.woff2") format("woff2"), url("../fonts/TimesNewRoman/TimesNewRoman.woff") format("woff"); }
 
 * {
   box-sizing: border-box; }
@@ -1506,23 +1506,23 @@ input:focus {
   border-right: solid 1px #e6e6e6; }
 
 h1, .h1 {
-  font-family: CharterC;
+  font-family: Charter;
   font-size: 36px;
   font-weight: normal;
   text-transform: uppercase; }
 
 h2, .h2 {
-  font-family: CharterC;
+  font-family: Charter;
   font-size: 36px;
   font-weight: normal; }
 
 h3, .h3 {
-  font-family: CharterC;
+  font-family: Charter;
   font-size: 30px;
   font-weight: normal; }
 
 h5, .h5 {
-  font-family: CharterC;
+  font-family: Charter;
   font-size: 26px;
   font-weight: normal; }
 
