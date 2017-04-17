@@ -1395,43 +1395,43 @@
   font-family: "sf";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Regular.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Regular.woff") format("woff"); }
+  src: url("../fonts/SFUIText/SFUIText-Regular.ttf") format("truetype"), url("../fonts/SFUIText/SFUIText-Regular.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Regular.woff") format("woff"); }
 
 @font-face {
   font-family: "sfB";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Bold.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Bold.woff") format("woff"); }
+  src: url("../fonts/SFUIText/SFUIText-Bold.ttf") format("truetype"), url("../fonts/SFUIText/SFUIText-Bold.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Bold.woff") format("woff"); }
 
 @font-face {
   font-family: "sfM";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Medium.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Medium.woff") format("woff"); }
+  src: url("../fonts/SFUIText/SFUIText-Medium.ttf") format("truetype"), url("../fonts/SFUIText/SFUIText-Medium.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Medium.woff") format("woff"); }
 
 @font-face {
   font-family: "sfL";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/SFUIText/SFUIText-Light.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Light.woff") format("woff"); }
+  src: url("../fonts/SFUIText/SFUIText-Light.ttf") format("truetype"), url("../fonts/SFUIText/SFUIText-Light.woff2") format("woff2"), url("../fonts/SFUIText/SFUIText-Light.woff") format("woff"); }
 
 @font-face {
   font-family: "Charter";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Charter/CharterC.woff2") format("woff2"), url("../fonts/Charter/CharterC.woff") format("woff"); }
+  src: url("../fonts/Charter/CharterC.ttf") format("truetype"), url("../fonts/Charter/CharterC.woff2") format("woff2"), url("../fonts/Charter/CharterC.woff") format("woff"); }
 
 @font-face {
   font-family: "HelveticaNeue";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/HelveticaNeue/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeue.woff") format("woff"); }
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.ttf") format("truetype"), url("../fonts/HelveticaNeue/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeue.woff") format("woff"); }
 
 @font-face {
   font-family: "TimesNewRoman";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/TimesNewRoman/TimesNewRoman.woff2") format("woff2"), url("../fonts/TimesNewRoman/TimesNewRoman.woff") format("woff"); }
+  src: url("../fonts/TimesNewRoman/TimesNewRoman.ttf") format("truetype"), url("../fonts/TimesNewRoman/TimesNewRoman.woff2") format("woff2"), url("../fonts/TimesNewRoman/TimesNewRoman.woff") format("woff"); }
 
 * {
   box-sizing: border-box; }
@@ -1999,15 +1999,19 @@ input[type="checkbox"]:checked + .check_default:before {
     padding: 6px 17px 4px; }
 
 .header__lang {
-  line-height: 11px;
   margin-left: 2px; }
   .header__lang__content {
     padding: 6px 19px 4px; }
+  .header__lang__ico {
+    width: 15px;
+    line-height: 13px; }
 
-.header__selected__lang {
+.header__lang__selected {
   margin-right: -7px;
   margin-left: 3px;
-  padding: 5px 9px 5px 9px; }
+  padding: 5px 9px 5px 9px;
+  width: 33px;
+  height: 22px; }
 
 .header__logo_text,
 .text-slider {
@@ -2207,6 +2211,9 @@ input[type="checkbox"]:checked + .check_default:before {
       min-height: 100%;
       position: absolute;
       left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
       transform: translateX(-50%);
       top: 0; }
     .slider__item__txt {
