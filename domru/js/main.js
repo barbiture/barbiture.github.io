@@ -6,7 +6,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 // Cache selectors
 var lastId,
     topMenu = $("#top-menu"),
-    topMenuHeight = topMenu.outerHeight()+250,
+    topMenuHeight = topMenu.outerHeight()+290,
     // All list items
     menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
@@ -279,9 +279,9 @@ new Dropdown({
 
   var updateScroll = function() {
     if (getFixedNav() > 660) {
-      headFixed.className = 'header header_fix';
+      headFixed.addClass('header_fix');
     } else {
-      headFixed.className = 'header';
+      headFixed.removeClass('header_fix');
     }
   };
 
@@ -311,7 +311,7 @@ fixHead.init('headFixed');
 
   var updateScroll = function() {
     if (getFixedNav() > 660) {
-      navFixed.className = 'nav nav_fix container_lg clearfix';
+      navFixed.className = 'nav container_lg nav_fix clearfix';
     } else {
       navFixed.className = 'nav container_lg clearfix';
     }
@@ -329,3 +329,9 @@ fixHead.init('headFixed');
 
 })();
 fixNav.init('navFixed');
+
+$('.nav__trigger').click(function() {
+  $('#top-menu').slideToggle();
+  $(this).toggleClass('nav__trigger_open');
+  $('.header').toggleClass('header__white');
+});

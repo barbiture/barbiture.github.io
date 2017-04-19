@@ -16,9 +16,9 @@
       <div class="header__tel pull-right text-right">
         <a href="" class="link d-block">
           <span class="header__tel__num header__tel__num_white">+7 (930) 680-62-20</span>
-          <span class="link_red">
+          <!-- <span class="link_red">
             Заказать обратный звонок
-          </span>
+          </span> -->
         </a>
       </div>
       <div class="dropdown header__dropdown" id="chooseCity">
@@ -53,154 +53,184 @@
           Подключить
         </button>
       </div>
-      <div class="nav" id="navFixed">
-        <ul class="container_lg clearfix" id="top-menu">
-          <li class="nav__item nav__item_active">
-            <a href="#price">
-              <span class="nav__item_small">01.</span>
-              Выбрать тариф
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#bonus">
-              <span class="nav__item_small">02.</span>
-              Бонусы
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#advantage">
-              <span class="nav__item_small">03.</span>
-              Преимущества
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#how">
-              <span class="nav__item_small">04.</span>
-              Как подключить
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#order">
-              <span class="nav__item_small">05.</span>
-              Заявка на подключение
-            </a>
-          </li>
-        </ul>
-      </div>
+    </div>
+    <div class="nav container_lg" id="navFixed">
+      <div class="nav__trigger"></div>
+      <ul class="clearfix" id="top-menu">
+        <li class="nav__item nav__item_active">
+          <a href="#price">
+            <span class="nav__item_small">01.</span>
+            Выбрать тариф
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#bonus">
+            <span class="nav__item_small">02.</span>
+            Бонусы
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#advantage">
+            <span class="nav__item_small">03.</span>
+            Преимущества
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#how">
+            <span class="nav__item_small">04.</span>
+            Как подключить
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#order">
+            <span class="nav__item_small">05.</span>
+            Заявка на подключение
+          </a>
+        </li>
+        <li class="header__tel">
+          <a href="" class="link d-block">
+            <span class="header__tel__num">+7 (930) 680-62-20</span>
+            <!-- <span class="link_red">
+              Заказать обратный звонок
+            </span> -->
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
-  <section class="price text-center">
-    <div class="container_lg">
-      <div class="h3 price__title">Выберете один из тарифов для подключения</div>
-      <div class="subtitle">Мы собрали самые удобные тарифы для обеспечения <br> самых разных потребностей</div>
-      <ul class="price__list clearfix">
-        <li class="price__list__item price__list__item_default">
-          <div class="price__size uppercase">
-            l
-          </div>
-          <div class="price__size__name">
-            Крепкий середнячок
-          </div>
-          <div class="price__cost">
-            785
-            <div class="pull-right price__cost__name">
-              <div class="price__cost__name_up">руб</div>
-              <div class="price__cost__name_down">мес</div>
-            </div>
-          </div>
-          <div class="price__profit">
-            Экономия 4200 руб в год
-          </div>
-          <div class="price__descript">
-            <p class="price__descript_pull-down">Интернет 70Мбит/с</p>
-            <p>  178 каналов ТВ (40HD)</p>
-          </div>
-          <div class="price__buy">
-            <button class="btn btn_white btn_md">
-              Подключить
-            </button>
-          </div>
-        </li>
+  <section class="price">
+    <div class="price__container">
+      <div class="h3 price__title text-center">Выберете один из тарифов для подключения</div>
+      <div class="subtitle text-center">Мы собрали самые удобные тарифы для обеспечения <br> самых разных потребностей</div>
+  
+      <ul class="price__list price__list_md clearfix">
         <li class="price__list__item price__list__item_special ">
-          <div class="price__size uppercase">
-            m full
-          </div>
-          <div class="price__size__name">
-            Специальное предложение
-          </div>
-          <div class="price__cost">
-            700
-            <div class="pull-right price__cost__name">
-              <div class="price__cost__name_up">руб</div>
-              <div class="price__cost__name_down">мес</div>
+          <div class="price__size__wrap">
+            <div class="price__size uppercase">
+              m full
+            </div>
+            <div class="price__size__name">
+              Специальное <br> предложение
             </div>
           </div>
-          <div class="price__profit">
-            Экономия 4200 руб в год
-          </div>
-          <div class="price__descript">
-            <p class="price__descript_pull-down">Интернет 60Мбит/с</p>
-            <p class="price__descript_pull-down">Бонус скорости на 24 мес - <br> 100 Мбит/с</p>
-            <p>154 канала ТВ (46HD)</p>
-          </div>
-          <div class="price__buy">
-            <button class="btn btn_orange btn_md">
+          <div class="price__cost_wrap">
+            <div class="price__cost pull-right">
+              700
+              <div class="pull-right price__cost__name">
+                <div class="price__cost__name_up">руб</div>
+                <div class="price__cost__name_down">мес</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="price__profit text-right">
+              Экономия 4200 руб в год
+            </div>
+            <button class="price__btn_tb btn btn_orange btn_md pull-right pull-right hidden_sm">
               Подключить
             </button>
+          </div>
+          <div class="price__descript">
+            <div class="pull-left price__descript_wrap">
+              <p class="price__descript_pull-down">Интернет 60Мбит/с</p>
+              <p class="price__descript_pull-down">Бонус скорости на 24 мес - 100 Мбит/с</p>
+            </div>
+            <p class="pull-right">154 канала ТВ <br> (46HD)</p>
           </div>
         </li>
         <li class="price__list__item price__list__item_default">
-          <div class="price__size uppercase">
-            xl
-          </div>
-          <div class="price__size__name">
-            Почти совершенство
-          </div>
-          <div class="price__cost">
-            895
-            <div class="pull-right price__cost__name">
-              <div class="price__cost__name_up">руб</div>
-              <div class="price__cost__name_down">мес</div>
+          <div class="price__size__wrap">
+            <div class="price__size uppercase">
+              l
+            </div>
+            <div class="price__size__name">
+              Крепкий середнячок
             </div>
           </div>
-          <div class="price__profit">
-            Экономия 4200 руб в год
-          </div>
-          <div class="price__descript">
-            <p class="price__descript_pull-down">Интернет 50Мбит/с</p>
-            <p>178 канала ТВ (40HD)</p>
-          </div>
-          <div class="price__buy">
-            <button class="btn btn_white btn_md">
+          <div class="price__cost_wrap">
+            <div class="price__cost pull-right">
+              785
+              <div class="pull-right price__cost__name">
+                <div class="price__cost__name_up">руб</div>
+                <div class="price__cost__name_down">мес</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="price__profit text-right">
+              Экономия 4200 руб в год
+            </div>
+            <button class="price__btn_tb btn btn_border btn_md pull-right hidden_sm">
               Подключить
             </button>
+          </div>
+          <div class="price__descript">
+            <div class="pull-left price__descript_wrap">
+              <p class="price__descript_pull-down">Интернет <br> 70Мбит/с</p>
+            </div>
+            <p class="pull-right">178 канала ТВ <br> (40HD)</p>
           </div>
         </li>
         <li class="price__list__item price__list__item_default">
-          <div class="price__size uppercase">
-            xxl
-          </div>
-          <div class="price__size__name">
-            Рок-звезда
-          </div>
-          <div class="price__cost price__cost_xl">
-            1050
-            <div class="pull-right price__cost__name">
-              <div class="price__cost__name_up">руб</div>
-              <div class="price__cost__name_down">мес</div>
+          <div class="price__size__wrap">
+            <div class="price__size uppercase">
+              xl
+            </div>
+            <div class="price__size__name">
+              Почти совершенство
             </div>
           </div>
-          <div class="price__profit">
-            Экономия 4200 руб в год
-          </div>
-          <div class="price__descript">
-            <p class="price__descript_pull-down">Интернет 100Мбит/с</p>
-            <p>178 канала ТВ (60HD)</p>
-          </div>
-          <div class="price__buy">
-            <button class="btn btn_white btn_md">
+          <div class="price__cost_wrap">
+            <div class="price__cost pull-right">
+              895
+              <div class="pull-right price__cost__name">
+                <div class="price__cost__name_up">руб</div>
+                <div class="price__cost__name_down">мес</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="price__profit text-right">
+              Экономия 4200 руб в год
+            </div>
+            <button class="price__btn_tb btn btn_border btn_md pull-right hidden_sm">
               Подключить
             </button>
+          </div>
+          <div class="price__descript">
+            <div class="pull-left price__descript_wrap">
+              <p class="price__descript_pull-down">Интернет <br> 50Мбит/с</p>
+            </div>
+            <p class="pull-right">178 канала ТВ <br> (60HD)</p>
+          </div>
+        </li>
+        <li class="price__list__item price__list__item_default">
+          <div class="price__size__wrap">
+            <div class="price__size uppercase">
+              xxl
+            </div>
+            <div class="price__size__name">
+              Рок-звезда
+            </div>
+          </div>
+          <div class="price__cost_wrap">
+            <div class="price__cost pull-right">
+              1050
+              <div class="pull-right price__cost__name">
+                <div class="price__cost__name_up">руб</div>
+                <div class="price__cost__name_down">мес</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="price__profit text-right">
+              Экономия 4200 руб в год
+            </div>
+            <button class="price__btn_tb btn btn_border btn_md pull-right hidden_sm">
+              Подключить
+            </button>
+          </div>
+          <div class="price__descript">
+            <div class="pull-left price__descript_wrap">
+              <p class="price__descript_pull-down">Интернет <br> 100Мбит/с</p>
+            </div>
+            <p class="pull-right">178 канала ТВ <br> (60HD)</p>
           </div>
         </li>
       </ul>
