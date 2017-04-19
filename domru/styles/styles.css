@@ -189,29 +189,29 @@ table {
 /*FONTS*/
 @font-face {
   font-family: FedraSansAltProBold;
-  src: url('../../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.eot');
-  src: url('../../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.eot?#iefix') format('embedded-opentype'), url('../../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.woff') format('woff'), url('../../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.ttf') format('truetype'), url('../../fonts/FedraSansAltProBold/fonts/FedraSansAltProBold/FedraSansAltPro-Bold') format('svg');
+  src: url('../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.eot');
+  src: url('../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.woff') format('woff'), url('../fonts/FedraSansAltProBold/FedraSansAltPro-Bold.ttf') format('truetype'), url('../fonts/FedraSansAltProBold/fonts/FedraSansAltProBold/FedraSansAltPro-Bold') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: FedraSansAltProBookTF;
-  src: url('../../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.eot');
-  src: url('../../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.eot?#iefix') format('embedded-opentype'), url('../../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.woff') format('woff'), url('../../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.ttf') format('truetype'), url('../../fonts/FedraSansAltProBookTF/fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF') format('svg');
+  src: url('../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.eot');
+  src: url('../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.eot?#iefix') format('embedded-opentype'), url('../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.woff') format('woff'), url('../fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF.ttf') format('truetype'), url('../fonts/FedraSansAltProBookTF/fonts/FedraSansAltProBookTF/FedraSansAltPro-BookTF') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: FedraSansAltProDemiTF;
-  src: url('../../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.eot');
-  src: url('../../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.eot?#iefix') format('embedded-opentype'), url('../../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.woff') format('woff'), url('../../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.ttf') format('truetype'), url('../../fonts/FedraSansAltProDemiTF/fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF') format('svg');
+  src: url('../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.eot');
+  src: url('../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.eot?#iefix') format('embedded-opentype'), url('../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.woff') format('woff'), url('../fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF.ttf') format('truetype'), url('../fonts/FedraSansAltProDemiTF/fonts/FedraSansAltProDemiTF/FedraSansAltPro-DemiTF') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: FedraSansAltProMedTF;
-  src: url('../../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.eot');
-  src: url('../../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.eot?#iefix') format('embedded-opentype'), url('../../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.woff') format('woff'), url('../../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.ttf') format('truetype'), url('../../fonts/FedraSansAltProMedTF/fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF') format('svg');
+  src: url('../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.eot');
+  src: url('../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.eot?#iefix') format('embedded-opentype'), url('../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.woff') format('woff'), url('../fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF.ttf') format('truetype'), url('../fonts/FedraSansAltProMedTF/fonts/FedraSansAltProMedTF/FedraSansAltPro-MedTF') format('svg');
   font-weight: 500;
   font-style: normal;
 }
