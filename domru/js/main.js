@@ -270,15 +270,22 @@ new Dropdown({
 ;(function() {
 
   var headFixed;
+  var headHeight;
 
   var getFixedNav = function() {
     return window.scrollY ||
-      window.pageYOffset ||
-      document.documentElement.scrollTop;
+      window.pageYOffset;
   };
 
+
   var updateScroll = function() {
-    if (getFixedNav() > 660) {
+    if (window.screen.width < 768) {
+      headHeight = 360;
+    } else {
+      headHeight = 660;
+    }
+
+    if (getFixedNav() > headHeight) {
       headFixed.addClass('header_fix');
     } else {
       headFixed.removeClass('header_fix');
@@ -294,14 +301,18 @@ new Dropdown({
   window.fixHead = {
     init: init
   };
-
+  var x = function() {
+    return window.onresize(updateScroll);
+  }
+  
 })();
 
 fixHead.init('headFixed');
 
 ;(function() {
 
-  var navFixed;
+  var navFixed,
+      headHeight;
 
   var getFixedNav = function() {
     return window.scrollY ||
@@ -310,7 +321,13 @@ fixHead.init('headFixed');
   };
 
   var updateScroll = function() {
-    if (getFixedNav() > 660) {
+    if (window.screen.width < 768) {
+      headHeight = 360;
+    } else {
+      headHeight = 660;
+    }
+
+    if (getFixedNav() > headHeight) {
       navFixed.className = 'nav container_lg nav_fix clearfix';
     } else {
       navFixed.className = 'nav container_lg clearfix';
@@ -326,7 +343,10 @@ fixHead.init('headFixed');
   window.fixNav = {
     init: init
   };
-
+  var x = function() {
+    return window.onresize(updateScroll);
+  }
+  
 })();
 fixNav.init('navFixed');
 
