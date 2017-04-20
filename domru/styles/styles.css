@@ -850,7 +850,8 @@ h3,
     padding-top: 10vh;
     padding-left: 210px;
     display: none;
-    min-height: 100vh;
+    height: calc(100vh - 99px);
+    overflow: auto;
   }
   .nav.nav_fix .nav__item {
     float: none;
@@ -897,7 +898,8 @@ h3,
     height: auto;
   }
   .nav ul {
-    min-height: 100vh;
+    height: calc(100vh - 89px);
+    overflow: auto;
     padding-top: 58px;
     padding-bottom: 30px;
     display: none;
