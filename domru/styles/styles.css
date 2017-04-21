@@ -889,6 +889,11 @@ h3,
     background-color: #000;
   }
 }
+@media (min-width: 769px) and (max-width: 1280px) {
+  .nav:not(.nav_fix) ul {
+    display: block !important;
+  }
+}
 @media (max-width: 768px) {
   .nav {
     position: fixed;
