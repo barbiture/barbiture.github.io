@@ -163,6 +163,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button:focus,
+a:focus,
+input:focus {
+  outline: none;
+}
 * {
   box-sizing: border-box;
 }
