@@ -2426,7 +2426,8 @@ new Dropdown({
     var target = e.target;
     var currentFlag = target.dataset.index;
     var flagIcon = document.getElementById('flagIcon');
-    var className = flagIcon.className.split(' ')[2];
+    var className = flagIcon.className.split(' ')[3];
+    // console.log(className);
     flagIcon.removeClass(className);
     flagIcon.addClass('flag-icon-' + currentFlag);
     this.selectItem(target);
