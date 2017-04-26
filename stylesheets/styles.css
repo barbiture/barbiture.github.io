@@ -1425,7 +1425,7 @@
   font-family: "TimesNewRoman";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/TimesNewRoman/TimesNewRoman.eot?") format("eot"), url('../fonts/TimesNewRoman/TimesNewRoman.svg#str-replace(TimesNewRoman, " ", "_")') format("svg"), url("../fonts/TimesNewRoman/TimesNewRoman.ttf") format("truetype"), url("../fonts/TimesNewRoman/TimesNewRoman.woff") format("woff"); }
+  src: url("../fonts/TimesNewRoman/TimesNewRomanPS-ItalicMT.otf") format("opentype"), url("../fonts/TimesNewRoman/TimesNewRomanPS-ItalicMT.eot?") format("eot"), url('../fonts/TimesNewRoman/TimesNewRomanPS-ItalicMT.svg#str-replace(TimesNewRoman, " ", "_")') format("svg"), url("../fonts/TimesNewRoman/TimesNewRomanPS-ItalicMT.ttf") format("truetype"), url("../fonts/TimesNewRoman/TimesNewRomanPS-ItalicMT.woff") format("woff"); }
 
 * {
   box-sizing: border-box; }
@@ -1529,15 +1529,13 @@ p {
   margin: 0 0 10px; }
 
 .subtitle {
-  font-family: 'Times New Roman';
+  font-family: 'TimesNewRoman';
   font-size: 24px;
-  font-style: italic;
   padding: 8px 0 55px;
   text-align: center; }
 
 .italic {
-  font-family: 'Times New Roman';
-  font-style: italic;
+  font-family: 'TimesNewRoman';
   font-size: 18px; }
 
 .pink {
@@ -2408,13 +2406,15 @@ input[type="checkbox"]:checked + .check_default:before {
     color: #006134; }
 
 .search-form__nav {
-  border-top: 1px solid #e6e6e6; }
+  border-top: 1px solid #e6e6e6;
+  background-color: #fff; }
   .search-form__nav ul {
     white-space: nowrap; }
 
 .search-form__nav-item {
   display: inline-block;
-  padding: 8px 27px 8px 6px; }
+  padding: 8px 27px 0 6px;
+  height: 32px; }
   .search-form__nav-item .icon-arrow {
     fill: #006134;
     -webkit-transition: all .2s ease-in-out;
@@ -2444,7 +2444,7 @@ input[type="checkbox"]:checked + .check_default:before {
   border-radius: 0 0 5px 5px;
   border-top: 1px solid #e6e6e6;
   position: absolute;
-  top: 33px;
+  top: 100%;
   left: 0;
   padding: 9px 57px 10px 15px;
   background-color: #fff; }
@@ -2468,12 +2468,11 @@ input[type="checkbox"]:checked + .check_default:before {
     position: absolute; }
   .search-form__content {
     z-index: 10;
-    background-color: #fff;
     left: 0;
     position: relative;
     right: 0;
-    top: -69px;
-    height: 69px;
+    top: -70px;
+    height: 70px;
     z-index: 12; }
 
 .search-form__link__icon {
@@ -2484,7 +2483,8 @@ input[type="checkbox"]:checked + .check_default:before {
 
 .search-form__wrap {
   vertical-align: top;
-  padding: 9px 0 8px; }
+  padding: 9px 0 8px;
+  background-color: #fff; }
 
 .search-form__wrap__icon {
   margin-left: 5px;
@@ -2596,8 +2596,7 @@ input[type="checkbox"]:checked + .check_default:before {
 
 .main-banner_subtitle {
   font-size: 26px;
-  font-family: 'Times New Roman';
-  font-style: italic; }
+  font-family: 'TimesNewRoman'; }
 
 .fast-buy__range {
   padding-top: 15px; }
@@ -2649,16 +2648,6 @@ input[type="checkbox"]:checked + .check_default:before {
   -moz-user-select: none;
   /* поэтому нужны префиксы */
   -ms-user-select: none; }
-  .fast-buy__range__step li:nth-child(2) {
-    width: 13.1%; }
-  .fast-buy__range__step li:nth-child(3) {
-    width: 15.2%; }
-  .fast-buy__range__step li:nth-child(5) {
-    width: 28%; }
-  .fast-buy__range__step li:nth-child(6) {
-    width: 19%;
-    float: right;
-    text-align: right; }
 
 .fast-buy__preview {
   position: absolute;
@@ -2886,10 +2875,14 @@ input[type="checkbox"]:checked + .check_default:before {
 
 .present {
   padding-top: 80px; }
+  .present p,
+  .present .link_more {
+    font-family: sfL;
+    font-size: 14px; }
 
 .present__flower {
   position: absolute;
-  left: -481px;
+  left: -470px;
   top: -67px; }
 
 .review__date {
