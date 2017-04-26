@@ -14,13 +14,12 @@ var lastId,
       var item = $($(this).attr("href"));
       if (item.length) { return item; }
     });
-if (window.screen.width < 768) {
-   
+if (window.innerWidth < 768) {
   topMenuHeight = topMenu.outerHeight()-290
 } else {
   topMenuHeight = topMenu.outerHeight()+290
 }
-console.log(topMenuHeight);
+// console.log(topMenuHeight);
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
@@ -32,7 +31,7 @@ menuItems.click(function(e){
   e.preventDefault();
   $('.nav__trigger').removeClass('nav__trigger_open');
   $('.header').removeClass('header__white');
-  if (window.screen.width <= 1280) {
+  if (window.innerWidth <= 1280) {
     $('#top-menu').hide();
   }
 });
@@ -290,7 +289,7 @@ new Dropdown({
 
 
   var updateScroll = function() {
-    if (window.screen.width < 768) {
+    if (window.innerWidth < 768) {
       headHeight = 360;
     } else {
       headHeight = 660;
@@ -332,7 +331,7 @@ fixHead.init('headFixed');
   };
 
   var updateScroll = function() {
-    if (window.screen.width < 768) {
+    if (window.innerWidth < 768) {
       headHeight = 360;
     } else {
       headHeight = 660;
