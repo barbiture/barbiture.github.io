@@ -1,0 +1,19 @@
+.icons {
+  background: url("../images/sprite.svg") no-repeat;
+}
+.svg-arrowDownBlack {
+  background-position: 0 0;
+}
+.svg-arrowDownBlack-dims {
+  width: 20px;
+  height: 17px;
+}
+.svg-arrowDownWhite {
+  background-position: 100% 0;
+}
+.svg-arrowDownWhite-dims {
+  width: 20px;
+  height: 17px;
+}
+
+/*# sourceMappingURL=../../../maps/sprites/dest/css/sprite.css.map */

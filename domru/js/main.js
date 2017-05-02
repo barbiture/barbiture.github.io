@@ -249,7 +249,7 @@ HTMLElement.prototype.removeClass = function(className) {
               self.onSelect.call(self,e);
             } else { 
               self.title.innerHTML = this.innerText;
-              self.selectItem(this); 
+              self.selectItem(this);
             }
             self.closeMenu();
           };
@@ -276,6 +276,11 @@ new Dropdown({
   content: 'dropdown__content',
   classSelected: 'dropdown__content__item_selected'
 });
+
+var dWidth = window.innerWidth - document.body.scrollWidth;
+console.log(dWidth);
+document.getElementsByClassName('dropdown__content')[0].style.left = dWidth+'px';
+document.getElementsByClassName('header__dropdown__selected')[0].style.marginLeft = dWidth+'px';
 
 ;(function() {
 
