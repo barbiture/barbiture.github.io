@@ -2081,7 +2081,6 @@ var FormatOptions = [
 	return wNumb;
 
 }));
-
 var _Slider = (function(id, o) {
   var elem = document.getElementById(id);
   var slider = elem.children[0];
@@ -2194,7 +2193,7 @@ var _Slider = (function(id, o) {
         elem.removeEventListener(event[i], fn, false);
     }
 
-    elem.onmousedown = function() {return false;};
+    // elem.onmousedown = function() {return false;};
 
     addEvent(slider,'start',mouseDown);
 
@@ -2204,6 +2203,7 @@ var _Slider = (function(id, o) {
       
       addEvent(slider,'move',mouseMove);
       addEvent(slider,'end',mouseUp);
+      e.preventDefault();
     }
 
     function mouseMove(e) {
@@ -2357,12 +2357,13 @@ var fn = function(item) {
   return '<li class="'+(this.classes+' '+selected).trim()+
     '" data-imglink="'+item['src']+'">'+item['link']+'</li>';
 };
+
 var fn1 = function(item) {
   var selected = '';
   if (this.title) {
     selected = (item.link == this.title) ? this.selectedClass: '';
   }
-  return '<li class="'+(this.classes+' '+selected).trim()+
+  return '<li id="'+ item['id'] +'" class="'+(this.classes+' '+selected).trim()+
     '" data-imglink="'+item['src']+'">'+item['link']+'</li>';
 };
 var fn2 = function(item) {
@@ -2793,8 +2794,7 @@ new Dropdown({
   id: 'dropdownCurency',
   title: 'dropdown__selected',
   classTitle: 'dropdown__selected_active',
-  content: 'dropdown__content',
-  classSelected: 'dropdown__content__item_selected'
+  content: 'dropdown__content'
 }).onSelect = function(e) {
     var target = e.target;
     var currSymb = document.getElementById('currSymb');
@@ -2855,13 +2855,10 @@ new Dropdown({
   }
 // // Создаем Масив и Ссылки для картинок
 var fastByImg = [
-  {link: 'Роза', src: 'images/img1.jpg'},
-  {link: 'Тюльпан', src: 'images/img2.jpg'},
-  {link: 'Хризантема', src: 'images/img3.jpg'},
-  {link: 'Гербера', src: 'images/img4.jpg'},
-  {link: 'Ирис', src: 'images/img5.jpg'},
-  {link: 'Гвоздика', src: 'images/img6.jpg'}
+  {link: 'Тюльпан', src: 'images/1_7_white_organza.jpg', id:0},
+  {link: 'Роза', src: 'images/2_9_orange_organza.jpg', id:1}
 ];
+
 new CreateList({
   id: 'fastBuyDrop',
   ul: '.dropdown__content',
@@ -2878,112 +2875,229 @@ new Dropdown({
   content: 'dropdown__content',
   classOnClick: 'dropdown__selected-active',
   classSelected: 'dropdown__content__item_selected'
-});
-;(function(){
+}).onSelect = function(e) {
+    var fastBuyImg = document.getElementById('fastBuyImg');
+
+    var target = e.target;
+    fastBuyImg.src = target.src;
+    console.log(target.src);
+    this.title.innerText = target.innerText;
+    this.selectItem(target);
+    FastBuy.update(target.id);
+};
+var FastBuy = (function() {
   var fastRange = document.getElementById('fastRange'),
       rangeVal = document.getElementById('rangeVal'),
-      fastRangeSteps = document.getElementById('fastRangeSteps'),
-      offset = 0,
-      // range = [1,9,11,15,17,19,25,35,51],
-      range = [7,9,11,15,17,19,25,35,51],
-      myRange = [1,25,51],
-      maxRange = 51;
-  // fastRange.style.width = '257px';
-
-
+      fastRangeSteps = document.getElementsByClassName('noUi-value');
+  
   var elem = document.getElementById('fastBuy').children[0];
-  var colors = elem.querySelectorAll('input[name=fbr]');
-  // var sizes = elem.querySelectorAll('input[name=size]');
-  var wrappers = elem.querySelectorAll('input[name=pack]');
-  // var range = elem.querySelector('.range');
   var btn = elem.querySelector('button');
-  // var img = elem.querySelector('img');
-  var img = {};
-  var data = {
-   id: elem.id,
-   amount: range[0],
-   size: 1,
-   color: 'red',
-   wrap: 'organza',
-   wrapCost: 1,
-   oneFlowerCost: 1
-   // parseInt(elem.dataset.cost)
-  };
+  // var img = {};
+  var img = elem.querySelector('#fastBuyImg');
+  // var gImg = elem.querySelector('#gFastBuyImg');
 
-  fastRangeSteps.innerHTML = (function(x) {
-    for (var i = 0; i < range.length; i++)
-      x += ' <li class="in-bl">'+range[i]+'</li>';
-    return '<ul class="fast-buy__range__step clearfix">'+x+'</ul>';
-  })('');
+  //////////////////////////////////////////////////////////////////////////////////
+  function getRange(arr) {
+    var tmp = {};
+    var len = arr.length;
+    var key;
 
-  noUiSlider.create(fastRange, {
-    start: 0,
-    step: 1,
-    connect: [true, false],
-    orientation: 'horizontal',
-    range: {
-      'min': [7],
-      '12%': [9],
-      '25%': [11],
-      '38%': [15],
-      '50%': [17],
-      '62%': [19],
-      '74%': [25],
-      '87%': [35],
-      'max': maxRange
+    for (var i=0; i<len; i++) {
+      if ( i == 0 ) key = 'min';
+      else if ( i == len-1 ) key = 'max';
+      else key = (i/(len-1)*100) + '%';
+      tmp[key] = arr[i];
     }
-  });
-  fastRange.noUiSlider.on('update', function(values, handle) {
-    data.amount = parseInt(values[handle]);
-    rangeVal.innerHTML = data.amount;
-    data.size = (function() {
-      var s = 0;
-      for (var i = 0; i < myRange.length; i++)
-        if ( myRange[i] <= data.amount ) s = myRange[i];
-      return s;
-    })();
-    changeSrcImg();
-    calcCost();
-  });
-  document.getElementById('rangePlus').onclick = function() {
-    if (offset < maxRange) {
-      fastRange.noUiSlider.set(++offset);
-      return false;
-    }
-  };
-  document.getElementById('rangeMinus').onclick = function() {
-    if (offset > 0)
-      fastRange.noUiSlider.set(--offset);
-  };
-  fastRangeSteps.onclick = function(e) {
-    var target = e.target;
-    if (target.tagName == 'LI') {
-      var val = parseInt(target.innerText);
-      fastRange.noUiSlider.set( val );
+    return tmp;
+  }
 
-      for (var i=0; i<myRange.length; i++) {
-        if ( myRange[i] == val) {
-          data.size = val; changeSrcImg(); break;
-        }
+/////////////////////////////////////////////////////////////////////////////////
+  var wrapsCost = {1:1,2:2,3:3};
+  var flowers = [
+    {
+      id : 1,
+      name: 'Тюльпан',
+      size: [7,9],
+      color: ['white', 'yellow'],
+      wrap: {
+        1: 'Крафт-бумага',
+        2: 'Органза'
+      },
+      oneFlowerCost: 1
+    },
+    {
+      id: 2,
+      name: 'Роза',
+      size: [9,11],
+      color: ['red'],
+      wrap: {
+        1: 'Крафт-бумага'
+      },
+      oneFlowerCost: 2
+    }
+  ];
+
+  var gMenu = (function() {
+    var tmp = [];
+    for (var i=0; i<2; i++) {
+      var wrap = (function() {
+        for (var k in flowers[i].wrap) return k;
+      }());
+      tmp.push({
+        id: i,
+        link: flowers[i].name,
+        src: 'images/' + flowers[i].id + flowers[i].size[0] + flowers[i].color[0] + wrap
+      });
+    }
+    return tmp;
+  })();
+
+
+  console.log(gMenu);
+
+  var data = {};
+
+  function clearItem(id) {
+    var el = document.getElementById(id);
+    while (el.firstChild)
+      el.removeChild(el.firstChild);
+  }
+
+  function updateColor(colors) {
+    //clearItem('fastBuyColor');
+    var fastBuyColor = document.getElementById('fastBuyColor');
+    var html = '';
+    var checked = '';
+    for (var i = 0; i < colors.length; i++) {
+      checked = (i == 0) ? 'checked' : '';
+      html += '<li class="in-bl">' +
+                '<input '+ checked +' class="hidden" type="radio" name="fbr" id="fbr'+ i +'" value="'+ colors[i] +'">'+
+                '<label class="radio radio_color radio_color_'+ colors[i] +'" for="fbr'+ i +'"></label>'+
+              '</li>';
+    }
+    fastBuyColor.innerHTML = html;
+  }
+
+  function updateWrap(wraps) {
+    //clearItem('fastBuyWrap');
+    var fastBuyWrap = document.getElementById('fastBuyWrap');
+    var html = '';
+    var checked = '';
+    var count = 0;
+    for (var i in wraps) {
+      checked = (count == 0) ? 'checked' : '';
+      html += '<li class="in-bl">'+
+                '<input '+ checked +' class="hidden" type="radio" name="pack" id="pack'+
+                  i +'" value="'+ i +'" data-cost="'+ wrapsCost[i] + '">'+
+                '<label class="radio radio_default" for="pack'+ i +'">'+ wraps[i] +'</label>'+
+              '</li>';
+      count++;
+    }
+    fastBuyWrap.innerHTML = html;
+  }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+  function addEvents() {
+    var colors = elem.querySelectorAll('input[name=fbr]');
+    var wrappers = elem.querySelectorAll('input[name=pack]');
+
+    for (var i=0; i<colors.length; i++) {
+      colors[i].onchange = function(e) {
+        data.color = e.target.value;
+        changeSrcImg();
+      };
+    }
+
+    for (var j=0; j<wrappers.length; j++) {
+      wrappers[j].onchange = function(e) {
+        data.wrap = parseInt(e.target.value);
+        data.wrapCost = parseInt(e.target.dataset.cost);
+        changeSrcImg();
+        calcCost();
+      };
+    }
+  }
+
+  function updateSlider(range) {
+    if(fastRange.noUiSlider)
+      fastRange.noUiSlider.destroy();
+
+    noUiSlider.create(fastRange, {
+      start: 0,
+      connect: [true, false],
+      orientation: 'horizontal',
+      range: getRange(range),
+      pips: {
+        mode: 'steps',
+        stepped: true,
+        density: range.length
       }
+    });
+
+    fastRange.lastChild.classList.add('fast-buy__range__value');
+
+    fastRange.noUiSlider.on('update', function(values, handle) {
+      data.amount = parseInt(values[handle]);
+      rangeVal.innerHTML = data.amount;
+      data.size = (function() {
+        var item = 0;
+          for (var i=0; i<range.length; i++)
+            if (range[i] <= data.amount) item = range[i]; else return item;
+        return item;
+      })();
+      changeSrcImg();
+      calcCost();
+    });
+
+    for (var i = 0; i < fastRangeSteps.length; i++) {
+      fastRangeSteps[i].onclick = function(e) {
+        fastRange.noUiSlider.set( parseInt(e.target.innerText) );
+      };
     }
+  }
+  //////
+  document.getElementById('rangePlus').onclick = function(e) {
+    if (data.amount < data.range[data.range.length-1])
+      fastRange.noUiSlider.set(++data.amount);
+    else e.preventDefault();
   };
-
-
-
+  document.getElementById('rangeMinus').onclick = function(e) {
+    if (data.amount > data.range[0])
+      fastRange.noUiSlider.set(--data.amount);
+    else e.preventDefault();
+  };
 
 
 /////
 
-  function update(id, cost) {
-    data.id = id;
-    data.oneFlowerCost = cost;
+  function update(id) {
+    data = {
+      id: flowers[id].id,
+      amount: flowers[id].size[0],
+      size: flowers[id].size[0],
+      color: flowers[id].color[0],
+      wrap: function() {
+        for (var i in flowers[id].wrap) return parseInt(i);
+      }(),
+      wrapCost: function() {
+        for (var i in flowers[id].wrap) return wrapsCost[i];
+      }(),
+      oneFlowerCost: flowers[id].oneFlowerCost,
+      range: flowers[id].size
+    };
+    updateColor(flowers[id].color);
+    updateWrap(flowers[id].wrap);
+    updateSlider(flowers[id].size);
+    addEvents();
   }
 
   function changeSrcImg() {
-    img.src = data.id +'_'+ data.size +
-      '_'+ data.color +'_'+ data.wrap + '.jpg';
-    console.log( img.src );
+    img.src = 'images/flows/' + data.id +''+ data.size +
+      ''+ data.color +''+ data.wrap + '.jpg';
+    document.getElementById('fastBuyPr').src = img.src;
+    document.getElementById('fastBuyPrG').src = 'images/flows/g' + data.id +''+ data.size +
+      ''+ data.color +''+ data.wrap + '.jpg';
   };
 
   function calcCost() {
@@ -2994,23 +3108,6 @@ new Dropdown({
     btn.innerText = btn.innerText.replace(/\d+/, data.cost);
   };
 
-
-  for (var i=0; i<colors.length; i++) {
-    colors[i].onchange = function(e) {
-      data.color = e.target.value;
-      changeSrcImg();
-    };
-  }
-
-  for (var i=0; i<wrappers.length; i++) {
-    wrappers[i].onchange = function(e) {
-      data.wrap = e.target.value;
-      data.wrapCost = parseInt(e.target.dataset.cost);
-      changeSrcImg();
-      calcCost();
-    };
-  }
-
   btn.onclick = function(e) {
     // var result = {
     //   id: data.id,
@@ -3018,11 +3115,12 @@ new Dropdown({
     //   amount: data.amount,
     //   wrap: data.wrap
     // };
-    console.log( data );
+    // console.log( data );
   };
 
-  calcCost();
+  ///////////////////////////////////////////////////////////////////////////
 
+  update(0);
   return {
     update: update,
     data: data
@@ -3036,7 +3134,7 @@ new Dropdown({
       delay = 0.5,
       toggle = false,
       sliderShift = document.querySelectorAll('.slide-shift');
-
+  
   // cont.style.transition = 'top '+delay+'s';
 
   function shiftStart() {
@@ -3048,7 +3146,7 @@ new Dropdown({
       sliderShift[i].style.marginLeft = 0;
   }
 
-  document.getElementById('fastBuyToggle').onclick = function() {
+  document.getElementById('fastBuyToggle').onclick = function(e) {
     var parent = this.parentElement;
     var cont = parent.querySelector('.fast-buy__content');
     height = cont.offsetHeight;
@@ -3114,13 +3212,6 @@ new Dropdown({
 
 
 
-
-	$(".choose-color__item").click(function() {
-		alert("fasfasfas");
-		//$(".choose-color__item").removeClass("choose-color__item_active");
-		//$(this).addClass("choose-color__item_active");
-		//return false;		
-	});
 
 
 scrollToTop.init('top').onclick = function() {

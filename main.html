@@ -473,12 +473,12 @@
     <div class="container prel">
   
       <div class="fast-buy" id="fastBuy">
-        <div class="fast-buy__content" id="item">
+        <div class="fast-buy__content" id="1">
           <svg class="fast-buy_close icon icon_grey icon-Cancel " id="fastBuyClose" >
             <use xlink:href="#Cancel"></use>
           </svg>
           <div class="fast-buy__preview_hover">
-            <img class="fast-buy__img" src="images/img1.jpg" alt="" id="fastBuyImg">
+            <img class="fast-buy__img" src="" alt="" id="fastBuyImg">
           </div>
           <div class="dropdown fast-buy__dropdown" id="fastBuyDrop">
             <div class="dropdown__selected
@@ -487,10 +487,11 @@
                         dropdown__selected__icon">
               Тюльпан
             </div>
-            <ul class="dropdown__content dropdown__content_theme_left"></ul>
+            <ul class="fast-buy__dropdown__content dropdown__content dropdown__content_theme_left"></ul>
           </div>
           <div class="fast-buy__preview">
-            <img src="../images/flowerBig2.jpg" alt="" class="img img-center">
+            <img src="" alt="" class="img img-center" id="fastBuyPr">
+            <img src="" alt="" class="img img-absolute" id="fastBuyPrG">
           </div>
           <div class="fast-buy__range">
             <div class="fast-buy__range__amount clearfix">
@@ -511,13 +512,13 @@
           </div>
           <div class="fast-buy__radio">
             <div class="title-light_s">Цвет</div>
-            <ul class="fast-buy__radio__list">
-              <li class="in-bl">
-                <input class="hidden" type="radio" name="fbr" id="fbr1" value="white">
+            <ul class="fast-buy__radio__list" id="fastBuyColor">
+              <!-- <li class="in-bl">
+                <input class="hidden" type="radio" name="fbr" id="fbr1" checked value="white">
                 <label class="radio radio_color radio_color_white" for="fbr1"></label>
               </li>
               <li class="in-bl">
-                <input class="hidden" type="radio" name="fbr" id="fbr2" checked value="orange">
+                <input class="hidden" type="radio" name="fbr" id="fbr2" value="orange">
                 <label class="radio radio_color radio_color_orange" for="fbr2"></label>
               </li>
               <li class="in-bl">
@@ -527,20 +528,20 @@
               <li class="in-bl">
                 <input class="hidden" type="radio" name="fbr" id="fbr4" value="pink">
                 <label class="radio radio_color radio_color_pink" for="fbr4"></label>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="fast-buy__radio">
             <div class="title-light_s">Упаковка</div>
-            <ul class="fast-buy__radio__list">
-              <li class="in-bl">
-                <input class="hidden" type="radio" name="pack" id="pack1" value="organza" data-cost="1">
+            <ul class="fast-buy__radio__list" id="fastBuyWrap">
+      <!--         <li class="in-bl">
+                <input class="hidden" type="radio" name="pack" id="pack1" checked value="4" data-cost="1">
                 <label class="radio radio_default" for="pack1">Органза</label>
               </li>
               <li class="in-bl pull-right">
-                <input class="hidden" type="radio" name="pack" id="pack2" checked value="kraft" data-cost="2">
+                <input class="hidden" type="radio" name="pack" id="pack2" value="1" data-cost="2">
                 <label class="radio radio_default" for="pack2">Крафт-бумага</label>
-              </li>
+              </li> -->
             </ul>
           </div>
           <button class="btn btn-bg fast-buy__btn" data-flag="close">Купить за 3990 ₽</button>

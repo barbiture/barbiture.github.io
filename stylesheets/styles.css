@@ -1471,6 +1471,8 @@ a {
   display: block; }
   .img-center {
     margin: 0 auto; }
+  .img-absolute {
+    position: absolute; }
 
 .justify {
   text-align: justify;
@@ -1805,7 +1807,8 @@ input[type="checkbox"]:checked + .check_default:before {
   background-color: #fff;
   border: solid 1px #e6e6e6; }
 
-.check-color_yellow {
+.check-color_yellow,
+.radio_color_yellow {
   background-color: #f8eb33; }
 
 .radio_color_orange {
@@ -1912,6 +1915,20 @@ input[type="checkbox"]:checked + .check_default:before {
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
   top: -20px; }
+
+.noUi-value {
+  position: absolute;
+  text-align: center;
+  cursor: pointer; }
+
+.noUi-pips {
+  position: absolute;
+  color: #e6e6e6; }
+
+.noUi-pips-horizontal {
+  left: 0;
+  top: 100%;
+  width: 100%; }
 
 .tabs__nav {
   margin: 0 -18px 20px; }
@@ -2610,6 +2627,10 @@ input[type="checkbox"]:checked + .check_default:before {
       position: absolute;
       top: 0;
       width: 20px; }
+  .fast-buy__range__value {
+    margin-top: 5px;
+    left: -15px;
+    font-size: 12px; }
 
 .fast-buy__range__minus,
 .fast-buy__range__plus {
@@ -2622,9 +2643,7 @@ input[type="checkbox"]:checked + .check_default:before {
   font-size: 17px;
   font-family: sfL;
   -webkit-user-select: none;
-  /* user-select -- это нестандартное свойство */
   -moz-user-select: none;
-  /* поэтому нужны префиксы */
   -ms-user-select: none; }
 
 .fast-buy__range__amount {
@@ -2632,8 +2651,7 @@ input[type="checkbox"]:checked + .check_default:before {
 
 .fast-buy__range__step {
   margin-top: 5px;
-  margin-left: -10px;
-  width: 270px;
+  width: 257px;
   font-size: 12px;
   color: #e6e6e6;
   cursor: pointer; }
@@ -2641,12 +2659,9 @@ input[type="checkbox"]:checked + .check_default:before {
 .fast-buy__range__step li {
   display: block;
   float: left;
-  width: 11.1%;
   text-align: center;
   -webkit-user-select: none;
-  /* user-select -- это нестандартное свойство */
   -moz-user-select: none;
-  /* поэтому нужны префиксы */
   -ms-user-select: none; }
 
 .fast-buy__preview {
@@ -2665,6 +2680,9 @@ input[type="checkbox"]:checked + .check_default:before {
   transform: translateX(319px);
   z-index: -1;
   transition: all .3s ease-in-out 0s, visibility 0s linear .3s, z-index .5s linear .05s; }
+  .fast-buy__preview img {
+    max-height: 505px;
+    width: auto; }
   .fast-buy__preview:hover {
     visibility: visible;
     opacity: 1;
@@ -2680,9 +2698,17 @@ input[type="checkbox"]:checked + .check_default:before {
       z-index: -1;
       transform: translateY(0%);
       transition-delay: .2s, 0s, .5s; }
+  .fast-buy__preview .img-absolute {
+    bottom: 24px;
+    right: 24px;
+    max-width: 99px;
+    height: auto; }
 
 .fast-buy__dropdown {
   margin-top: 15px; }
+
+.fast-buy__dropdown__content {
+  padding: 5px 10px; }
 
 .fast-buy {
   bottom: 0;
