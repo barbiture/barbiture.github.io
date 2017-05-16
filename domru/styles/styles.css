@@ -1540,8 +1540,8 @@ h3,
   font-family: FedraSansAltProBold;
   font-size: 32px;
   letter-spacing: -0.3px;
-  line-height: 26px;
-  margin-top: 36px;
+  line-height: 36px;
+  margin-top: 31px;
 }
 @media (max-width: 991px) {
   .advantage__row__title {
