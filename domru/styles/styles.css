@@ -1100,6 +1100,7 @@ h3,
     margin-top: 104px;
   }
   .price__list_md .price__btn_tb {
+    color: #4A4A4A;
     font-size: 14px;
     padding: 15px 53px 11px;
     margin-top: 22px;
@@ -1127,6 +1128,9 @@ h3,
     font-size: 13px;
     letter-spacing: 0.2px;
     line-height: 18px;
+  }
+  .price__list_md .price__size__descript {
+    padding: 0;
   }
   .price__list_md .price__cost_wrap {
     float: right;
@@ -1189,6 +1193,10 @@ h3,
   }
   .price__list_md .price__size__wrap {
     float: left;
+    width: 50%;
+  }
+  .price__list_md .price__size__descript {
+    padding: 0 0 20px;
   }
   .price__list_md .price__list__item_special .price__cost__name_up {
     border-color: #F11929;
@@ -1245,6 +1253,7 @@ h3,
     letter-spacing: 0.17px;
     line-height: 20px;
     border-top: solid 1px #E5E5E5;
+    clear: both;
   }
   .price__list_md .price__list__item_special .price__descript_wrap,
   .price__list_md .price__list__item_default .price__descript_wrap {
@@ -1327,7 +1336,7 @@ h3,
   }
 }
 .price__list__item_special .price__cost {
-  margin-top: 93px;
+  margin-top: 35px;
   margin-left: 59px;
   color: #F11929;
   font-size: 90px;
@@ -1347,7 +1356,7 @@ h3,
   margin-top: 16px;
 }
 .price__list__item_special .price__descript {
-  margin-top: 78px;
+  margin-top: 69px;
 }
 .price__list__item_special .price__buy {
   margin-top: 51px;
@@ -1367,6 +1376,13 @@ h3,
   color: #4A4A4A;
   letter-spacing: -0.22px;
   line-height: 18px;
+}
+.price__size__descript {
+  margin-top: 10px;
+  padding: 0 20px;
+  font-family: FedraSansAltProBookTF;
+  font-size: 14px;
+  color: #4A4A4A;
 }
 .price__cost {
   font-family: FedraSansAltProMedTF;
