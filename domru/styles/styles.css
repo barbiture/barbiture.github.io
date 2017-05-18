@@ -1191,10 +1191,6 @@ h3,
     padding: 30px 20px 97px;
     position: relative;
   }
-  .price__list_md .price__size__wrap {
-    float: left;
-    width: 50%;
-  }
   .price__list_md .price__size__descript {
     padding: 0 0 20px;
   }
@@ -1224,6 +1220,10 @@ h3,
     letter-spacing: -0.48px;
     line-height: 42px;
   }
+  .price__list_md .price__list__item_special .price__cost_wrap,
+  .price__list_md .price__list__item_default .price__cost_wrap {
+    width: 100%;
+  }
   .price__list_md .price__list__item_special .price__cost__name,
   .price__list_md .price__list__item_default .price__cost__name {
     text-align: center;
@@ -1244,11 +1244,6 @@ h3,
   .price__list_md .price__list__item_special .price__cost__name_down,
   .price__list_md .price__list__item_default .price__cost__name_down {
     font-size: 12px;
-  }
-  .price__list_md .price__list__item_special .price__profit,
-  .price__list_md .price__list__item_default .price__profit {
-    width: 60%;
-    float: right;
   }
   .price__list_md .price__list__item_special .price__descript,
   .price__list_md .price__list__item_default .price__descript {
