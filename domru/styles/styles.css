@@ -1245,6 +1245,11 @@ h3,
   .price__list_md .price__list__item_default .price__cost__name_down {
     font-size: 12px;
   }
+  .price__list_md .price__list__item_special .price__profit,
+  .price__list_md .price__list__item_default .price__profit {
+    width: 60%;
+    float: right;
+  }
   .price__list_md .price__list__item_special .price__descript,
   .price__list_md .price__list__item_default .price__descript {
     padding-top: 16px;
