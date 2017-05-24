@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/jquery.fancybox.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	<script src="https://soohoo.ru/js/jquery.min.js"></script>
 	<script src="js/jquery.jcarousel.min.js"></script>
 	<script src="js/modal.js"></script>
@@ -37,6 +37,17 @@
 		
 	</div> -->
 	<div class="wrapper">
+		<div class="search">
+		  <a href="" class="">
+		    <i class="button-search"></i>
+		  </a>
+		  <div class="wrap">
+		    <div class="toggle-search">Закрыть окно</div>
+		    <form action="">
+		      <input id='inputFocus' type="text" autofocus>
+		    </form>
+		  </div>
+		</div>
 		<div class="top-bar link-color--white">
 			<div class="container">
 				<div class="top-bar--menu">
@@ -58,7 +69,6 @@
 					<select name="id_currency" id="id_currency" class="form-control" onchange="javascript:
 									xajax_process_browse_url('./?action=user_currency&amp;id_currency='+this.options[this.selectedIndex].value);
 									return false;">
-									
 						<option label="RUB" value="1">RUB</option>
 						<option label="EUR" value="2">EUR</option>
 						<option label="USD" value="3">USD</option>
@@ -73,466 +83,6 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
-		<header class="header">
-			<div class="container">
-				<a href="#index.html" class="hidden-lg visible-md pull-left logo-mobile">
-					<i class="logo-icon"></i>
-				</a>
-				<div class="header-cabinet visible-sm">
-					<ul class="cabinet-hide toggle-content">
-						<li><a href="">Имя пользователя</a></li>
-						<li><a href="">Сменить пароль</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Выход</a></li>
-						<li><a href="">Имя пользователя</a></li>
-						<li><a href="">Сменить пароль</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Выход</a></li>
-						<li><a href="">Имя пользователя</a></li>
-						<li><a href="">Сменить пароль</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Выход</a></li>
-						<li><a href="">Имя пользователя</a></li>
-						<li><a href="">Сменить пароль</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Выход</a></li>
-						<li><a href="">Имя пользователя</a></li>
-						<li><a href="">Сменить пароль</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Выход</a></li>
-						<li><a href="">Имя пользователя</a></li>
-						<li><a href="">Сменить пароль</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Выход</a></li>
-					</ul>
-					<a class="cabinet toggle-link">
-						<i class="menuSandvich-icon"></i>
-					</a>
-				</div>
-				<nav class="nav-bar">
-					<div class="search">
-						<a href="" class="">
-							<i class="button-search"></i>
-						</a>
-						<div class="wrap">
-							<div class="toggle-search">Закрыть окно</div>
-							<form action="">
-								<input id='inputFocus' type="text" autofocus>
-							</form>
-						</div>
-					</div>
-					<!-- Modal -->
-					<div class="search-result" id="searchContent">
-					  <div class="search-result--title">
-					    <i class="close-icon"></i>
-					    <h6>Результаты поиска</h6>
-					  </div>
-					  <div class="search-result--body">
-					    <div class="block-goods">
-					      <div class="block-goods--wrapp">
-					      	<div class="block-goods_title">
-					      		<div class="statusBadge News">
-					      			Новинка
-					      		</div>
-					      		<ul class="retings">
-					      			<li>
-					      				<input type="checkbox" name="star1" id="">
-					      				<label for="star1"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star2" id="">
-					      				<label for="star2"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star3" id="">
-					      				<label for="star3"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star4" id="">
-					      				<label for="star4"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star5" id="">
-					      				<label for="star5"></label>
-					      			</li>
-					      		</ul>
-					      	</div>
-					      	<div class="block-goods_img">
-					      		<img src="assets/img/goods.jpg" alt="">
-					      	</div>
-					      	<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
-					      	<p class="price">279 000 руб. <span>465 00 руб.</span></p>
-					      	<div class="block-goods_hover block-goods--inCart">
-					      		<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
-					      			<span>
-					      				<i class="cartWhite-icon"></i>
-					      				В корзину
-					      			</span>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="cart-icon"></i>
-					      				Купить в 1 клик
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="libra-icon"></i>
-					      				К сравнению
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="favorite-icon"></i>
-					      				В избранное
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<span>
-					      				<i class="order-icon"></i>
-					      				Под заказ
-					      			</span>
-					      		</div>
-					      	</div>
-					      </div>
-					      <div class="block-goods--wrapp">
-					      	<div class="block-goods_title">
-					      		<div class="statusBadge News">
-					      			Новинка
-					      		</div>
-					      		<ul class="retings">
-					      			<li>
-					      				<input type="checkbox" name="star1" id="">
-					      				<label for="star1"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star2" id="">
-					      				<label for="star2"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star3" id="">
-					      				<label for="star3"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star4" id="">
-					      				<label for="star4"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star5" id="">
-					      				<label for="star5"></label>
-					      			</li>
-					      		</ul>
-					      	</div>
-					      	<div class="block-goods_img">
-					      		<img src="assets/img/goods.jpg" alt="">
-					      	</div>
-					      	<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
-					      	<p class="price">279 000 руб. <span>465 00 руб.</span></p>
-					      	<div class="block-goods_hover block-goods--inCart">
-					      		<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
-					      			<span>
-					      				<i class="cartWhite-icon"></i>
-					      				В корзину
-					      			</span>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="cart-icon"></i>
-					      				Купить в 1 клик
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="libra-icon"></i>
-					      				К сравнению
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="favorite-icon"></i>
-					      				В избранное
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<span>
-					      				<i class="order-icon"></i>
-					      				Под заказ
-					      			</span>
-					      		</div>
-					      	</div>
-					      </div>
-					      <div class="block-goods--wrapp">
-					      	<div class="block-goods_title">
-					      		<div class="statusBadge News">
-					      			Новинка
-					      		</div>
-					      		<ul class="retings">
-					      			<li>
-					      				<input type="checkbox" name="star1" id="">
-					      				<label for="star1"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star2" id="">
-					      				<label for="star2"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star3" id="">
-					      				<label for="star3"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star4" id="">
-					      				<label for="star4"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star5" id="">
-					      				<label for="star5"></label>
-					      			</li>
-					      		</ul>
-					      	</div>
-					      	<div class="block-goods_img">
-					      		<img src="assets/img/goods.jpg" alt="">
-					      	</div>
-					      	<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
-					      	<p class="price">279 000 руб. <span>465 00 руб.</span></p>
-					      	<div class="block-goods_hover block-goods--inCart">
-					      		<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
-					      			<span>
-					      				<i class="cartWhite-icon"></i>
-					      				В корзину
-					      			</span>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="cart-icon"></i>
-					      				Купить в 1 клик
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="libra-icon"></i>
-					      				К сравнению
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="favorite-icon"></i>
-					      				В избранное
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<span>
-					      				<i class="order-icon"></i>
-					      				Под заказ
-					      			</span>
-					      		</div>
-					      	</div>
-					      </div>
-					      <div class="block-goods--wrapp">
-					      	<div class="block-goods_title">
-					      		<div class="statusBadge News">
-					      			Новинка
-					      		</div>
-					      		<ul class="retings">
-					      			<li>
-					      				<input type="checkbox" name="star1" id="">
-					      				<label for="star1"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star2" id="">
-					      				<label for="star2"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star3" id="">
-					      				<label for="star3"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star4" id="">
-					      				<label for="star4"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star5" id="">
-					      				<label for="star5"></label>
-					      			</li>
-					      		</ul>
-					      	</div>
-					      	<div class="block-goods_img">
-					      		<img src="assets/img/goods.jpg" alt="">
-					      	</div>
-					      	<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
-					      	<p class="price">279 000 руб. <span>465 00 руб.</span></p>
-					      	<div class="block-goods_hover block-goods--inCart">
-					      		<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
-					      			<span>
-					      				<i class="cartWhite-icon"></i>
-					      				В корзину
-					      			</span>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="cart-icon"></i>
-					      				Купить в 1 клик
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="libra-icon"></i>
-					      				К сравнению
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="favorite-icon"></i>
-					      				В избранное
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<span>
-					      				<i class="order-icon"></i>
-					      				Под заказ
-					      			</span>
-					      		</div>
-					      	</div>
-					      </div>
-					      <div class="block-goods--wrapp">
-					      	<div class="block-goods_title">
-					      		<div class="statusBadge News">
-					      			Новинка
-					      		</div>
-					      		<ul class="retings">
-					      			<li>
-					      				<input type="checkbox" name="star1" id="">
-					      				<label for="star1"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star2" id="">
-					      				<label for="star2"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star3" id="">
-					      				<label for="star3"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star4" id="">
-					      				<label for="star4"></label>
-					      			</li>
-					      			<li>
-					      				<input type="checkbox" name="star5" id="">
-					      				<label for="star5"></label>
-					      			</li>
-					      		</ul>
-					      	</div>
-					      	<div class="block-goods_img">
-					      		<img src="assets/img/goods.jpg" alt="">
-					      	</div>
-					      	<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
-					      	<p class="price">279 000 руб. <span>465 00 руб.</span></p>
-					      	<div class="block-goods_hover block-goods--inCart">
-					      		<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
-					      			<span>
-					      				<i class="cartWhite-icon"></i>
-					      				В корзину
-					      			</span>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="cart-icon"></i>
-					      				Купить в 1 клик
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="libra-icon"></i>
-					      				К сравнению
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<a>
-					      				<i class="favorite-icon"></i>
-					      				В избранное
-					      			</a>
-					      		</div>
-					      		<div class="auxiliary-buttons">
-					      			<span>
-					      				<i class="order-icon"></i>
-					      				Под заказ
-					      			</span>
-					      		</div>
-					      	</div>
-					      </div>
-					    </div>
-					    <div class="pagination">
-					    <ul>
-					    	<li class="pagination_btn disable">Назад</li>
-					    	<li class="active">1</li>
-					    	<li><a href="#">2</a></li>
-					    	<li class="pagination_btn"><a href="">Вперед</a></li>
-					    </ul>
-					    </div>
-					  </div>
-					  <div class="all-result">
-					    <a href="catalog.html">смотреть все результаты</a>
-					  </div>
-					</div>
-					<!-- <div class="logo">
-						<p>
-							Самое лучшее для мам и деток
-						</p>
-					</div> -->
-					<div class="nav-bar--item nav-bar--item_link toggle-search">
-						<a href="#">
-							<i class="search-icon"></i>
-						</a>
-					</div>
-					<div class="nav-bar--item nav-bar--item_link nav-bar--item_single">
-						<a href="#">
-							<i class="user-icon"></i>
-							<span class="nav-bar--item__wrapper">
-								Личный кабинет
-							</span>
-						</a>
-					</div>
-					<div class="nav-bar--item nav-bar--item_link nav-bar--item_single">
-						<a href="feedBack.html">
-							<i class="catalog-icon"></i>
-							<span class="nav-bar--item__wrapper">
-								Каталог
-							</span>
-						</a>
-					</div>
-					<div class="nav-bar--item nav-bar--item_link">
-						<a href="feedBack.html">
-							<i class="phone-icon"></i>
-							<span class="nav-bar--item__wrapper">
-								8 (800) 300-32-32
-								<span>обратная связь</span>
-							</span>
-						</a>
-					</div>
-					<div class="nav-bar--item nav-bar--item active">
-						<a href="#">
-							<i class="favorite-icon"></i>
-							<span class="nav-bar--item__wrapper">
-								Избранное
-								<span>нет товаров</span>
-							</span>
-						</a>
-					</div>
-					<div class="nav-bar--item nav-bar--item active">
-						<a href="">
-							<i class="cart-icon"></i>
-							<span class="amount">
-								0
-							</span>
-							<span class="nav-bar--item__wrapper">
-								Моя корзина
-								<span>в корзине пусто</span>
-							</span>
-						</a>
-					</div>
-				</nav>
-				<div class="clearfix"></div>
-			</div>
-		</header>
 <div class="main inside main-good">
   <div class="container">
     <div class="with--aside">
@@ -607,18 +157,18 @@
         															В корзину
         														</span>
         													</div>
-        													<div class="auxiliary-buttons">
+        													<!-- <div class="auxiliary-buttons">
         														<a>
         															<i class="cart-icon"></i>
         															Купить в 1 клик
         														</a>
-        													</div>
-        													<div class="auxiliary-buttons">
+        													</div> -->
+        													<!-- <div class="auxiliary-buttons">
         														<a>
         															<i class="libra-icon"></i>
         															К сравнению
         														</a>
-        													</div>
+        													</div> -->
         													<div class="auxiliary-buttons">
         														<a>
         															<i class="favorite-icon"></i>
@@ -675,18 +225,18 @@
         															В корзину
         														</span>
         													</div>
-        													<div class="auxiliary-buttons">
+        													<!-- <div class="auxiliary-buttons">
         														<a>
         															<i class="cart-icon"></i>
         															Купить в 1 клик
         														</a>
-        													</div>
-        													<div class="auxiliary-buttons">
+        													</div> -->
+        													<!-- <div class="auxiliary-buttons">
         														<a>
         															<i class="libra-icon"></i>
         															К сравнению
         														</a>
-        													</div>
+        													</div> -->
         													<div class="auxiliary-buttons">
         														<a>
         															<i class="favorite-icon"></i>
@@ -1065,18 +615,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1131,18 +681,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1197,18 +747,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1263,18 +813,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1329,18 +879,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1395,18 +945,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1466,18 +1016,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1532,18 +1082,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1598,18 +1148,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1664,18 +1214,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1730,18 +1280,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1796,18 +1346,18 @@
               				В корзину
               			</span>
               		</div>
-              		<div class="auxiliary-buttons">
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="cart-icon"></i>
               				Купить в 1 клик
               			</a>
-              		</div>
-              		<div class="auxiliary-buttons">
+              		</div> -->
+              		<!-- <div class="auxiliary-buttons">
               			<a>
               				<i class="libra-icon"></i>
               				К сравнению
               			</a>
-              		</div>
+              		</div> -->
               		<div class="auxiliary-buttons">
               			<a>
               				<i class="favorite-icon"></i>
@@ -1891,18 +1441,18 @@
         				В корзину
         			</span>
         		</div>
-        		<div class="auxiliary-buttons">
+        		<!-- <div class="auxiliary-buttons">
         			<a>
         				<i class="cart-icon"></i>
         				Купить в 1 клик
         			</a>
-        		</div>
-        		<div class="auxiliary-buttons">
+        		</div> -->
+        		<!-- <div class="auxiliary-buttons">
         			<a>
         				<i class="libra-icon"></i>
         				К сравнению
         			</a>
-        		</div>
+        		</div> -->
         		<div class="auxiliary-buttons">
         			<a>
         				<i class="favorite-icon"></i>
@@ -1957,18 +1507,18 @@
         				В корзину
         			</span>
         		</div>
-        		<div class="auxiliary-buttons">
+        		<!-- <div class="auxiliary-buttons">
         			<a>
         				<i class="cart-icon"></i>
         				Купить в 1 клик
         			</a>
-        		</div>
-        		<div class="auxiliary-buttons">
+        		</div> -->
+        		<!-- <div class="auxiliary-buttons">
         			<a>
         				<i class="libra-icon"></i>
         				К сравнению
         			</a>
-        		</div>
+        		</div> -->
         		<div class="auxiliary-buttons">
         			<a>
         				<i class="favorite-icon"></i>
@@ -2023,18 +1573,18 @@
         				В корзину
         			</span>
         		</div>
-        		<div class="auxiliary-buttons">
+        		<!-- <div class="auxiliary-buttons">
         			<a>
         				<i class="cart-icon"></i>
         				Купить в 1 клик
         			</a>
-        		</div>
-        		<div class="auxiliary-buttons">
+        		</div> -->
+        		<!-- <div class="auxiliary-buttons">
         			<a>
         				<i class="libra-icon"></i>
         				К сравнению
         			</a>
-        		</div>
+        		</div> -->
         		<div class="auxiliary-buttons">
         			<a>
         				<i class="favorite-icon"></i>
@@ -2096,18 +1646,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2164,18 +1714,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2232,18 +1782,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2300,18 +1850,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2368,18 +1918,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2436,18 +1986,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2504,18 +2054,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2572,18 +2122,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2640,18 +2190,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
@@ -2708,18 +2258,18 @@
                 				В корзину
                 			</span>
                 		</div>
-                		<div class="auxiliary-buttons">
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="cart-icon"></i>
                 				Купить в 1 клик
                 			</a>
-                		</div>
-                		<div class="auxiliary-buttons">
+                		</div> -->
+                		<!-- <div class="auxiliary-buttons">
                 			<a>
                 				<i class="libra-icon"></i>
                 				К сравнению
                 			</a>
-                		</div>
+                		</div> -->
                 		<div class="auxiliary-buttons">
                 			<a>
                 				<i class="favorite-icon"></i>
