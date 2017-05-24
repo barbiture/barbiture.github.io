@@ -3026,6 +3026,7 @@ table.stats {
     background-color: #D5D5D5;
     position: absolute;
     height: 100%;
+    width: 200px;
     right: -15px;
     float: none; }
   .main .review-right--good {
