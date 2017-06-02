@@ -1,13 +1,6 @@
 (function($) {
 
   $(document).ready(function() {
-
-    $('.nav-bar--toggle').click(function(){
-        $('.nav-bar').toggleClass('open');
-        console.log('msg');
-    });
-
-    
     $('.left-side--nav_list a').click(function(){
       var target = $(this).attr('href');
       $('html, body').animate({scrollTop: $(target).offset().top}, 300);
@@ -230,24 +223,19 @@
       });
   });
   var carouselResponsive = $('.carousel-single');
-  // $('.slider').jcarousel({
-  //   wrap: 'circular'
-  // });
+  $('.slider')
+  .on('jcarousel:create jcarousel:reload', function() {
+      var element = $(this),
+          width = element.innerWidth();
 
-
-
-
-  $('.slider').on('jcarousel:create jcarousel:reload', function() {
-          var element = $(this),
-              width = element.innerWidth();
-
-          // This shows 1 item at a time.
-          // Divide `width` to the number of items you want to display,
-          // eg. `width = width / 3` to display 3 items at a time.
-          element.jcarousel('items').css('width', width + 'px');
-      }).jcarousel({
-          wrap: 'circular'
-      });
+      // This shows 1 item at a time.
+      // Divide `width` to the number of items you want to display,
+      // eg. `width = width / 3` to display 3 items at a time.
+      element.jcarousel('items').css('width', width + 'px');
+  })
+  .jcarousel({
+    wrap: 'circular'
+  });
   $('.left-side--catalog_slider .slider').jcarouselAutoscroll({
     interval: 3500
   });
