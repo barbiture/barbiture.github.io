@@ -1,0 +1,507 @@
+/*RESET-CSS*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: Tahoma;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+input {
+  outline: none;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.icon-vk {
+  fill: #5781ad;
+}
+.icon-fb {
+  fill: #3e6fac;
+}
+.icon-tw {
+  fill: #60b5f0;
+}
+.icon-in {
+  fill: #828083;
+}
+.icon-gp {
+  fill: #ff543c;
+}
+.icon-ok {
+  fill: #ef8c30;
+}
+.icon-yt {
+  fill: #ff3026;
+}
+/*COLOR*/
+/*FONTS*/
+h2,
+.h2 {
+  font-size: 24px;
+  color: #303030;
+}
+h3,
+.h3 {
+  font-size: 20px;
+  color: #303030;
+}
+.title {
+  padding-top: 15px;
+  padding-bottom: 12px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #303030;
+  text-transform: uppercase;
+  border-bottom: solid 2px #eaeaea;
+  letter-spacing: .2em;
+  margin-bottom: 10px;
+}
+.title span {
+  border-bottom: solid 2px #f39c12;
+  padding-bottom: 16px;
+}
+.text-center {
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.link_dotted {
+  border-bottom: dotted 1px #303030;
+}
+.link_s {
+  font-size: 13px;
+}
+.link_h_orange:hover {
+  color: #f39c12;
+}
+.link_h_orange:active {
+  color: #f1900f;
+}
+.link_new {
+  color: #52b636;
+}
+.link_new:hover {
+  color: #5dc03f;
+}
+.link_new:active {
+  color: #47ac2d;
+}
+.link_sales {
+  color: #e43636;
+}
+.link_sales:hover {
+  color: #ee4747;
+}
+.link_sales:active {
+  color: #da2525;
+}
+.btn {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 3px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.btn_L {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 11px 34px;
+  letter-spacing: .1em;
+}
+.btn_orange {
+  background-color: #f39c12;
+}
+.btn_orange:hover {
+  background-color: #f39c12;
+}
+.btn_orange:active {
+  background-color: #f1900f;
+}
+.btn_black {
+  background-color: #303030;
+}
+.btn_black:hover {
+  background-color: #f39c12;
+}
+.btn_black:active {
+  background-color: #f1900f;
+}
+.btn_sales {
+  background-color: #e43636;
+}
+.btn_sales:hover {
+  background-color: #ee4747;
+}
+.btn_sales:active {
+  background-color: #da2525;
+}
+.btn_new {
+  background-color: #52b636;
+}
+.btn_new:hover {
+  background-color: #5dc03f;
+}
+.btn_new:active {
+  background-color: #47ac2d;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+/*GRID*/
+.col {
+  float: left;
+  padding: 0 15px;
+}
+.col-1 {
+  width: 8.33333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333%;
+}
+.col-5 {
+  width: 41.66666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-11 {
+  width: 83.33333333%;
+}
+.col-12 {
+  width: 100%;
+}
+.container {
+  width: 1170px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.row {
+  margin: 0 -15px;
+}
+.input {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #eaeaea;
+  border-radius: 3px;
+}
+.hidden {
+  display: none;
+}
+.content {
+  margin-top: 20px;
+}
+.menu__accordion .menu {
+  /*Change toggle size by adjusting width & height*/
+}
+.menu__accordion .menu__content,
+.menu__accordion .menu__sub {
+  display: none;
+  list-style: none;
+}
+.menu__accordion .menu__toggles {
+  border: 0;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  /*Change toggle color here*/
+  /* Style the active toggle here */
+  /*Animation of the toggle*/
+}
+.menu__accordion .menu__toggles i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.menu__accordion .menu__toggles i:nth-child(2) {
+  top: 40%;
+}
+.menu__accordion .menu__toggles i:nth-child(3) {
+  top: 80%;
+}
+.menu__accordion .menu__toggles_animate i:first-child,
+.menu__accordion .menu__toggles_animate i:nth-child(2) {
+  top: 40%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.menu__accordion .menu__toggles_animate i:nth-child(3) {
+  top: 40%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.menu__level {
+  /*Change menu content size*/
+  margin-top: 20px;
+  float: left;
+  width: 0;
+}
+.menu__level_active {
+  width: 300px;
+}
+.menu__level_animate {
+  -webkit-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+.menu__toggle {
+  /*Change toggle size by adjusting width & height*/
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+.menu__toggle i {
+  /*Change toggles color here*/
+  background-color: green;
+  height: 20%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.menu__toggle i:nth-child(2) {
+  top: 40%;
+}
+.menu__toggle i:nth-child(3) {
+  top: 80%;
+}
+.menu__wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.menu__content {
+  /*Default content is hidden*/
+  padding: 15px;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  transform: translateX(-50%);
+}
+.menu__content_active {
+  /*Position showing content*/
+  transform: translateX(0%);
+  width: 100%;
+  position: relative;
+}
+.menu__content__sub {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.menu__content__sub_hide {
+  display: none;
+}
+.menu__sub {
+  padding: 0;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.menu__sub__toggle {
+  position: relative;
+  overflow: hidden;
+}
+.menu__sub_active .menu__sub__back {
+  transform: translateX(0);
+  position: relative;
+}
+.menu__sub__back {
+  position: absolute;
+  transform: translateX(-100%);
+}
+.menu__sub_active {
+  transform: translateX(0%);
+  width: 100%;
+  position: relative;
+}
+.menu__shift {
+  float: left;
+  width: 100%;
+}
+.menu__shift_active {
+  position: absolute;
+  transform: translateX(300px);
+}
+
+/*# sourceMappingURL=maps/styles.css.map */

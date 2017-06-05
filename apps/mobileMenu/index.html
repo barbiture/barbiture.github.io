@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Menus</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="shortcut icon" href="../../fav.ico" type="image/x-icon">
+  </head>
+  <body>
+    
+
+    <div class="container">
+      <div class="menu__accordion">
+  <div class="title">
+    Mobile Menu with accordion sub menu
+  </div>
+  <div class="content">
+    <h3 id="menuToggleAccordion" class="menu__toggle">Menu</h3>
+    <ul id="menuContentAccordion" class="menu__content">
+      <li><a href="#">Home</a>
+        <ul class="menu__sub menu__sub_accordion">
+          <li><a href="#">Test 1</a></li>
+          <li><a href="#">Test 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Products</a>
+        <ul class="menu__sub menu__sub_accordion">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Javascript</a>
+            <ul class="menu__sub menu__sub_accordion">
+              <li><a href="#">jQuery</a></li>
+              <li><a href="#">MooTools</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+      <div class="clearfix"></div>
+<div class="title">
+  Mobile Menu with level sub menu
+</div>
+<div class="menu__level">
+  <div class="menu__wrapper">
+    <ul class="menu__content menu__level_animate">
+      <li class="menu__content__sub">
+        <div class="menu__sub__toggle">
+          <div class="menu__sub__back menu__level_animate">назад</div>
+          level1menu1
+        </div>
+        <ul class="menu__sub menu__sub_level menu__level_animate">
+          <li>
+            <div class="menu__sub__toggle">
+              <div class="menu__sub__back menu__level_animate">назад</div>
+              level2menu1
+            </div>
+          </li>
+          <li><span>level2menu2</span></li>
+          <li><span>level2menu3</span></li>
+        </ul>
+      </li>
+      <li class="menu__content__sub">
+        <div class="menu__sub__toggle">
+          <div class="menu__sub__back menu__level_animate">назад</div>
+          level1menu2
+        </div>
+        <ul class="menu__sub menu__sub_level menu__level_animate">
+          <li>
+            <span>level2menu1</span>
+          </li>
+          <li><span>level2menu2</span></li>
+          <li><span>level2menu3</span></li>
+        </ul>
+      </li>
+      <li class="menu__content__sub">
+        <div class="menu__sub__toggle">
+          <div class="menu__sub__back menu__level_animate">назад</div>
+          level1menu3
+        </div>
+        <ul class="menu__sub menu__sub_level menu__level_animate">
+          <li>
+            <span>level2menu1</span>
+          </li>
+          <li><span>level2menu2</span></li>
+          <li><span>level2menu3</span></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="menu__shift menu__level_animate">
+  <div id="menuToggleLevel" class="menu__toggle">
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt fugiat minus, molestias nobis veniam error consectetur ipsa dolorum corporis quia sit explicabo sint nemo ipsam delectus quam non vero.  </p>
+</div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
