@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Мандарин</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="title">
+        Mobile Menu with accordion sub menu
+      </div>
+      <div class="content">
+        <h3 id="menuToggleAccordion" class="menu__toggle">Menu</h3>
+        <ul id="menuContentAccordion" class="menu__content">
+          <li><a href="#">Home</a>
+            <ul class="menu__sub menu__sub_accordion">
+              <li><a href="#">Test 1</a></li>
+              <li><a href="#">Test 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Products</a>
+            <ul class="menu__sub menu__sub_accordion">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">Javascript</a>
+                <ul class="menu__sub menu__sub_accordion">
+                  <li><a href="#">jQuery</a></li>
+                  <li><a href="#">MooTools</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 id="menuToggleLevel" class="menu__toggle">Menu</h3>
+        <ul id="menuContentLevel" class="menu__content">
+          <li>
+            <a href="#">level1menu1</a>
+            <ul class="menu__sub menu__sub_level">
+              <li>
+                <a href="#">level2menu1</a>
+                <ul class="menu__sub menu__sub_level">
+                  <li>level3menu1</li>
+                </ul>
+              </li>
+              <li><a href="#">level2menu2</a></li>
+              <li><a href="#">level2menu3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">level1menu2</a>
+            <ul class="menu__sub menu__sub_level">
+              <li><a href="#">level2menu1</a></li>
+              <li><a href="#">level2menu2</a></li>
+              <li><a href="#">level2menu3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">level1menu3</a>
+            <ul class="menu__sub menu__sub_level">
+              <li><a href="#">level2menu1</a></li>
+              <li><a href="#">level2menu2</a></li>
+              <li><a href="#">level2menu3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

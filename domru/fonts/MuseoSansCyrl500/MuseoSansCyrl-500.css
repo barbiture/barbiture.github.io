@@ -1,0 +1,12 @@
+/* Webfont: MuseoSansCyrl-500 */@font-face {
+    font-family: 'MuseoSansCyrl500';
+    src: url('MuseoSansCyrl-500.eot'); /* IE9 Compat Modes */
+    src: url('MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('MuseoSansCyrl-500.woff') format('woff'), /* Modern Browsers */
+         url('MuseoSansCyrl-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('MuseoSansCyrl-500.svg#MuseoSansCyrl-500') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

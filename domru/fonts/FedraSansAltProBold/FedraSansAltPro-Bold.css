@@ -1,0 +1,12 @@
+/* Webfont: FedraSansAltPro-Bold */@font-face {
+    font-family: 'FedraSansAltProBold';
+    src: url('FedraSansAltPro-Bold.eot'); /* IE9 Compat Modes */
+    src: url('FedraSansAltPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('FedraSansAltPro-Bold.woff') format('woff'), /* Modern Browsers */
+         url('FedraSansAltPro-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('FedraSansAltPro-Bold.svg#FedraSansAltPro-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
