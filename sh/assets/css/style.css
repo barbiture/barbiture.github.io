@@ -1232,10 +1232,11 @@ i {
 .connected-carousels .carousel-stage {
   position: relative;
   overflow: hidden;
-  max-height: 402px; }
+  max-height: 458px; }
   .jcarousel img,
   .connected-carousels .carousel-stage img {
-    width: 100%;
+    min-height: 458px;
+    min-width: 100%;
     height: auto; }
   .jcarousel > ul,
   .connected-carousels .carousel-stage > ul {
@@ -4372,6 +4373,15 @@ table.stats {
     display: block !important; } }
 
 @media only screen and (max-width: 1065px) {
+  .jcarousel,
+  .connected-carousels .carousel-stage {
+    position: relative;
+    overflow: hidden;
+    max-height: auto; }
+    .jcarousel img,
+    .connected-carousels .carousel-stage img {
+      min-height: auto;
+      width: 100%; }
   .nav-bar--item a .nav-bar--item__wrapper {
     display: none; }
   .nav-bar {
@@ -4923,6 +4933,22 @@ table.stats {
     display: none; } }
 
 @media only screen and (max-width: 440px) {
+  .logo-icon {
+    margin-right: 15px; }
+  .top-bar a {
+    padding-right: 0; }
+  .nav-bar {
+    margin-left: 15px; }
+    .nav-bar--item i {
+      width: 16px; }
+      .nav-bar--item i:before {
+        font-size: .6em; }
+  .logIn-icon {
+    margin-top: 1px; }
+  .button-search {
+    margin-top: 30px; }
+  .top-bar--menu {
+    margin-right: 25px; }
   .block-goods--wrapp.block-goods-list--wrapp .block-goods--inCart {
     margin-bottom: 0;
     text-align: center; }
