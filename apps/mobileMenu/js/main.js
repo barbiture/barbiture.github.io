@@ -76,7 +76,7 @@ subToggle.click(function() {
   var sub = $this.next();
   $this.parent().siblings().toggleClass('menu__content__sub_hide');
   sub.toggleClass('menu__sub_active');
-  $this.toggleClass('menu__sub_active')
+  $this.toggleClass('menu__sub_active');
 });
 $('.menu__sub__back').click(function() {
   var $this = $(this);
