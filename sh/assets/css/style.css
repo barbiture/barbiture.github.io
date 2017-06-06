@@ -2570,6 +2570,25 @@ table.stats {
 .pull-left {
   float: left; }
 
+.catalog-content .title a {
+  font-weight: 600; }
+
+.catalog-content.cabinet-content {
+  width: 320px;
+  left: -191px; }
+
+.catalog-content li a {
+  font-size: 12px; }
+
+.catalog-content li:hover ul {
+  display: block; }
+
+.catalog-content_hover {
+  display: none;
+  margin-top: 15px; }
+  .catalog-content_hover li {
+    border-bottom: none; }
+
 .wrapper {
   font-family: 'Open Sans'; }
 
