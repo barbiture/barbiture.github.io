@@ -1232,10 +1232,10 @@ i {
 .connected-carousels .carousel-stage {
   position: relative;
   overflow: hidden;
-  max-height: 458px; }
+  max-height: 454px; }
   .jcarousel img,
   .connected-carousels .carousel-stage img {
-    min-height: 458px;
+    min-height: 454px;
     min-width: 100%;
     height: auto; }
   .jcarousel > ul,
