@@ -1184,7 +1184,7 @@ i {
   border-left: solid 1px #D5D5D5;
   padding-left: 25px; }
 
-.border--left-side, .main .left-side--catalog_list {
+.border--left-side {
   border-bottom: solid 1px #D5D5D5; }
 
 .default-boreder, .pagination .pagination_btn a, .main-cart .orderLine, .main.main-good .block-review--desription .choose_color li, .inner-table .date-head input, .btn-group:hover .dropdown, .main .left-side, .main .left-side_img, .main .left-side--news_more li, .block-carousel-title {
@@ -1232,10 +1232,10 @@ i {
 .connected-carousels .carousel-stage {
   position: relative;
   overflow: hidden;
-  max-height: 454px; }
+  max-height: 330px; }
   .jcarousel img,
   .connected-carousels .carousel-stage img {
-    min-height: 454px;
+    min-height: 330px;
     min-width: 100%;
     height: auto; }
   .jcarousel > ul,
@@ -1688,7 +1688,7 @@ i {
 .main.main-good {
   padding-bottom: 0; }
   .main.main-good .block-wrapp--good {
-    margin-right: 220px;
+    margin-right: 375px;
     border-left: 0; }
   .main.main-good .block-good {
     margin-top: 30px;
@@ -1703,6 +1703,24 @@ i {
     float: none; }
   .main.main-good .block--desription {
     margin-top: 30px; }
+    .main.main-good .block--desription-title {
+      font-size: 24px;
+      font-weight: 200;
+      margin-top: 25px; }
+    .main.main-good .block--desription-list {
+      font-size: 14px;
+      margin-top: 25px; }
+      .main.main-good .block--desription-list li {
+        line-height: 24px;
+        font-weight: 200;
+        vertical-align: middle; }
+        .main.main-good .block--desription-list li i {
+          display: inline-block;
+          margin-right: 5px; }
+          .main.main-good .block--desription-list li i:before {
+            vertical-align: middle; }
+      .main.main-good .block--desription-list-title {
+        margin-bottom: 10px; }
     .main.main-good .block--desription p {
       line-height: 24px; }
   .main.main-good .block-good--video {
@@ -1727,13 +1745,13 @@ i {
       text-align: left; }
   .main.main-good .block-review--img {
     position: relative;
-    width: 60%;
+    width: 50%;
     float: left; }
     .main.main-good .block-review--img .navigation {
       margin-top: 15px; }
   .main.main-good .block-review--desription {
     float: right;
-    width: 40%;
+    width: 50%;
     padding-left: 30px; }
     .main.main-good .block-review--desription .review-right--good {
       float: none; }
@@ -3953,6 +3971,12 @@ table.stats {
     .cabinet-content li a {
       color: #fff;
       padding: 0; }
+
+.col {
+  float: left; }
+
+.col-6 {
+  width: 50%; }
 
 .container {
   max-width: 1920px;
