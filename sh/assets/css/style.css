@@ -2580,12 +2580,22 @@ table.stats {
 .catalog-content li a {
   font-size: 12px; }
 
-.catalog-content li:hover ul {
-  display: block; }
+.catalog-content li {
+  position: relative; }
+  .catalog-content li:hover ul {
+    display: block; }
 
 .catalog-content_hover {
+  position: absolute;
+  left: -320px;
+  top: 0;
+  padding-left: 15px;
+  padding-top: 15px;
   display: none;
-  margin-top: 15px; }
+  margin-top: 0;
+  background-color: #202020;
+  z-index: 100;
+  width: 320px; }
   .catalog-content_hover li {
     border-bottom: none; }
 
@@ -4761,6 +4771,13 @@ table.stats {
     margin-right: 0; } }
 
 @media only screen and (max-width: 700px) {
+  .catalog-content_hover {
+    position: relative;
+    top: auto;
+    left: 0;
+    margin-top: 15px;
+    padding-left: 0;
+    width: 300px; }
   .hidden-xs {
     display: none !important; }
   .col-fix-left-panel {
