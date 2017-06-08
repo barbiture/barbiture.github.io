@@ -1240,11 +1240,12 @@ h3,
 }
 @media only screen and (max-width: 1230px) {
   .footer__icon {
-    width: 127px;
+    width: 121px;
     display: inline-block;
+    padding-left: 42px;
   }
   .footer__icon:first-child {
-    margin-right: 5px;
+    margin-right: 3px;
   }
 }
 @media only screen and (max-width: 360px) {
