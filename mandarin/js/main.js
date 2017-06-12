@@ -242,7 +242,9 @@ a.fn.owlCarousel.Constructor.Plugins.Animate=e}(window.Zepto||window.jQuery,wind
 }));
 $( document ).ready(function() {
   $('#menuToggleLevel').click(function() {
-    $('.menu__shift').toggleClass('menu__shift_active');
+    $('.menu__shift').toggleClass('menu__shift_active');  // сдвигаем основной контент на право
+    $('.menu__level').toggleClass('menu__level_active');
+    $('.menu__content').toggleClass('menu__content_active');
   })
   // $(function() {
   //   $('.scroll-pane').jScrollPane();
@@ -304,8 +306,8 @@ $( document ).ready(function() {
     toggle.prepend('<i></i><i></i><i></i>');
   
     toggle.click(function() {  // открывается первый уровень меню
-      $('.menu__level').toggleClass('menu__level_active');  // добавляем класс для всего меню (ширина меню)
-      $('.menu__content').toggleClass('menu__content_active');  // показываем контент првого уровня меню (ставим положение left = 0)
+      // $('.menu__level').toggleClass('menu__level_active');  // добавляем класс для всего меню (ширина меню)
+      // $('.menu__content').toggleClass('menu__content_active');  // показываем контент првого уровня меню (ставим положение left = 0)
     });
   
     subToggle.click(function() {  // открывается подменю
