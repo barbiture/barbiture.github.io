@@ -66,7 +66,7 @@
         // Cache the number of options
         var $this = $(this),
             numberOfOptions = $(this).children('option').length;
-            console.log(numberOfOptions);
+
 
         // Hides the select element
         $this.addClass('s-hidden');
