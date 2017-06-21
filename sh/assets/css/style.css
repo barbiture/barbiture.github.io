@@ -4169,26 +4169,6 @@ table.stats {
     float: left; }
 
 @media only screen and (max-width: 1770px) {
-  .col-12-md {
-    width: 100%; }
-    .col-12-md.col {
-      float: none; }
-    .col-12-md .select-box-inline {
-      padding-left: 0;
-      padding-right: 0; }
-      .col-12-md .select-box-inline input,
-      .col-12-md .select-box-inline label,
-      .col-12-md .select-box-inline .styledSelect {
-        font-size: 16px; }
-      .col-12-md .select-box-inline .select {
-        height: 30px; }
-      .col-12-md .select-box-inline .styledSelect:after {
-        top: 12px;
-        right: 10px; }
-      .col-12-md .select-box-inline .options li {
-        font-size: 16px; } }
-
-@media only screen and (max-width: 1770px) {
   .main.main-good .block-goods .block-goods--wrapp {
     width: 33.332%; }
   .block-goods--wrapp.block-goods-list--wrapp .block-goods_description {
@@ -4518,6 +4498,24 @@ table.stats {
     display: block !important; } }
 
 @media only screen and (max-width: 1065px) {
+  .col-12-md {
+    width: 100%; }
+    .col-12-md.col {
+      float: none; }
+    .col-12-md .select-box-inline {
+      padding-left: 0;
+      padding-right: 0; }
+      .col-12-md .select-box-inline input,
+      .col-12-md .select-box-inline label,
+      .col-12-md .select-box-inline .styledSelect {
+        font-size: 16px; }
+      .col-12-md .select-box-inline .select {
+        height: 30px; }
+      .col-12-md .select-box-inline .styledSelect:after {
+        top: 12px;
+        right: 10px; }
+      .col-12-md .select-box-inline .options li {
+        font-size: 16px; }
   .jcarousel,
   .connected-carousels .carousel-stage {
     position: relative;
