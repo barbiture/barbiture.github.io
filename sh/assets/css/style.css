@@ -766,6 +766,8 @@ body .pink-link--color a:hover {
 input[type="submit"] {
   -webkit-appearance: none;
   border-radius: 0; }
+  input[type="submit"].button {
+    border-radius: 5px; }
 
 body {
   position: relative;
@@ -868,6 +870,27 @@ body {
   width: 100%;
   padding: 15px; }
 
+.select-box-btn {
+  margin-top: 50px; }
+
+.select-box-inline {
+  padding: 10px 20px; }
+  .select-box-inline label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block; }
+  .select-box-inline input {
+    left: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #D5D5D5; }
+  .select-box-inline input, .select-box-inline .select {
+    width: 100%;
+    white-space: nowrap; }
+
 .select-box-wrapper {
   vertical-align: middle;
   height: 43px; }
@@ -877,7 +900,8 @@ body {
     .select-box-wrapper .select-box label {
       font-size: 14px;
       margin-right: 5px;
-      vertical-align: middle; }
+      line-height: 26px;
+      vertical-align: -3px; }
   .select-box-wrapper .btn-group button:last-child {
     margin-left: 10px; }
 
@@ -4052,6 +4076,9 @@ table.stats {
 .col-6 {
   width: 50%; }
 
+.col-4 {
+  width: 25%; }
+
 .container {
   max-width: 1920px;
   width: 100%;
@@ -4140,6 +4167,26 @@ table.stats {
     padding-left: 15px;
     width: 50%;
     float: left; }
+
+@media only screen and (max-width: 1770px) {
+  .col-12-md {
+    width: 100%; }
+    .col-12-md.col {
+      float: none; }
+    .col-12-md .select-box-inline {
+      padding-left: 0;
+      padding-right: 0; }
+      .col-12-md .select-box-inline input,
+      .col-12-md .select-box-inline label,
+      .col-12-md .select-box-inline .styledSelect {
+        font-size: 16px; }
+      .col-12-md .select-box-inline .select {
+        height: 30px; }
+      .col-12-md .select-box-inline .styledSelect:after {
+        top: 12px;
+        right: 10px; }
+      .col-12-md .select-box-inline .options li {
+        font-size: 16px; } }
 
 @media only screen and (max-width: 1770px) {
   .main.main-good .block-goods .block-goods--wrapp {
