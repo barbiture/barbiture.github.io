@@ -423,11 +423,6 @@
                             </div>
                           </div>
                         </form>
-                        <script>
-                          $('.toggle-mobile-click').click(function() {
-                            $(this).toggleClass('active').next('.toggle-mobile-content').toggle();
-                          })
-                        </script>
                         <script type="text/javascript" src="https://soohoo.ru/libp/js/table.js"></script>
                         <form id="table_form" class="shipment-content">
                           <table width="100%" cellspacing="0" cellpadding="5" class="table-contnent table-content-operation">
@@ -444,13 +439,18 @@
                                   <td><span class="visible-xs title">ID:</span>62738</td>
                                   <td><span class="visible-xs title">Название:</span>Кроватка SooHookids Молочная 3 в 1</td>
                                   <td>
-                                    <nobr>
+                                    <nobr class="hover-wrap">
                                       <span class="visible-xs title">Код:</span>
-                                      <a class="inner-table-link"
-                                          href="javascript:void(0)"
-                                          onclick="$('#id_search_tovar').val('4600008');
-                                          $('#form_search').submit();">
-                                          (1)</a> 4600008
+                                      <a class="inner-table-link" href="javascript:void(0)" onclick="$('#id_search_tovar').val('4600008'); $('#form_search').submit();">
+                                        (1)<i class="arrow-down arrow-title"></i>
+                                        <div class="hover-content">
+                                           <p>ID: 1729</p>
+                                           <p>Заказчик: a2195268</p>
+                                           <div class="hover-content-img">
+                                             <img src="https://soohoo.ru/imgbank/Image/pic/s/82_IMG_3133-20 розовый.jpg">
+                                           </div>
+                                        </div>
+                                      </a> 4600008
                                     </nobr>
                                   </td>
                                   <td><span class="visible-xs title">Заказчик:</span>a2150166 Бибикова Марина</td>
@@ -731,8 +731,10 @@
         		});
         	</script>
         	<script src="js/fotorama.js"></script>
+        	<script src="js/toggle-mobile-click.js"></script>
         </body>
         </html>
+        
 
        <!-- //= template/fix-panel.html
        //= template/footer.html -->

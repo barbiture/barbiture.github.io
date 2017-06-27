@@ -295,7 +295,7 @@
 			</div>
 		</div>
 
-  <link href="assets/css/context_hint.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/context_hint.css" rel="stylesheet" type="text/css">
     <div class="wrapper">
         <div class="main inside main-good">
             <div class="container">
@@ -353,458 +353,277 @@
                     		</ul>
                     	</div>
                     </div>
-                   </aside>
-                    <section class="section section-content">
-                            <!--input class="btn" value="Вернуться в фин модуль"
-                          onclick="location.href='./?action=finance'" type="button"-->
+                  </aside>
+                  <section class="section section-content">
+                    <div class="top-button">
+                      <input type=button class='defaultBtn button' value="Выписать счет"
+                      onclick="location.href='./?action=finance_bill_add&code_template=simple_bill';">
 
-                    <!--input type=button class='btn' value="Удалить выбранные"
-                      onclick="if (confirm('Вы уверены, что хотите удалить эти данные?'))
-                       mt.ChangeActionSubmit(this.form,'finance_bill_delete');" -->
+                      <input type=button class='defaultBtn button' value="Выписать приходно-кассовый ордер"
+                      onclick="location.href='./?action=finance_bill_add&code_template=order_bill';">
+                      <input type=button class='defaultBtn button' value="return bill add"
+                      onclick="location.href='./?action=finance_bill_add&code_template=return_simple_bill';">
 
+                      <input type=button class='defaultBtn button' value="Выписать расходно-кассовый ордер"
+                      onclick="location.href='./?action=finance_bill_add&code_template=return_order_bill';">
+                    </div>
+                    <script type="text/javascript" src="https://soohoo.ru/libp/js/table.js"></script>
+                    <div class="hover-block-title">
+                      <div class="hover-wrap">
+                        <div class="block-title">Счета заказчиков
+                          <i class="arrow-down arrow-title"></i>
+                        </div>
+                        <div class="block-title hover-content" id="customer_bill">
+                           <p>Счета ожидающие оплаты</p>
+                        </div>
+                      </div>
+                    </div>
+                    <form id="table_form" >
+                      <table width="99%" cellspacing="0" cellpadding="5" class="table-contnent table-content-operation">
+                        <thead>
+                         <tr>
+                           <th>
+                             <div class="checkbox">
+                               <input id="check_all"
+                                      name="check_all"
+                                      value="Y" type="checkbox">
+                               <label class="bx-filter-param-label"
+                                      for="check_all"></label>
+                             </div>
+                           </th>
+                           <th>ID</th>
+                           <th>Заказчик</th>
+                           <th>Сумма</th>
+                           <th>Тип платежа</th>
+                           <th>Дата</th>
+                           <th>Комментарий</th>
+                         </tr>
+                         <tr class="filter">
+                           <script language="javascript" type="text/javascript" src="https://soohoo.ru//js/form.js?588"></script>
+                         </tr>
+                         <tr>
+                           <th>&nbsp;</th>
+                           <th class="sep" align="left">
+                             <input id="id"
+                                    type="text"
+                                    name="search[id]"
+                                    value=""
+                                    class="input_global"
+                                    style="width: 30px;"
+                                    onkeydown="if(mf.SetFocusOnEnter(event,'sLink'))
+                                     return true;"/>
+                           </th>
+                           <th class="sep" align="left">
+                             <input id="customer"
+                                    type="text"
+                                    name="search[customer]"
+                                    value="" 
+                                    class="input_global"
+                                    style="width: 130px;"
+                                    onkeydown="if(mf.SetFocusOnEnter(event,'sLink'))
+                                     return true;" />
+                           </th>
+                           <th>&nbsp;</th>
+                           <th>&nbsp;</th>
+                           <th class="sep" align="center"><nobr>
+                             <input id="date_from"
+                                    name="date_from"
+                                    style='width:70px;'
+                                    readonly value='01.01.2012'
+                                    onclick="popUpCalendar(this, this, 'dd.mm.yyyy')">&nbsp;
+                             - <input id=date_to
+                                      name=date_to
+                                     style='width:70px;'
+                                     readonly value='24.06.2017'
+                                     onclick="popUpCalendar(this, this, 'dd.mm.yyyy')">
+                               </nobr>
+                             </th>
+                           <th>&nbsp;</th>
+                           <th class="table-button" nowrap>
+                             <a href="./?action=finance_bill">
+                               <i class="closeRed-icon"></i>
+                               Отмена
+                             </a>
+                             <a id="sLink" href="./?action=finance_bill"
+                                 onclick="this.href+='&search[id]='+$('#id').val()+'&search[customer]='+$('#customer').val()+'&search[date_from]='+$('#date_from').val()+'&search[date_to]='+$('#date_to').val()">
+                                 <i class="search-red"></i>
+                                 Искать
+                             </a>
+                           </th>
+                        </thead>
+                        <tbody>
+                          <tr class="inner-table-tr inner-table-grey">
+                            <td>
+                              <div class="checkbox">
+                                <input id="row_check_0"
+                                       name="row_check[]"
+                                       value="1729"
+                                       type="checkbox"
+                                       checked>
+                                <label class="bx-filter-param-label"
+                                       for="row_check_0"></label>
+                              </div>
+                            <td>
+                              <div class="hover-wrap">
+                                <div class="visible-xs">
+                                  ID:
+                                </div>
+                                1729<i class="arrow-down arrow-title"></i>
+                                <div class="hover-content">
+                                    <div class="checkbox">
+                                      <input id="row_check_2"
+                                             name="row_check[]"
+                                             value="1729"
+                                             type="checkbox"
+                                             checked>
+                                      <label class="bx-filter-param-label"
+                                             for="row_check_2"></label>
+                                    </div>
+                                   <p>ID: 1729</p>
+                                   <p>Заказчик: a2195268</p>
+                                   <p>андреев петр петрович</p>
+                                   <p>Сумма:    29275.00 руб.</p>
+                                   <p>Тип платежа: Приходной кассовый ордер | <i class="rouble-icon"></i>Наличные</p>
+                                   <p>Дата: 2017-06-23 10:08:50</p>
+                                   <p>Комментарий: склад</p>
+                                   <p class="table-buttons">
+                                     <a href="./?action=finance_bill_print&id=1729" target=_blank>
+                                       <i class="print-icon"></i>Печать
+                                     </a>
+                                     <br>
+                                     <a href="./?action=finance_bill_print&id=1729&send_file=1" target=_blank>
+                                       <i class="disk-icon"></i>Скачать
+                                     </a>
+                                     <br>
+                                   </p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><div class="visible-xs">Заказчик:</div> <b>a2195268</b><br>андреев петр петрович</td></td>
+                            <td><div class="visible-xs">Сумма:</div><div class="visible-xs">Сумма:</div>29275.00 руб.</td>
+                            <td><div class="visible-xs">Тип платежа:</div> Приходной кассовый ордер
+                              <br>
+                              <i class="rouble-icon"></i>Наличные
+                            </td>
+                            <td><div class="visible-xs">Дата:</div> 2017-06-23 10:08:50</td>
+                            <td><div class="visible-xs">Комментарий:</div> склад</td>
+                            <td class="table-buttons" nowrap>
+                              <div class="action-shipment">
+                                <a href="./?action=finance_bill_print&id=1729" target=_blank>
+                                  <i class="print-icon"></i><span class="message-user-login"> Печать</span>
+                                </a>
+                              </div>
+                              <div class="action-shipment">
+                                <a href="./?action=finance_bill_print&pdf=1&id=1729" target=_blank>
+                                  <i class="print-icon"></i><span class="message-user-login"> pdf</span>
+                                </a>
+                              </div>
+                              <div class="action-shipment">
+                                <a href="./?action=finance_bill_print&id=1729&send_file=1" target=_blank>
+                                  <i class="disk-icon"></i><span class="message-user-login"> Скачать</span>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="inner-table-tr inner-table-white">
+                            <td>
+                              <div class="checkbox">
+                                <input id="row_check_1"
+                                       name="row_check[]"
+                                       value="1729"
+                                       type="checkbox"
+                                       checked>
+                                <label class="bx-filter-param-label"
+                                       for="row_check_1"></label>
+                              </div>
+                            </td>
+                            <td>
+                                <div class="hover-wrap">
+                                  <div class="visible-xs">ID:</div>1728<i class="arrow-down arrow-title"></i>
+                                  <div class="hover-content" id="customer_bill">
+                                      <div class="checkbox">
+                                        <input id="row_check_2"
+                                               name="row_check[]"
+                                               value="1729"
+                                               type="checkbox"
+                                               checked>
+                                        <label class="bx-filter-param-label"
+                                               for="row_check_2"></label>
+                                      </div>
+                                     <p>ID: 1728</p>
+                                     <p>Заказчик: a2195268</p>
+                                     <p>Агеева Елена Анатольевна</p>
+                                     <p>Сумма:    18450.00 руб.</p>
+                                     <p>Тип платежа: Приходной кассовый ордер | Безналичные</p>
+                                     <p>Дата: 2017-06-23 10:08:50</p>
+                                     <p>Комментарий: склад</p>
+                                     <p class="table-buttons">
+                                       <a href="./?action=finance_bill_print&id=1729" target=_blank>
+                                         <i class="print-icon"></i>Печать
+                                       </a>
+                                       <br>
+                                       <a href="./?action=finance_bill_print&id=1729&send_file=1" target=_blank>
+                                         <i class="disk-icon"></i>Скачать
+                                       </a>
+                                       <br>
+                                     </p>
+                                  </div>
+                                </div>
+                            </td>
+                            <td><div class="visible-xs">Заказчик:</div> <b>Lenusy12</b><br>Агеева Елена Анатольевна</td></td>
+                            <td><div class="visible-xs">Сумма:</div>18450.00 руб.</td>
+                            <td><div class="visible-xs">Тип платежа:</div> Приходной кассовый ордер
+                              <br><br>Заказ: <b>13205</b><br>
+                              <i>Безналичные</i>
+                            </td>
+                            <td><div class="visible-xs">Дата:</div> 2017-06-22 14:23:53</td>
+                            <td><div class="visible-xs">Комментарий:</div> Оплата Яндекс.Касса</td>
+                            <td nowrap class="table-buttons">
+                              <div class="action-shipment">
+                                <a href="./?action=finance_bill_print&id=1729" target=_blank>
+                                  <i class="print-icon"></i><span class="message-user-login"> Печать</span>
+                                </a>
+                              </div>
+                              <div class="action-shipment">
+                                <a href="./?action=finance_bill_print&pdf=1&id=1729" target=_blank>
+                                  <i class="print-icon"></i><span class="message-user-login"> pdf</span>
+                                </a>
+                              </div>
+                              <div class="action-shipment">
+                                <a href="./?action=finance_bill_print&id=1729&send_file=1" target=_blank>
+                                  <i class="disk-icon"></i><span class="message-user-login"> Скачать</span>
+                                </a>
+                              </div>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr class="stepper">
+                            <div class="pagination">
+                            <ul>
+                            	<li class="pagination_btn disable">Назад</li>
+                            	<li class="active">1</li>
+                            	<li><a href="#">2</a></li>
+                            	<li><a href="#">3</a></li>
+                            	<li><a href="#">4</a></li>
+                            	<li><a href="#">8</a></li>
+                            	<li class="pagination_btn"><a href="">Вперед</a></li>
+                            </ul>
+                            </div>
+                            <!-- <span class="list">&lt;&lt;&nbsp;начало</span>&nbsp;&nbsp;<span class="list">&lt;&nbsp;предыдущий  </span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="list">следующий&nbsp;&gt;</span>&nbsp;<span class="list">конец&nbsp;&gt;&gt;</span> -->
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="bottom-button">
                         <input type=button class='defaultBtn button' value="Выписать счет"
                         onclick="location.href='./?action=finance_bill_add&code_template=simple_bill';">
-
                         <input type=button class='defaultBtn button' value="Выписать приходно-кассовый ордер"
                         onclick="location.href='./?action=finance_bill_add&code_template=order_bill';">
                         <input type=button class='defaultBtn button' value="return bill add"
                         onclick="location.href='./?action=finance_bill_add&code_template=return_simple_bill';">
-
                         <input type=button class='defaultBtn button' value="Выписать расходно-кассовый ордер"
                         onclick="location.href='./?action=finance_bill_add&code_template=return_order_bill';">
-                    <script type="text/javascript" src="https://soohoo.ru/libp/js/table.js"></script>
-
-                    <div class="hover-wrap">
-                      <div class="block-title block-title-hover" onmouseover="$('#customer_bill').toggle();"
-                          onmouseout="$('#customer_bill').toggle();">Счета заказчиков
-                        <i class="arrow-down arrow-title"></i>
                       </div>
-                   
-                      <div class="block-title tip_div" style="display: none; font-weight:normal;"
-                         id="customer_bill">
-                         <p>Счета ожидающие оплаты</p>
-                      </div>
-                    </div>
-                      
-
-
-
-                    <form id="table_form" >
-                    <table width="99%" cellspacing="0" cellpadding="5" class="table-contnent table-responsive table-responsive-big" >
-
-                    <thead>
-                    <tr>
-                      <th><label><nobr><input type=checkbox name=check_all
-                        onclick="mt.SetCheckboxes(this.form,this.checked);"
-                         checked ></nobr>
-                         </label></th>
-                      
-                      <th    >
-                        ID    </th>
-
-                      <th    >
-                        Заказчик    </th>
-
-                      <th    >
-                        Сумма   </th>
-
-                      <th    >
-                        Тип платежа   </th>
-
-                      <th    >
-                        Дата    </th>
-
-                      <th    >
-                        Комментарий   </th>
-
-                      <th    >
-                        &nbsp;    </th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-
-
-                     <tr class="filter">
-                        <script language="javascript" type="text/javascript" src="/js/form.js?588"></script>
-                      <th>&nbsp;</th>
-                        <th class="sep"><input id="id" type="text" name="search[id]" value="" 
-                              class="input_global" style="width: 30px;" onkeydown="if(mf.SetFocusOnEnter(event,'sLink')) return true;" />
-                        </th>
-                        <th class="sep"><input id="customer" type="text" name="search[customer]" value="" 
-                              class="input_global" style="width: 130px;" onkeydown="if(mf.SetFocusOnEnter(event,'sLink')) return true;" />
-                        </th>
-                    <th>&nbsp;</th>
-                    <th>&nbsp;</th>
-                        <th class="sep" align="center"><nobr>
-                        <input id="date_from" name="date_from"  style='width:70px;'
-                    readonly value='01.01.2012'
-                              onclick="popUpCalendar(this, this, 'dd.mm.yyyy')">&nbsp;
-                        - <input id=date_to name=date_to  style='width:70px;'
-                    readonly value='24.06.2017'
-                              onclick="popUpCalendar(this, this, 'dd.mm.yyyy')">
-                        </nobr></th>
-                    <th>&nbsp;</th>
-                        <th>
-                    <a href="./?action=finance_bill"><img src="/image/design/cancel.png" 
-                    alt="cancel" title="cancel"/></a>
-                      <!--a href="./?action=manager_order"><img src="/image/design/right.png"></a--> 
-                        <!--input type="button" class="defaultBtn button" value="ok" style="height:22px"-->
-                        <a id="sLink" href="./?action=finance_bill"
-                            onclick="this.href+='&search[id]='+$('#id').val()+'&search[customer]='+$('#customer').val()+'&search[date_from]='+$('#date_from').val()+'&search[date_to]='+$('#date_to').val()"
-                        ><img src="/image/design/search.png" alt="Искать" title="Искать" /></a>
-                        </th>
-                        
-                    </tr> 
-                    <tr   class="inner-table-tr"    >
-                      <td><input type=checkbox name=row_check[]
-                      id='row_check_0' value='1729'
-                       checked  ></td>
-                      <td>1729</td>
-                    <td><b>a2195268</b><br>андреев петр петрович</td></td>
-                    <td>   29275.00 руб.</td>
-                    <td>Приходной кассовый ордер
-
-                    <br>
-                    <i>Наличные</i>
-                    </td>
-                    <td>2017-06-23 10:08:50</td>
-                    <td>склад</td>
-                    <td nowrap>
-
-                    <a href="./?action=finance_bill_print&id=1729" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-                    <a href="./?action=finance_bill_print&pdf=1&id=1729" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>pdf</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1729&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    <!-- a href="./?action=finance_bill_edit&id=1729"
-                      ><img src="/image/edit.png" border=0 width=16 align=absmiddle hspace=1/>Редактировать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_delete&id=1729"
-                      onclick="if (!confirm('Вы уверены, что хотите удалить эти данные?')) return false;"
-                      ><img src="/image/delete.png" border=0  width=16 align=absmiddle hspace=1/>Удалить</a -->
-                    </td></tr>
-                    <tr   class="inner-table-tr"    >
-                      <td><input type=checkbox name=row_check[]
-                      id='row_check_1' value='1728'
-                       checked  ></td>
-                      <td>1728</td>
-                    <td><b>Lenusy12</b><br>Агеева Елена Анатольевна</td></td>
-                    <td>   18450.00 руб.</td>
-                    <td>Приходной кассовый ордер
-                      <br><br>Заказ: <b>13205</b>
-
-                    <br>
-                    <i>Безналичные</i>
-                    </td>
-                    <td>2017-06-22 14:23:53</td>
-                    <td>Оплата Яндекс.Касса</td>
-                    <td nowrap>
-
-                    <a href="./?action=finance_bill_print&id=1728" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-                    <a href="./?action=finance_bill_print&pdf=1&id=1728" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>pdf</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1728&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    <!-- a href="./?action=finance_bill_edit&id=1728"
-                      ><img src="/image/edit.png" border=0 width=16 align=absmiddle hspace=1/>Редактировать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_delete&id=1728"
-                      onclick="if (!confirm('Вы уверены, что хотите удалить эти данные?')) return false;"
-                      ><img src="/image/delete.png" border=0  width=16 align=absmiddle hspace=1/>Удалить</a -->
-                    </td>
-                    </tbody>
-                    </table>
-
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_0' value='1729'
-                       checked  >
-                      <p>ID: 1729</p>
-                    <p>Заказчик: <b>a2195268</b><br>андреев петр петрович</p></p>
-                    <p>Сумма:    29275.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Наличные</i>
-                    </p>
-                    <p>Дата: 2017-06-23 10:08:50</p>
-                    <p>Комментарий: склад</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1729" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1729&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_1' value='1728'
-                       checked  >
-                      <p>ID: 1728</p>
-                    <p>Заказчик: <b>Lenusy12</b><br>Агеева Елена Анатольевна</p></p>
-                    <p>Сумма:    18450.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                      | Заказ: <b>13205</b>
-                    | <i>Безналичные</i>
-                    </p>
-                    <p>Дата: 2017-06-22 14:23:53</p>
-                    <p>Комментарий: Оплата Яндекс.Касса</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1728" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1728&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_2' value='1727'
-                       checked  >
-                      <p>ID: 1727</p>
-                    <p>Заказчик: <b>8(903)963-79-37</b><br>Параничев Владимир Викторович </p></p>
-                    <p>Сумма:    16849.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Наличные</i>
-                    </p>
-                    <p>Дата: 2017-06-22 13:30:48</p>
-                    <p>Комментарий: склад</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1727" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1727&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_3' value='1726'
-                       checked  >
-                      <p>ID: 1726</p>
-                    <p>Заказчик: <b>a2194846</b><br>Заиграева Валентина Владимировна</p></p>
-                    <p>Сумма:    21350.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Безналичные</i>
-                    </p>
-                    <p>Дата: 2017-06-21 14:36:37</p>
-                    <p>Комментарий: карта</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1726" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1726&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_4' value='1725'
-                       checked  >
-                      <p>ID: 1725</p>
-                    <p>Заказчик: <b>a2192174</b><br>Лаврова Оксана Вячеславовна</p></p>
-                    <p>Сумма:    51765.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Наличные</i>
-                    </p>
-                    <p>Дата: 2017-06-21 11:17:43</p>
-                    <p>Комментарий: склад</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1725" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1725&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_5' value='1724'
-                       checked  >
-                      <p>ID: 1724</p>
-                    <p>Заказчик: <b>a2193986</b><br>левятова татьяна владимировна</p></p>
-                    <p>Сумма:     5700.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Наличные</i>
-                    </p>
-                    <p>Дата: 2017-06-21 11:09:01</p>
-                    <p>Комментарий: Склад, перезачислила, зачислили не на тот логин</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1724" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1724&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_6' value='1723'
-                       checked  >
-                      <p>ID: 1723</p>
-                    <p>Заказчик: <b>a2193994</b><br>левятова татьяна владимировна</p></p>
-                    <p>Сумма:     5700.00 руб.</p>
-                    <p>Тип платежа: Расходно-кассовый ордер
-                    | <i>Наличные</i>
-                    </p>
-                    <p>Дата: 2017-06-21 11:07:41</p>
-                    <p>Комментарий: Склад, зачисление не на тот логин</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1723" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1723&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_7' value='1722'
-                       checked  >
-                      <p>ID: 1722</p>
-                    <p>Заказчик: <b>89132222696</b><br>БОРИСОВА КСЕНИЯ АНДРЕЕВНА </p></p>
-                    <p>Сумма:      900.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                      | Заказ: <b>13279</b>
-                    | <i>Безналичные</i>
-                    </p>
-                    <p>Дата: 2017-06-20 17:43:18</p>
-                    <p>Комментарий: Оплата Яндекс.Касса</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1722" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1722&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_8' value='1721'
-                       checked  >
-                      <p>ID: 1721</p>
-                    <p>Заказчик: <b>AMV</b><br>Кривых Милена Вячеславовна</p></p>
-                    <p>Сумма:     5187.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Безналичные</i>
-                    </p>
-                    <p>Дата: 2017-06-20 15:42:38</p>
-                    <p>Комментарий: карта</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1721" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1721&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <input type=checkbox name=row_check[]
-                      id='row_check_s_9' value='1720'
-                       checked  >
-                      <p>ID: 1720</p>
-                    <p>Заказчик: <b>a2171959</b><br>Маслова Наталья Александровна</p></p>
-                    <p>Сумма:     1300.00 руб.</p>
-                    <p>Тип платежа: Приходной кассовый ордер
-                    | <i>Наличные</i>
-                    </p>
-                    <p>Дата: 2017-06-20 14:44:37</p>
-                    <p>Комментарий: склад</p>
-                    <p>
-
-                    <a href="./?action=finance_bill_print&id=1720" target=_blank
-                      ><img src="/image/fileprint.png" border=0 width=16 align=absmiddle hspace=1/>Печать</a>
-                    <br>
-
-                    <a href="./?action=finance_bill_print&id=1720&send_file=1" target=_blank
-                      ><img src="/image/disk_blue.png" border=0 width=16 align=absmiddle hspace=1/>Скачать</a>
-                    <br>
-
-
-                    </p></div>
-                    <div class="table-small table-small-big">
-                    <div class="pagination"><ul><li class='pagination_btn disable'>предыдущий  </li><li class='active'>0</li><li><a href='./?action=finance_bill&step=1' >1</a></li><li><a href='./?action=finance_bill&step=2' >2</a></li><li><a href='./?action=finance_bill&step=3' >3</a></li><li><a href='./?action=finance_bill&step=4' >4</a></li><li><a href='./?action=finance_bill&step=5' >5</a></li><li><a href='./?action=finance_bill&step=6' >6</a></li><li><a href='./?action=finance_bill&step=7' >7</a></li><li><a href='./?action=finance_bill&step=8' >8</a></li><li><a href='./?action=finance_bill&step=9' >9</a></li><li><a href='./?action=finance_bill&step=10' >10</a></li><li class='pagination_btn'><a href='./?action=finance_bill&step=1' >следующий</a></li></ul></div>
-                    </div>
-
-                    <div style="padding: 5;">
-                     <!--input class="btn" value="Вернуться в фин модуль"
-                          onclick="location.href='./?action=finance'" type="button"-->
-
-                    <!--input type=button class='btn' value="Удалить выбранные"
-                      onclick="if (confirm('Вы уверены, что хотите удалить эти данные?'))
-                       mt.ChangeActionSubmit(this.form,'finance_bill_delete');" -->
-
-                    <input type=button class='btn' value="Выписать счет"
-                      onclick="location.href='./?action=finance_bill_add&code_template=simple_bill';">
-
-                    <input type=button class='btn' value="Выписать приходно-кассовый ордер"
-                      onclick="location.href='./?action=finance_bill_add&code_template=order_bill';">
-                    <br />
-                    <input type=button class='btn' value="return bill add"
-                      onclick="location.href='./?action=finance_bill_add&code_template=return_simple_bill';">
-
-                    <input type=button class='btn' value="Выписать расходно-кассовый ордер"
-                      onclick="location.href='./?action=finance_bill_add&code_template=return_order_bill';">
-                     
-                    </div>
-
-
-                    <input type="hidden" name="action" id='action' value='empty'>
-                    <input type="hidden" name="return" id='return' value='action=finance_bill'>
                     </form>
-
                   </section>
                 </div>
             </div>
@@ -961,72 +780,74 @@
         		});
         	</script>
         	<script src="js/fotorama.js"></script>
+        	<script src="js/toggle-mobile-click.js"></script>
         </body>
         </html>
+        
 
-       <!-- //= template/fix-panel.html
-       //= template/footer.html -->
+        <!-- //= template/fix-panel.html
+        //= template/footer.html -->
         <div class="scroll-up"></div>
 
-    </div>
-    <script>
-    var input = document.getElementById('inputFocus');
-    input.oninput = function() {
-        //$('#searchContent').show();
-    };
-    </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-    (function(d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter37148345 = new Ya.Metrika({
-                    id: 37148345,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true,
-                    webvisor: true,
-                    trackHash: true
-                });
-            } catch (e) {}
-        });
+      </div>
+      <script>
+        var input = document.getElementById('inputFocus');
+        input.oninput = function() {
+            //$('#searchContent').show();
+        };
+      </script>
+      <!-- Yandex.Metrika counter -->
+      <script type="text/javascript">
+      (function(d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter37148345 = new Ya.Metrika({
+                      id: 37148345,
+                      clickmap: true,
+                      trackLinks: true,
+                      accurateTrackBounce: true,
+                      webvisor: true,
+                      trackHash: true
+                  });
+              } catch (e) {}
+          });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function() {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function() {
+                  n.parentNode.insertBefore(s, n);
+              };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript>
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else {
+              f();
+          }
+      })(document, window, "yandex_metrika_callbacks");
+      </script>
+      <noscript>
         <div><img src="https://mc.yandex.ru/watch/37148345" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-    <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      </noscript>
+      <!-- /Yandex.Metrika counter -->
+      <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-79890393-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+        ga('create', 'UA-79890393-1', 'auto');
+        ga('send', 'pageview');
+      </script>
 </body>
 
 </html>

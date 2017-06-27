@@ -1,20 +1,20 @@
-.inst-icon, .vk-icon, .fb-icon, .tw-icon, .viewed-icon, .revert-icon, .folder-icon, .write-icon, .edit-icon, .export-icon, .box-icon, .print-icon, .print-icon-white, .rouble-icon, .favorite-icon:before, .favoriteWhite-icon:before, .menuSandvichWhite-icon:before, .cartWhite-icon:before, .logIn-icon:before, .logIn-icon:hover:before, .logIn-icon:active:before, .cart-icon:before, .cartOrder-icon:before, .order-icon:before, .order-icon-green:before, .closeRed-icon:before, .user-icon:before, .checkGreen-icon:before, .backArrow-icon:before, .backArrowRed-icon:before, .review-icon:before, .reviewRed-icon:before, .description-icon:before, .descriptionRed-icon:before, .specifications-icon:before, .specificationsRed-icon:before, .accessories-icon:before, .accessoriesRed-icon:before, .similarItems-icon:before, .similarItemsRed-icon:before, .video-icon:before, .videoRed-icon:before, .check-icon:before, .checked-icon:before, .minus-icon:before, .plus-icon:before, .close-icon:before, .menu-icon:before, .clock-icon:before, .clockWhite-icon:before, .backBuy-icon:before, .viewTable-icon, .viewList-icon, .eye-icon, .archive-icon, .jcarousel-wrapper .jcarousel-control-next:before,
+.inst-icon, .vk-icon, .fb-icon, .tw-icon, .viewed-icon, .revert-icon, .folder-icon, .write-icon, .edit-icon, .export-icon, .box-icon, .print-icon, .disk-icon, .print-icon-white, .rouble-icon, .favorite-icon:before, .favoriteWhite-icon:before, .menuSandvichWhite-icon:before, .cartWhite-icon:before, .logIn-icon:before, .logIn-icon:hover:before, .logIn-icon:active:before, .cart-icon:before, .cartOrder-icon:before, .order-icon:before, .order-icon-green:before, .closeRed-icon:before, .user-icon:before, .checkGreen-icon:before, .backArrow-icon:before, .backArrowRed-icon:before, .review-icon:before, .reviewRed-icon:before, .description-icon:before, .descriptionRed-icon:before, .specifications-icon:before, .specificationsRed-icon:before, .accessories-icon:before, .accessoriesRed-icon:before, .similarItems-icon:before, .similarItemsRed-icon:before, .video-icon:before, .videoRed-icon:before, .check-icon:before, .checked-icon:before, .minus-icon:before, .plus-icon:before, .close-icon:before, .menu-icon:before, .clock-icon:before, .clockWhite-icon:before, .backBuy-icon:before, .viewTable-icon, .viewList-icon, .eye-icon, .archive-icon, .jcarousel-wrapper .jcarousel-control-next:before,
 .carousel-goods.carousel .jcarousel-control-next:before, .jcarousel-wrapper .jcarousel-control-next:hover:before,
 .carousel-goods.carousel .jcarousel-control-next:hover:before, .jcarousel-wrapper .jcarousel-control-prev:before,
 .carousel-goods.carousel .jcarousel-control-prev:before, .jcarousel-wrapper .jcarousel-control-prev:hover:before,
 .carousel-goods.carousel .jcarousel-control-prev:hover:before, .retings li input[type="checkbox"]:checked + label,
-.starred_on, .menuSandvich-icon:before, .viewTableActive-icon, .viewListActive-icon, .logo-icon:before, .logoInvert-icon:before, .search-icon:hover:before, .search-icon:active:before, .search-icon:before, .phone-icon:before, .heartRed-icon:before, .catalog-icon:before, .retings li input[type="checkbox"] + label, .checkbox input[type="checkbox"] + label:before,
+.starred_on, .menuSandvich-icon:before, .viewTableActive-icon, .viewListActive-icon, .logo-icon:before, .logoInvert-icon:before, .search-icon:hover:before, .search-icon:active:before, .search-icon:before, .search-red:before, .phone-icon:before, .heartRed-icon:before, .catalog-icon:before, .retings li input[type="checkbox"] + label, .checkbox input[type="checkbox"] + label:before,
 .checkbox input[type="radio"] + label:before, .checkbox input[type="checkbox"]:checked + label:before,
 .checkbox input[type="radio"]:checked + label:before, .left-side--filter .choes-prices--title.toggle-link:before, .left-side--filter .choes-prices--title.toggle-link--active:before, .ui-state-default:before, .fancybox-custom a.fancybox-next span:before, .fancybox-custom a.fancybox-prev span:before, .fancybox-custom a.fancybox-close:before, .arrow-down.arrow-title, .starred_off, .button-search:hover:before, .button-search:hover:active, .button-search:before, .nav-bar--item .user-icon:before, .nav-bar--item .catalog-icon:before, .nav-bar--item .toggle-link--active .menuSandvichWhite-icon:before, .nav-bar--item:hover .menuSandvichWhite-icon:before, .nav-bar--item:hover .phone-icon:before, .nav-bar--item:hover .favorite-icon:before, .nav-bar--item:hover .cart-icon:before, .nav-bar--item:hover .user-icon:before, .nav-bar--item:hover .catalog-icon:before, .nav-bar--item:hover .cartWhite-icon:before, .nav-bar--item:active .menuSandvichWhite-icon:before, .nav-bar--item:active .phone-icon:before, .nav-bar--item:active .favorite-icon:before, .nav-bar--item:active .cart-icon:before, .nav-bar--item:active .user-icon:before, .nav-bar--item:active .catalog-icon:before, .nav-bar--item:active .cartWhite-icon:before, .block-goods--wrapp_more .morePlus-icon, .block-brands--wrapp_more .morePlus-icon, .scroll-up {
   display: inline-block;
   background-image: url("../img/sprite.svg");
   background-size: 31.5em 29.0625em; }
 
-.lt-ie9 .inst-icon, .lt-ie9 .vk-icon, .lt-ie9 .fb-icon, .lt-ie9 .tw-icon, .lt-ie9 .viewed-icon, .lt-ie9 .revert-icon, .lt-ie9 .folder-icon, .lt-ie9 .write-icon, .lt-ie9 .edit-icon, .lt-ie9 .export-icon, .lt-ie9 .box-icon, .lt-ie9 .print-icon, .lt-ie9 .print-icon-white, .lt-ie9 .rouble-icon, .lt-ie9 .favorite-icon:before, .lt-ie9 .favoriteWhite-icon:before, .lt-ie9 .menuSandvichWhite-icon:before, .lt-ie9 .cartWhite-icon:before, .lt-ie9 .logIn-icon:before, .lt-ie9 .logIn-icon:hover:before, .lt-ie9 .logIn-icon:active:before, .lt-ie9 .cart-icon:before, .lt-ie9 .cartOrder-icon:before, .lt-ie9 .order-icon:before, .lt-ie9 .order-icon-green:before, .lt-ie9 .closeRed-icon:before, .lt-ie9 .user-icon:before, .lt-ie9 .checkGreen-icon:before, .lt-ie9 .backArrow-icon:before, .lt-ie9 .backArrowRed-icon:before, .lt-ie9 .review-icon:before, .lt-ie9 .reviewRed-icon:before, .lt-ie9 .description-icon:before, .lt-ie9 .descriptionRed-icon:before, .lt-ie9 .specifications-icon:before, .lt-ie9 .specificationsRed-icon:before, .lt-ie9 .accessories-icon:before, .lt-ie9 .accessoriesRed-icon:before, .lt-ie9 .similarItems-icon:before, .lt-ie9 .similarItemsRed-icon:before, .lt-ie9 .video-icon:before, .lt-ie9 .videoRed-icon:before, .lt-ie9 .check-icon:before, .lt-ie9 .checked-icon:before, .lt-ie9 .minus-icon:before, .lt-ie9 .plus-icon:before, .lt-ie9 .close-icon:before, .lt-ie9 .menu-icon:before, .lt-ie9 .clock-icon:before, .lt-ie9 .clockWhite-icon:before, .lt-ie9 .backBuy-icon:before, .lt-ie9 .viewTable-icon, .lt-ie9 .viewList-icon, .lt-ie9 .eye-icon, .lt-ie9 .archive-icon, .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:before, .lt-ie9
+.lt-ie9 .inst-icon, .lt-ie9 .vk-icon, .lt-ie9 .fb-icon, .lt-ie9 .tw-icon, .lt-ie9 .viewed-icon, .lt-ie9 .revert-icon, .lt-ie9 .folder-icon, .lt-ie9 .write-icon, .lt-ie9 .edit-icon, .lt-ie9 .export-icon, .lt-ie9 .box-icon, .lt-ie9 .print-icon, .lt-ie9 .disk-icon, .lt-ie9 .print-icon-white, .lt-ie9 .rouble-icon, .lt-ie9 .favorite-icon:before, .lt-ie9 .favoriteWhite-icon:before, .lt-ie9 .menuSandvichWhite-icon:before, .lt-ie9 .cartWhite-icon:before, .lt-ie9 .logIn-icon:before, .lt-ie9 .logIn-icon:hover:before, .lt-ie9 .logIn-icon:active:before, .lt-ie9 .cart-icon:before, .lt-ie9 .cartOrder-icon:before, .lt-ie9 .order-icon:before, .lt-ie9 .order-icon-green:before, .lt-ie9 .closeRed-icon:before, .lt-ie9 .user-icon:before, .lt-ie9 .checkGreen-icon:before, .lt-ie9 .backArrow-icon:before, .lt-ie9 .backArrowRed-icon:before, .lt-ie9 .review-icon:before, .lt-ie9 .reviewRed-icon:before, .lt-ie9 .description-icon:before, .lt-ie9 .descriptionRed-icon:before, .lt-ie9 .specifications-icon:before, .lt-ie9 .specificationsRed-icon:before, .lt-ie9 .accessories-icon:before, .lt-ie9 .accessoriesRed-icon:before, .lt-ie9 .similarItems-icon:before, .lt-ie9 .similarItemsRed-icon:before, .lt-ie9 .video-icon:before, .lt-ie9 .videoRed-icon:before, .lt-ie9 .check-icon:before, .lt-ie9 .checked-icon:before, .lt-ie9 .minus-icon:before, .lt-ie9 .plus-icon:before, .lt-ie9 .close-icon:before, .lt-ie9 .menu-icon:before, .lt-ie9 .clock-icon:before, .lt-ie9 .clockWhite-icon:before, .lt-ie9 .backBuy-icon:before, .lt-ie9 .viewTable-icon, .lt-ie9 .viewList-icon, .lt-ie9 .eye-icon, .lt-ie9 .archive-icon, .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:before, .lt-ie9
 .carousel-goods.carousel .jcarousel-control-next:before, .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:hover:before, .lt-ie9
 .carousel-goods.carousel .jcarousel-control-next:hover:before, .lt-ie9 .jcarousel-wrapper .jcarousel-control-prev:before, .lt-ie9
 .carousel-goods.carousel .jcarousel-control-prev:before, .lt-ie9 .jcarousel-wrapper .jcarousel-control-prev:hover:before, .lt-ie9
-.carousel-goods.carousel .jcarousel-control-prev:hover:before, .lt-ie9 .retings li input[type="checkbox"]:checked + label, .lt-ie9 .starred_on, .lt-ie9 .menuSandvich-icon:before, .lt-ie9 .viewTableActive-icon, .lt-ie9 .viewListActive-icon, .lt-ie9 .logo-icon:before, .lt-ie9 .logoInvert-icon:before, .lt-ie9 .search-icon:hover:before, .lt-ie9 .search-icon:active:before, .lt-ie9 .search-icon:before, .lt-ie9 .phone-icon:before, .lt-ie9 .heartRed-icon:before, .lt-ie9 .catalog-icon:before, .lt-ie9 .retings li input[type="checkbox"] + label, .lt-ie9 .checkbox input[type="checkbox"] + label:before, .lt-ie9
+.carousel-goods.carousel .jcarousel-control-prev:hover:before, .lt-ie9 .retings li input[type="checkbox"]:checked + label, .lt-ie9 .starred_on, .lt-ie9 .menuSandvich-icon:before, .lt-ie9 .viewTableActive-icon, .lt-ie9 .viewListActive-icon, .lt-ie9 .logo-icon:before, .lt-ie9 .logoInvert-icon:before, .lt-ie9 .search-icon:hover:before, .lt-ie9 .search-icon:active:before, .lt-ie9 .search-icon:before, .lt-ie9 .search-red:before, .lt-ie9 .phone-icon:before, .lt-ie9 .heartRed-icon:before, .lt-ie9 .catalog-icon:before, .lt-ie9 .retings li input[type="checkbox"] + label, .lt-ie9 .checkbox input[type="checkbox"] + label:before, .lt-ie9
 .checkbox input[type="radio"] + label:before, .lt-ie9 .checkbox input[type="checkbox"]:checked + label:before, .lt-ie9
 .checkbox input[type="radio"]:checked + label:before, .lt-ie9 .left-side--filter .choes-prices--title.toggle-link:before, .lt-ie9 .left-side--filter .choes-prices--title.toggle-link--active:before, .lt-ie9 .ui-state-default:before, .lt-ie9 .fancybox-custom a.fancybox-next span:before, .lt-ie9 .fancybox-custom a.fancybox-prev span:before, .lt-ie9 .fancybox-custom a.fancybox-close:before, .lt-ie9 .arrow-down.arrow-title, .lt-ie9 .starred_off, .lt-ie9 .button-search:hover:before, .lt-ie9 .button-search:hover:active, .lt-ie9 .button-search:before, .lt-ie9 .nav-bar--item .user-icon:before, .lt-ie9 .nav-bar--item .catalog-icon:before, .lt-ie9 .nav-bar--item .toggle-link--active .menuSandvichWhite-icon:before, .lt-ie9 .nav-bar--item:hover .menuSandvichWhite-icon:before, .lt-ie9 .nav-bar--item:hover .phone-icon:before, .lt-ie9 .nav-bar--item:hover .favorite-icon:before, .lt-ie9 .nav-bar--item:hover .cart-icon:before, .lt-ie9 .nav-bar--item:hover .user-icon:before, .lt-ie9 .nav-bar--item:hover .catalog-icon:before, .lt-ie9 .nav-bar--item:hover .cartWhite-icon:before, .lt-ie9 .nav-bar--item:active .menuSandvichWhite-icon:before, .lt-ie9 .nav-bar--item:active .phone-icon:before, .lt-ie9 .nav-bar--item:active .favorite-icon:before, .lt-ie9 .nav-bar--item:active .cart-icon:before, .lt-ie9 .nav-bar--item:active .user-icon:before, .lt-ie9 .nav-bar--item:active .catalog-icon:before, .lt-ie9 .nav-bar--item:active .cartWhite-icon:before, .lt-ie9 .block-goods--wrapp_more .morePlus-icon, .lt-ie9 .block-brands--wrapp_more .morePlus-icon, .lt-ie9 .scroll-up {
   background-image: url("../img/sprite.png"); }
@@ -25,11 +25,11 @@
 .inst-icon {
   width: 1.0625em;
   height: 1.0625em;
-  background-position: -20.625em -21.46875em; }
+  background-position: -21.5625em -21.46875em; }
   .lt-ie9 .inst-icon {
     width: 16px;
     height: 16px;
-    background-position: -330px -343.5px; }
+    background-position: -345px -343.5px; }
 
 .vk-icon {
   width: 1.0625em;
@@ -43,56 +43,56 @@
 .fb-icon {
   width: 1.0625em;
   height: 1.0625em;
-  background-position: -15.75em -21.46875em; }
+  background-position: -16.6875em -21.46875em; }
   .lt-ie9 .fb-icon {
     width: 16px;
     height: 16px;
-    background-position: -252px -343.5px; }
+    background-position: -267px -343.5px; }
 
 .tw-icon {
   width: 1.0625em;
   height: 1.0625em;
-  background-position: -17.375em -21.46875em; }
+  background-position: -18.3125em -21.46875em; }
   .lt-ie9 .tw-icon {
     width: 16px;
     height: 16px;
-    background-position: -278px -343.5px; }
+    background-position: -293px -343.5px; }
 
 .viewed-icon {
   width: 1.8em;
   height: 1em;
-  background-position: -13.41875em -11.3125em; }
+  background-position: -6.3125em -7.11875em; }
   .lt-ie9 .viewed-icon {
     width: 27.8px;
     height: 15px;
-    background-position: -214.7px -181px; }
+    background-position: -101px -113.9px; }
 
 .revert-icon {
   width: 1.31875em;
   height: 1.1125em;
-  background-position: -6.3125em -7.11875em; }
+  background-position: -11.13125em -8.9375em; }
   .lt-ie9 .revert-icon {
     width: 20.1px;
     height: 16.8px;
-    background-position: -101px -113.9px; }
+    background-position: -178.1px -143px; }
 
 .folder-icon {
   width: 1.20625em;
   height: 1.01875em;
-  background-position: -8.19375em -7.11875em; }
+  background-position: -14.39375em -13.10625em; }
   .lt-ie9 .folder-icon {
     width: 18.3px;
     height: 15.3px;
-    background-position: -131.1px -113.9px; }
+    background-position: -230.3px -209.7px; }
 
 .write-icon {
   width: 1em;
   height: 1.075em;
-  background-position: -11.13125em -8.9375em; }
+  background-position: -15.125em -21.46875em; }
   .lt-ie9 .write-icon {
     width: 15px;
     height: 16.2px;
-    background-position: -178.1px -143px; }
+    background-position: -242px -343.5px; }
 
 .edit-icon {
   width: 1.0625em;
@@ -106,29 +106,38 @@
 .export-icon {
   width: 1.0625em;
   height: 1.0625em;
-  background-position: -19em -21.46875em; }
+  background-position: -19.9375em -21.46875em; }
   .lt-ie9 .export-icon {
     width: 16px;
     height: 16px;
-    background-position: -304px -343.5px; }
+    background-position: -319px -343.5px; }
 
 .box-icon {
   width: 1.0625em;
   height: 1.0625em;
-  background-position: -22.25em -21.46875em; }
+  background-position: -23.1875em -21.46875em; }
   .lt-ie9 .box-icon {
     width: 16px;
     height: 16px;
-    background-position: -356px -343.5px; }
+    background-position: -371px -343.5px; }
 
 .print-icon {
   width: 1.0625em;
   height: 1em;
-  background-position: -14.39375em -13.10625em; }
+  background-position: -8.675em -7.11875em; }
   .lt-ie9 .print-icon {
     width: 16px;
     height: 15px;
-    background-position: -230.3px -209.7px; }
+    background-position: -138.8px -113.9px; }
+
+.disk-icon {
+  width: 2.0625em;
+  height: 2.0625em;
+  background-position: -0.3125em -18.84375em; }
+  .lt-ie9 .disk-icon {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -301.5px; }
 
 .print-icon-white {
   width: 1.0625em;
@@ -142,11 +151,11 @@
 .rouble-icon {
   width: 1.9375em;
   height: 2.125em;
-  background-position: -19.5625em -13.4375em; }
+  background-position: -19.5625em -13.5em; }
   .lt-ie9 .rouble-icon {
     width: 30px;
     height: 33px;
-    background-position: -313px -215px; }
+    background-position: -313px -216px; }
 
 .logo-icon:before {
   font-size: 10px; }
@@ -157,38 +166,38 @@
 .favorite-icon:before {
   width: 2.1875em;
   height: 2.0625em;
-  background-position: -8.75em -16.21875em; }
+  background-position: -11.5em -16.21875em; }
   .lt-ie9 .favorite-icon:before {
     width: 34px;
     height: 32px;
-    background-position: -140px -259.5px; }
+    background-position: -184px -259.5px; }
 
 .favoriteWhite-icon:before {
   width: 2.1875em;
   height: 2.0625em;
-  background-position: -8.75em -16.21875em; }
+  background-position: -11.5em -16.21875em; }
   .lt-ie9 .favoriteWhite-icon:before {
     width: 34px;
     height: 32px;
-    background-position: -140px -259.5px; }
+    background-position: -184px -259.5px; }
 
 .menuSandvichWhite-icon:before {
   width: 2.0625em;
   height: 1.8125em;
-  background-position: -10.5em -21.46875em; }
+  background-position: -12.5em -21.46875em; }
   .lt-ie9 .menuSandvichWhite-icon:before {
     width: 32px;
     height: 28px;
-    background-position: -168px -343.5px; }
+    background-position: -200px -343.5px; }
 
 .cartWhite-icon:before {
   width: 1.75em;
   height: 2.0625em;
-  background-position: -0.3125em -21.46875em; }
+  background-position: -4.9375em -21.46875em; }
   .lt-ie9 .cartWhite-icon:before {
     width: 27px;
     height: 32px;
-    background-position: -5px -343.5px; }
+    background-position: -79px -343.5px; }
 
 .logIn-icon {
   margin-top: 3px; }
@@ -196,63 +205,63 @@
     font-size: .7em;
     width: 2.0625em;
     height: 1.9375em;
-    background-position: -27.5625em -21.3125em; }
+    background-position: -27.5625em -18.6875em; }
     .lt-ie9 .logIn-icon:before {
       width: 32px;
       height: 30px;
-      background-position: -441px -341px; }
+      background-position: -441px -299px; }
   .logIn-icon:hover:before {
     width: 2.1875em;
     height: 2.0625em;
-    background-position: -14.25em -16.21875em; }
+    background-position: -8.75em -16.21875em; }
     .lt-ie9 .logIn-icon:hover:before {
       width: 34px;
       height: 32px;
-      background-position: -228px -259.5px; }
+      background-position: -140px -259.5px; }
   .logIn-icon:active:before {
     width: 2.1875em;
     height: 2.0625em;
-    background-position: -11.5em -16.21875em; }
+    background-position: -14.25em -16.21875em; }
     .lt-ie9 .logIn-icon:active:before {
       width: 34px;
       height: 32px;
-      background-position: -184px -259.5px; }
+      background-position: -228px -259.5px; }
 
 .cart-icon:before {
   width: 1.75em;
   height: 2.0625em;
-  background-position: -22.3125em -15.5625em; }
+  background-position: -17em -16.21875em; }
   .lt-ie9 .cart-icon:before {
     width: 27px;
     height: 32px;
-    background-position: -357px -249px; }
+    background-position: -272px -259.5px; }
 
 .cartOrder-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -22.3125em -10.3125em; }
+  background-position: -22.3125em -15.5625em; }
   .lt-ie9 .cartOrder-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -357px -165px; }
+    background-position: -357px -249px; }
 
 .order-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -24.9375em -10.8125em; }
+  background-position: -24.9375em -8.1875em; }
   .lt-ie9 .order-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -399px -173px; }
+    background-position: -399px -131px; }
 
 .order-icon-green:before {
   width: 2.0625em;
   height: 2em;
-  background-position: -24.9375em -13.4375em; }
+  background-position: -24.9375em -10.8125em; }
   .lt-ie9 .order-icon-green:before {
     width: 32px;
     height: 31px;
-    background-position: -399px -215px; }
+    background-position: -399px -173px; }
 
 .closeRed-icon:before {
   width: 2.0625em;
@@ -266,57 +275,57 @@
 .user-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -13.4375em -24.09375em; }
+  background-position: -10.8125em -24.09375em; }
   .lt-ie9 .user-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -215px -385.5px; }
+    background-position: -173px -385.5px; }
 
 .checkGreen-icon:before {
   font-size: 8px;
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -16.0625em -24.09375em; }
+  background-position: -21.3125em -24.09375em; }
   .lt-ie9 .checkGreen-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -257px -385.5px; }
+    background-position: -341px -385.5px; }
 
 .backArrow-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -22.3125em -5.5625em; }
+  background-position: -22.3125em -10.8125em; }
   .lt-ie9 .backArrow-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -357px -89px; }
+    background-position: -357px -173px; }
 
 .backArrowRed-icon:before {
   width: 2.0625em;
   height: 1.5625em;
-  background-position: -22.3125em -8.1875em; }
+  background-position: -22.3125em -13.4375em; }
   .lt-ie9 .backArrowRed-icon:before {
     width: 32px;
     height: 24px;
-    background-position: -357px -131px; }
+    background-position: -357px -215px; }
 
 .review-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -18.6875em -24.09375em; }
+  background-position: -16.0625em -24.09375em; }
   .lt-ie9 .review-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -299px -385.5px; }
+    background-position: -257px -385.5px; }
 
 .reviewRed-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -21.3125em -24.09375em; }
+  background-position: -18.6875em -24.09375em; }
   .lt-ie9 .reviewRed-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -341px -385.5px; }
+    background-position: -299px -385.5px; }
 
 .description-icon:before {
   width: 2.0625em;
@@ -330,11 +339,11 @@
 .descriptionRed-icon:before {
   width: 2.125em;
   height: 2.125em;
-  background-position: -19.5625em -16.125em; }
+  background-position: -19.5625em -10.8125em; }
   .lt-ie9 .descriptionRed-icon:before {
     width: 33px;
     height: 33px;
-    background-position: -313px -258px; }
+    background-position: -313px -173px; }
 
 .specifications-icon:before {
   width: 2.0625em;
@@ -357,11 +366,11 @@
 .accessories-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -10.8125em -18.84375em; }
+  background-position: -16.0625em -18.84375em; }
   .lt-ie9 .accessories-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -173px -301.5px; }
+    background-position: -257px -301.5px; }
 
 .accessoriesRed-icon:before {
   width: 1.5625em;
@@ -375,47 +384,47 @@
 .similarItems-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -27.5625em -23.8125em; }
+  background-position: -27.5625em -21.1875em; }
   .lt-ie9 .similarItems-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -441px -381px; }
+    background-position: -441px -339px; }
 
 .similarItemsRed-icon:before {
   width: 2.0625em;
   height: 1.6875em;
-  background-position: -13.125em -21.46875em; }
+  background-position: -27.5625em -23.8125em; }
   .lt-ie9 .similarItemsRed-icon:before {
     width: 32px;
     height: 26px;
-    background-position: -210px -343.5px; }
+    background-position: -441px -381px; }
 
 .video-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -5.5625em -18.84375em; }
+  background-position: -10.8125em -18.84375em; }
   .lt-ie9 .video-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -89px -301.5px; }
+    background-position: -173px -301.5px; }
 
 .videoRed-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -0.3125em -18.84375em; }
+  background-position: -5.5625em -18.84375em; }
   .lt-ie9 .videoRed-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -5px -301.5px; }
+    background-position: -89px -301.5px; }
 
 .check-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -0.3125em -24.09375em; }
+  background-position: -13.4375em -24.09375em; }
   .lt-ie9 .check-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -5px -385.5px; }
+    background-position: -215px -385.5px; }
 
 .checked-icon:before {
   width: 2.0625em;
@@ -428,30 +437,30 @@
 
 .minus-icon:before {
   width: 2.0625em;
-  height: 2.0625em;
-  background-position: -24.9375em -0.3125em; }
+  height: 0.25em;
+  background-position: -13.41875em -11.3125em; }
   .lt-ie9 .minus-icon:before {
     width: 32px;
-    height: 32px;
-    background-position: -399px -5px; }
+    height: 3px;
+    background-position: -214.7px -181px; }
 
 .plus-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -2.9375em -24.09375em; }
+  background-position: -0.3125em -24.09375em; }
   .lt-ie9 .plus-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -47px -385.5px; }
+    background-position: -5px -385.5px; }
 
 .close-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -27.5625em -5.5625em; }
+  background-position: -27.5625em -8.1875em; }
   .lt-ie9 .close-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -441px -89px; }
+    background-position: -441px -131px; }
 
 .menu-icon:before {
   font-size: 6px;
@@ -493,22 +502,22 @@
 .viewTable-icon {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -22.3125em -2.9375em;
+  background-position: -22.3125em -8.1875em;
   font-size: 11px; }
   .lt-ie9 .viewTable-icon {
     width: 32px;
     height: 32px;
-    background-position: -357px -47px; }
+    background-position: -357px -131px; }
 
 .viewList-icon {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -27.5625em -18.6875em;
+  background-position: -2.9375em -18.84375em;
   font-size: 11px; }
   .lt-ie9 .viewList-icon {
     width: 32px;
     height: 32px;
-    background-position: -441px -299px; }
+    background-position: -47px -301.5px; }
 
 .border-bottem-dash-color, .message-user-login {
   border-bottom: dashed 1px #B70000; }
@@ -516,20 +525,20 @@
 .eye-icon {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -2.9375em -18.84375em; }
+  background-position: -8.1875em -18.84375em; }
   .lt-ie9 .eye-icon {
     width: 32px;
     height: 32px;
-    background-position: -47px -301.5px; }
+    background-position: -131px -301.5px; }
 
 .archive-icon {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -18.6875em -18.84375em; }
+  background-position: -22.3125em -2.9375em; }
   .lt-ie9 .archive-icon {
     width: 32px;
     height: 32px;
-    background-position: -299px -301.5px; }
+    background-position: -357px -47px; }
 
 .message-table-tr .message-user-login {
   color: #B70000; }
@@ -544,45 +553,45 @@
 .carousel-goods.carousel .jcarousel-control-next:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -24.9375em -5.5625em; }
+  background-position: -24.9375em -2.9375em; }
   .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:before, .lt-ie9
   .carousel-goods.carousel .jcarousel-control-next:before {
     width: 32px;
     height: 32px;
-    background-position: -399px -89px; }
+    background-position: -399px -47px; }
 
 .jcarousel-wrapper .jcarousel-control-next:hover:before,
 .carousel-goods.carousel .jcarousel-control-next:hover:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -24.9375em -8.1875em; }
+  background-position: -24.9375em -5.5625em; }
   .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:hover:before, .lt-ie9
   .carousel-goods.carousel .jcarousel-control-next:hover:before {
     width: 32px;
     height: 32px;
-    background-position: -399px -131px; }
+    background-position: -399px -89px; }
 
 .jcarousel-wrapper .jcarousel-control-prev:before,
 .carousel-goods.carousel .jcarousel-control-prev:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -5.5625em -24.09375em; }
+  background-position: -2.9375em -24.09375em; }
   .lt-ie9 .jcarousel-wrapper .jcarousel-control-prev:before, .lt-ie9
   .carousel-goods.carousel .jcarousel-control-prev:before {
     width: 32px;
     height: 32px;
-    background-position: -89px -385.5px; }
+    background-position: -47px -385.5px; }
 
 .jcarousel-wrapper .jcarousel-control-prev:hover:before,
 .carousel-goods.carousel .jcarousel-control-prev:hover:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -8.1875em -24.09375em; }
+  background-position: -5.5625em -24.09375em; }
   .lt-ie9 .jcarousel-wrapper .jcarousel-control-prev:hover:before, .lt-ie9
   .carousel-goods.carousel .jcarousel-control-prev:hover:before {
     width: 32px;
     height: 32px;
-    background-position: -131px -385.5px; }
+    background-position: -89px -385.5px; }
 
 .footer .nav-footer-col li a:hover {
   color: #B70000; }
@@ -610,31 +619,31 @@
 .menuSandvich-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -7.875em -21.46875em; }
+  background-position: -9.875em -21.46875em; }
   .lt-ie9 .menuSandvich-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -126px -343.5px; }
+    background-position: -158px -343.5px; }
 
 .viewTableActive-icon {
   font-size: 11px;
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -22.3125em -0.3125em; }
+  background-position: -22.3125em -5.5625em; }
   .lt-ie9 .viewTableActive-icon {
     width: 32px;
     height: 32px;
-    background-position: -357px -5px; }
+    background-position: -357px -89px; }
 
 .viewListActive-icon {
   font-size: 11px;
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -8.1875em -18.84375em; }
+  background-position: -13.4375em -18.84375em; }
   .lt-ie9 .viewListActive-icon {
     width: 32px;
     height: 32px;
-    background-position: -131px -301.5px; }
+    background-position: -215px -301.5px; }
 
 .main.main-good .block-review--desription .choose_color li.active, .main.main-good .block-review--desription .choose_color li:hover {
   border-color: #B70000; }
@@ -662,38 +671,47 @@
 .logoInvert-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -2.625em -21.46875em; }
+  background-position: -7.25em -21.46875em; }
   .lt-ie9 .logoInvert-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -42px -343.5px; }
+    background-position: -116px -343.5px; }
 
 .search-icon:hover:before {
   width: 2.125em;
   height: 2.0625em;
-  background-position: -19.5625em -8.1875em; }
-  .lt-ie9 .search-icon:hover:before {
-    width: 33px;
-    height: 32px;
-    background-position: -313px -131px; }
-
-.search-icon:active:before {
-  width: 2.125em;
-  height: 2.0625em;
   background-position: -19.5625em -5.5625em; }
-  .lt-ie9 .search-icon:active:before {
+  .lt-ie9 .search-icon:hover:before {
     width: 33px;
     height: 32px;
     background-position: -313px -89px; }
 
+.search-icon:active:before {
+  width: 2.125em;
+  height: 2.0625em;
+  background-position: -19.5625em -8.1875em; }
+  .lt-ie9 .search-icon:active:before {
+    width: 33px;
+    height: 32px;
+    background-position: -313px -131px; }
+
 .search-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -27.5625em -8.1875em; }
+  background-position: -27.5625em -5.5625em; }
   .lt-ie9 .search-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -441px -131px; }
+    background-position: -441px -89px; }
+
+.search-red:before {
+  width: 2.125em;
+  height: 2.0625em;
+  background-position: -19.5625em -16.1875em; }
+  .lt-ie9 .search-red:before {
+    width: 33px;
+    height: 32px;
+    background-position: -313px -259px; }
 
 .phone-icon:before {
   width: 2.5em;
@@ -707,11 +725,11 @@
 .heartRed-icon:before {
   width: 2.25em;
   height: 2.0625em;
-  background-position: -3.125em -16.21875em; }
+  background-position: -0.3125em -16.21875em; }
   .lt-ie9 .heartRed-icon:before {
     width: 35px;
     height: 32px;
-    background-position: -50px -259.5px; }
+    background-position: -5px -259.5px; }
 
 .link-color--white {
   background-color: #202020;
@@ -726,11 +744,11 @@
 .catalog-icon:before {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -5.25em -21.46875em; }
+  background-position: -24.9375em -0.3125em; }
   .lt-ie9 .catalog-icon:before {
     width: 32px;
     height: 32px;
-    background-position: -84px -343.5px; }
+    background-position: -399px -5px; }
 
 .defaultBtn {
   background-color: #B70000; }
@@ -802,19 +820,31 @@ body {
     background-color: #D5D5D5;
     width: 25px;
     height: 20px;
-    line-height: 12px;
+    line-height: 20px;
+    vertical-align: middle;
     text-align: center; }
+  .goods-amount .up i:before {
+    margin-top: -6px; }
+  .goods-amount .down i:before {
+    margin-top: -1px; }
   .goods-amount .down, .goods-amount .up {
+    cursor: pointer;
     color: #D5D5D5;
     background-color: #202020;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 20px;
     height: 20px;
     line-height: 18px;
-    text-align: center; }
+    text-align: center;
+    vertical-align: middle;
+    position: relative; }
     .goods-amount .down i:before, .goods-amount .up i:before {
-      vertical-align: middle; }
+      position: absolute;
+      font-size: 6px;
+      left: 50%;
+      top: 50%;
+      margin-left: -6px; }
 
 .checkbox-view {
   float: right; }
@@ -1078,14 +1108,17 @@ body {
 
 .checkbox input[type="checkbox"] + label {
   position: relative;
-  padding-left: 24px; }
+  padding-left: 24px;
+  cursor: pointer; }
+  .checkbox input[type="checkbox"] + label:before {
+    font-size: .6em; }
 
 .checkbox input[type="checkbox"] + label:before,
 .checkbox input[type="radio"] + label:before {
   content: '';
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -0.3125em -24.09375em;
+  background-position: -13.4375em -24.09375em;
   position: absolute;
   top: 0;
   left: 0; }
@@ -1093,7 +1126,7 @@ body {
   .checkbox input[type="radio"] + label:before {
     width: 32px;
     height: 32px;
-    background-position: -5px -385.5px; }
+    background-position: -215px -385.5px; }
 
 .checkbox input[type="checkbox"]:checked + label:before,
 .checkbox input[type="radio"]:checked + label:before {
@@ -1158,7 +1191,7 @@ body {
   clear: both;
   height: 0; }
 
-.clearfix-extendet:after, .retings:after, .connected-carousels .carousel-navigation:after, .left-side_button--wrapp:after, .main.main-good .block--desription:after, .main.main-good .block-review--desription .review-right--good:after, .main.main-good .block-review--desription .choose_color:after, .main.main-good .desription--list .table-row:after, .block-goods:after, .block-brands:after, .footer:after, .col-fix-left-panel:after, .tab-content > .tab-pane form:after, .nav-tabs:after, .block-goods--wrapp.block-goods-list--wrapp .block-goods_title:after, .cartModal .modal-dialog .block-goods_title:after, .cartModal .modal-dialog .block-goods--wrapp:after, .cartModal .modal-dialog .modal-cart--title:after, .clearfix-extendet:before, .retings:before, .connected-carousels .carousel-navigation:before, .left-side_button--wrapp:before, .main.main-good .block--desription:before, .main.main-good .block-review--desription .review-right--good:before, .main.main-good .block-review--desription .choose_color:before, .main.main-good .desription--list .table-row:before, .block-goods:before, .block-brands:before, .footer:before, .col-fix-left-panel:before, .tab-content > .tab-pane form:before, .nav-tabs:before, .block-goods--wrapp.block-goods-list--wrapp .block-goods_title:before, .cartModal .modal-dialog .block-goods_title:before, .cartModal .modal-dialog .block-goods--wrapp:before, .cartModal .modal-dialog .modal-cart--title:before {
+.clearfix-extendet:after, .retings:after, .select-col:after, .connected-carousels .carousel-navigation:after, .left-side_button--wrapp:after, .main.main-good .block--desription:after, .main.main-good .block-review--desription .review-right--good:after, .main.main-good .block-review--desription .choose_color:after, .main.main-good .desription--list .table-row:after, .block-goods:after, .block-brands:after, .footer:after, .col-fix-left-panel:after, .tab-content > .tab-pane form:after, .nav-tabs:after, .block-goods--wrapp.block-goods-list--wrapp .block-goods_title:after, .cartModal .modal-dialog .block-goods_title:after, .cartModal .modal-dialog .block-goods--wrapp:after, .cartModal .modal-dialog .modal-cart--title:after, .clearfix-extendet:before, .retings:before, .select-col:before, .connected-carousels .carousel-navigation:before, .left-side_button--wrapp:before, .main.main-good .block--desription:before, .main.main-good .block-review--desription .review-right--good:before, .main.main-good .block-review--desription .choose_color:before, .main.main-good .desription--list .table-row:before, .block-goods:before, .block-brands:before, .footer:before, .col-fix-left-panel:before, .tab-content > .tab-pane form:before, .nav-tabs:before, .block-goods--wrapp.block-goods-list--wrapp .block-goods_title:before, .cartModal .modal-dialog .block-goods_title:before, .cartModal .modal-dialog .block-goods--wrapp:before, .cartModal .modal-dialog .modal-cart--title:before {
   display: table;
   clear: both;
   content: ''; }
@@ -1279,6 +1312,66 @@ i {
   height: 100px;
   border: 1px solid #D5D5D5; }
 
+.noselect, .goods-amount .down, .goods-amount .up {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */ }
+
+.table-contnent .rouble-icon {
+  vertical-align: -.1em;
+  margin-right: .6em;
+  font-size: .4em; }
+
+.table-buttons .print-icon {
+  font-size: 1em;
+  vertical-align: -.1em;
+  margin-right: .6em; }
+
+.table-buttons .disk-icon {
+  vertical-align: -.1em;
+  margin-right: 1em;
+  font-size: .5em; }
+
+.top-button {
+  margin-top: 15px; }
+
+.bottom-button {
+  margin-bottom: 20px; }
+
+.table-content-operation {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.select-col-wrapper {
+  margin-bottom: 20px; }
+
+.select-col {
+  height: 100%; }
+  .select-col .button {
+    margin-top: 20px; }
+  .select-col .select-box {
+    width: 100%;
+    padding-right: 25px; }
+    .select-col .select-box label {
+      width: 50%; }
+    .select-col .select-box .select {
+      float: right;
+      width: 50%; }
+
+.table-btn.button {
+  font-size: 1em;
+  padding: 5px 10px 7px; }
+
 .jcarousel-wrapper {
   position: relative; }
 
@@ -1392,6 +1485,8 @@ i {
     .main-cart .block-goods--wrapp .goods-amount .title {
       line-height: 19px;
       margin-right: 10px; }
+    .main-cart .block-goods--wrapp .goods-amount i {
+      font-size: 6px; }
 
 .main-cart .orderLine {
   height: 75px;
@@ -2044,11 +2139,14 @@ table.stats {
 .starred_off {
   width: 2.0625em;
   height: 2.0625em;
-  background-position: -8.1875em -26.71875em; }
+  background-position: -8.1875em -26.71875em;
+  font-size: .5em; }
   .lt-ie9 .starred_off {
     width: 32px;
     height: 32px;
     background-position: -131px -427.5px; }
+  .starred_off.table-icon {
+    vertical-align: -2px; }
 
 .table-icon {
   vertical-align: middle; }
@@ -2116,7 +2214,8 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   .inner-table-tr .message-table-order {
     min-width: 120px; }
     .inner-table-tr .message-table-order .starred_on {
-      margin-bottom: 2px; }
+      margin-bottom: 2px;
+      font-size: .5em; }
   .inner-table-tr .message-table-action span.table-icon {
     margin-right: 5px; }
   .inner-table-tr td {
@@ -2216,7 +2315,9 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   margin-top: 10px;
   width: 100%; }
   .table-nav-tabs a {
-    line-height: 35px; }
+    line-height: 20px;
+    vertical-align: top;
+    display: block; }
 
 .personSelect.tableSelect .select-box .select {
   width: 138px; }
@@ -2529,8 +2630,14 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     vertical-align: middle; }
 
 .table-button .closeRed-icon {
+  font-size: 7px; }
+
+.table-button .search-red {
+  font-size: .6em; }
+
+.table-button .closeRed-icon,
+.table-button .search-red {
   vertical-align: middle;
-  font-size: 7px;
   line-height: 12px;
   display: inline-block; }
 
@@ -2653,23 +2760,23 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
 .fotorama--fullscreen .fotorama__arr--prev {
   background-position: -19.5125em -4.49375em; }
 
-.inst-icon, .vk-icon, .fb-icon, .tw-icon, .viewed-icon, .revert-icon, .folder-icon, .write-icon, .edit-icon, .export-icon, .box-icon, .print-icon, .print-icon-white, .rouble-icon, .favorite-icon:before, .favoriteWhite-icon:before, .menuSandvichWhite-icon:before, .cartWhite-icon:before, .logIn-icon:before, .logIn-icon:hover:before, .logIn-icon:active:before, .cart-icon:before, .cartOrder-icon:before, .order-icon:before, .order-icon-green:before, .closeRed-icon:before, .user-icon:before, .checkGreen-icon:before, .backArrow-icon:before, .backArrowRed-icon:before, .review-icon:before, .reviewRed-icon:before, .description-icon:before, .descriptionRed-icon:before, .specifications-icon:before, .specificationsRed-icon:before, .accessories-icon:before, .accessoriesRed-icon:before, .similarItems-icon:before, .similarItemsRed-icon:before, .video-icon:before, .videoRed-icon:before, .check-icon:before, .checked-icon:before, .minus-icon:before, .plus-icon:before, .close-icon:before, .menu-icon:before, .clock-icon:before, .clockWhite-icon:before, .backBuy-icon:before, .viewTable-icon, .viewList-icon, .eye-icon, .archive-icon, .jcarousel-wrapper .jcarousel-control-next:before,
+.inst-icon, .vk-icon, .fb-icon, .tw-icon, .viewed-icon, .revert-icon, .folder-icon, .write-icon, .edit-icon, .export-icon, .box-icon, .print-icon, .disk-icon, .print-icon-white, .rouble-icon, .favorite-icon:before, .favoriteWhite-icon:before, .menuSandvichWhite-icon:before, .cartWhite-icon:before, .logIn-icon:before, .logIn-icon:hover:before, .logIn-icon:active:before, .cart-icon:before, .cartOrder-icon:before, .order-icon:before, .order-icon-green:before, .closeRed-icon:before, .user-icon:before, .checkGreen-icon:before, .backArrow-icon:before, .backArrowRed-icon:before, .review-icon:before, .reviewRed-icon:before, .description-icon:before, .descriptionRed-icon:before, .specifications-icon:before, .specificationsRed-icon:before, .accessories-icon:before, .accessoriesRed-icon:before, .similarItems-icon:before, .similarItemsRed-icon:before, .video-icon:before, .videoRed-icon:before, .check-icon:before, .checked-icon:before, .minus-icon:before, .plus-icon:before, .close-icon:before, .menu-icon:before, .clock-icon:before, .clockWhite-icon:before, .backBuy-icon:before, .viewTable-icon, .viewList-icon, .eye-icon, .archive-icon, .jcarousel-wrapper .jcarousel-control-next:before,
 .carousel-goods.carousel .jcarousel-control-next:before, .jcarousel-wrapper .jcarousel-control-next:hover:before,
 .carousel-goods.carousel .jcarousel-control-next:hover:before, .jcarousel-wrapper .jcarousel-control-prev:before,
 .carousel-goods.carousel .jcarousel-control-prev:before, .jcarousel-wrapper .jcarousel-control-prev:hover:before,
 .carousel-goods.carousel .jcarousel-control-prev:hover:before, .retings li input[type="checkbox"]:checked + label,
-.starred_on, .menuSandvich-icon:before, .viewTableActive-icon, .viewListActive-icon, .logo-icon:before, .logoInvert-icon:before, .search-icon:hover:before, .search-icon:active:before, .search-icon:before, .phone-icon:before, .heartRed-icon:before, .catalog-icon:before, .retings li input[type="checkbox"] + label, .checkbox input[type="checkbox"] + label:before,
+.starred_on, .menuSandvich-icon:before, .viewTableActive-icon, .viewListActive-icon, .logo-icon:before, .logoInvert-icon:before, .search-icon:hover:before, .search-icon:active:before, .search-icon:before, .search-red:before, .phone-icon:before, .heartRed-icon:before, .catalog-icon:before, .retings li input[type="checkbox"] + label, .checkbox input[type="checkbox"] + label:before,
 .checkbox input[type="radio"] + label:before, .checkbox input[type="checkbox"]:checked + label:before,
 .checkbox input[type="radio"]:checked + label:before, .left-side--filter .choes-prices--title.toggle-link:before, .left-side--filter .choes-prices--title.toggle-link--active:before, .ui-state-default:before, .fancybox-custom a.fancybox-next span:before, .fancybox-custom a.fancybox-prev span:before, .fancybox-custom a.fancybox-close:before, .arrow-down.arrow-title, .starred_off, .button-search:hover:before, .button-search:hover:active, .button-search:before, .nav-bar--item .user-icon:before, .nav-bar--item .catalog-icon:before, .nav-bar--item .toggle-link--active .menuSandvichWhite-icon:before, .nav-bar--item:hover .menuSandvichWhite-icon:before, .nav-bar--item:hover .phone-icon:before, .nav-bar--item:hover .favorite-icon:before, .nav-bar--item:hover .cart-icon:before, .nav-bar--item:hover .user-icon:before, .nav-bar--item:hover .catalog-icon:before, .nav-bar--item:hover .cartWhite-icon:before, .nav-bar--item:active .menuSandvichWhite-icon:before, .nav-bar--item:active .phone-icon:before, .nav-bar--item:active .favorite-icon:before, .nav-bar--item:active .cart-icon:before, .nav-bar--item:active .user-icon:before, .nav-bar--item:active .catalog-icon:before, .nav-bar--item:active .cartWhite-icon:before, .block-goods--wrapp_more .morePlus-icon, .block-brands--wrapp_more .morePlus-icon, .scroll-up {
   display: inline-block;
   background-image: url("../img/sprite.svg");
   background-size: 31.5em 29.0625em; }
 
-.lt-ie9 .inst-icon, .lt-ie9 .vk-icon, .lt-ie9 .fb-icon, .lt-ie9 .tw-icon, .lt-ie9 .viewed-icon, .lt-ie9 .revert-icon, .lt-ie9 .folder-icon, .lt-ie9 .write-icon, .lt-ie9 .edit-icon, .lt-ie9 .export-icon, .lt-ie9 .box-icon, .lt-ie9 .print-icon, .lt-ie9 .print-icon-white, .lt-ie9 .rouble-icon, .lt-ie9 .favorite-icon:before, .lt-ie9 .favoriteWhite-icon:before, .lt-ie9 .menuSandvichWhite-icon:before, .lt-ie9 .cartWhite-icon:before, .lt-ie9 .logIn-icon:before, .lt-ie9 .logIn-icon:hover:before, .lt-ie9 .logIn-icon:active:before, .lt-ie9 .cart-icon:before, .lt-ie9 .cartOrder-icon:before, .lt-ie9 .order-icon:before, .lt-ie9 .order-icon-green:before, .lt-ie9 .closeRed-icon:before, .lt-ie9 .user-icon:before, .lt-ie9 .checkGreen-icon:before, .lt-ie9 .backArrow-icon:before, .lt-ie9 .backArrowRed-icon:before, .lt-ie9 .review-icon:before, .lt-ie9 .reviewRed-icon:before, .lt-ie9 .description-icon:before, .lt-ie9 .descriptionRed-icon:before, .lt-ie9 .specifications-icon:before, .lt-ie9 .specificationsRed-icon:before, .lt-ie9 .accessories-icon:before, .lt-ie9 .accessoriesRed-icon:before, .lt-ie9 .similarItems-icon:before, .lt-ie9 .similarItemsRed-icon:before, .lt-ie9 .video-icon:before, .lt-ie9 .videoRed-icon:before, .lt-ie9 .check-icon:before, .lt-ie9 .checked-icon:before, .lt-ie9 .minus-icon:before, .lt-ie9 .plus-icon:before, .lt-ie9 .close-icon:before, .lt-ie9 .menu-icon:before, .lt-ie9 .clock-icon:before, .lt-ie9 .clockWhite-icon:before, .lt-ie9 .backBuy-icon:before, .lt-ie9 .viewTable-icon, .lt-ie9 .viewList-icon, .lt-ie9 .eye-icon, .lt-ie9 .archive-icon, .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:before, .lt-ie9
+.lt-ie9 .inst-icon, .lt-ie9 .vk-icon, .lt-ie9 .fb-icon, .lt-ie9 .tw-icon, .lt-ie9 .viewed-icon, .lt-ie9 .revert-icon, .lt-ie9 .folder-icon, .lt-ie9 .write-icon, .lt-ie9 .edit-icon, .lt-ie9 .export-icon, .lt-ie9 .box-icon, .lt-ie9 .print-icon, .lt-ie9 .disk-icon, .lt-ie9 .print-icon-white, .lt-ie9 .rouble-icon, .lt-ie9 .favorite-icon:before, .lt-ie9 .favoriteWhite-icon:before, .lt-ie9 .menuSandvichWhite-icon:before, .lt-ie9 .cartWhite-icon:before, .lt-ie9 .logIn-icon:before, .lt-ie9 .logIn-icon:hover:before, .lt-ie9 .logIn-icon:active:before, .lt-ie9 .cart-icon:before, .lt-ie9 .cartOrder-icon:before, .lt-ie9 .order-icon:before, .lt-ie9 .order-icon-green:before, .lt-ie9 .closeRed-icon:before, .lt-ie9 .user-icon:before, .lt-ie9 .checkGreen-icon:before, .lt-ie9 .backArrow-icon:before, .lt-ie9 .backArrowRed-icon:before, .lt-ie9 .review-icon:before, .lt-ie9 .reviewRed-icon:before, .lt-ie9 .description-icon:before, .lt-ie9 .descriptionRed-icon:before, .lt-ie9 .specifications-icon:before, .lt-ie9 .specificationsRed-icon:before, .lt-ie9 .accessories-icon:before, .lt-ie9 .accessoriesRed-icon:before, .lt-ie9 .similarItems-icon:before, .lt-ie9 .similarItemsRed-icon:before, .lt-ie9 .video-icon:before, .lt-ie9 .videoRed-icon:before, .lt-ie9 .check-icon:before, .lt-ie9 .checked-icon:before, .lt-ie9 .minus-icon:before, .lt-ie9 .plus-icon:before, .lt-ie9 .close-icon:before, .lt-ie9 .menu-icon:before, .lt-ie9 .clock-icon:before, .lt-ie9 .clockWhite-icon:before, .lt-ie9 .backBuy-icon:before, .lt-ie9 .viewTable-icon, .lt-ie9 .viewList-icon, .lt-ie9 .eye-icon, .lt-ie9 .archive-icon, .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:before, .lt-ie9
 .carousel-goods.carousel .jcarousel-control-next:before, .lt-ie9 .jcarousel-wrapper .jcarousel-control-next:hover:before, .lt-ie9
 .carousel-goods.carousel .jcarousel-control-next:hover:before, .lt-ie9 .jcarousel-wrapper .jcarousel-control-prev:before, .lt-ie9
 .carousel-goods.carousel .jcarousel-control-prev:before, .lt-ie9 .jcarousel-wrapper .jcarousel-control-prev:hover:before, .lt-ie9
-.carousel-goods.carousel .jcarousel-control-prev:hover:before, .lt-ie9 .retings li input[type="checkbox"]:checked + label, .lt-ie9 .starred_on, .lt-ie9 .menuSandvich-icon:before, .lt-ie9 .viewTableActive-icon, .lt-ie9 .viewListActive-icon, .lt-ie9 .logo-icon:before, .lt-ie9 .logoInvert-icon:before, .lt-ie9 .search-icon:hover:before, .lt-ie9 .search-icon:active:before, .lt-ie9 .search-icon:before, .lt-ie9 .phone-icon:before, .lt-ie9 .heartRed-icon:before, .lt-ie9 .catalog-icon:before, .lt-ie9 .retings li input[type="checkbox"] + label, .lt-ie9 .checkbox input[type="checkbox"] + label:before, .lt-ie9
+.carousel-goods.carousel .jcarousel-control-prev:hover:before, .lt-ie9 .retings li input[type="checkbox"]:checked + label, .lt-ie9 .starred_on, .lt-ie9 .menuSandvich-icon:before, .lt-ie9 .viewTableActive-icon, .lt-ie9 .viewListActive-icon, .lt-ie9 .logo-icon:before, .lt-ie9 .logoInvert-icon:before, .lt-ie9 .search-icon:hover:before, .lt-ie9 .search-icon:active:before, .lt-ie9 .search-icon:before, .lt-ie9 .search-red:before, .lt-ie9 .phone-icon:before, .lt-ie9 .heartRed-icon:before, .lt-ie9 .catalog-icon:before, .lt-ie9 .retings li input[type="checkbox"] + label, .lt-ie9 .checkbox input[type="checkbox"] + label:before, .lt-ie9
 .checkbox input[type="radio"] + label:before, .lt-ie9 .checkbox input[type="checkbox"]:checked + label:before, .lt-ie9
 .checkbox input[type="radio"]:checked + label:before, .lt-ie9 .left-side--filter .choes-prices--title.toggle-link:before, .lt-ie9 .left-side--filter .choes-prices--title.toggle-link--active:before, .lt-ie9 .ui-state-default:before, .lt-ie9 .fancybox-custom a.fancybox-next span:before, .lt-ie9 .fancybox-custom a.fancybox-prev span:before, .lt-ie9 .fancybox-custom a.fancybox-close:before, .lt-ie9 .arrow-down.arrow-title, .lt-ie9 .starred_off, .lt-ie9 .button-search:hover:before, .lt-ie9 .button-search:hover:active, .lt-ie9 .button-search:before, .lt-ie9 .nav-bar--item .user-icon:before, .lt-ie9 .nav-bar--item .catalog-icon:before, .lt-ie9 .nav-bar--item .toggle-link--active .menuSandvichWhite-icon:before, .lt-ie9 .nav-bar--item:hover .menuSandvichWhite-icon:before, .lt-ie9 .nav-bar--item:hover .phone-icon:before, .lt-ie9 .nav-bar--item:hover .favorite-icon:before, .lt-ie9 .nav-bar--item:hover .cart-icon:before, .lt-ie9 .nav-bar--item:hover .user-icon:before, .lt-ie9 .nav-bar--item:hover .catalog-icon:before, .lt-ie9 .nav-bar--item:hover .cartWhite-icon:before, .lt-ie9 .nav-bar--item:active .menuSandvichWhite-icon:before, .lt-ie9 .nav-bar--item:active .phone-icon:before, .lt-ie9 .nav-bar--item:active .favorite-icon:before, .lt-ie9 .nav-bar--item:active .cart-icon:before, .lt-ie9 .nav-bar--item:active .user-icon:before, .lt-ie9 .nav-bar--item:active .catalog-icon:before, .lt-ie9 .nav-bar--item:active .cartWhite-icon:before, .lt-ie9 .block-goods--wrapp_more .morePlus-icon, .lt-ie9 .block-brands--wrapp_more .morePlus-icon, .lt-ie9 .scroll-up {
   background-image: url("../img/sprite.png"); }
@@ -2925,27 +3032,27 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     .button-search:hover:before {
       width: 2.125em;
       height: 2.0625em;
-      background-position: -19.5625em -8.1875em; }
+      background-position: -19.5625em -5.5625em; }
       .lt-ie9 .button-search:hover:before {
         width: 33px;
         height: 32px;
-        background-position: -313px -131px; }
+        background-position: -313px -89px; }
     .button-search:hover:active {
       width: 2.125em;
       height: 2.0625em;
-      background-position: -19.5625em -5.5625em; }
+      background-position: -19.5625em -8.1875em; }
       .lt-ie9 .button-search:hover:active {
         width: 33px;
         height: 32px;
-        background-position: -313px -89px; }
+        background-position: -313px -131px; }
   .button-search:before {
     width: 2.125em;
     height: 2.0625em;
-    background-position: -19.5625em -10.8125em; }
+    background-position: -19.5625em -16.1875em; }
     .lt-ie9 .button-search:before {
       width: 33px;
       height: 32px;
-      background-position: -313px -173px; }
+      background-position: -313px -259px; }
 
 .nav-bar {
   float: right;
@@ -2975,11 +3082,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     .nav-bar--item .user-icon:before {
       width: 2.0625em;
       height: 2.0625em;
-      background-position: -13.4375em -18.84375em; }
+      background-position: -18.6875em -18.84375em; }
       .lt-ie9 .nav-bar--item .user-icon:before {
         width: 32px;
         height: 32px;
-        background-position: -215px -301.5px; }
+        background-position: -299px -301.5px; }
     .nav-bar--item .catalog-icon:before {
       width: 2.0625em;
       height: 2.0625em;
@@ -3014,11 +3121,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       .nav-bar--item:hover .phone-icon:before {
         width: 2.5625em;
         height: 2.0625em;
-        background-position: -13.41875em -8.6875em; }
+        background-position: -13.41875em -2.9375em; }
         .lt-ie9 .nav-bar--item:hover .phone-icon:before {
           width: 40px;
           height: 32px;
-          background-position: -214.7px -139px; }
+          background-position: -214.7px -47px; }
       .nav-bar--item:hover .favorite-icon:before {
         width: 2.25em;
         height: 2.0625em;
@@ -3030,19 +3137,19 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       .nav-bar--item:hover .cart-icon:before {
         width: 1.75em;
         height: 2.0625em;
-        background-position: -17em -16.21875em; }
+        background-position: -2.625em -21.46875em; }
         .lt-ie9 .nav-bar--item:hover .cart-icon:before {
           width: 27px;
           height: 32px;
-          background-position: -272px -259.5px; }
+          background-position: -42px -343.5px; }
       .nav-bar--item:hover .user-icon:before {
         width: 2.0625em;
         height: 2.0625em;
-        background-position: -16.0625em -18.84375em; }
+        background-position: -22.3125em -0.3125em; }
         .lt-ie9 .nav-bar--item:hover .user-icon:before {
           width: 32px;
           height: 32px;
-          background-position: -257px -301.5px; }
+          background-position: -357px -5px; }
       .nav-bar--item:hover .catalog-icon:before {
         width: 2.0625em;
         height: 2.0625em;
@@ -3054,11 +3161,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       .nav-bar--item:hover .cartWhite-icon:before {
         width: 1.75em;
         height: 2.0625em;
-        background-position: -17em -16.21875em; }
+        background-position: -2.625em -21.46875em; }
         .lt-ie9 .nav-bar--item:hover .cartWhite-icon:before {
           width: 27px;
           height: 32px;
-          background-position: -272px -259.5px; }
+          background-position: -42px -343.5px; }
     .nav-bar--item:active a, .nav-bar--item:active span {
       color: #6b0000;
       cursor: pointer; }
@@ -3081,27 +3188,27 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     .nav-bar--item:active .favorite-icon:before {
       width: 2.25em;
       height: 2.0625em;
-      background-position: -0.3125em -16.21875em; }
+      background-position: -3.125em -16.21875em; }
       .lt-ie9 .nav-bar--item:active .favorite-icon:before {
         width: 35px;
         height: 32px;
-        background-position: -5px -259.5px; }
+        background-position: -50px -259.5px; }
     .nav-bar--item:active .cart-icon:before {
       width: 1.75em;
       height: 2.0625em;
-      background-position: -22.3125em -18.1875em; }
+      background-position: -0.3125em -21.46875em; }
       .lt-ie9 .nav-bar--item:active .cart-icon:before {
         width: 27px;
         height: 32px;
-        background-position: -357px -291px; }
+        background-position: -5px -343.5px; }
     .nav-bar--item:active .user-icon:before {
       width: 2.0625em;
       height: 2.0625em;
-      background-position: -22.3125em -12.9375em; }
+      background-position: -22.3125em -18.1875em; }
       .lt-ie9 .nav-bar--item:active .user-icon:before {
         width: 32px;
         height: 32px;
-        background-position: -357px -207px; }
+        background-position: -357px -291px; }
     .nav-bar--item:active .catalog-icon:before {
       width: 2.0625em;
       height: 2.0625em;
@@ -3113,11 +3220,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     .nav-bar--item:active .cartWhite-icon:before {
       width: 1.75em;
       height: 2.0625em;
-      background-position: -22.3125em -18.1875em; }
+      background-position: -0.3125em -21.46875em; }
       .lt-ie9 .nav-bar--item:active .cartWhite-icon:before {
         width: 27px;
         height: 32px;
-        background-position: -357px -291px; }
+        background-position: -5px -343.5px; }
     .nav-bar--item__wrapper {
       float: right; }
     .nav-bar--item a {
@@ -3503,11 +3610,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       .block-goods--wrapp_more .morePlus-icon, .block-brands--wrapp_more .morePlus-icon {
         width: 2.5625em;
         height: 2.5625em;
-        background-position: -13.41875em -5.5625em; }
+        background-position: -13.41875em -8.1875em; }
         .lt-ie9 .block-goods--wrapp_more .morePlus-icon, .lt-ie9 .block-brands--wrapp_more .morePlus-icon {
           width: 40px;
           height: 40px;
-          background-position: -214.7px -89px; }
+          background-position: -214.7px -131px; }
   .block-goods_title .statusBadge {
     color: #fff;
     line-height: 20px;
@@ -4128,29 +4235,62 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     -ms-filter: blur(0px);
     filter: blur(0px); } }
 
+.hover-block-title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 18px; }
+
+.hover-content-img {
+  margin-top: 10px; }
+  .hover-content-img img {
+    display: block;
+    width: 100%; }
+
 .hover-wrap {
-  position: relative; }
-  .hover-wrap .block-title.tip_div {
-    transform: translateX(-50%);
+  position: relative;
+  display: inline; }
+  .hover-wrap:hover .hover-content {
+    display: block; }
+  .hover-wrap .block-title {
+    display: inline; }
+    .hover-wrap .block-title i {
+      font-size: 1em;
+      position: absolute;
+      right: -30px;
+      top: 4px; }
+    .hover-wrap .block-title:hover i {
+      transform: rotate(180deg); }
+  .hover-wrap .hover-content {
+    font-size: 11px;
+    position: absolute;
+    display: none;
+    border: 1px solid #828282;
+    background-color: #EEEEEE;
+    color: black;
+    padding: 0px 5px 4px 10px;
+    width: 250px;
+    z-index: 10000;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
+    margin-left: -125px;
     left: 50%;
-    top: 10px;
+    top: 0;
     vertical-align: middle;
     padding: 5px; }
 
 .block-title {
-  margin-left: -20%;
   font-size: 26px;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 18px;
   text-transform: uppercase; }
-  .block-title-hover {
-    cursor: pointer;
-    position: relative; }
-    .block-title-hover i {
-      font-size: 2em; }
-    .block-title-hover:hover i {
-      transform: rotate(180deg); }
+  .block-title-left {
+    float: left; }
+
+.button-width-title {
+  margin-top: 25px;
+  margin-bottom: 18px; }
 
 .cabinet-content {
   position: absolute;
@@ -4178,11 +4318,17 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
 .col {
   float: left; }
 
-.col-6 {
-  width: 50%; }
+.col-2 {
+  width: 16.66666667%; }
 
 .col-4 {
   width: 25%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-10 {
+  width: 83.33333333%; }
 
 .container {
   max-width: 1920px;
@@ -4438,6 +4584,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     width: 25%; } }
 
 @media only screen and (max-width: 1350px) {
+  .select-col .select-box {
+    margin-bottom: 15px; }
+  .col-cm-12 {
+    width: 100%;
+    float: none !important; }
   .block-goods--wrapp.block-goods-list--wrapp {
     padding-bottom: 0; }
     .block-goods--wrapp.block-goods-list--wrapp .block-goods--inCart {
@@ -4744,6 +4895,16 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
           display: none; } }
 
 @media only screen and (max-width: 900px) {
+  .select-col {
+    margin: 0;
+    width: 100%; }
+    .select-col.select-box-wrapper {
+      width: 100%; }
+      .select-col.select-box-wrapper label {
+        display: inline; }
+  .col-xs-12 {
+    width: 100%;
+    float: none !important; }
   .select-box-container-price .select-box-wrapper .select-box label {
     display: inline-block;
     margin-bottom: 0; }
@@ -4776,6 +4937,12 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   display: none; }
 
 @media only screen and (max-width: 810px) {
+  .fln-xs {
+    float: none !important; }
+  .select-col.select-box-wrapper .select {
+    width: 70%; }
+  .select-col.select-box-wrapper label {
+    width: 30%; }
   .big-table-button-adaptive.big-table-button {
     padding: 0 !important; }
   .big-table-button-adaptive a {
@@ -4792,25 +4959,53 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     font-size: 2vh; }
   .visible-xs {
     display: inline-block; }
-  .table-content-operation .inner-table-white .action-shipment {
-    background-color: #F0F0F0;
-    padding: 10px;
-    text-align: center; }
-    .table-content-operation .inner-table-white .action-shipment i:before {
-      font-size: 1em; }
-  .table-content-operation .inner-table-red td {
-    border-bottom: solid 1px #6b0000; }
-  .table-content-operation .inner-table-red .title {
-    margin-right: 5px; }
-  .table-content-operation .inner-table-red .title-shipment {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .table-content-operation .inner-table-red .action-shipment {
-    background-color: #6b0000;
-    padding: 10px;
-    text-align: center; }
-    .table-content-operation .inner-table-red .action-shipment i {
-      font-size: 2em; }
+  .top-button .button,
+  .bottom-button .button {
+    margin-bottom: 15px; }
+  .table-content-operation {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .table-content-operation .hover-wrap .hover-content {
+      left: 0;
+      margin-left: 0; }
+    .table-content-operation .table-buttons .action-shipment {
+      margin-top: 10px; }
+    .table-content-operation .table-buttons .folder-icon {
+      font-size: 1.8em;
+      vertical-align: -.3em; }
+    .table-content-operation .table-buttons .print-icon {
+      font-size: 2em;
+      vertical-align: -.2em; }
+    .table-content-operation .table-buttons .disk-icon {
+      font-size: 1em;
+      vertical-align: -.7em; }
+    .table-content-operation .inner-table-white .action-shipment {
+      background-color: #F0F0F0;
+      padding: 10px;
+      text-align: center; }
+      .table-content-operation .inner-table-white .action-shipment i:before {
+        font-size: 1em; }
+      .table-content-operation .inner-table-white .action-shipment .print-icon:before {
+        font-size: 2em; }
+    .table-content-operation .inner-table-grey .action-shipment {
+      background-color: #fff;
+      padding: 10px;
+      text-align: center; }
+      .table-content-operation .inner-table-grey .action-shipment i:before {
+        font-size: 1em; }
+    .table-content-operation .inner-table-red td {
+      border-bottom: solid 1px #6b0000; }
+    .table-content-operation .inner-table-red .title {
+      margin-right: 5px; }
+    .table-content-operation .inner-table-red .title-shipment {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .table-content-operation .inner-table-red .action-shipment {
+      background-color: #6b0000;
+      padding: 10px;
+      text-align: center; }
+      .table-content-operation .inner-table-red .action-shipment i {
+        font-size: 2em; }
   .order-table.order-table-right-section {
     padding-left: 0; }
   .order-item.shipment-content .inner-table-tr {
@@ -4960,6 +5155,12 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       padding-left: 0; } }
 
 @media only screen and (max-width: 780px) {
+  .button-width-title {
+    float: none !important;
+    display: block;
+    margin: 0 auto; }
+  .block-title-left {
+    float: none; }
   .select-box .hide-mobile {
     display: none; }
   .main-catlog .select-box .select {
@@ -5127,6 +5328,17 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     line-height: 40px; } }
 
 @media only screen and (max-width: 553px) {
+  .select-col.select-box-wrapper {
+    margin: 0; }
+    .select-col.select-box-wrapper .select-box {
+      text-align: left; }
+      .select-col.select-box-wrapper .select-box label {
+        text-align: inherit;
+        display: block;
+        width: 100%; }
+    .select-col.select-box-wrapper .select {
+      width: 100%;
+      margin-bottom: 20px; }
   .select-box-container-price .select-box-wrapper {
     margin: 0 auto; }
     .select-box-container-price .select-box-wrapper .select-box label {
