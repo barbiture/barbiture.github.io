@@ -205,6 +205,7 @@ button {
     color: #cb944c;
     text-transform: uppercase; }
   .nav__item__sub {
+    margin-right: -1px;
     display: block;
     margin-bottom: -7px; }
     .nav__item__sub:hover > a {
@@ -780,7 +781,7 @@ button {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1354px;
+  max-width: 1434px;
   min-width: 320px;
   padding: 0 40px 0 40px;
   position: relative; }
