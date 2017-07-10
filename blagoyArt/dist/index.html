@@ -24,15 +24,16 @@
     </div>
     <div class="header__contacts">
       <div class="header__contacts__tel">
-        <a href="tel:+78007078139">+7 (800) 707-81-39</a>
+        <a href="tel:+78007078139" class="hidden-xs">+7 (800) 707-81-39</a>
+        <svg class="icon svg-tel-dims visible-xs"><use xlink:href="icons/sprite.svg#tel"/></svg>
       </div>
-      <ul class="header__contacts__info list__reset">
+      <ul class="header__contacts__info list__reset hidden-xs">
         <li>ПН-ПТ с 9:00 до 18:00</li>
         <li>Доставка по РФ и СНГ</li>
       </ul>
     </div>
     <form class="header__search">
-      <input type="text" name="" placeholder="Введите название или артикул">
+      <input class="hidden-xs" type="text" name="" placeholder="Введите название или артикул">
       <button type="submit" class="btn-reset header__search__btn">
         <svg class="icon svg-search-dims"><use xlink:href="icons/sprite.svg#search"/></svg>
       </button>
@@ -43,23 +44,31 @@
 
 <nav class="nav nav__level">
   <div class="header__container clearfix">
+    <div class="visible-xs nav__home">
+      <svg class="icon svg-home-dims"><use xlink:href="icons/sprite.svg#home"/></svg>
+    </div>
     <ul class="nav__user">
       <li class="nav__cart">
         <a href="">
           <svg class="icon svg-cart-dims"><use xlink:href="icons/sprite.svg#cart"/></svg>
-          <div class="nav__cart__count">10</div>
-          <span>товаров <span class="nav__cart__sum">/ 56 789 р</span></span>
+          <div class="nav__cart__count hidden-xs">10</div>
+          <span class="hidden-xs">товаров <span class="nav__cart__sum">/ 56 789 р</span></span>
         </a>
       </li>
       <li>
         <svg class="icon svg-login-dims"><use xlink:href="icons/sprite.svg#login"/></svg>
-        <span>войти</span>
+        <span class="hidden-xs">войти</span>
       </li>
     </ul>
+    <div class="nav__toggle visible-xs">
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
     <ul class="nav__content">
       <li class="nav__item toggle__item">
         <a href="#">
-          <span class="nav__menu__toggle">
+          <span class="nav__menu__toggle hidden-xs">
             <svg class="icon svg-menu-dims"><use xlink:href="icons/sprite.svg#menu"/></svg>
           </span>
           <span>каталог товаров</span>
@@ -115,7 +124,7 @@
 </nav>
 
 
-<!--= include components/slider/slider.html -->
+
 <body class="loaded">
 
 
@@ -127,7 +136,29 @@
 
   <main class="content">
     <div class="wrapper">
-      <h1>Тест</h1>
+      <div class="slider">
+        <div class="slider__wrapp">
+          <div class="slider__description">
+            Новая коллекция
+            <span class="uppercase">swarovski</span> уже здесь!
+          </div>
+          <img src="img/sliderImg1.jpg">
+        </div>
+        <div class="slider__wrapp">
+          <div class="slider__description">
+            Новая коллекция
+            <span class="uppercase">swarovski</span> уже здесь!
+          </div>
+          <img src="img/sliderImg1.jpg">
+        </div>
+        <div class="slider__wrapp">
+          <div class="slider__description">
+            Новая коллекция
+            <span class="uppercase">swarovski</span> уже здесь!
+          </div>
+          <img src="img/sliderImg1.jpg">
+        </div>
+      </div>
     </div>
   </main> 
 
@@ -163,21 +194,11 @@
 
   <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
 
-  <script type="text/javascript" src="js/slick.js" ></script>
-
-  <!--
-
-  <script type="text/javascript" src="js/components/jquery.fancybox.js" ></script>
-
-  <script type="text/javascript" src="js/components/jquery.formstyler.js" ></script>
-
-  <script type="text/javascript" src="js/components/slick.js" ></script>
-
-  <script type="text/javascript" src="js/components/jquery.mCustomScrollbar.js" ></script>
-
-  -->
+  <script type="text/javascript" src="js/slick.min.js" ></script>
 
   <script type="text/javascript" src="js/custom.js" ></script>
+
+  <script type="text/javascript" src="js/_slider.js" ></script>
 
   <script type="text/javascript" src="js/_nav.js" ></script>
 
