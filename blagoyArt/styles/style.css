@@ -668,6 +668,7 @@ button {
         padding: 0; } }
 
 .slider {
+  margin-top: 30px;
   position: relative; }
   .slider img {
     width: 100%;
