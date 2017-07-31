@@ -110,51 +110,53 @@
       </div>
 
     </div>
-    <div class="course-band__order row row_y">
-      <div class="col-third">
-        <button type="button" class="btn btn-bordered btn-huge open-registration-modal more-form-btn" data-extra="1"
-          data-extra2="insert_page_title">Записаться</button>
-      </div>
-      <div class="col-third">
-        <div class="start-text accent-text_m">до старта осталось
-          <span class="start-date">40 дней</span>
+    <div class="course-band__order">
+      <div class="row row_y u_prl">
+        <div class="col col-third">
+          <button type="button" class="btn btn-bordered btn-huge open-registration-modal more-form-btn" data-extra="1"
+            data-extra2="insert_page_title">Записаться</button>
+        </div>
+        <div class="col col-third">
+          <div class="start-text accent-text_m">до старта осталось
+            <span class="start-date">40 дней</span>
+          </div>
+        </div>
+        <div class="c_2 u_prl u_alignCenter course-band__note">
+          <h4>Скидка <span>до 12.09.17</span> <span>еще 40 дней</span></h4>
+          <div class="bg_circle"></div>
         </div>
       </div>
-      <div class="c_2 u_prl col-tenth u_alignCenter">
-        <h4 class="">Скидка до 12.09.17 еще 40 дней</h4>
-        <div class="bg_circle"></div>
-      </div>
     </div>
-  </div>
-  <div class="row section-indent">
-    <div class="col-quarter"></div>
-    <div class="col-half form more-form-content" style="display: none;">
-      <h4>Заполните форму и внесите оплату или предоплату для фиксации цены</h4>
-      <input type="text" name="client_name" class="client-name" placeholder="Имя Фамилия">
-      <input type="text" name="client_email" class="client-email" placeholder="Email">
-      <input type="tel" name="client_phone" class="client-phone" placeholder="Ваш телефон">
-      <div class="select_wrapp">
-        <input type="checkbox" id="rools">
-        <label for="rools"> Я согласен со всеми правилами</label>
+    <div class="section-indent">
+      <div class="form more-form-content" style="display: none;">
+        <h4>Заполните форму и внесите оплату или предоплату для фиксации цены</h4>
+        <input type="text" name="client_name" class="client-name" placeholder="Имя Фамилия">
+        <input type="text" name="client_email" class="client-email" placeholder="Email">
+        <input type="tel" name="client_phone" class="client-phone" placeholder="Ваш телефон">
+        <div class="select_wrapp">
+          <input type="checkbox" id="rools">
+          <label for="rools"> Я согласен со всеми правилами</label>
 
-        <input type="radio" name="pay" id="pay1">
-        <label for="pay1"> Внести полную оплату 18 000 р.</label>
-        <input type="radio" name="pay" id="pay2">
-        <label for="pay2"> Внести предоплату 5 000 р.</label>
-      </div>
-      <div class="row row_y">
-        <div class="col">
-          <div class="b_font_h3">18 000 р.</div>
+          <input type="radio" name="pay" id="pay1">
+          <label for="pay1"> Внести полную оплату 18 000 р.</label>
+          <input type="radio" name="pay" id="pay2">
+          <label for="pay2"> Внести предоплату 5 000 р.</label>
         </div>
-        <div class="col">
-          <button type="submit" class="btn-small btn btn-accent ">Оплатить</button>
-        </div>
-        <div class="col">
-          <a class="line more-form-close">Закрыть</a>
+        <div class="row row_y">
+          <div class="col">
+            <div class="b_font_h3">18 000 р.</div>
+          </div>
+          <div class="col">
+            <button type="submit" class="btn-small btn btn-accent ">Оплатить</button>
+          </div>
+          <div class="col">
+            <a class="line more-form-close">Закрыть</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 <div class="container">
   <!--===================================================== section course-advantages-inner -->
@@ -239,7 +241,7 @@
 </section>
 <div class="container">
   <!--===================================================== section results-inner -->
-  <section class="section-indent" id="results-inner">
+  <section class="section-indent inner-results" id="results-inner">
   
     <h2 class="heading">
       <div class="heading_decor">
@@ -795,7 +797,7 @@
                   <div class="u_alignCenter">
                       <a href="https://www.youtube.com/watch?v=ljPfuqedyyQ&amp;autoplay=1"
                          data-rel="media" class="show-video btn btn-bordered btn-with-icon">
-                          <span class="icon icon-play"></span>
+                          <span class="iconPng icon-play"></span>
                           Посмотреть видео о курсе
                       </a>
                   </div>
@@ -920,7 +922,7 @@
   
   </section>
   <!--===================================================== section course-another-inner -->
-  <section class="section-indent" id="course-about-inner">
+  <section class="section-indent section-course-another-inner" id="course-about-inner">
   
       <h2 class="heading">
         <div class="heading_decor">
@@ -931,7 +933,7 @@
       </h2>
       <div class="tabs-block course-tabs-block" data-tab-block="t-another">
   
-          <ul class="nav nav-tabs u_alignCenter">
+          <ul class="nav section-indent u_alignCenter">
               <li class="tab-link active" data-tab="t-another-1" data-tab-block="t-another">
                   Развитие
               </li>
