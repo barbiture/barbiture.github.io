@@ -22,87 +22,87 @@
 	<script src="js/main.js"></script>
 	<script src="https://soohoo.ru/js/popcalendar.js?1" type="text/javascript"></script>
 </head>
-  <div id="popup_opaco" class="popup_opaco"></div>
-  <div id="popup_div" class="popup_div">
-      <div id="popup_form" class="popup_form">
-      </div>
-      <script>
-      function ClosePopup() {
-          $('#popup_opaco').hide();
-          $('#popup_div').fadeOut(500);
-          return false;
-      };
+	<div id="popup_opaco" class="popup_opaco"></div>
+	<div id="popup_div" class="popup_div">
+			<div id="popup_form" class="popup_form">
+			</div>
+			<script>
+			function ClosePopup() {
+					$('#popup_opaco').hide();
+					$('#popup_div').fadeOut(500);
+					return false;
+			};
 
-      function ShowPopup(ev, h, w) {
-          h = h || '60%';
-          w = w || '50%';
-          ev = ev || window.event;
-          $('#popup_opaco').height($(document).height());
-          $('#popup_opaco').show();
-          $('#popup_opaco').fadeTo(100, 0.6);
-          if (h == '101%') {
-              $('#popup_div').css("height", "none");
-              $('#popup_div').css("top", (ev.pageY - 100));
-              $('#popup_div').css("position", "absolute");
-          } else {
-              $('#popup_div').css("height", h);
-              $('#popup_div').css("top", "15%");
-              $('#popup_div').css("position", "fixed");
-          }
-          $('#popup_div').width(w);
-          if (w == '80%') {
-              $('#popup_div').css("left", "10%");
-          } else if (w == '50%') {
-              $('#popup_div').css("left", "25%");
-          }
-          $('#popup_div').fadeIn(500);
-          return false;
-      };
-      </script>
-      <a class="popup_close" href="#" onclick="ClosePopup();return false;" style="display: inline;"></a>
-  </div>
-  <div class="usr_menu">
-    <center>
-      <a href='javascript:return false;' onclick="$('#form_metatag').toggle();">Редактировать мета-данные</a>
-      <form method="post" id='form_metatag' style='display:none;'>
-          <table>
-              <tr>
-                  <td align="right">
-                      Заглавие:
-                      <input type="text" name="meta[title]" style="width:400px;" value="SooHoo.ru">по-умолчанию
-                      <br> Описание:
-                      <textarea name="meta[description]" style="width:400px;">SooHoo.ru</textarea>по-умолчанию
-                      <br> Ключивые слова:
-                      <textarea name="meta[keywords]" style="width:400px;">SooHoo.ru</textarea>по-умолчанию
-                      <br>
-                      <input type="submit" value="Отправить">
-                      <input type="hidden" name="action" value="metatag">
-                      <input type="button" value="Свернуть" onclick="$('#form_metatag').toggle();">
-                  </td>
-                  <td valign="top">
-                  </td>
-              </tr>
-          </table>
-      </form>
-    </center>
-  </div>
+			function ShowPopup(ev, h, w) {
+					h = h || '60%';
+					w = w || '50%';
+					ev = ev || window.event;
+					$('#popup_opaco').height($(document).height());
+					$('#popup_opaco').show();
+					$('#popup_opaco').fadeTo(100, 0.6);
+					if (h == '101%') {
+							$('#popup_div').css("height", "none");
+							$('#popup_div').css("top", (ev.pageY - 100));
+							$('#popup_div').css("position", "absolute");
+					} else {
+							$('#popup_div').css("height", h);
+							$('#popup_div').css("top", "15%");
+							$('#popup_div').css("position", "fixed");
+					}
+					$('#popup_div').width(w);
+					if (w == '80%') {
+							$('#popup_div').css("left", "10%");
+					} else if (w == '50%') {
+							$('#popup_div').css("left", "25%");
+					}
+					$('#popup_div').fadeIn(500);
+					return false;
+			};
+			</script>
+			<a class="popup_close" href="#" onclick="ClosePopup();return false;" style="display: inline;"></a>
+	</div>
+	<div class="usr_menu">
+		<center>
+			<a href='javascript:return false;' onclick="$('#form_metatag').toggle();">Редактировать мета-данные</a>
+			<form method="post" id='form_metatag' style='display:none;'>
+					<table>
+							<tr>
+									<td align="right">
+											Заглавие:
+											<input type="text" name="meta[title]" style="width:400px;" value="SooHoo.ru">по-умолчанию
+											<br> Описание:
+											<textarea name="meta[description]" style="width:400px;">SooHoo.ru</textarea>по-умолчанию
+											<br> Ключивые слова:
+											<textarea name="meta[keywords]" style="width:400px;">SooHoo.ru</textarea>по-умолчанию
+											<br>
+											<input type="submit" value="Отправить">
+											<input type="hidden" name="action" value="metatag">
+											<input type="button" value="Свернуть" onclick="$('#form_metatag').toggle();">
+									</td>
+									<td valign="top">
+									</td>
+							</tr>
+					</table>
+			</form>
+		</center>
+	</div>
 <body data-spy="scroll" data-target=".scrollspy">
 	<script type="text/javascript">
-	  var xajaxRequestUri = "https://soohoo.ru/?action=manager_operation";
-	  var xajaxDebug = false;
-	  var xajaxStatusMessages = true;
-	  var xajaxWaitCursor = true;
-	  var xajaxDefinedGet = 0;
-	  var xajaxDefinedPost = 1;
-	  var xajaxLoaded = false;
+		var xajaxRequestUri = "https://soohoo.ru/?action=manager_operation";
+		var xajaxDebug = false;
+		var xajaxStatusMessages = true;
+		var xajaxWaitCursor = true;
+		var xajaxDefinedGet = 0;
+		var xajaxDefinedPost = 1;
+		var xajaxLoaded = false;
 
-	  function xajax_process_form() {
-	      return xajax.call("process_form", arguments, 1);
-	  }
+		function xajax_process_form() {
+				return xajax.call("process_form", arguments, 1);
+		}
 
-	  function xajax_process_browse_url() {
-	      return xajax.call("process_browse_url", arguments, 1);
-	  }
+		function xajax_process_browse_url() {
+				return xajax.call("process_browse_url", arguments, 1);
+		}
 	</script>
 	<script type="text/javascript" src="https://soohoo.ru//libp/xajax/xajax_js/xajax.js"></script>
 	<script type="text/javascript">
@@ -121,13 +121,15 @@
 				<div class="top-bar--menu">
 					<span class="toggle-link">Меню</span>
 					<div class="top-bar--menu_wrap toggle-content">
-						<span class="active">Главная</span>
-						<a href="#">Как купить</a>
-						<a href="#">Доставка</a>
-						<a href="#">О магазине</a>
-						<a href="#">Гарантия</a>
-						<a href="#">Контакты</a>
-						<a href="#">Услуги</a>
+						<div class="container">
+							<span class="active">Главная</span>
+							<a href="#">Как купить</a>
+							<a href="#">Доставка</a>
+							<a href="#">О магазине</a>
+							<a href="#">Гарантия</a>
+							<a href="#">Контакты</a>
+							<a href="#">Услуги</a>
+						</div>
 					</div>
 				</div>
 				<div class="select-light">
@@ -328,10 +330,140 @@
 											<div class="jcarousel slider">
 												<ul>
 													<li>
-														//= goods.html
+														<div class="block-goods--wrapp">
+															<div class="block-goods_title">
+																<div class="statusBadge News">
+																	Новинка
+																</div>
+																<ul class="retings">
+																	<li>
+																		<input type="checkbox" name="star1" id="">
+																		<label for="star1"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star2" id="">
+																		<label for="star2"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star3" id="">
+																		<label for="star3"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star4" id="">
+																		<label for="star4"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star5" id="">
+																		<label for="star5"></label>
+																	</li>
+																</ul>
+															</div>
+															<div class="block-goods_img">
+																<img src="assets/img/goods.jpg" alt="">
+															</div>
+															<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
+															<p class="price">279 000 руб. <span>465 00 руб.</span></p>
+															<div class="block-goods_hover block-goods--inCart">
+																<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
+																	<span>
+																		<i class="cartWhite-icon"></i>
+																		В корзину
+																	</span>
+																</div>
+																<!-- <div class="auxiliary-buttons">
+																	<a>
+																		<i class="cart-icon"></i>
+																		Купить в 1 клик
+																	</a>
+																</div> -->
+																<!-- <div class="auxiliary-buttons">
+																	<a>
+																		<i class="libra-icon"></i>
+																		К сравнению
+																	</a>
+																</div> -->
+																<div class="auxiliary-buttons">
+																	<a>
+																		<i class="favorite-icon"></i>
+																		В избранное
+																	</a>
+																</div>
+																<div class="auxiliary-buttons">
+																	<span>
+																		<i class="order-icon"></i>
+																		Под заказ
+																	</span>
+																</div>
+															</div>
+														</div>
 													</li>
 													<li>
-														//= goods.html
+														<div class="block-goods--wrapp">
+															<div class="block-goods_title">
+																<div class="statusBadge News">
+																	Новинка
+																</div>
+																<ul class="retings">
+																	<li>
+																		<input type="checkbox" name="star1" id="">
+																		<label for="star1"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star2" id="">
+																		<label for="star2"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star3" id="">
+																		<label for="star3"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star4" id="">
+																		<label for="star4"></label>
+																	</li>
+																	<li>
+																		<input type="checkbox" name="star5" id="">
+																		<label for="star5"></label>
+																	</li>
+																</ul>
+															</div>
+															<div class="block-goods_img">
+																<img src="assets/img/goods.jpg" alt="">
+															</div>
+															<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
+															<p class="price">279 000 руб. <span>465 00 руб.</span></p>
+															<div class="block-goods_hover block-goods--inCart">
+																<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
+																	<span>
+																		<i class="cartWhite-icon"></i>
+																		В корзину
+																	</span>
+																</div>
+																<!-- <div class="auxiliary-buttons">
+																	<a>
+																		<i class="cart-icon"></i>
+																		Купить в 1 клик
+																	</a>
+																</div> -->
+																<!-- <div class="auxiliary-buttons">
+																	<a>
+																		<i class="libra-icon"></i>
+																		К сравнению
+																	</a>
+																</div> -->
+																<div class="auxiliary-buttons">
+																	<a>
+																		<i class="favorite-icon"></i>
+																		В избранное
+																	</a>
+																</div>
+																<div class="auxiliary-buttons">
+																	<span>
+																		<i class="order-icon"></i>
+																		Под заказ
+																	</span>
+																</div>
+															</div>
+														</div>
 													</li>
 												</ul>
 											</div>
@@ -1120,66 +1252,57 @@
 		<div class="block-goods">
 			<div class="block-goods--wrapp">
 				<div class="block-goods_title">
-					<div class="statusBadge News">
-						Новинка
-					</div>
 					<ul class="retings">
 						<li>
-							<input type="checkbox" name="star1" id="">
+							<input name="star1" id="" type="checkbox">
 							<label for="star1"></label>
 						</li>
 						<li>
-							<input type="checkbox" name="star2" id="">
+							<input name="star2" id="" type="checkbox">
 							<label for="star2"></label>
 						</li>
 						<li>
-							<input type="checkbox" name="star3" id="">
+							<input name="star3" id="" type="checkbox">
 							<label for="star3"></label>
 						</li>
 						<li>
-							<input type="checkbox" name="star4" id="">
+							<input name="star4" id="" type="checkbox">
 							<label for="star4"></label>
 						</li>
 						<li>
-							<input type="checkbox" name="star5" id="">
+							<input name="star5" id="" type="checkbox">
 							<label for="star5"></label>
 						</li>
 					</ul>
 				</div>
 				<div class="block-goods_img">
-					<img src="assets/img/goods.jpg" alt="">
+					<a href="/catalog/ovaltransfomersurf/SH_SURFGLAAA">
+					<img src="https://soohoo.ru/imgbank/Image/pic/s/2448_SURFGLAAA1.jpeg" alt="SURFGLAAA Овальная кроватка SURF Gold">
+					</a>
 				</div>
-				<p>Детская кроватка Giovanni Magico (Поперечный маятник)</p>
-				<p class="price">279 000 руб. <span>465 00 руб.</span></p>
+				<p><a href="/catalog/ovaltransfomersurf/SH_SURFGLAAA">SURFGLAAA Овальная кроватка SURF Gold</a></p>
+				<p class="price">ОТ 14899 руб</p>
 				<div class="block-goods_hover block-goods--inCart">
-					<div class="button defaultBtn" data-toggle="modal" data-target="#cartModal">
+					<div class="button defaultBtn" onclick="location.href='/?action=catalog_configurator&amp;item_code=SH_SURFGLAAA';return false;" data-toggle="modal">
 						<span>
-							<i class="cartWhite-icon"></i>
-							В корзину
+							Конфигуратор
 						</span>
 					</div>
-					<!-- <div class="auxiliary-buttons">
-						<a>
-							<i class="cart-icon"></i>
-							Купить в 1 клик
-						</a>
-					</div> -->
-					<!-- <div class="auxiliary-buttons">
+					<div class="auxiliary-buttons">
 						<a>
 							<i class="libra-icon"></i>
 							К сравнению
 						</a>
-					</div> -->
+					</div>
 					<div class="auxiliary-buttons">
-						<a>
+						<a onclick="xajax_process_browse_url('./?action=catalog_favorite&amp;add=SH_SURFGLAAA');">
 							<i class="favorite-icon"></i>
 							В избранное
 						</a>
 					</div>
-					<div class="auxiliary-buttons">
-						<span>
-							<i class="order-icon"></i>
-							Под заказ
+					<div class="auxiliary-buttons" style="width: 100%;">
+						<span style="font-size: 14px;line-height: 18px;">
+									Фабрика Мебели 20шт
 						</span>
 					</div>
 				</div>
