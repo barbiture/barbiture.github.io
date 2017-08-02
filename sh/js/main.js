@@ -260,6 +260,28 @@
 
         wrap: 'circular'
     });
+  var carouselFiltr = $('.review-right--good .jcarousel');
+  carouselFiltr
+    .on('jcarousel:reload jcarousel:create', function () {
+      var carousel = $(this),
+          width = carousel.innerWidth();
+
+      if (width >= 900) {
+          width = width / 6;
+      } else if (width >= 736) {
+          width = width / 5;
+      } else if (width >= 594) {
+          width = width / 3;
+      } else if (width >= 476) {
+          width = width / 2;
+      }
+
+      carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+    })
+    .jcarousel({
+
+        wrap: 'circular'
+    });
   $('.jcarousel-control-prev')
     .on('jcarouselcontrol:active', function() {
       $(this).removeClass('inactive');
