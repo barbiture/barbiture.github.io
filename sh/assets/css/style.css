@@ -3815,10 +3815,11 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   .fix_panel .next-step {
     color: #202020;
     text-transform: uppercase;
-    text-align: right;
-    margin-top: 5px; }
+    text-align: right; }
     .fix_panel .next-step a {
       font-weight: 700; }
+      .fix_panel .next-step a i {
+        vertical-align: text-top; }
 
 .col-right {
   padding-top: 40px;
@@ -3882,11 +3883,13 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       line-height: 17px;
       margin-top: 4px; }
     .col-fix-right-panel .col.price {
-      float: left;
       font-size: 14px;
-      line-height: 20px; }
+      line-height: 20px;
+      margin-right: 50px; }
       .col-fix-right-panel .col.price > div {
         font-weight: 700; }
+  .col-fix-right-panel.col-compl .col {
+    float: left; }
   .col-fix-right-panel.col-compl a {
     color: #fff;
     text-decoration: none; }
@@ -4553,7 +4556,19 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     .main.main-good .block-review--desription .review-right--good .auxiliary-buttons {
       height: auto; }
   .main.main-good .block-wrapp--good {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .col-filtr .hidden {
+    display: block; }
+  .col-filtr .col {
+    float: left; }
+    .col-filtr .col .toggle-link {
+      color: #fff; }
+      .col-filtr .col .toggle-link:hover, .col-filtr .col .toggle-link:focus {
+        text-decoration: none; }
+    .col-filtr .col .cabinet-hide a {
+      color: #fff; }
+    .col-filtr .col.next-step {
+      float: right; } }
 
 @media only screen and (min-width: 1066px) {
   .main.main-good .left-side--catalog_content {
@@ -4737,15 +4752,23 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     float: right; }
     .col-fix-right-panel.col-compl {
       float: left;
-      width: 70%;
+      width: 60%;
       margin-right: 0; }
       .col-fix-right-panel.col-compl .config-hide {
         left: 0; }
       .col-fix-right-panel.col-compl .col {
         width: 50%;
         padding-left: 0; }
-    .col-fix-right-panel.next-step {
+        .col-fix-right-panel.col-compl .col.price {
+          margin-right: 0; }
+    .col-fix-right-panel.col-filtr {
+      width: 40%;
       margin-right: 0; }
+      .col-fix-right-panel.col-filtr .col {
+        width: 50%;
+        padding-left: 0; }
+        .col-fix-right-panel.col-filtr .col.next-step {
+          text-align: right; }
     .col-fix-right-panel .col {
       padding-left: 20px; }
       .col-fix-right-panel .col .amount {
@@ -5057,8 +5080,8 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
           width: 100%; }
       .col-fix-right-panel .col:nth-child(2) {
         text-align: center; }
-    .col-fix-right-panel.next-step {
-      width: auto; }
+    .col-fix-right-panel.col-compl .price {
+      text-align: left; }
   .block-goods--wrapp.block-goods-list--wrapp .block-goods--inCart .button.defaultBtn {
     width: 170px; }
   .block-goods--wrapp.block-goods-list--wrapp .block-goods--inCart .price {
@@ -5310,6 +5333,8 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     line-height: 26px;
     margin: 10px 0; }
   .main .left-side--catalog {
+    display: none; }
+  .col-fix-right-panel .col .h-mob {
     display: none; } }
 
 @media only screen and (max-width: 440px) {
@@ -5348,12 +5373,17 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     display: block; }
   .tab-content > .tab-pane img {
     float: none; }
-  .col-fix-right-panel.col-compl {
-    width: 77%; }
-    .col-fix-right-panel.col-compl .col {
-      width: 40%; }
-      .col-fix-right-panel.col-compl .col.price {
-        width: 60%; } }
+  .conf_panel .col-fix-right-panel.col-compl {
+    width: 55%; }
+  .conf_panel .col-fix-right-panel.col-filtr {
+    width: 45%; }
+  .conf_panel .col-fix-right-panel .col a {
+    font-size: 12px; }
+  .conf_panel .col-fix-right-panel .col i {
+    margin: 0;
+    font-size: .5em; }
+  .conf_panel .col-fix-right-panel .col.price {
+    font-size: 12px; } }
 
 @media only screen and (max-width: 455px) {
   .table-nav-tabs li {
