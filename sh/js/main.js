@@ -223,6 +223,9 @@
       });
   });
   var carouselResponsive = $('.carousel-single');
+  $('.sliderS').jcarousel({
+    wrap: 'circular'
+  });
   $('.slider')
   .on('jcarousel:create jcarousel:reload', function() {
       var element = $(this),
@@ -248,7 +251,7 @@
           width = width / 4;
       } else if (width >= 1036) {
           width = width / 4;
-      } else if (width >= 994) {
+      } else if (width >= 765) {
           width = width / 3;
       } else if (width >= 476) {
           width = width / 2;
