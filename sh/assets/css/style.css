@@ -1925,15 +1925,11 @@ i {
     .main.main-good .block-table .tab-content {
       text-align: left; }
   .main.main-good .block-review--img {
-    position: relative;
-    width: 50%;
-    float: left; }
+    position: relative; }
     .main.main-good .block-review--img .navigation {
       margin-top: 15px; }
   .main.main-good .block-review--desription {
-    float: right;
-    width: 50%;
-    padding-left: 30px; }
+    padding-top: 50px; }
     .main.main-good .block-review--desription .review-right--good {
       float: none; }
     .main.main-good .block-review--desription h4 {
@@ -3297,11 +3293,13 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     padding: 11px 20px 0;
     margin-bottom: 30px; }
     .main .left-side--catalog {
-      padding: 11px 0 0;
-    }
-    .main .left-side--catalog .left-side_title {
-      margin: -11px 0 0;
-    }
+      padding: 11px 0 0; }
+      .main .left-side--catalog .left-side_title {
+        margin: -11px 0 0; }
+      .main .left-side--catalog_list li {
+        padding: 0 20px;
+        position: relative;
+        line-height: 44px; }
     .main .left-side_title {
       padding: 11px 20px 15px;
       margin: -11px -20px 0;
@@ -3340,7 +3338,6 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   .main .left-side--catalog_content {
     padding: 0 0 7px; }
   .main .left-side--catalog_list li {
-    padding: 0 20px;
     position: relative;
     line-height: 44px; }
     .main .left-side--catalog_list li:hover ul.hide {
@@ -3370,17 +3367,20 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     .main .left-side--catalog ul.hide .left-side--catalog_slider {
       background-color: #fff;
       position: absolute;
-      padding: 0;
       right: -340px;
       z-index: 10000;
       width: 340px;
+      top: 0;
+      padding: 0;
       top: 0; }
       .main .left-side--catalog ul.hide .left-side--catalog_slider .jcarousel {
         max-height: 360px;
         height: 360px; }
         .main .left-side--catalog ul.hide .left-side--catalog_slider .jcarousel li {
-          padding: 0;
-          height: 360px; }
+          height: 360px;
+          padding: 0; }
+          .main .left-side--catalog ul.hide .left-side--catalog_slider .jcarousel li img {
+            min-width: auto; }
       .main .left-side--catalog ul.hide .left-side--catalog_slider .jcarousel-wrapper {
         position: relative;
         margin-left: 0;
@@ -3674,8 +3674,8 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   .block-goods_img img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
     height: auto; }
   .block-brands--wrapp {
     position: relative;
@@ -3703,7 +3703,6 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
 
 .scroll-up {
   position: fixed;
-  z-index: 20;
   right: 50px;
   bottom: 150px;
   width: 3.60625em;
@@ -4472,12 +4471,12 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
 
 .block-goods--wrapp,
 .block-brands--wrapp {
-  height: 215px;
-  width: 20%; }
+  width: 20%;
+  height: 215px; }
+
 .block-goods_img {
   height: 100%;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .footer .nav-footer {
   width: 65%;
@@ -5346,7 +5345,9 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
 
 @media only screen and (max-width: 520px) {
   .container .with--aside .block-goods--wrapp {
-    width: 100%; }
+    width: 100%;
+    height: auto;
+    min-height: 100px; }
   .block-goods--wrapp.block-goods-list--wrapp .block-goods_img {
     margin-top: 15px;
     width: 100%;
@@ -5438,8 +5439,6 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     margin-top: 30px; }
   .top-bar--menu {
     margin-right: 25px; }
-  .container .with--aside .block-goods--wrapp {
-    width: 100%; }
   .block-goods--wrapp.block-goods-list--wrapp .block-goods--inCart {
     margin-bottom: 0;
     text-align: center; }
