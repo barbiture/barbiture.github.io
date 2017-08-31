@@ -1,0 +1,18 @@
+.back {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  .slick-track,
+  .slick-slider,
+  .slick-list {
+    height: 100%;
+  }
+  .slick-slide {
+    // background-position: center;
+    // background-size: cover;
+  }
+}

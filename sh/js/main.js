@@ -20,6 +20,16 @@
           }, 600);
           return false;
       });
+    $('.btn-circle').click(function () {
+      console.log('find')
+      $(this).find('.tooltip').toggle();
+    });
+    $(document).click( function(event){
+      if( $(event.target).closest(".btn-circle").length ) 
+      return;
+      $(".btn-circle .tooltip").hide();
+      event.stopPropagation();
+    });
     $( "#slider-range" ).slider({
       range: true,
       min: 0,

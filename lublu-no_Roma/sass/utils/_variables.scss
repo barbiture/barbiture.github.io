@@ -1,0 +1,42 @@
+/* reset */
+$min-width: 320px;
+$max-width: 1920px;
+$base-bg: #FFF;
+
+$f_size_s: 14px;
+$l_height_s: 19px;
+
+$base-font-size: 15px;
+$base-line-height: 20px;
+
+$f_size_l: 16px;
+$l_height_l: 20px;
+
+$f_size_xl: 18px;
+$l_height_xl: 21px;
+
+$base-font-family: 'Roboto', sans-serif;
+$custom-font-family: Arial, sans-serif;
+$link-color: #333;
+$default-transition: all 0.2s linear;
+
+/* main variables */
+
+//text, titles
+$text-color: #333;
+$title-color: #000;
+$brand-color: #aa4141;
+$brand-color_l: #fd6262;
+$brand-color_d: #642121;
+$bd_color: #b8b6b4;
+$input_bd: #9d9d9d;
+$grey: #D0CFCF;
+
+$title-font-family: $custom-font-family;
+
+$font-size-h1: 36px;
+$line-height-h1: 42px;
+$font-size-h2: 32px;
+$line-height-h2: 37px;
+$font-size-h3: 24px;
+$line-height-h3: 32px;
