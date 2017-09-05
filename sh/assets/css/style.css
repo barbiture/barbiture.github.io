@@ -3569,7 +3569,8 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
       background-color: transparent;
       width: 130px; }
       .main .section-right--good.section-right--filtr .fix-aside {
-        width: 100px; }
+        width: 100px;
+        z-index: 100; }
   .main .review-right--good {
     display: none; }
     .main .review-right--good .section-right--good_title .price {
