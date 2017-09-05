@@ -21,7 +21,7 @@
           return false;
       });
     $('.btn-circle').click(function () {
-      console.log('find')
+      $(this).toggleClass('open');
       $(this).find('.tooltip').toggle();
     });
     $(document).click( function(event){
