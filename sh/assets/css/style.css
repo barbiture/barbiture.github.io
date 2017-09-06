@@ -784,6 +784,9 @@
 .block-goods--wrapp_more .center:hover p, .block-goods--wrapp_more .center:hover span {
   color: #B70000; }
 
+body b, body strong {
+  font-weight: bold; }
+
 body h6 {
   font-size: 20px;
   font-weight: 300;
@@ -2716,17 +2719,18 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
 .hover-dropDown-list.toggle-link--active .hover-dropDown-list-isHide.toggle-content {
   display: block; }
 
-.section-right .filtr-title {
-  text-align: center; }
+.section-right--filtr .filtr-title {
+  text-align: center;
+  font-size: 14px; }
 
 .btn-circle {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   text-align: center;
   margin: 10px auto 20px;
   position: relative;
   z-index: 20;
-  line-height: 100px;
+  line-height: 80px;
   vertical-align: middle;
   cursor: pointer;
   -webkit-transition: transform .2s ease-in-out;
@@ -2755,9 +2759,9 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     text-align: left;
     top: 0;
-    width: 250px;
-    left: -210px;
-    padding: 10px 60px 10px 20px;
+    width: 240px;
+    left: -205px;
+    padding: 10px 50px 10px 20px;
     line-height: 1.4;
     z-index: 1; }
     .btn-circle .tooltip p {
@@ -2794,6 +2798,9 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   border-radius: 50%;
   width: 100%;
   height: 100%; }
+
+.img-responsive {
+  max-width: 100%; }
 
 .fotorama__thumb-border {
   border-color: #000; }
@@ -3567,9 +3574,9 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
     float: none; }
     .main .section-right--good.section-right--filtr {
       background-color: transparent;
-      width: 130px; }
+      width: 110px; }
       .main .section-right--good.section-right--filtr .fix-aside {
-        width: 100px;
+        width: 80px;
         z-index: 100; }
   .main .review-right--good {
     display: none; }
@@ -4681,6 +4688,14 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   .desription--list,
   .section-right.section-right--good {
     display: none; }
+    .desription--list.section-right--filtr,
+    .section-right.section-right--good.section-right--filtr {
+      display: block;
+      padding: 0;
+      width: 80px;
+      top: 80px; }
+  .section-right--filtr .filtr-title {
+    display: none; }
   .main.main-good .block-review--desription.section-right--search {
     float: none;
     width: 100%;
@@ -5504,7 +5519,14 @@ tbody .inner-table-tr.inner-table-white .action-shipment .message-user-login, tb
   .main .left-side--catalog {
     display: none; }
   .col-fix-right-panel .col .h-mob {
-    display: none; } }
+    display: none; }
+  .section-right.section-right--good.section-right--filtr,
+  .main .section-right--good.section-right--filtr .fix-aside {
+    width: 60px; }
+  .btn-circle {
+    width: 60px;
+    height: 60px;
+    line-height: 60px; } }
 
 @media only screen and (max-width: 440px) {
   .logo-icon {
