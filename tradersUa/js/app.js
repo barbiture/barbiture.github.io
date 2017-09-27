@@ -8,9 +8,9 @@ console.log('msg');
 // }(document, 'script', 'facebook-jssdk'));
 
 
-function myFacebookLogin() {
-  FB.login(function(){}, {scope: 'publish_actions'});
-}
+// function myFacebookLogin() {
+//   FB.login(function(){}, {scope: 'publish_actions'});
+// }
 window.fbAsyncInit = function() {
     FB.init({
       appId            : '145291699399937',
