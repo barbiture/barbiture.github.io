@@ -13,7 +13,7 @@ console.log('msg');
 // }
 window.fbAsyncInit = function() {
     FB.init({
-      appId            : '145291699399937',
+      appId            : '1920488714856591',
       autoLogAppEvents : true,
       xfbml            : true,
       version          : 'v2.10'
