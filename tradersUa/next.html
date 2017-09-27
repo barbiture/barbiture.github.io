@@ -14,7 +14,7 @@
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 </head>
@@ -22,7 +22,9 @@
 <!-- BEGIN BODY -->
 
 <body class="b-login">
+
 <!--BEGIN CONTENT -->
+
   <div class="container">
     <div class="b-login__wrapper mx-auto">
       <div class="b-login__header text-center">
@@ -32,32 +34,27 @@
           <span class="b-login__title_light">в аккаунт</span>
         </div>
       </div>
-      <div class="b-login__form mx-auto">
-        <script type="text/javascript">
-          function myFacebookLogin() {
-            FB.login(function(){}, {scope: 'publish_actions'});
-          }
-        </script>
-        <button class="btn-facebook" onclick="myFacebookLogin()">
-          <svg class="icon icon-fb float-left"><use xlink:href="#icon-fb"></use></svg>
-          Connect with Facebook
-        </button>
-        <div class="b-devider"><span>или</span></div>
-        <label for="tel" class="b-login__input">
-          <svg class="icon icon-mobile float-left"><use xlink:href="#icon-mobile"></use></svg>
-          <input id="tel" type="tel"/ placeholder="мобильный номер">
+      <form class="b-login__form mx-auto" action="#">
+        <p class="b-login__notif">
+          На Ваш телефон был отправлен секретный код для подтверждения
+        </p>
+
+        <label for="pas" class="b-login__input">
+          <svg class="icon icon-lock float-left"><use xlink:href="#icon-lock"></use></svg>
+          <input type="password" id="pwd" name="pwd" placeholder="код">
         </label>
-        <a href="next.html" class="btn-next">Далее</a>
+        <button type="submit" class="btn-next">Отправить снова</button>
         <div class="b-check">
           <input type="checkbox" name="remCheck" id="remCheck">
           <label for="remCheck" class="b-check__label">
             запомнить
           </label>
         </div>
-      </div>
+      </form>
     </div>
   </div>
-<!-- CONTENT EOF -->
+
+<!-- CONTENT END -->
 
 
   <!-- BODY EOF -->

@@ -61,4 +61,40 @@ window.fbAsyncInit = function() {
 
 
 
+  function inputHandler(masks, max, event) {
+    var c = event.target;
+    var v = c.value.replace(/\D/g, '');
+    var m = c.value.length > max ? 1 : 0;
+    VMasker(c).unMask();
+    VMasker(c).maskPattern(masks[m]);s
+    c.value = VMasker.toPattern(v, masks[m]);
+  }
+
+  var telMask = ['(999) 999-99-99', '(999) 999-99-99'];
+  var tel = document.querySelector('#tel');
+  VMasker(tel).maskPattern(telMask[0]);
+  tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+
+
+(function() {
+  
+  var PasswordToggler = function( element, field ) {
+    this.element = element;
+    this.field = field;
+    
+    this.toggle();  
+  };
+  document.addEventListener( "DOMContentLoaded", function() {
+    var checkbox = document.querySelector( "#show-hide" ),
+      pwd = document.querySelector( "#pwd" ),
+      form = document.querySelector( "#login" );
+      
+      form.addEventListener( "submit", function( e ) {
+        e.preventDefault();
+      }, false);
+      
+      var toggler = new PasswordToggler( checkbox, pwd );
+  });
+})();
+
 //# sourceMappingURL=maps/app.js.map
