@@ -158,6 +158,9 @@ button {
         background-color: #13151f;
         background-image: none;
         border-color: transparent; }
+      .b-login__input input:focus {
+        -webkit-box-shadow: 0 0 0 2px #212537;
+        box-shadow: 0 0 0 2px #212537; }
 
 @media screen and (max-width: 576px) {
   .b-login {
@@ -201,6 +204,9 @@ button {
     margin-top: -10px;
     font-size: 1.25rem;
     position: absolute; }
+  .btn-facebook:focus {
+    -webkit-box-shadow: 0 0 0 2px #212537;
+    box-shadow: 0 0 0 2px #212537; }
 
 .btn-next {
   color: #fff;
@@ -229,6 +235,9 @@ button {
     background-color: #286d9a;
     background-image: none;
     border-color: transparent; }
+  .btn-next:focus {
+    -webkit-box-shadow: 0 0 0 2px #212537;
+    box-shadow: 0 0 0 2px #212537; }
 
 .icon {
   display: inline-block;
