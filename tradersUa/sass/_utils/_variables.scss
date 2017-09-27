@@ -1,0 +1,70 @@
+/* reset */
+$min-width: 320px;
+$max-width: 1200px;
+$base-bg: #FFF;
+$base-font-size: 13px;
+$base-line-height: 18px;
+$base-font-family: Arial, sans-serif;
+$custom-font-family: 'Open Sans', sans-serif;
+$link-color: #100da9;
+$default-transition:all 0.2s linear;
+
+/* main variables */
+
+//text, titles
+$text-color: #000;
+$title-color: #000;
+$title-font-family: $custom-font-family;
+
+// TODO: CLEAN ALL VARIABLE COLOR AND USE function
+// functions to access variable maps 
+// https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
+// USE: background-color: map-get(map-get($colors, brand-color), base);
+// USE: background-color: map-get(map-get($colors, brand-color), dark);
+$colors: (
+  brand-color: (
+    base : #4D3CE6,
+    light: lighten(#4D3CE6, 5%),
+    dark: darken(#4D3CE6, 15%),
+    trans: transparentize(#4D3CE6, 0.5)
+  ),
+  primary-color: (
+    base : #C8C6D8,
+    light: lighten(#C8C6D8, 5%),
+    dark: darken(#C8C6D8, 15%),
+    trans: transparentize(#C8C6D8, 0.5)
+  ),
+  grey-color: (
+    base : #4A4A4A,
+    light: lighten(#4A4A4A, 5%),
+    dark: darken(#4A4A4A, 15%),
+    trans: transparentize(#4A4A4A, 0.5)
+  ),
+  link-color: (
+    base : #100da9,
+    light: lighten(#100da9, 5%),
+    dark: darken(#100da9, 15%),
+    trans: transparentize(#100da9, 0.5)
+  ),
+  text-color: (
+    base : #474747,
+    light: lighten(#474747, 5%),
+    dark: darken(#474747, 15%),
+    trans: transparentize(#474747, 0.5)
+  ),
+  title-color: (
+    base : #fff,
+    light: lighten(#fff, 5%),
+    dark: darken(#fff, 15%),
+    trans: transparentize(#fff, 0.5)
+  )
+);
+
+
+
+$font-size-h1: 36px;
+$line-height-h1: 42px;
+$font-size-h2: 32px;
+$line-height-h2: 37px;
+$font-size-h3: 28px;
+$line-height-h3: 32px;

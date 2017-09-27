@@ -1,0 +1,22 @@
+.b-login__wrapper {
+  padding-top: 108px; }
+
+.b-login__header {
+  padding-top: 30px;
+  padding-bottom: 29px;
+  border-radius: 8px;
+  background-color: #21283e; }
+  .b-login__header img {
+    width: 34.1%; }
+
+.b-login__title {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-top: 18px;
+  letter-spacing: .04em; }
+  .b-login__title_light {
+    font-weight: 300; }
+  .b-login__title_bold {
+    font-weight: 700; }
+
+/*# sourceMappingURL=maps/style.css.map */
