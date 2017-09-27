@@ -238,6 +238,8 @@ button {
   .btn-next:focus {
     -webkit-box-shadow: 0 0 0 2px #212537;
     box-shadow: 0 0 0 2px #212537; }
+  .btn-next:hover {
+    text-decoration: none; }
 
 .icon {
   display: inline-block;
