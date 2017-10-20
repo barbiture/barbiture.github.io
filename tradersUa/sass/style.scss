@@ -1,3 +1,253 @@
-h1 {
-  font-size: 32px;
+@import 'bootstrap/_functions';
+@import 'bootstrap/_mixins';
+@import 'bootstrap/_custom';
+@import '_utils/_type';
+@import '_utils/_clear';
+@import 'components/_card';
+@import '../../components/header/_header';
+@import '../../components/user/_user';
+
+// aside
+@import '../../components/asideNav/_asideNav';
+
+// section
+@import '../../components/sectionMain/_sectionMain';
+@import '_utils/fTable';
+a,
+span,
+div,
+button {
+  outline: none!important;
 }
+
+input[type=submit],
+input[type=button],
+button {
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.b-check {
+  &__label {
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #808286;
+    position: relative;
+    vertical-align: middle;
+    padding-top: 11px;
+    letter-spacing: .04em;
+    cursor: pointer;
+    &:before {
+      margin-right: 5px;
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border-width: 1px;
+      border-style: solid;
+      vertical-align: middle;
+
+    }
+  }
+  input[type='checkbox'] {
+    display: none;
+    &:checked {
+      +.b-check__label:before {
+        background-color: #fff;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.b-devider {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: Roboto;
+  text-align: center;
+  color: #808286;
+  text-transform: uppercase;
+  line-height: 14px;
+  vertical-align: middle;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  position: relative;
+  span {
+    position: relative;
+    background-color: $blue;
+    z-index: 2;
+    padding: 5px 10px;
+  }
+  &:after {
+    width: 100%;
+    height: 1px;
+    background-color: #808286;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    z-index: 1;
+  }
+}
+.b-login {
+  padding-top: 108px;
+  background-image: url(../img/loginBg.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100vh;
+  background-color: $dBlue;
+  &__notif {
+    margin-top: 41px;
+    margin-bottom: 29px;
+    line-height: 16px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    color: #808286;
+    text-align: center;
+    &_mb-xl {
+      margin-bottom: 45px;
+    }
+  }
+  &__wrapper {
+    max-width: 555px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 29px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px;
+    background-color: $blue;
+    img {
+      width: 36.1%;
+    }
+  }
+  &__title {
+    font-size: $title-font-size;
+    text-transform: uppercase;
+    margin-top: 18px;
+    letter-spacing: .05em;
+    &_light {
+      font-weight: $fw-light;
+    }
+    &_bold {
+      font-weight: $fw-bold;
+    }
+  }
+  &__form {
+    margin-top: 13px;
+    max-width: $logInput-max-width;
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+    display: block;
+    vertical-align: middle;
+    line-height: 46px;
+    position: relative;
+    padding-bottom: 10px;
+    .icon {
+      position: absolute;
+      left: 19px;
+      top: 50%;
+      margin-top: -15px;
+      font-size: $font-size-lg;
+    }
+    input {
+      text-transform: uppercase;
+      background-color: transparent;
+      border: none;
+      @include button-size(0, 0, 8px, 11px, 100px);
+      @include button-variant($dBlue, transparent,darken($dBlue, 7.5%));
+      padding-top: 19px;
+      padding-bottom: 16px;
+      padding-left: 44px;
+      width: 100%;
+      color: $white;
+      height: 100%;
+      display: block;
+      -webkit-appearance: none;
+      outline: none;
+      &:focus {
+        box-shadow: 0 0 0 2px $dBlue;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .b-login {
+    padding-top: 15px;
+    &__wrapper {
+      padding-top: 15px;
+      img {
+       width: 100px;
+     }
+    }
+  }
+}
+.btn-facebook {
+  @include button-variant($fbBlue, transparent,darken($fbBlue, 7.5%));
+  @include button-size(12px, 23px, 11px, 21px, 100px);
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+  letter-spacing: .05em;
+  .icon-fb {
+    left: 23px;
+    top: 50%;
+    margin-top: -10px;
+    font-size: $font-size-lg;
+    position: absolute;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px $dBlue;
+  }
+}
+
+.btn-next {
+  @include button-variant($cyan, transparent,darken($cyan, 7.5%));
+  @include button-size(12px, 23px, 12px, 21px, 100px);
+  vertical-align: middle;
+  width: 100%;
+  display: block;
+  text-align: center;
+  &:focus {
+    box-shadow: 0 0 0 2px $dBlue;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  &-lock {
+    width: 0.77734375em;
+  }
+  &-mobile {
+    // width: 0.599609375em;
+  }
+  &-fb {
+    // width: 1rem;
+  }
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+

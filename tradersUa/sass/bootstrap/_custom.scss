@@ -47,10 +47,9 @@
 //
 // Color system
 //
-
 $white:  #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-200: #e4e4e4;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
@@ -72,7 +71,10 @@ $grays: (
   900: $gray-900
 ) !default;
 
-$blue:    #007bff !default;
+$blue:    #21283e;
+$dBlue:   #212537;
+$fbBlue:  #43589b;
+$bBlue:   #1d2025;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -81,7 +83,7 @@ $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #3082b8;
 
 $colors: (
   blue: $blue,
@@ -155,8 +157,8 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:       #212537;
-$body-color:    $gray-900 !default;
+$body-bg:       $gray-200;
+$body-color:    $white !default;
 
 // Links
 //
@@ -231,16 +233,25 @@ $transition-collapse:    height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Open Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
+// $font-family-sans-serif2: -apple-system, BlinkMacSystemFont, "Roboto", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: "Open Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif2: "Roboto", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-base:       $font-family-sans-serif;
+$font-family-secondary:  $font-family-sans-serif2;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
+$font-size-ms:   .75rem !default;
+$font-size-xs:   .562rem !default;
 
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
+$fw-light: 300;
+$fw-reg: 400;
+$fw-bold: 700;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
@@ -251,6 +262,7 @@ $h3-font-size: 1.75rem !default;
 $h4-font-size: 1.5rem !default;
 $h5-font-size: 1.25rem !default;
 $h6-font-size: 1rem !default;
+$title-font-size: 1.125rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
@@ -649,6 +661,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 $popover-inner-padding:               1px !default;
 $popover-bg:                          $white !default;
 $popover-max-width:                   276px !default;
+$logInput-max-width:                  360px;
 $popover-border-width:                $border-width !default;
 $popover-border-color:                rgba($black,.2) !default;
 $popover-box-shadow:                  0 5px 10px rgba($black,.2) !default;
