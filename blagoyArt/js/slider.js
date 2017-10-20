@@ -1,2 +1,0 @@
-$(document).ready(function(){$(".slider").slick({dots:!0,prevArrow:'<div class="slider__nav slider__nav_left"><svg class="icon svg-arrowLeft-dims"><use xlink:href="icons/sprite.svg#arrowLeft"/></svg></div>',nextArrow:'<div class="slider__nav slider__nav_right"><svg class="icon svg-arrowRight-dims"><use xlink:href="icons/sprite.svg#arrowRight"/></svg></div>'})});
-//# sourceMappingURL=maps/_slider.js.map

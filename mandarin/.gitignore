@@ -1,5 +1,0 @@
-# Ignore build
-barbiture.github.io/*
-node_modules/*
-bower_components/*
-.DS_Store

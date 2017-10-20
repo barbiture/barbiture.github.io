@@ -1,2 +1,0 @@
-$(document).ready(function(){$(".nav__toggle").click(function(){$(".nav__content").slideToggle()}),$(".toggle__item a").click(function(e){e.preventDefault();var n=$(this);n.next(".nav__sub_top").slideToggle(350),n.next(".nav__sub_top").toggleClass("show"),n.children(".icon").toggleClass("icon_active"),n.parent().children(".nav__sub_left").toggleClass("show"),n.parent().children(".nav__sub_left").slideToggle(350),n.next(".icon").toggleClass("icon_active")})});
-//# sourceMappingURL=maps/_nav.js.map
